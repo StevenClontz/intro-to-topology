@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd build
+rm -rf *
+xsltproc ../../mathbook/xsl/mathbook-html.xsl ../index.xml
