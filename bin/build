@@ -4,3 +4,6 @@ cd build
 rm -rf *
 cp -r ../images .
 xsltproc --xinclude ../../mathbook/xsl/mathbook-html.xsl ../index.xml
+xsltproc --xinclude ../../mathbook/xsl/mathbook-latex.xsl ../index.xml
+mv index.tex intro-to-topology.tex
+pdflatex intro-to-topology.tex & pdflatex intro-to-topology.tex
