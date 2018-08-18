@@ -1,0 +1,396 @@
+%**************************************%
+%*    Generated from PreTeXt source   *%
+%*    on 2018-08-18T17:55:39Z    *%
+%*                                    *%
+%*   http://mathbook.pugetsound.edu   *%
+%*                                    *%
+%**************************************%
+\documentclass[10pt,]{article}
+%% Custom Preamble Entries, early (use latex.preamble.early)
+%% Default LaTeX packages
+%%   1.  always employed (or nearly so) for some purpose, or
+%%   2.  a stylewriter may assume their presence
+\usepackage{geometry}
+%% Some aspects of the preamble are conditional,
+%% the LaTeX engine is one such determinant
+\usepackage{ifthen}
+%% etoolbox has a variety of modern conveniences
+\usepackage{etoolbox}
+\usepackage{ifxetex,ifluatex}
+%% Raster graphics inclusion
+\usepackage{graphicx}
+%% Color support, xcolor package
+%% Always loaded, for: add/delete text, author tools
+%% Here, since tcolorbox loads tikz, and tikz loads xcolor
+\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
+\usepackage{xcolor}
+%% Colored boxes, and much more, though mostly styling
+%% skins library provides "enhanced" skin, employing tikzpicture
+%% boxes may be configured as "breakable" or "unbreakable"
+%% "raster" controls grids of boxes, aka side-by-side
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{raster}
+%% xparse allows the construction of more robust commands,
+%% this is a necessity for isolating styling and behavior
+%% The tcolorbox library of the same name loads the base library
+\tcbuselibrary{xparse}
+%% Hyperref should be here, but likes to be loaded late
+%%
+%% Inline math delimiters, \(, \), need to be robust
+%% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
+%% If  latexrelease.sty  exists, bugfix is in kernel
+%% If not, bugfix is in  fixltx2e.sty
+%% See:  https://tug.org/TUGboat/tb36-3/tb114ltnews22.pdf
+%% and read "Fewer fragile commands" in distribution's  latexchanges.pdf
+\IfFileExists{latexrelease.sty}{}{\usepackage{fixltx2e}}
+%% Text height identically 9 inches, text width varies on point size
+%% See Bringhurst 2.1.1 on measure for recommendations
+%% 75 characters per line (count spaces, punctuation) is target
+%% which is the upper limit of Bringhurst's recommendations
+\geometry{letterpaper,total={340pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
+%% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex
+%% The following provides engine-specific capabilities
+%% Generally, xelatex and lualatex will do better languages other than US English
+%% You can pick from the conditional if you will only ever use one engine
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific configuration
+%% fontspec package will make Latin Modern (lmodern) the default font
+\ifxetex\usepackage{xltxtra}\fi
+\usepackage{fontspec}
+%% realscripts is the only part of xltxtra relevant to lualatex 
+\ifluatex\usepackage{realscripts}\fi
+%% 
+%% Extensive support for other languages
+\usepackage{polyglossia}
+%% Main document language is US English
+\setdefaultlanguage{english}
+%% Spanish
+\setotherlanguage{spanish}
+%% Vietnamese
+\setotherlanguage{vietnamese}
+%% end: xelatex and lualatex-specific configuration
+}{%
+%% begin: pdflatex-specific configuration
+%% translate common Unicode to their LaTeX equivalents
+%% Also, fontenc with T1 makes CM-Super the default font
+%% (\input{ix-utf8enc.dfu} from the "inputenx" package is possible addition (broken?)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%% end: pdflatex-specific configuration
+}
+%% Symbols, align environment, bracket-matrix
+\usepackage{amsmath}
+\usepackage{amssymb}
+%% allow page breaks within display mathematics anywhere
+%% level 4 is maximally permissive
+%% this is exactly the opposite of AMSmath package philosophy
+%% there are per-display, and per-equation options to control this
+%% split, aligned, gathered, and alignedat are not affected
+\allowdisplaybreaks[4]
+%% allow more columns to a matrix
+%% can make this even bigger by overriding with  latex.preamble.late  processing option
+\setcounter{MaxMatrixCols}{30}
+%%
+%% Semantic Macros
+%% To preserve meaning in a LaTeX file
+%% Only defined here if required in this document
+%% Used for inline definitions of terms
+\newcommand{\terminology}[1]{\textbf{#1}}
+%% Subdivision Numbering, Chapters, Sections, Subsections, etc
+%% Subdivision numbers may be turned off at some level ("depth")
+%% A section *always* has depth 1, contrary to us counting from the document root
+%% The latex default is 3.  If a larger number is present here, then
+%% removing this command may make some cross-references ambiguous
+%% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
+\setcounter{secnumdepth}{3}
+%% begin: General AMS environment setup
+%% Environments built with amsthm package
+\usepackage{amsthm}
+%% Numbering for Theorems, Conjectures, Examples, Figures, etc
+%% Controlled by  numbering.theorems.level  processing parameter
+%% Numbering: all theorem-like numbered consecutively
+%% i.e. Corollary 4.3 follows Theorem 4.2
+%% Always need some theorem environment to set base numbering scheme
+%% even if document has no theorems (but has other environments)
+%% Create a never-used style first, always
+%% simply to provide a global counter to use, namely "cthm"
+\newtheorem{cthm}{BadTheoremStringName}[section]
+%% end: General AMS environment setup
+%% begin: environments with italicized bodies, theorems and similar
+%% Style is like a theorem, and for statements without proofs
+%% Theorem-like environments in modified "plain" style
+%% We manage the head, do not adjust vertical spacing
+%% Thus "space after theorem head" is necessary
+%% This provides an automatic period after the number
+\newtheoremstyle{ptxplainnotitle}
+  {}% space above
+  {}% space below
+  {\itshape}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {.}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {}% theorem head specification
+%% We now manage punctuation on-sight, elsewhere,
+%% assuming non-trivial content inside a "title"
+\newtheoremstyle{ptxplaintitle}
+  {}% space above
+  {}% space below
+  {\itshape}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% theorem head specification
+%% Only variants actually used in document appear here
+%% Template eventually creates an environment of the given name
+%% No arguments => Theorem 2.6. via "notitle" style variant
+%% One optional argument => Theorem 2.6 Fantastic! via "title" style variant
+%% AMS proof environment is basically fine as-is and special treatment
+%% would certainly interfere with the functioning of \qed, etc.
+%% So we simply localize the default heading
+%% Redefinition of the "proof" environment is to cause a long alternate
+%% title to line-break appropriately.  Code is cut verbatim, by suggestion,
+%% from "Using the amsthm Package" Version 2.20.3, September 2017
+%% end: environments with italicized bodies, theorems and similar
+%% begin: environments with normal bodies, examples, etc.
+%% Other environments go in modified "definition" style
+%% Similar to above
+\newtheoremstyle{ptxdefinitionnotitle}
+  {}% space above
+  {}% space below
+  {}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {.}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {\thmname{#1}\thmnumber{ #2}}% theorem head specification
+\newtheoremstyle{ptxdefinitiontitle}
+  {}% space above
+  {}% space below
+  {}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% theorem head specification
+%% definition: fairly simple numbered block/structure
+\tcbset{ definitionstyle/.style={size=minimal, colback=white, colbacktitle=white, coltitle=black, fonttitle=\bfseries, attach title to upper, after title={\space}} }
+\newtcolorbox[use counter=cthm, number within=section]{definition}[2]{title={{Definition~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, definitionstyle}
+%% end: environments with normal bodies, examples, etc.
+%% Localize LaTeX supplied names (possibly none)
+\renewcommand*{\appendixname}{Appendix}
+\renewcommand*{\abstractname}{Abstract}
+%% Figures, Tables, Listings, Named Lists, Floats
+%% The [H]ere option of the float package fixes floats in-place,
+%% in deference to web usage, where floats are totally irrelevant
+%% You can remove some of this setup, to restore standard LaTeX behavior
+%% HOWEVER, numbering of figures/tables AND theorems/examples/remarks, etc
+%% may de-synchronize with the numbering in the HTML version
+%% You can remove the "placement={H}" option to allow flotation and
+%% preserve numbering, BUT the numbering may then appear "out-of-order"
+%% Floating environments: http://tex.stackexchange.com/questions/95631/
+\usepackage{float}
+\usepackage{newfloat}
+\usepackage{caption}%% Adjust stock figure environment so that it no longer floats
+\SetupFloatingEnvironment{figure}{fileext=lof,placement={H},within=section,name=Figure}
+\captionsetup[figure]{labelfont=bf}
+%% http://tex.stackexchange.com/questions/16195
+\makeatletter
+\let\c@figure\c@cthm
+\makeatother
+%% Footnote Numbering
+%% We reset the footnote counter, as given by numbering.footnotes.level
+\makeatletter\@addtoreset{footnote}{section}\makeatother
+%% More flexible list management, esp. for references
+%% But also for specifying labels (i.e. custom order) on nested lists
+\usepackage{enumitem}
+%% hyperref driver does not need to be specified, it will be detected
+\usepackage{hyperref}
+%% configure hyperref's  \url  to match listings' inline verbatim
+\renewcommand\UrlFont{\small\ttfamily}
+%% Hyperlinking active in PDFs, all links solid and blue
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+\hypersetup{pdftitle={Intro to Topology}}
+%% If you manually remove hyperref, leave in this next command
+\providecommand\phantomsection{}
+%% If tikz has been loaded, replace ampersand with \amp macro
+%% extpfeil package for certain extensible arrows,
+%% as also provided by MathJax extension of the same name
+%% NB: this package loads mtools, which loads calc, which redefines
+%%     \setlength, so it can be removed if it seems to be in the 
+%%     way and your math does not use:
+%%     
+%%     \xtwoheadrightarrow, \xtwoheadleftarrow, \xmapsto, \xlongequal, \xtofrom
+%%     
+%%     we have had to be extra careful with variable thickness
+%%     lines in tables, and so also load this package late
+\usepackage{extpfeil}
+%% Custom Preamble Entries, late (use latex.preamble.late)
+%% Begin: Author-provided packages
+%% (From  docinfo/latex-preamble/package  elements)
+%% End: Author-provided packages
+%% Begin: Author-provided macros
+%% (From  docinfo/macros  element)
+%% Plus three from MBX for XML characters
+\newcommand{\tuple}[1]{\langle #1 \rangle}
+\newcommand{\mb}{\mathbb}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+%% End: Author-provided macros
+%% Title page information for article
+\title{Intro to Topology}
+\author{Steven Clontz\\
+University of South Alabama
+}
+\date{August 18, 2018}
+\begin{document}
+%% Target for xref to top-level element is document start
+\hypertarget{index}{}
+\maketitle
+\thispagestyle{empty}
+\begin{abstract}
+\hypertarget{p-1}{}%
+These are course notes for an introductory course for general topology, to be used in an inquiry-based learning classroom.%
+\par
+\hypertarget{p-2}{}%
+Much of the content has been adapted from Michel Smith's undergraduate topology notes, used with permission.%
+\end{abstract}
+\hypertarget{p-3}{}%
+These are course notes for an introductory course for general topology, to be used in an inquiry-based learning classroom.%
+\typeout{************************************************}
+\typeout{Section 1 Curves and Surfaces}
+\typeout{************************************************}
+\section[{Curves and Surfaces}]{Curves and Surfaces}\label{section-surfaces}
+\hypertarget{p-4}{}%
+In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.%
+\par
+\hypertarget{p-5}{}%
+Unlike the rest of these notes, this section is not meant to be studied rigorously. (For example, what do I mean by ``locally looks like'' in \hyperref[curve-defn]{Definition~\ref{curve-defn}}?)  However, many of these ideas will return later in the course and be handled more carefully.%
+\begin{definition}{}{curve-defn}%
+\hypertarget{p-6}{}%
+A \terminology{curve} is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the real line \(\mathbb R\) or the half line \(\mathbb R^*=\{x\in\mathbb R:x\geq 0\}\).%
+\end{definition}
+\hypertarget{p-7}{}%
+For example, \hyperref[circle-fig]{Figure~\ref{circle-fig}}, \hyperref[figure-parabola]{Figure~\ref{figure-parabola}}, and \hyperref[figure-helix]{Figure~\ref{figure-helix}} are all examples of curves in two or three-dimensional Euclidean space.%
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{A circle\label{circle-fig}}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{A parabola\label{figure-parabola}}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{A helix\label{figure-helix}}
+\end{figure}
+\hypertarget{p-8}{}%
+Note the following differences between \hyperref[circle-fig]{Figure~\ref{circle-fig}} and \hyperref[figure-parabola]{Figure~\ref{figure-parabola}}:%
+\leavevmode%
+\begin{itemize}[label=\textbullet]
+\item{}Removing a point from \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} would split it into two disconnected parts, but \hyperref[circle-fig]{Figure~\ref{circle-fig}} would remain connected after a point is removed.%
+\item{}\hyperref[circle-fig]{Figure~\ref{circle-fig}} is bounded while \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} extends unboundedly. \footnote{This topological distinction makes sense as both are closed subsets of \(\mathbb R^2\); see \hyperref[section-compactness]{Section~\ref{section-compactness}} for more info.\label{fn-1}}%
+\end{itemize}
+\hypertarget{p-9}{}%
+These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} and \hyperref[figure-helix]{Figure~\ref{figure-helix}}, they are in a certain sense the same object that has been bent or stretched into a different shape.%
+\begin{definition}{}{definition-2}%
+\hypertarget{p-10}{}%
+Two objects are said to be \terminology{topologically equivalent} or \terminology{homeomorphic} if one may be bent or stretched into the shape of the other.%
+\end{definition}
+\hypertarget{p-11}{}%
+So this means that all geometrically similar shapes are homeomorphic (as in \hyperref[figure-geometrically-similar]{Figure~\ref{figure-geometrically-similar}}), but we also use the idea of homeomorphism to compare other objects in our daily lives.%
+\par
+\hypertarget{p-12}{}%
+For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. \hyperref[figure-letter-a]{Figure~\ref{figure-letter-a}} illustrates several homeomorphic expressions of the letter ``A''.%
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{Two similar triangles\label{figure-geometrically-similar}}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{The letter ``A'' in several fonts.\label{figure-letter-a}}
+\end{figure}
+\hypertarget{p-13}{}%
+A homeomorphism is more carefully defined in \hyperref[section-continuity]{Section~\ref{section-continuity}}, but the central idea is that of ``neighborhoods''. For each of the letters ``A'' in \hyperref[figure-letter-a]{Figure~\ref{figure-letter-a}}, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see \hyperref[figure-letter-a-neighborhoods]{Figure~\ref{figure-letter-a-neighborhoods}}.%
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{Neighborhoods within the letter ``A''.\label{figure-letter-a-neighborhoods}}
+\end{figure}
+\begin{definition}{}{definition-surface}%
+\hypertarget{p-14}{}%
+A \terminology{surface} is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the plane \(\mathbb R^2\) or the half-plane \(\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}\).%
+\end{definition}
+\hypertarget{p-15}{}%
+A classic example of the topology of surfaces is the following joke: ``A topologist is a mathematician who cannot tell the difference between his doughnut and coffee cup.'' The joke is a lot funnier\footnote{Eh, maybe.\label{fn-2}} once you've seen \href{https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif}{this animated GIF on Wikipedia}.%
+\par
+\hypertarget{p-16}{}%
+The ``doughnut'''s surface is known mathematically as a ``torus'', shown in \hyperref[figure-torus]{Figure~\ref{figure-torus}}. A sphere is shown in \hyperref[figure-sphere]{Figure~\ref{figure-sphere}}, and a surface that cannot be cannot be embedded in \(\mathbb R^3\), the Klein bottle, is shown in \hyperref[figure-klein-bottle]{Figure~\ref{figure-klein-bottle}}.%
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{A torus.\label{figure-torus}}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{A sphere.\label{figure-sphere}}
+\end{figure}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{images/math.jpg}
+\caption{A Klein bottle.\label{figure-klein-bottle}}
+\end{figure}
+\hypertarget{p-17}{}%
+While these shapes appear very different, they can all be defined as a ``quotient space'' (\hyperref[section-quotient-spaces]{Section~\ref{section-quotient-spaces}}) of the unit square in \(\mathbb R^2\).%
+\par
+\hypertarget{p-18}{}%
+In order to study so-called ``topological spaces'' such as these, we will begin by distilling down the notion of a ``neighborhood'' for an arbitrary set.%
+\typeout{************************************************}
+\typeout{Section 2 Topological Spaces}
+\typeout{************************************************}
+\section[{Topological Spaces}]{Topological Spaces}\label{section-topological-spaces}
+\typeout{************************************************}
+\typeout{Section 3 Continuity \& Homeomorphisms}
+\typeout{************************************************}
+\section[{Continuity \& Homeomorphisms}]{Continuity \& Homeomorphisms}\label{section-continuity}
+\typeout{************************************************}
+\typeout{Section 4 Compactness}
+\typeout{************************************************}
+\section[{Compactness}]{Compactness}\label{section-compactness}
+\typeout{************************************************}
+\typeout{Section 5 Connectedness}
+\typeout{************************************************}
+\section[{Connectedness}]{Connectedness}\label{section-connectedness}
+\typeout{************************************************}
+\typeout{Section 6 Metric Spaces}
+\typeout{************************************************}
+\section[{Metric Spaces}]{Metric Spaces}\label{section-metric-spaces}
+\typeout{************************************************}
+\typeout{Section 7 Product Spaces}
+\typeout{************************************************}
+\section[{Product Spaces}]{Product Spaces}\label{section-product-spaces}
+\typeout{************************************************}
+\typeout{Section 8 Quotient Spaces}
+\typeout{************************************************}
+\section[{Quotient Spaces}]{Quotient Spaces}\label{section-quotient-spaces}
+\typeout{************************************************}
+\typeout{Appendix A Naive Set Theory}
+\typeout{************************************************}
+%
+\appendix
+%
+\section[{Naive Set Theory}]{Naive Set Theory}\label{set-theory}
+\hypertarget{p-19}{}%
+A review of basic results concerning sets.%
+\end{document}
