@@ -1,0 +1,165 @@
+<section xml:id="section-surfaces">
+<title>Curves and Surfaces</title>
+<introduction>
+  <p>
+    In this section, we will develop an intuition for a
+    topological space and the purpose of topology by
+    investigating two natural examples of
+    topological spaces: curves and
+    surfaces.
+  </p>
+  <p>
+    Unlike the rest of these notes, this section is
+    not meant to be studied rigorously. (For example,
+    what do I mean by <q>locally looks like</q>
+    in <xref ref="curve-defn"/>?)  However,
+    many of these ideas will return later in the course
+    and be handled more carefully.
+  </p>
+</introduction>
+<definition xml:id="curve-defn">
+  <p>
+    A <term>curve</term> is a set of points such
+    that for every point in the set, the set locally
+    looks like a (possibly bent or curved) copy of 
+    the real line <m>\mathbb R</m> or 
+    the half line <m>\mathbb R^*=\{x\in\mathbb R:x\geq 0\}</m>.
+  </p> 
+</definition>
+<p>
+  For example, <xref ref="circle-fig"/>, <xref ref="figure-parabola"/>,
+  and <xref ref="figure-helix"/> are all examples of curves in
+  two or three-dimensional Euclidean space.
+</p>
+<figure xml:id="circle-fig">
+  <caption>A circle</caption><image source="images/math.jpg"/>
+</figure>
+<figure xml:id="figure-parabola">
+  <caption>A parabola</caption><image source="images/math.jpg"/>
+</figure>
+<figure xml:id="figure-helix">
+  <caption>A helix</caption><image source="images/math.jpg"/>
+</figure>
+<p>
+  Note the following differences between <xref ref="circle-fig"/> and 
+  <xref ref="figure-parabola"/>:
+</p>
+<ul>
+  <li>
+    Removing a point from
+    <xref ref="figure-parabola"/>
+    would split it into two disconnected parts, but
+    <xref ref="circle-fig"/> 
+    would remain connected after a point is removed.
+  </li>
+  <li>
+    <xref ref="circle-fig"/> is bounded while <xref ref="figure-parabola"/>
+    extends unboundedly.
+    <fn>
+      This topological distinction makes sense as both are closed subsets of 
+      <m>\mathbb R^2</m>; see <xref ref="section-compactness"/>
+      for more info.
+    </fn>
+  </li>
+</ul>
+<p>
+  These differences would remain no matter how the curves were
+  stretched or bent. However, while there are certainly geometrical
+  differences beteween
+  <xref ref="figure-parabola"/>
+  and
+  <xref ref="figure-helix"/>,
+  they are in a certain sense the same object that has been bent
+  or stretched into a different shape.
+</p>
+<definition>
+  <p>
+    Two objects are said to be <term>topologically equivalent</term>
+    or <term>homeomorphic</term> if one may be bent or stretched into
+    the shape of the other.
+  </p>
+</definition>
+<p>
+  So this means that all geometrically similar shapes are homeomorphic
+  (as in <xref ref="figure-geometrically-similar"/>),
+  but we also use the idea of homeomorphism to compare other objects
+  in our daily lives.
+</p>
+<p>
+  For example, while many of them are not curves by our definition,
+  the letters of the alphabet may be considered as topological objects.
+  <xref ref="figure-letter-a"/> illustrates several
+  homeomorphic expressions of the letter <q>A</q>.
+</p>
+<figure xml:id="figure-geometrically-similar">
+  <caption>Two similar triangles</caption><image source="images/math.jpg"/>
+</figure>
+<figure xml:id="figure-letter-a">
+  <caption>The letter <q>A</q> in several fonts.</caption>
+  <image source="images/math.jpg"/>
+</figure>
+<p>
+  A homeomorphism is more carefully defined in <xref ref="section-continuity"/>,
+  but the central idea is that of <q>neighborhoods</q>. For each of the
+  letters <q>A</q> in <xref ref="figure-letter-a"/>, note that there are
+  two endpoints and two triad intersections 
+  whose neighborhoods look different from the
+  other neighborhoods within the letter; see
+  <xref ref="figure-letter-a-neighborhoods"/>.
+</p>
+<figure xml:id="figure-letter-a-neighborhoods">
+  <caption>Neighborhoods within the letter <q>A</q>.</caption>
+  <image source="images/math.jpg"/>
+</figure>
+<definition xml:id="definition-surface"> 
+  <p>
+    A <term>surface</term> is a set of points such
+    that for every point in the set, the set locally
+    looks like a (possibly bent or curved) copy of 
+    the plane <m>\mathbb R^2</m>
+    or the half-plane 
+    <m>\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}</m>.
+  </p> 
+</definition>
+<p>
+  A classic example of the topology of surfaces is the following joke:
+  <q>
+    A topologist is a mathematician who cannot tell the difference
+    between his doughnut and coffee cup.
+  </q>
+  The joke is a lot funnier<fn>Eh, maybe.</fn> once you've seen
+  <url href="https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif">
+    this animated GIF on Wikipedia
+  </url>.
+</p>
+<p>
+  The <q>doughnut</q>'s surface is known mathematically as a 
+  <q>torus</q>, shown in <xref ref="figure-torus"/>. A sphere
+  is shown in <xref ref="figure-sphere"/>, and a surface that
+  cannot be cannot be embedded in <m>\mathbb R^3</m>, the Klein
+  bottle, is shown in <xref ref="figure-klein-bottle"/>. 
+</p>
+<figure xml:id="figure-torus">
+  <caption>A torus.</caption>
+  <image source="images/math.jpg"/>
+</figure>
+<figure xml:id="figure-sphere">
+  <caption>A sphere.</caption>
+  <image source="images/math.jpg"/>
+</figure>
+<figure xml:id="figure-klein-bottle">
+  <caption>A Klein bottle.</caption>
+  <image source="images/math.jpg"/>
+</figure>
+<p>
+  While these shapes appear very different, they can all be
+  defined as a <q>quotient space</q> 
+  (<xref ref="section-quotient-spaces"/>)
+  of the unit square in <m>\mathbb R^2</m>.
+</p>
+<p>
+  In order to study so-called <q>topological spaces</q> such as
+  these, we will begin by distilling down the notion of a
+  <q>neighborhood</q> for an arbitrary set.
+</p>
+</section>

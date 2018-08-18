@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2018-08-18T02:02:11Z    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Curves and Surfaces</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']],
+    },
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-article has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+\newcommand{\mb}{\mathbb}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="index.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-topological-spaces.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="index.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-topological-spaces.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<h2 class="link active"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></h2>
+<h2 class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></h2>
+<h2 class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></h2>
+<h2 class="link"><a href="section-compactness.html" data-scroll="section-compactness"><span class="codenumber">4</span> <span class="title">Compactness</span></a></h2>
+<h2 class="link"><a href="section-connectedness.html" data-scroll="section-connectedness"><span class="codenumber">5</span> <span class="title">Connectedness</span></a></h2>
+<h2 class="link"><a href="section-metric-spaces.html" data-scroll="section-metric-spaces"><span class="codenumber">6</span> <span class="title">Metric Spaces</span></a></h2>
+<h2 class="link"><a href="section-product-spaces.html" data-scroll="section-product-spaces"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></h2>
+<h2 class="link"><a href="section-quotient-spaces.html" data-scroll="section-quotient-spaces"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-surfaces"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Curves and Surfaces</span>
+</h2>
+<a href="section-surfaces.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-4">In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.</p>
+<p id="p-5">Unlike the rest of these notes, this section is not meant to be studied rigorously. (For example, what do I mean by “locally looks like” in <a knowl="./knowl/curve-defn.html" title="Definition 1.1">Definition 1.1</a>?)  However, many of these ideas will return later in the course and be handled more carefully.</p></section><article class="definition-like" id="curve-defn"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.1</span>
+</h6>
+<p id="p-6">A <dfn class="terminology">curve</dfn> is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the real line \(\mathbb R\) or the half line \(\mathbb R^*=\{x\in\mathbb R:x\geq 0\}\text{.}\)</p></article><p id="p-7">For example, <a knowl="./knowl/circle-fig.html" title="Figure 1.2">Figure 1.2</a>, <a knowl="./knowl/figure-parabola.html" title="Figure 1.3">Figure 1.3</a>, and <a knowl="./knowl/figure-helix.html" title="Figure 1.4">Figure 1.4</a> are all examples of curves in two or three-dimensional Euclidean space.</p>
+<figure class="figure-like" id="circle-fig"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.2</span> A circle</figcaption></figure><figure class="figure-like" id="figure-parabola"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.3</span> A parabola</figcaption></figure><figure class="figure-like" id="figure-helix"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.4</span> A helix</figcaption></figure><p id="p-8">Note the following differences between <a knowl="./knowl/circle-fig.html" title="Figure 1.2">Figure 1.2</a> and <a knowl="./knowl/figure-parabola.html" title="Figure 1.3">Figure 1.3</a>:</p>
+<ul class="disc">
+<li id="li-1">Removing a point from <a knowl="./knowl/figure-parabola.html" title="Figure 1.3">Figure 1.3</a> would split it into two disconnected parts, but <a knowl="./knowl/circle-fig.html" title="Figure 1.2">Figure 1.2</a> would remain connected after a point is removed.</li>
+<li id="li-2">
+<a knowl="./knowl/circle-fig.html" title="Figure 1.2">Figure 1.2</a> is bounded while <a knowl="./knowl/figure-parabola.html" title="Figure 1.3">Figure 1.3</a> extends unboundedly. <a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a><span id="hk-fn-1" class="hidden-content tex2jax_ignore"><span class="footnote">This topological distinction makes sense as both are closed subsets of \(\mathbb R^2\text{;}\) see <a href="section-compactness.html" class="xref" title="Section 4: Compactness">Section 4</a> for more info.</span></span>
+</li>
+</ul>
+<p id="p-9">These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween <a knowl="./knowl/figure-parabola.html" title="Figure 1.3">Figure 1.3</a> and <a knowl="./knowl/figure-helix.html" title="Figure 1.4">Figure 1.4</a>, they are in a certain sense the same object that has been bent or stretched into a different shape.</p>
+<article class="definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.5</span>
+</h6>
+<p id="p-10">Two objects are said to be <dfn class="terminology">topologically equivalent</dfn> or <dfn class="terminology">homeomorphic</dfn> if one may be bent or stretched into the shape of the other.</p></article><p id="p-11">So this means that all geometrically similar shapes are homeomorphic (as in <a knowl="./knowl/figure-geometrically-similar.html" title="Figure 1.6">Figure 1.6</a>), but we also use the idea of homeomorphism to compare other objects in our daily lives.</p>
+<p id="p-12">For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. <a knowl="./knowl/figure-letter-a.html" title="Figure 1.7">Figure 1.7</a> illustrates several homeomorphic expressions of the letter “A”.</p>
+<figure class="figure-like" id="figure-geometrically-similar"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.6</span> Two similar triangles</figcaption></figure><figure class="figure-like" id="figure-letter-a"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.7</span> The letter “A” in several fonts.</figcaption></figure><p id="p-13">A homeomorphism is more carefully defined in <a href="section-continuity.html" class="xref" title="Section 3: Continuity &amp; Homeomorphisms">Section 3</a>, but the central idea is that of “neighborhoods”. For each of the letters “A” in <a knowl="./knowl/figure-letter-a.html" title="Figure 1.7">Figure 1.7</a>, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see <a knowl="./knowl/figure-letter-a-neighborhoods.html" title="Figure 1.8">Figure 1.8</a>.</p>
+<figure class="figure-like" id="figure-letter-a-neighborhoods"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.8</span> Neighborhoods within the letter “A”.</figcaption></figure><article class="definition-like" id="definition-surface"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.9</span>
+</h6>
+<p id="p-14">A <dfn class="terminology">surface</dfn> is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the plane \(\mathbb R^2\) or the half-plane \(\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}\text{.}\)</p></article><p id="p-15">A classic example of the topology of surfaces is the following joke: “A topologist is a mathematician who cannot tell the difference between his doughnut and coffee cup.” The joke is a lot funnier<a knowl="" class="id-ref" refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a><span id="hk-fn-2" class="hidden-content tex2jax_ignore"><span class="footnote">Eh, maybe.</span></span> once you've seen <a class="url" href="https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif" target="_blank">this animated GIF on Wikipedia</a>.</p>
+<p id="p-16">The “doughnut”'s surface is known mathematically as a “torus”, shown in <a knowl="./knowl/figure-torus.html" title="Figure 1.10">Figure 1.10</a>. A sphere is shown in <a knowl="./knowl/figure-sphere.html" title="Figure 1.11">Figure 1.11</a>, and a surface that cannot be cannot be embedded in \(\mathbb R^3\text{,}\) the Klein bottle, is shown in <a knowl="./knowl/figure-klein-bottle.html" title="Figure 1.12">Figure 1.12</a>.</p>
+<figure class="figure-like" id="figure-torus"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.10</span> A torus.</figcaption></figure><figure class="figure-like" id="figure-sphere"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.11</span> A sphere.</figcaption></figure><figure class="figure-like" id="figure-klein-bottle"><div style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/math.jpg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.12</span> A Klein bottle.</figcaption></figure><p id="p-17">While these shapes appear very different, they can all be defined as a “quotient space” (<a href="section-quotient-spaces.html" class="xref" title="Section 8: Quotient Spaces">Section 8</a>) of the unit square in \(\mathbb R^2\text{.}\)</p>
+<p id="p-18">In order to study so-called “topological spaces” such as these, we will begin by distilling down the notion of a “neighborhood” for an arbitrary set.</p></section></div></main>
+</div>
+</body>
+</html>

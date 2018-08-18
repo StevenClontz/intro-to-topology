@@ -2,4 +2,5 @@
 
 cd build
 rm -rf *
-xsltproc ../../mathbook/xsl/mathbook-html.xsl ../index.xml
+cp -r ../images .
+xsltproc --xinclude ../../mathbook/xsl/mathbook-html.xsl ../index.xml
