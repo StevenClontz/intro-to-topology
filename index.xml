@@ -46,6 +46,8 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
         <macros>
           \newcommand{\tuple}[1]{\langle #1 \rangle}
           \newcommand{\mb}{\mathbb}
+          \newcommand{\mc}{\mathcal}
+          \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
         </macros>
     </docinfo>
 
@@ -84,7 +86,7 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 
 
 <xi:include href="sections/surfaces.xml" />
-<section xml:id="section-topological-spaces"><title>Topological Spaces</title></section>
+<xi:include href="sections/topological-spaces.xml" />
 <section xml:id="section-continuity"><title>Continuity <ampersand/> Homeomorphisms</title></section>
 <section xml:id="section-compactness"><title>Compactness</title></section>
 <section xml:id="section-connectedness"><title>Connectedness</title></section>

@@ -1,0 +1,85 @@
+<section xml:id="section-topological-spaces">
+<title>Topological Spaces</title>
+<definition>
+<p>
+  Let <m>a,b\in\mb R</m>. The <term>open interval</term>
+  from <m>a</m> to <m>b</m> is the set
+</p>
+<me>
+  (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
+</me>
+</definition>
+<definition>
+<p>
+  Let <m>x\in\mb R</m> and <m>S\subseteq\mb R</m>.
+  The point <m>x</m> is a <term>limit point</term> of the set
+  <m>S</m> if and only if for every open interval <m>(a,b)</m> containing <m>x</m>,
+  there is a point <m>y\in S</m> such that <m>x\not=y</m> and
+  <m>y\in(a,b)</m>.
+</p>
+</definition>
+<example>
+<p>
+  Determine if each set has the number <m>0</m> as a limit point. 
+</p>
+<ol>
+  <li><m>\mb Z</m></li>
+  <li><m>\mb R\setminus\mb Z</m></li>
+  <li><m>\setBuilder{\frac{1}{n+1}}{n\in\mb N}</m></li>
+  <li><m>\mb Q</m></li>
+  <li>A finite set <m>F\subseteq\mb R</m></li>
+</ol>
+</example>
+<definition>
+<p>
+  A subset <m>U\subseteq\mb R</m> is called <term>open</term>
+  if and only if for every point <m>x\in U</m>, there exists an open interval
+  <m>(a,b)</m> such that <m>x\in(a,b)\subseteq U</m>.
+</p>
+</definition>
+<example>
+<p>
+  Determine if each set is open or not open.
+</p>
+<ol>
+  <li><m>[\pi,42)</m></li>
+  <li><m>(-3,-1)\cup(4,5.5)</m></li>
+  <li><m>\setBuilder{x}{2x+1>5}</m></li>
+  <li><m>\mb Z</m></li>
+  <li><m>\mb R\setminus\mb Z</m></li>
+  <li><m>\mb Q</m></li>
+</ol>
+</example>
+<theorem>
+<p>
+  A subset <m>U\subseteq\mb R</m> is open if and only if there exists a
+  collection of open intervals <m>\mc U</m> such that <m>U=\bigcup\mc U</m>.
+</p>
+</theorem>
+<proposition>
+<p>
+  Let <m>x\in\mb R</m> and <m>S\subseteq\mb R</m>.
+  The point <m>x</m> is a limit point of the set
+  <m>S</m> if and only if for every open set <m>U</m> containing <m>x</m>,
+  there is a point <m>y\in S</m> such that <m>x\not=y</m> and
+  <m>y\in U</m>.
+</p>
+</proposition>
+<theorem>
+<p>
+  The open subsets of <m>\mb R</m> satisfy the following properties.
+</p>
+<ol>
+  <li>
+    <m>\emptyset</m> and <m>\mb R</m> are open sets.
+  </li>
+  <li>
+    If <m>\mc U</m> is a collection of open sets, then <m>\bigcup\mc U</m>
+    is also an open set.
+  </li>
+  <li>
+    If <m>U,V</m> are open sets, then <m>U\cap V</m> is an open set.
+  </li>
+</ol>
+</theorem>
+</section>
