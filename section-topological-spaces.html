@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-08-22T13:26:15-05:00    *-->
+<!--*    on 2018-08-22T14:09:04-05:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -43,6 +43,8 @@ MathJax.Hub.Config({
 <body class="mathbook-article has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -77,7 +79,56 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-topological-spaces"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Topological Spaces</span>
 </h2>
-<a href="section-topological-spaces.html" class="permalink">¶</a></section></div></main>
+<a href="section-topological-spaces.html" class="permalink">¶</a><article class="definition-like" id="definition-4"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.1</span>
+</h6>
+<p id="p-19">Let \(a,b\in\mb R\text{.}\) The <dfn class="terminology">open interval</dfn> from \(a\) to \(b\) is the set</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
+\end{equation*}
+</div></article><article class="definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.2</span>
+</h6>
+<p id="p-20">Let \(x\in\mb R\) and \(S\subseteq\mb R\text{.}\) The point \(x\) is a <dfn class="terminology">limit point</dfn> of the set \(S\) if and only if for every open interval \((a,b)\) containing \(x\text{,}\) there is a point \(y\in S\) such that \(x\not=y\) and \(y\in(a,b)\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-1" id="example-1"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3</span>
+</h6></a></article><div id="hk-example-1" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-21">Determine if each set has the number \(0\) as a limit point.</p>
+<ol class="decimal">
+<li id="li-3">\(\mb Z\)</li>
+<li id="li-4">\(\mb R\setminus\mb Z\)</li>
+<li id="li-5">\(\setBuilder{\frac{1}{n+1}}{n\in\mb N}\)</li>
+<li id="li-6">\(\mb Q\)</li>
+<li id="li-7">A finite set \(F\subseteq\mb R\)</li>
+</ol></article></div>
+<article class="definition-like" id="definition-6"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.4</span>
+</h6>
+<p id="p-22">A subset \(U\subseteq\mb R\) is called <dfn class="terminology">open</dfn> if and only if for every point \(x\in U\text{,}\) there exists an open interval \((a,b)\) such that \(x\in(a,b)\subseteq U\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-2" id="example-2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.5</span>
+</h6></a></article><div id="hk-example-2" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-23">Determine if each set is open or not open.</p>
+<ol class="decimal">
+<li id="li-8">\([\pi,42)\)</li>
+<li id="li-9">\((-3,-1)\cup(4,5.5)\)</li>
+<li id="li-10">\(\setBuilder{x}{2x+1&gt;5}\)</li>
+<li id="li-11">\(\mb Z\)</li>
+<li id="li-12">\(\mb R\setminus\mb Z\)</li>
+<li id="li-13">\(\mb Q\)</li>
+</ol></article></div>
+<article class="theorem-like" id="theorem-1"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.6</span>
+</h6>
+<p id="p-24">A subset \(U\subseteq\mb R\) is open if and only if there exists a collection of open intervals \(\mc U\) such that \(U=\bigcup\mc U\text{.}\)</p></article><article class="theorem-like" id="proposition-1"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.7</span>
+</h6>
+<p id="p-25">Let \(x\in\mb R\) and \(S\subseteq\mb R\text{.}\) The point \(x\) is a limit point of the set \(S\) if and only if for every open set \(U\) containing \(x\text{,}\) there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\text{.}\)</p></article><article class="theorem-like" id="theorem-2"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.8</span>
+</h6>
+<p id="p-26">The open subsets of \(\mb R\) satisfy the following properties.</p>
+<ol class="decimal">
+<li id="li-14">\(\emptyset\) and \(\mb R\) are open sets.</li>
+<li id="li-15">If \(\mc U\) is a collection of open sets, then \(\bigcup\mc U\) is also an open set.</li>
+<li id="li-16">If \(U,V\) are open sets, then \(U\cap V\) is an open set.</li>
+</ol></article></section></div></main>
 </div>
 </body>
 </html>
