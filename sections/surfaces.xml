@@ -32,13 +32,13 @@
   two or three-dimensional Euclidean space.
 </p>
 <figure xml:id="circle-fig">
-  <caption>A circle</caption><image source="images/math.jpg"/>
+  <caption>A circle</caption><image source="images/circle.jpg"/>
 </figure>
 <figure xml:id="figure-parabola">
-  <caption>A parabola</caption><image source="images/math.jpg"/>
+  <caption>A parabola</caption><image source="images/parabola.jpg"/>
 </figure>
 <figure xml:id="figure-helix">
-  <caption>A helix</caption><image source="images/math.jpg"/>
+  <caption>A helix</caption><image source="images/helix.jpg"/>
 </figure>
 <p>
   Note the following differences between <xref ref="circle-fig"/> and 
@@ -81,7 +81,7 @@
 </definition>
 <p>
   So this means that all geometrically similar shapes are homeomorphic
-  (as in <xref ref="figure-geometrically-similar"/>),
+  (as in <xref ref="figure-similar-triangles"/>),
   but we also use the idea of homeomorphism to compare other objects
   in our daily lives.
 </p>
@@ -91,12 +91,12 @@
   <xref ref="figure-letter-a"/> illustrates several
   homeomorphic expressions of the letter <q>A</q>.
 </p>
-<figure xml:id="figure-geometrically-similar">
-  <caption>Two similar triangles</caption><image source="images/math.jpg"/>
+<figure xml:id="figure-similar-triangles">
+  <caption>Two similar triangles</caption><image source="images/similar-triangles.jpg"/>
 </figure>
 <figure xml:id="figure-letter-a">
   <caption>The letter <q>A</q> in several fonts.</caption>
-  <image source="images/math.jpg"/>
+  <image source="images/letter-a.jpg"/>
 </figure>
 <p>
   A homeomorphism is more carefully defined in <xref ref="section-continuity"/>,
@@ -109,7 +109,7 @@
 </p>
 <figure xml:id="figure-letter-a-neighborhoods">
   <caption>Neighborhoods within the letter <q>A</q>.</caption>
-  <image source="images/math.jpg"/>
+  <image source="images/letter-a-neighborhoods.jpg"/>
 </figure>
 <definition xml:id="definition-surface"> 
   <p>
@@ -141,15 +141,15 @@
 </p>
 <figure xml:id="figure-torus">
   <caption>A torus.</caption>
-  <image source="images/math.jpg"/>
+  <image source="images/torus.jpg"/>
 </figure>
 <figure xml:id="figure-sphere">
   <caption>A sphere.</caption>
-  <image source="images/math.jpg"/>
+  <image source="images/sphere.jpg"/>
 </figure>
 <figure xml:id="figure-klein-bottle">
   <caption>A Klein bottle.</caption>
-  <image source="images/math.jpg"/>
+  <image source="images/klein-bottle.png"/>
 </figure>
 <p>
   While these shapes appear very different, they can all be
