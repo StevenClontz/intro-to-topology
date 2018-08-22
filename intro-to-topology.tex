@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-08-18T18:00:17Z    *%
+%*    on 2018-08-22T13:26:15-05:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -26,10 +26,12 @@
 \usepackage{xcolor}
 %% Colored boxes, and much more, though mostly styling
 %% skins library provides "enhanced" skin, employing tikzpicture
+%% vignette library provides fancy shaded frames
 %% boxes may be configured as "breakable" or "unbreakable"
 %% "raster" controls grids of boxes, aka side-by-side
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
+\tcbuselibrary{vignette}
 \tcbuselibrary{breakable}
 \tcbuselibrary{raster}
 %% xparse allows the construction of more robust commands,
@@ -119,68 +121,12 @@
 %% simply to provide a global counter to use, namely "cthm"
 \newtheorem{cthm}{BadTheoremStringName}[section]
 %% end: General AMS environment setup
-%% begin: environments with italicized bodies, theorems and similar
-%% Style is like a theorem, and for statements without proofs
-%% Theorem-like environments in modified "plain" style
-%% We manage the head, do not adjust vertical spacing
-%% Thus "space after theorem head" is necessary
-%% This provides an automatic period after the number
-\newtheoremstyle{ptxplainnotitle}
-  {}% space above
-  {}% space below
-  {\itshape}% body font
-  {}% indent amount
-  {\bfseries}% theorem head font
-  {.}% punctuation after theorem head
-  {0.5em}% space after theorem head
-  {}% theorem head specification
-%% We now manage punctuation on-sight, elsewhere,
-%% assuming non-trivial content inside a "title"
-\newtheoremstyle{ptxplaintitle}
-  {}% space above
-  {}% space below
-  {\itshape}% body font
-  {}% indent amount
-  {\bfseries}% theorem head font
-  {}% punctuation after theorem head
-  {0.5em}% space after theorem head
-  {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% theorem head specification
-%% Only variants actually used in document appear here
-%% Template eventually creates an environment of the given name
-%% No arguments => Theorem 2.6. via "notitle" style variant
-%% One optional argument => Theorem 2.6 Fantastic! via "title" style variant
-%% AMS proof environment is basically fine as-is and special treatment
-%% would certainly interfere with the functioning of \qed, etc.
-%% So we simply localize the default heading
-%% Redefinition of the "proof" environment is to cause a long alternate
-%% title to line-break appropriately.  Code is cut verbatim, by suggestion,
-%% from "Using the amsthm Package" Version 2.20.3, September 2017
-%% end: environments with italicized bodies, theorems and similar
-%% begin: environments with normal bodies, examples, etc.
-%% Other environments go in modified "definition" style
-%% Similar to above
-\newtheoremstyle{ptxdefinitionnotitle}
-  {}% space above
-  {}% space below
-  {}% body font
-  {}% indent amount
-  {\bfseries}% theorem head font
-  {.}% punctuation after theorem head
-  {0.5em}% space after theorem head
-  {\thmname{#1}\thmnumber{ #2}}% theorem head specification
-\newtheoremstyle{ptxdefinitiontitle}
-  {}% space above
-  {}% space below
-  {}% body font
-  {}% indent amount
-  {\bfseries}% theorem head font
-  {}% punctuation after theorem head
-  {0.5em}% space after theorem head
-  {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% theorem head specification
+%%
+%% tcolorbox, with styles, for DEFINITION-LIKE
+%%
 %% definition: fairly simple numbered block/structure
-\tcbset{ definitionstyle/.style={size=minimal, colback=white, colbacktitle=white, coltitle=black, fonttitle=\bfseries, attach title to upper, after title={\space}} }
-\newtcolorbox[use counter=cthm, number within=section]{definition}[2]{title={{Definition~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, definitionstyle}
-%% end: environments with normal bodies, examples, etc.
+\tcbset{ definitionstyle/.style={size=minimal, boxrule=-0.3pt, frame empty, colback=white, colbacktitle=white, coltitle=black, fonttitle=\normalfont\bfseries, attach title to upper, after title={\space}, after upper={\hfill{}\(\lozenge\)}, } }
+\newtcolorbox[use counter=cthm, number within=section]{definition}[2]{title={{Definition~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, definitionstyle, }
 %% Localize LaTeX supplied names (possibly none)
 \renewcommand*{\appendixname}{Appendix}
 \renewcommand*{\abstractname}{Abstract}
@@ -247,7 +193,7 @@
 \author{Steven Clontz\\
 University of South Alabama
 }
-\date{August 18, 2018}
+\date{August 22, 2018}
 \begin{document}
 %% Target for xref to top-level element is document start
 \hypertarget{index}{}
@@ -262,9 +208,12 @@ Much of the content has been adapted from Michel Smith's undergraduate topology 
 \end{abstract}
 \hypertarget{p-3}{}%
 These are course notes for an introductory course for general topology, to be used in an inquiry-based learning classroom.%
+%
+%
 \typeout{************************************************}
 \typeout{Section 1 Curves and Surfaces}
 \typeout{************************************************}
+%
 \section[{Curves and Surfaces}]{Curves and Surfaces}\label{section-surfaces}
 \hypertarget{p-4}{}%
 In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.%
@@ -279,17 +228,17 @@ A \terminology{curve} is a set of points such that for every point in the set, t
 For example, \hyperref[circle-fig]{Figure~\ref{circle-fig}}, \hyperref[figure-parabola]{Figure~\ref{figure-parabola}}, and \hyperref[figure-helix]{Figure~\ref{figure-helix}} are all examples of curves in two or three-dimensional Euclidean space.%
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/circle.jpg}
 \caption{A circle\label{circle-fig}}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/parabola.jpg}
 \caption{A parabola\label{figure-parabola}}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/helix.jpg}
 \caption{A helix\label{figure-helix}}
 \end{figure}
 \hypertarget{p-8}{}%
@@ -306,25 +255,25 @@ These differences would remain no matter how the curves were stretched or bent. 
 Two objects are said to be \terminology{topologically equivalent} or \terminology{homeomorphic} if one may be bent or stretched into the shape of the other.%
 \end{definition}
 \hypertarget{p-11}{}%
-So this means that all geometrically similar shapes are homeomorphic (as in \hyperref[figure-geometrically-similar]{Figure~\ref{figure-geometrically-similar}}), but we also use the idea of homeomorphism to compare other objects in our daily lives.%
+So this means that all geometrically similar shapes are homeomorphic (as in \hyperref[figure-similar-triangles]{Figure~\ref{figure-similar-triangles}}), but we also use the idea of homeomorphism to compare other objects in our daily lives.%
 \par
 \hypertarget{p-12}{}%
 For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. \hyperref[figure-letter-a]{Figure~\ref{figure-letter-a}} illustrates several homeomorphic expressions of the letter ``A''.%
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
-\caption{Two similar triangles\label{figure-geometrically-similar}}
+\includegraphics[width=1\linewidth]{images/similar-triangles.jpg}
+\caption{Two similar triangles\label{figure-similar-triangles}}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/letter-a.jpg}
 \caption{The letter ``A'' in several fonts.\label{figure-letter-a}}
 \end{figure}
 \hypertarget{p-13}{}%
 A homeomorphism is more carefully defined in \hyperref[section-continuity]{Section~\ref{section-continuity}}, but the central idea is that of ``neighborhoods''. For each of the letters ``A'' in \hyperref[figure-letter-a]{Figure~\ref{figure-letter-a}}, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see \hyperref[figure-letter-a-neighborhoods]{Figure~\ref{figure-letter-a-neighborhoods}}.%
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/letter-a-neighborhoods.jpg}
 \caption{Neighborhoods within the letter ``A''.\label{figure-letter-a-neighborhoods}}
 \end{figure}
 \begin{definition}{}{definition-surface}%
@@ -338,17 +287,17 @@ A classic example of the topology of surfaces is the following joke: ``A topolog
 The ``doughnut'''s surface is known mathematically as a ``torus'', shown in \hyperref[figure-torus]{Figure~\ref{figure-torus}}. A sphere is shown in \hyperref[figure-sphere]{Figure~\ref{figure-sphere}}, and a surface that cannot be cannot be embedded in \(\mathbb R^3\), the Klein bottle, is shown in \hyperref[figure-klein-bottle]{Figure~\ref{figure-klein-bottle}}.%
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/torus.jpg}
 \caption{A torus.\label{figure-torus}}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/sphere.jpg}
 \caption{A sphere.\label{figure-sphere}}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=1\linewidth]{images/math.jpg}
+\includegraphics[width=1\linewidth]{images/klein-bottle.png}
 \caption{A Klein bottle.\label{figure-klein-bottle}}
 \end{figure}
 \hypertarget{p-17}{}%
@@ -356,37 +305,61 @@ While these shapes appear very different, they can all be defined as a ``quotien
 \par
 \hypertarget{p-18}{}%
 In order to study so-called ``topological spaces'' such as these, we will begin by distilling down the notion of a ``neighborhood'' for an arbitrary set.%
+%
+%
 \typeout{************************************************}
 \typeout{Section 2 Topological Spaces}
 \typeout{************************************************}
+%
 \section[{Topological Spaces}]{Topological Spaces}\label{section-topological-spaces}
+%
+%
 \typeout{************************************************}
 \typeout{Section 3 Continuity \& Homeomorphisms}
 \typeout{************************************************}
+%
 \section[{Continuity \& Homeomorphisms}]{Continuity \& Homeomorphisms}\label{section-continuity}
+%
+%
 \typeout{************************************************}
 \typeout{Section 4 Compactness}
 \typeout{************************************************}
+%
 \section[{Compactness}]{Compactness}\label{section-compactness}
+%
+%
 \typeout{************************************************}
 \typeout{Section 5 Connectedness}
 \typeout{************************************************}
+%
 \section[{Connectedness}]{Connectedness}\label{section-connectedness}
+%
+%
 \typeout{************************************************}
 \typeout{Section 6 Metric Spaces}
 \typeout{************************************************}
+%
 \section[{Metric Spaces}]{Metric Spaces}\label{section-metric-spaces}
+%
+%
 \typeout{************************************************}
 \typeout{Section 7 Product Spaces}
 \typeout{************************************************}
+%
 \section[{Product Spaces}]{Product Spaces}\label{section-product-spaces}
+%
+%
 \typeout{************************************************}
 \typeout{Section 8 Quotient Spaces}
 \typeout{************************************************}
+%
 \section[{Quotient Spaces}]{Quotient Spaces}\label{section-quotient-spaces}
+%
+%
 \typeout{************************************************}
 \typeout{Appendix A Naive Set Theory}
 \typeout{************************************************}
+%
 %
 \appendix
 %
