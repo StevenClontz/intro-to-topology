@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
+ <mathbook xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <docinfo>
+        <macros>
+          \newcommand{\tuple}[1]{\langle #1 \rangle}
+          \newcommand{\mb}{\mathbb}
+          \newcommand{\mc}{\mathcal}
+          \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+        </macros>
+    </docinfo>
+
+    <article xml:id="index">
+        <title>Intro to Topology</title>
+
+        <frontmatter>
+
+            <titlepage>
+                <author>
+                    <personname>Steven Clontz</personname>
+                    <institution>University of South Alabama</institution>
+                </author>
+                <date><today /></date>
+            </titlepage>
+
+            <abstract>
+                <p>
+                  These are course notes for an introductory course for
+                  general topology, to be used in an inquiry-based learning classroom.
+                </p>
+                <p>
+                  Some of this content has been adapted from Michel Smith's undergraduate
+                  topology notes, used with permission.
+                </p>
+                <p>
+                  Dr. Clontz's website for students is <url href="https://prof.clontz.org"/>.
+                  His personal website is <url href="https://clontz.org"/>.
+                </p>
+            </abstract>
+
+        </frontmatter>
+
+        <introduction>
+           <p>
+                  These are course notes for an introductory course for
+                  general topology, to be used in an inquiry-based learning classroom.
+           </p>
+        </introduction>
+
+
+<xi:include href="sections/surfaces.xml" />
+<xi:include href="sections/topological-spaces.xml" />
+<section xml:id="section-continuity"><title>Continuity <ampersand/> Homeomorphisms</title></section>
+<section xml:id="section-compactness"><title>Compactness</title></section>
+<section xml:id="section-connectedness"><title>Connectedness</title></section>
+<section xml:id="section-metric-spaces"><title>Metric Spaces</title></section>
+<section xml:id="section-product-spaces"><title>Product Spaces</title></section>
+<section xml:id="section-quotient-spaces"><title>Quotient Spaces</title></section>
+
+<backmatter>
+<xi:include href="sections/set-theory.xml" />
+</backmatter>
+</article>
+
+</mathbook>
 <!--********************************************************************
 Copyright 2015 Robert A. Beezer
 
@@ -40,63 +104,3 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/mathbook-sage-doctest.xsl minimal.xml -->
 <!--     <read further instructions in> minimal.py                                                -->
 
- <mathbook xmlns:xi="http://www.w3.org/2001/XInclude">
-
-    <docinfo>
-        <macros>
-          \newcommand{\tuple}[1]{\langle #1 \rangle}
-          \newcommand{\mb}{\mathbb}
-          \newcommand{\mc}{\mathcal}
-          \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
-        </macros>
-    </docinfo>
-
-    <article xml:id="index">
-        <title>Intro to Topology</title>
-
-        <frontmatter>
-
-            <titlepage>
-                <author>
-                    <personname>Steven Clontz</personname>
-                    <institution>University of South Alabama</institution>
-                </author>
-                <date><today /></date>
-            </titlepage>
-
-            <abstract>
-                <p>
-                  These are course notes for an introductory course for
-                  general topology, to be used in an inquiry-based learning classroom.
-                </p>
-                <p>
-                  Much of the content has been adapted from Michel Smith's undergraduate
-                  topology notes, used with permission.
-                </p>
-            </abstract>
-
-        </frontmatter>
-
-        <introduction>
-           <p>
-                  These are course notes for an introductory course for
-                  general topology, to be used in an inquiry-based learning classroom.
-           </p>
-        </introduction>
-
-
-<xi:include href="sections/surfaces.xml" />
-<xi:include href="sections/topological-spaces.xml" />
-<section xml:id="section-continuity"><title>Continuity <ampersand/> Homeomorphisms</title></section>
-<section xml:id="section-compactness"><title>Compactness</title></section>
-<section xml:id="section-connectedness"><title>Connectedness</title></section>
-<section xml:id="section-metric-spaces"><title>Metric Spaces</title></section>
-<section xml:id="section-product-spaces"><title>Product Spaces</title></section>
-<section xml:id="section-quotient-spaces"><title>Quotient Spaces</title></section>
-
-<backmatter>
-<xi:include href="sections/set-theory.xml" />
-</backmatter>
-</article>
-
-</mathbook>
