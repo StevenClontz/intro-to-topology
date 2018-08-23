@@ -8,6 +8,7 @@
           \newcommand{\mb}{\mathbb}
           \newcommand{\mc}{\mathcal}
           \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+          \newcommand{\setList}[1]{\left\{#1\right\}}
         </macros>
     </docinfo>
 

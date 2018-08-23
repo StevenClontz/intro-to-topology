@@ -30,7 +30,7 @@
   <li>A finite set <m>F\subseteq\mb R</m></li>
 </ol>
 </example>
-<definition>
+<definition xml:id="euclidean-open-sets">
 <p>
   A subset <m>U\subseteq\mb R</m> is called <term>open</term>
   if and only if for every point <m>x\in U</m>, there exists an open interval
@@ -48,6 +48,7 @@
   <li><m>\mb Z</m></li>
   <li><m>\mb R\setminus\mb Z</m></li>
   <li><m>\mb Q</m></li>
+  <li>A finite set <m>F\subseteq\mb R</m></li>
 </ol>
 </example>
 <theorem>
@@ -65,7 +66,7 @@
   <m>y\in U</m>.
 </p>
 </proposition>
-<theorem>
+<theorem xml:id="euclidean-topology-verification">
 <p>
   The open subsets of <m>\mb R</m> satisfy the following properties.
 </p>
@@ -82,4 +83,117 @@
   </li>
 </ol>
 </theorem>
+<definition>
+<p>
+  Let <m>X</m> be a set, and let <m>\mc T\subseteq \mc P(X)</m> satisfy
+  the following properties.
+</p>
+<ol>
+  <li>
+    <m>\emptyset,X\in\mc T</m>.
+  </li>
+  <li>
+    If <m>\mc U\subseteq\mc T</m>, then <m>\bigcup\mc U\in\mc T</m>.
+  </li>
+  <li>
+    If <m>U,V\in\mc T</m>, then <m>U\cap V\in\mc T</m>.
+  </li>
+</ol>
+<p>
+  Then <m>\mc T</m> is called a <term>topology</term> on <m>X</m>,
+  the pair <m>\tuple{X,\mc T}</m> is called a <term>topological space</term>,
+  and elements <m>U\in\mc T</m> are called <term>open sets</term> of the space.
+  (Usually <m>\tuple{X,\mc T}</m> is abbreviated to just <m>X</m> when the
+  topology is known from context.)
+</p>
+</definition>
+<definition>
+<p>
+  Let <m>\mc T\subseteq\mc P(\mb R)</m> be the collection of open subsets
+  of <m>\mb R</m> defined by <xref ref="euclidean-open-sets"/>.
+  Then by <xref ref="euclidean-topology-verification"/>, <m>\mc T</m>
+  is a valid topology for <m>\mb R</m> called the <term>Euclidean topology</term>.
+</p>
+</definition>
+<theorem>
+<p>
+  Let <m>X</m> be any set. Then the following sets are topologies on <m>X</m>.
+</p>
+<ol>
+  <li><m>\mc T=\mc P(X)</m> is called the <term>discrete topology</term>.</li>
+  <li><m>\mc T=\{\emptyset,X\}</m> is called the <term>indiscrete topology</term>.</li>
+</ol>
+</theorem>
+<proposition>
+<p>
+  Let <m>\mc T</m> be a topology, and let <m>\mc U\subseteq\mc T</m> be finite. 
+  Then <m>\bigcap\mc U\in\mc T</m>.
+</p>
+</proposition>
+<proposition>
+<p>
+  Let <m>\mc T</m> be the Euclidean topology. There exists a collection
+  <m>\mc U=\{U_n:n\in\mb N\}</m> such that <m>\bigcap\mc U\not\in\mc T</m>.
+</p>
+</proposition>
+<definition>
+<p>
+  Let <m>a,b\in\mb R\cup\setList{-\infty,\infty}</m>. The
+  following are called <term>intervals</term> of real numbers.
+</p>
+<me>
+  (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
+</me>
+<me>
+  [a,b)=\setBuilder{x\in\mb R}{a\leq x\lt b}
+</me>
+<me>
+  (a,b]=\setBuilder{x\in\mb R}{a\lt x\leq b}
+</me>
+<me>
+  [a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
+</me>
+</definition>
+<example>
+<p>
+  Show that each of the following is an example of a topological space 
+  <m>\tuple{X,\mc T}</m>.
+</p>
+<ol>
+  <li>
+    Let <m>X=\mb R</m> and 
+    <m>
+      \mc T=\setBuilder{(x,\infty)}{x\in\mb R\cup\setList{-\infty}}
+      \cup\setList{\emptyset}
+    </m>.
+  </li>
+  <li>
+    Let <m>X=\mb R</m> and 
+    <m>
+      \mc T=\setBuilder{(x,y)}{
+        x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
+      }\cup\setList{\emptyset}
+    </m>.
+  </li>
+  <li>
+    Let <m>X=\mb R</m> and 
+    <m>U\in\mc T</m> if for each <m>x\in U</m>, there exists <m>a,b\in\mb R</m>
+    such that <m>x\in[a,b)\subseteq U</m>.
+  </li>
+  <li>
+    Let <m>X=\setList{0,1}</m> and <m>\mc T=\setList{\emptyset,\setList{0},X}</m>.
+  </li>
+  <li>
+    Let <m>X=\mb Z</m>, <m>E=\setBuilder{n\in\mb Z}{n\text{ is even}}</m>,
+    <m>D=\setBuilder{n\in\mb Z}{n\text{ is odd}}</m>, and
+    <m>\mc T=\setList{\emptyset,E,D,X}</m>.
+  </li>
+</ol>
+</example>
+<definition>
+<p>
+  The following are known as <term>separation axioms</term> for a topological space
+  <m>\tuple{X,\mc T}</m>. TODO
+</p>
+</definition>
 </section>
