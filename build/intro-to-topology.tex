@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-08-22T14:45:23-05:00    *%
+%*    on 2018-08-23T16:56:12-05:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -201,6 +201,7 @@
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+\newcommand{\setList}[1]{\left\{#1\right\}}
 \newcommand{\lt}{<}
 \newcommand{\gt}{>}
 \newcommand{\amp}{&}
@@ -210,7 +211,7 @@
 \author{Steven Clontz\\
 University of South Alabama
 }
-\date{August 22, 2018}
+\date{August 23, 2018}
 \begin{document}
 %% Target for xref to top-level element is document start
 \hypertarget{index}{}
@@ -356,7 +357,7 @@ Determine if each set has the number \(0\) as a limit point.%
 \item\hypertarget{li-7}{}A finite set \(F\subseteq\mb R\)%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-6}%
+\begin{definition}{}{euclidean-open-sets}%
 \hypertarget{p-23}{}%
 A subset \(U\subseteq\mb R\) is called \terminology{open} if and only if for every point \(x\in U\), there exists an open interval \((a,b)\) such that \(x\in(a,b)\subseteq U\).%
 \end{definition}
@@ -371,6 +372,7 @@ Determine if each set is open or not open.%
 \item\hypertarget{li-11}{}\(\mb Z\)%
 \item\hypertarget{li-12}{}\(\mb R\setminus\mb Z\)%
 \item\hypertarget{li-13}{}\(\mb Q\)%
+\item\hypertarget{li-14}{}A finite set \(F\subseteq\mb R\)%
 \end{enumerate}
 \end{example}
 \begin{theorem}{}{}{theorem-1}%
@@ -381,16 +383,88 @@ A subset \(U\subseteq\mb R\) is open if and only if there exists a collection of
 \hypertarget{p-26}{}%
 Let \(x\in\mb R\) and \(S\subseteq\mb R\). The point \(x\) is a limit point of the set \(S\) if and only if for every open set \(U\) containing \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\).%
 \end{proposition}
-\begin{theorem}{}{}{theorem-2}%
+\begin{theorem}{}{}{euclidean-topology-verification}%
 \hypertarget{p-27}{}%
 The open subsets of \(\mb R\) satisfy the following properties.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-14}{}\(\emptyset\) and \(\mb R\) are open sets.%
-\item\hypertarget{li-15}{}If \(\mc U\) is a collection of open sets, then \(\bigcup\mc U\) is also an open set.%
-\item\hypertarget{li-16}{}If \(U,V\) are open sets, then \(U\cap V\) is an open set.%
+\item\hypertarget{li-15}{}\(\emptyset\) and \(\mb R\) are open sets.%
+\item\hypertarget{li-16}{}If \(\mc U\) is a collection of open sets, then \(\bigcup\mc U\) is also an open set.%
+\item\hypertarget{li-17}{}If \(U,V\) are open sets, then \(U\cap V\) is an open set.%
 \end{enumerate}
 \end{theorem}
+\begin{definition}{}{definition-7}%
+\hypertarget{p-28}{}%
+Let \(X\) be a set, and let \(\mc T\subseteq \mc P(X)\) satisfy the following properties.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-18}{}\(\emptyset,X\in\mc T\).%
+\item\hypertarget{li-19}{}If \(\mc U\subseteq\mc T\), then \(\bigcup\mc U\in\mc T\).%
+\item\hypertarget{li-20}{}If \(U,V\in\mc T\), then \(U\cap V\in\mc T\).%
+\end{enumerate}
+\hypertarget{p-29}{}%
+Then \(\mc T\) is called a \terminology{topology} on \(X\), the pair \(\tuple{X,\mc T}\) is called a \terminology{topological space}, and elements \(U\in\mc T\) are called \terminology{open sets} of the space. (Usually \(\tuple{X,\mc T}\) is abbreviated to just \(X\) when the topology is known from context.)%
+\end{definition}
+\begin{definition}{}{definition-8}%
+\hypertarget{p-30}{}%
+Let \(\mc T\subseteq\mc P(\mb R)\) be the collection of open subsets of \(\mb R\) defined by \hyperref[euclidean-open-sets]{Definition~\ref{euclidean-open-sets}}. Then by \hyperref[euclidean-topology-verification]{Theorem~\ref{euclidean-topology-verification}}, \(\mc T\) is a valid topology for \(\mb R\) called the \terminology{Euclidean topology}.%
+\end{definition}
+\begin{theorem}{}{}{theorem-3}%
+\hypertarget{p-31}{}%
+Let \(X\) be any set. Then the following sets are topologies on \(X\).%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-21}{}\(\mc T=\mc P(X)\) is called the \terminology{discrete topology}.%
+\item\hypertarget{li-22}{}\(\mc T=\{\emptyset,X\}\) is called the \terminology{indiscrete topology}.%
+\end{enumerate}
+\end{theorem}
+\begin{proposition}{}{}{proposition-2}%
+\hypertarget{p-32}{}%
+Let \(\mc T\) be a topology, and let \(\mc U\subseteq\mc T\) be finite. Then \(\bigcap\mc U\in\mc T\).%
+\end{proposition}
+\begin{proposition}{}{}{proposition-3}%
+\hypertarget{p-33}{}%
+Let \(\mc T\) be the Euclidean topology. There exists a collection \(\mc U=\{U_n:n\in\mb N\}\) such that \(\bigcap\mc U\not\in\mc T\).%
+\end{proposition}
+\begin{definition}{}{definition-9}%
+\hypertarget{p-34}{}%
+Let \(a,b\in\mb R\cup\setList{-\infty,\infty}\). The following are called \terminology{intervals} of real numbers.%
+%
+\begin{equation*}
+(a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
+\end{equation*}
+%
+\begin{equation*}
+[a,b)=\setBuilder{x\in\mb R}{a\leq x\lt b}
+\end{equation*}
+%
+\begin{equation*}
+(a,b]=\setBuilder{x\in\mb R}{a\lt x\leq b}
+\end{equation*}
+%
+\begin{equation*}
+[a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
+\end{equation*}
+\end{definition}
+\begin{example}{}{example-3}%
+\hypertarget{p-35}{}%
+Show that each of the following is an example of a topological space \(\tuple{X,\mc T}\).%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-23}{}Let \(X=\mb R\) and \(\mc T=\setBuilder{(x,\infty)}{x\in\mb R\cup\setList{-\infty}}
+\cup\setList{\emptyset}\).%
+\item\hypertarget{li-24}{}Let \(X=\mb R\) and \(\mc T=\setBuilder{(x,y)}{
+x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
+}\cup\setList{\emptyset}\).%
+\item\hypertarget{li-25}{}Let \(X=\mb R\) and \(U\in\mc T\) if for each \(x\in U\), there exists \(a,b\in\mb R\) such that \(x\in[a,b)\subseteq U\).%
+\item\hypertarget{li-26}{}Let \(X=\setList{0,1}\) and \(\mc T=\setList{\emptyset,\setList{0},X}\).%
+\item\hypertarget{li-27}{}Let \(X=\mb Z\), \(E=\setBuilder{n\in\mb Z}{n\text{ is even}}\), \(D=\setBuilder{n\in\mb Z}{n\text{ is odd}}\), and \(\mc T=\setList{\emptyset,E,D,X}\).%
+\end{enumerate}
+\end{example}
+\begin{definition}{}{definition-10}%
+\hypertarget{p-36}{}%
+The following are known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\). TODO%
+\end{definition}
 %
 %
 \typeout{************************************************}
@@ -443,6 +517,6 @@ The open subsets of \(\mb R\) satisfy the following properties.%
 \appendix
 %
 \section[{Naive Set Theory}]{Naive Set Theory}\label{set-theory}
-\hypertarget{p-28}{}%
+\hypertarget{p-37}{}%
 A review of basic results concerning sets.%
 \end{document}
