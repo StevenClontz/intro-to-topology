@@ -1,0 +1,92 @@
+\documentclass[12pt, std]{article}
+\usepackage{amssymb}
+\begin{document}
+
+\begin{center} \textbf{Nowhere Dense Sets.} \end{center}
+
+Definition.  Suppose that $X$ is a topological space.  The subset
+$M$ of $X$ is said to be \textit{nowhere dense} in $X$ means that if
+$U$ is a non-empty open set in $X$ then there is a non-empty open
+subset $V$ of $U$ that does not intersect $M$.
+
+\
+
+Theorem 7.1.  If $M$ is a nowhere dense subset of the topological
+space $X$ then $\overline{M}$ is nowhere dense in $X$.
+
+\
+
+Theorem 7.2.  If $X$ is normal and the subset $M$ is nowhere dense
+in $X$ then if $U$ is an open set in $X$ there is an open set $V$
+such that $\overline{V} \subset U$ and $ \overline{V} \cap M
+=\emptyset$.
+
+\
+
+Theorem 7.3.  If $X$ is compact, then $X$ is not the union of
+countable many nowhere dense sets.  [Hint: use theorem 7.2 together
+with theorem 5.7.]
+
+\
+
+Corollary.  A closed interval in the reals is uncountable.
+
+\
+
+Definition.  The subset $M$ of the space $X$ is said to be
+\textit{perfect} if and only if every point of $M$ is a limit point
+of $M$.
+
+\
+
+Theorem 7.4.  There exists a closed perfect nowhere dense subset of
+the reals.
+
+\
+
+Lemma to theorem 7.4.  A closed perfect subset of the reals is
+nowhere dense if and only if it does not contain an interval.
+
+\
+
+Definition.  A compact perfect nowhere dense subset of the reals is
+called a Cantor set.
+
+\
+
+Corollaries to 7.3.  Every Cantor set is uncountable.  The Reals is
+not the union of countably many Cantor sets.
+
+\
+
+Exercise 7.5.  Let $f: X \rightarrow Y$ be continuous and onto. Show
+that if $H$ is a nowhere dense subset of $Y$, then $f^{-1}(H)$ is
+nowhere dense in $X$.
+
+\
+
+Exercise 7.6.  Show that the converse of exercise 7.5 is not true.
+
+\newpage
+
+Definition.  Suppose that $X$ is a metric space with metric $d$.  The sequence $\{x_i\}_{i=1}^{\infty}$ is said to be a Cauchy sequence if and only if for each positive number $\epsilon$ there exists an integer $N$ so that $d(x_k, x_n) < \epsilon$ for all $k,n > N$.
+
+\
+
+Definition.  Suppose that $X$ is a metric space with metric $d$.  Then the metric $d$ is said to be a complete metric if and only if every Cauchy sequence converges with respect to the metric $d$.
+
+\
+
+Exercise 7.7.  Show that the standard metric for the real numbers is a complete metric.
+
+\
+
+Exercise 7.8.  Show that there exists a metric for the reals which is not a complete metric but which produces the same topology as the standard metric.
+
+\
+
+Theorem 7.9.  If $X$ is a metric space with a complete metric, then $X$ is not the union of countably many nowhere dense sets.
+
+
+
+\end{document}
