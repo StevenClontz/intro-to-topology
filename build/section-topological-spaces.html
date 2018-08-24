@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-08-23T16:56:12-05:00    *-->
+<!--*    on 2018-08-24T14:24:49-05:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -44,6 +44,10 @@ MathJax.Hub.Config({
 <a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\int}{\operatorname{int}}
+\newcommand{\ext}{\operatorname{ext}}
+\newcommand{\bd}{\operatorname{bd}}
 \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
 \newcommand{\setList}[1]{\left\{#1\right\}}
 \newcommand{\lt}{&lt;}
@@ -88,7 +92,7 @@ MathJax.Hub.Config({
 \begin{equation*}
 (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 \end{equation*}
-</div></article><article class="definition-like" id="definition-5"><h6 class="heading">
+</div></article><article class="definition-like" id="limit-point-intro"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.2</span>
 </h6>
 <p id="p-21">Let \(x\in\mb R\) and \(S\subseteq\mb R\text{.}\) The point \(x\) is a <dfn class="terminology">limit point</dfn> of the set \(S\) if and only if for every open interval \((a,b)\) containing \(x\text{,}\) there is a point \(y\in S\) such that \(x\not=y\) and \(y\in(a,b)\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-1" id="example-1"><h6 class="heading">
@@ -196,7 +200,108 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <article class="definition-like" id="definition-10"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.16</span>
 </h6>
-<p id="p-36">The following are known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\) TODO</p></article></section></div></main>
+<p id="p-36">Let \(\tuple{X,\mc T}\) be a topological space and let \(x\in X\text{.}\) The set \(N\subseteq X\) is called a <dfn class="terminology">neighborhood</dfn> of \(x\) if and only if there exists an open set \(U\in\mc T\) such that \(x\in U\subseteq N\text{.}\)</p></article><article class="theorem-like" id="proposition-4"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.17</span>
+</h6>
+<p id="p-37">A subset \(U\) of a topological space \(X\) is open if and only if \(U\) is a neighborhood of every point it contains.</p></article><article class="definition-like" id="definition-11"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.18</span>
+</h6>
+<p id="p-38">The following are known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
+<ol class="decimal">
+<li id="li-28">\(\mc T\) is said to be <dfn class="terminology">\(T_0\)</dfn> if and only if for all points \(x,y\in X\) such that \(x\not=y\text{,}\) there either exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\text{,}\) or there exists a neighborhood \(V\) of \(y\) such that \(x\not\in U\text{.}\)</li>
+<li id="li-29">\(\mc T\) is said to be <dfn class="terminology">\(T_1\)</dfn> if and only if for all points \(x,y\in X\) such that \(x\not=y\text{,}\) there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(y\not\in U\) and \(x\not\in U\text{.}\)</li>
+<li id="li-30">\(\mc T\) is said to be <dfn class="terminology">\(T_2\)</dfn> (also known as <dfn class="terminology">Hausdorff</dfn>) if and only if for all points \(x,y\in X\) such that \(x\not=y\text{,}\) there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(y\not\in U\text{,}\) \(x\not\in U\text{,}\) and \(U\cap V=\emptyset\text{.}\)</li>
+</ol></article><article class="theorem-like" id="proposition-5"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.19</span>
+</h6>
+<p id="p-39">\(T_2\Rightarrow T_1\Rightarrow T_0\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-4" id="example-4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.20</span>
+</h6></a></article><div id="hk-example-4" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-40">Find or create an example of a topological space \(\tuple{X,\mc T}\) that is:</p>
+<ol class="decimal">
+<li id="li-31">Not \(T_0\text{.}\)</li>
+<li id="li-32">\(T_0\) but not \(T_1\text{.}\)</li>
+<li id="li-33">\(T_1\) but not \(T_2\text{.}\)</li>
+</ol></article></div>
+<article class="theorem-like" id="theorem-4"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.21</span>
+</h6>
+<p id="p-41">Let \(X\) be a finite topological space. Then \(X\) is Hausdorff if and only if \(X\) has the discrete topology.</p></article><article class="theorem-like" id="proposition-6"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.22</span>
+</h6>
+<p id="p-42">The Euclidean real line is a non-discrete Hausdorff topological space.</p></article><article class="definition-like" id="limit-point"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.23</span>
+</h6>
+<p id="p-43">Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a <dfn class="terminology">limit point</dfn> of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\text{,}\) there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\text{.}\)</p></article><article class="theorem-like" id="proposition-7"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.24</span>
+</h6>
+<p id="p-44">The point \(x\in\mb R\) is a limit point of \(S\subseteq \mb R\) according to <a knowl="./knowl/limit-point-intro.html" title="Definition 2.2">Definition 2.2</a> if and only if it is a limit point according to <a knowl="./knowl/limit-point.html" title="Definition 2.23">Definition 2.23</a> (where \(\mb R\) is assumed to have the Euclidean topology).</p></article><article class="definition-like" id="definition-13"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.25</span>
+</h6>
+<p id="p-45">Let \(S\subseteq X\) be a subset of a topological space. Then \(S'\) is the set of all limit points of \(S\text{,}\) called the <dfn class="terminology">derived set</dfn> of \(S\text{.}\)</p></article><article class="definition-like" id="definition-14"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.26</span>
+</h6>
+<p id="p-46">Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=S\cup S'\) is called the <dfn class="terminology">closure</dfn> of \(S\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-5" id="example-5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.27</span>
+</h6></a></article><div id="hk-example-5" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-47">Calculate \(\cl S\) for each of the following examples.</p>
+<ol class="decimal">
+<li id="li-34">\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.</li>
+<li id="li-35">\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the discrete topology.</li>
+<li id="li-36">\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the indiscrete topology.</li>
+<li id="li-37">\(S=\mb Z\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.</li>
+<li id="li-38">\(S=\mb Q\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.</li>
+</ol></article></div>
+<article class="definition-like" id="definition-15"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.28</span>
+</h6>
+<p id="p-48">Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is called <dfn class="terminology">closed</dfn> if and only if \(H=\cl S\text{.}\)</p></article><article class="theorem-like" id="theorem-5"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.29</span>
+</h6>
+<p id="p-49">Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is closed if and only if there exists an open set \(U\) such that \(H=X\setminus U\text{.}\)</p></article><article class="theorem-like" id="proposition-8"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.30</span>
+</h6>
+<p id="p-50">The closed subsets of a topological space \(X\) satisfy the following properties.</p>
+<ol class="decimal">
+<li id="li-39">\(\emptyset\) and \(X\) are closed sets.</li>
+<li id="li-40">If \(\mc H\) is a collection of closed sets, then \(\bigcap\mc H\) is also a closed set.</li>
+<li id="li-41">If \(H,L\) are closed sets, then \(H\cup L\) is a closed set.</li>
+</ol></article><article class="theorem-like" id="theorem-6"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.31</span>
+</h6>
+<p id="p-51">A topological space \(X\) is \(T_1\) if and only if every finite subset of \(X\) is closed.</p></article><article class="definition-like" id="boundary-point"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.32</span>
+</h6>
+<p id="p-52">Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a <dfn class="terminology">boundary point</dfn> of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\text{,}\) both \(S\cap U\) and \(S\setminus U\) are non-empty.</p>
+<p id="p-53">Let \(\bd S\) collect all the boundary points of \(S\text{.}\)</p></article><article class="theorem-like" id="proposition-9"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.33</span>
+</h6>
+<p id="p-54">Let \(a,b\in\mb R\text{.}\) Then \(\bd (a,b)=\bd (a,b]=\bd [a,b)=\bd [a,b]=\{a,b\}\) with respect to the Eudlidean topology.</p></article><article class="definition-like" id="interior-point"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.34</span>
+</h6>
+<p id="p-55">Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a <dfn class="terminology">interior point</dfn> of the set \(S\) if and only if there exists a neighborhood \(U\) of \(x\) such that \(x\in U\subseteq S\text{.}\)</p>
+<p id="p-56">Let \(\int S\) collect all the interior points of \(S\text{.}\)</p></article><article class="theorem-like" id="proposition-10"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.35</span>
+</h6>
+<p id="p-57">Let \(U\subseteq X\) be a subset of a topological space. Then \(U\) is open if and only if \(U=\int U\text{.}\)</p></article><article class="definition-like" id="exterior-point"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.36</span>
+</h6>
+<p id="p-58">Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a <dfn class="terminology">exterior point</dfn> of the set \(S\) if and only if there exists a neighborhood \(U\) of \(x\) such that \(x\in U\subseteq X\setminus S\text{.}\)</p>
+<p id="p-59">Let \(\ext S\) collect all the exterior points of \(S\text{.}\)</p></article><article class="definition-like" id="definition-19"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.37</span>
+</h6>
+<p id="p-60">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection \(\mc P\) such that \(X=\bigcup\mc P\) and \(A\cap B=\emptyset\) for all \(A,B\in\mc P\text{.}\)</p></article><article class="theorem-like" id="proposition-11"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.38</span>
+</h6>
+<p id="p-61">Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-6" id="example-6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.39</span>
+</h6></a></article><div id="hk-example-6" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-62">Let \(S\) be a subset of a topological space. Prove the following.</p>
+<ol class="decimal">
+<li id="li-42">\(\int\int S=\int S\)</li>
+<li id="li-43">\(\int\cl S=\int S\)</li>
+<li id="li-44">\(\bd\bd S=\bd S\)</li>
+<li id="li-45">\(\ext\ext S=\int S\)</li>
+<li id="li-46">\(\int\ext S=\ext S\)</li>
+<li id="li-47">\(\int\bd S=\emptyset\)</li>
+</ol></article></div></section></div></main>
 </div>
 </body>
 </html>
