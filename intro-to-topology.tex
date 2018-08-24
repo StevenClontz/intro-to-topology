@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-08-23T16:56:12-05:00    *%
+%*    on 2018-08-24T14:24:49-05:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -200,6 +200,10 @@
 \newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
+\newcommand{\cl}{\operatorname{cl}}
+\newcommand{\int}{\operatorname{int}}
+\newcommand{\ext}{\operatorname{ext}}
+\newcommand{\bd}{\operatorname{bd}}
 \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
 \newcommand{\setList}[1]{\left\{#1\right\}}
 \newcommand{\lt}{<}
@@ -211,7 +215,7 @@
 \author{Steven Clontz\\
 University of South Alabama
 }
-\date{August 23, 2018}
+\date{August 24, 2018}
 \begin{document}
 %% Target for xref to top-level element is document start
 \hypertarget{index}{}
@@ -341,7 +345,7 @@ Let \(a,b\in\mb R\). The \terminology{open interval} from \(a\) to \(b\) is the 
 (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 \end{equation*}
 \end{definition}
-\begin{definition}{}{definition-5}%
+\begin{definition}{}{limit-point-intro}%
 \hypertarget{p-21}{}%
 Let \(x\in\mb R\) and \(S\subseteq\mb R\). The point \(x\) is a \terminology{limit point} of the set \(S\) if and only if for every open interval \((a,b)\) containing \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in(a,b)\).%
 \end{definition}
@@ -463,8 +467,144 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 \end{example}
 \begin{definition}{}{definition-10}%
 \hypertarget{p-36}{}%
-The following are known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\). TODO%
+Let \(\tuple{X,\mc T}\) be a topological space and let \(x\in X\). The set \(N\subseteq X\) is called a \terminology{neighborhood} of \(x\) if and only if there exists an open set \(U\in\mc T\) such that \(x\in U\subseteq N\).%
 \end{definition}
+\begin{proposition}{}{}{proposition-4}%
+\hypertarget{p-37}{}%
+A subset \(U\) of a topological space \(X\) is open if and only if \(U\) is a neighborhood of every point it contains.%
+\end{proposition}
+\begin{definition}{}{definition-11}%
+\hypertarget{p-38}{}%
+The following are known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\).%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-28}{}\(\mc T\) is said to be \terminology{\(T_0\)} if and only if for all points \(x,y\in X\) such that \(x\not=y\), there either exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\), or there exists a neighborhood \(V\) of \(y\) such that \(x\not\in U\).%
+\item\hypertarget{li-29}{}\(\mc T\) is said to be \terminology{\(T_1\)} if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(y\not\in U\) and \(x\not\in U\).%
+\item\hypertarget{li-30}{}\(\mc T\) is said to be \terminology{\(T_2\)} (also known as \terminology{Hausdorff}) if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(y\not\in U\), \(x\not\in U\), and \(U\cap V=\emptyset\).%
+\end{enumerate}
+\end{definition}
+\begin{proposition}{}{}{proposition-5}%
+\hypertarget{p-39}{}%
+\(T_2\Rightarrow T_1\Rightarrow T_0\).%
+\end{proposition}
+\begin{example}{}{example-4}%
+\hypertarget{p-40}{}%
+Find or create an example of a topological space \(\tuple{X,\mc T}\) that is:%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-31}{}Not \(T_0\).%
+\item\hypertarget{li-32}{}\(T_0\) but not \(T_1\).%
+\item\hypertarget{li-33}{}\(T_1\) but not \(T_2\).%
+\end{enumerate}
+\end{example}
+\begin{theorem}{}{}{theorem-4}%
+\hypertarget{p-41}{}%
+Let \(X\) be a finite topological space. Then \(X\) is Hausdorff if and only if \(X\) has the discrete topology.%
+\end{theorem}
+\begin{proposition}{}{}{proposition-6}%
+\hypertarget{p-42}{}%
+The Euclidean real line is a non-discrete Hausdorff topological space.%
+\end{proposition}
+\begin{definition}{}{limit-point}%
+\hypertarget{p-43}{}%
+Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{limit point} of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\).%
+\end{definition}
+\begin{proposition}{}{}{proposition-7}%
+\hypertarget{p-44}{}%
+The point \(x\in\mb R\) is a limit point of \(S\subseteq \mb R\) according to \hyperref[limit-point-intro]{Definition~\ref{limit-point-intro}} if and only if it is a limit point according to \hyperref[limit-point]{Definition~\ref{limit-point}} (where \(\mb R\) is assumed to have the Euclidean topology).%
+\end{proposition}
+\begin{definition}{}{definition-13}%
+\hypertarget{p-45}{}%
+Let \(S\subseteq X\) be a subset of a topological space. Then \(S'\) is the set of all limit points of \(S\), called the \terminology{derived set} of \(S\).%
+\end{definition}
+\begin{definition}{}{definition-14}%
+\hypertarget{p-46}{}%
+Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=S\cup S'\) is called the \terminology{closure} of \(S\).%
+\end{definition}
+\begin{example}{}{example-5}%
+\hypertarget{p-47}{}%
+Calculate \(\cl S\) for each of the following examples.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-34}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
+\item\hypertarget{li-35}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the discrete topology.%
+\item\hypertarget{li-36}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the indiscrete topology.%
+\item\hypertarget{li-37}{}\(S=\mb Z\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
+\item\hypertarget{li-38}{}\(S=\mb Q\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
+\end{enumerate}
+\end{example}
+\begin{definition}{}{definition-15}%
+\hypertarget{p-48}{}%
+Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is called \terminology{closed} if and only if \(H=\cl S\).%
+\end{definition}
+\begin{theorem}{}{}{theorem-5}%
+\hypertarget{p-49}{}%
+Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is closed if and only if there exists an open set \(U\) such that \(H=X\setminus U\).%
+\end{theorem}
+\begin{proposition}{}{}{proposition-8}%
+\hypertarget{p-50}{}%
+The closed subsets of a topological space \(X\) satisfy the following properties.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-39}{}\(\emptyset\) and \(X\) are closed sets.%
+\item\hypertarget{li-40}{}If \(\mc H\) is a collection of closed sets, then \(\bigcap\mc H\) is also a closed set.%
+\item\hypertarget{li-41}{}If \(H,L\) are closed sets, then \(H\cup L\) is a closed set.%
+\end{enumerate}
+\end{proposition}
+\begin{theorem}{}{}{theorem-6}%
+\hypertarget{p-51}{}%
+A topological space \(X\) is \(T_1\) if and only if every finite subset of \(X\) is closed.%
+\end{theorem}
+\begin{definition}{}{boundary-point}%
+\hypertarget{p-52}{}%
+Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{boundary point} of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\), both \(S\cap U\) and \(S\setminus U\) are non-empty.%
+\par
+\hypertarget{p-53}{}%
+Let \(\bd S\) collect all the boundary points of \(S\).%
+\end{definition}
+\begin{proposition}{}{}{proposition-9}%
+\hypertarget{p-54}{}%
+Let \(a,b\in\mb R\). Then \(\bd (a,b)=\bd (a,b]=\bd [a,b)=\bd [a,b]=\{a,b\}\) with respect to the Eudlidean topology.%
+\end{proposition}
+\begin{definition}{}{interior-point}%
+\hypertarget{p-55}{}%
+Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{interior point} of the set \(S\) if and only if there exists a neighborhood \(U\) of \(x\) such that \(x\in U\subseteq S\).%
+\par
+\hypertarget{p-56}{}%
+Let \(\int S\) collect all the interior points of \(S\).%
+\end{definition}
+\begin{proposition}{}{}{proposition-10}%
+\hypertarget{p-57}{}%
+Let \(U\subseteq X\) be a subset of a topological space. Then \(U\) is open if and only if \(U=\int U\).%
+\end{proposition}
+\begin{definition}{}{exterior-point}%
+\hypertarget{p-58}{}%
+Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{exterior point} of the set \(S\) if and only if there exists a neighborhood \(U\) of \(x\) such that \(x\in U\subseteq X\setminus S\).%
+\par
+\hypertarget{p-59}{}%
+Let \(\ext S\) collect all the exterior points of \(S\).%
+\end{definition}
+\begin{definition}{}{definition-19}%
+\hypertarget{p-60}{}%
+A \terminology{partition} of a set \(X\) is a collection \(\mc P\) such that \(X=\bigcup\mc P\) and \(A\cap B=\emptyset\) for all \(A,B\in\mc P\).%
+\end{definition}
+\begin{proposition}{}{}{proposition-11}%
+\hypertarget{p-61}{}%
+Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\).%
+\end{proposition}
+\begin{example}{}{example-6}%
+\hypertarget{p-62}{}%
+Let \(S\) be a subset of a topological space. Prove the following.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-42}{}\(\int\int S=\int S\)%
+\item\hypertarget{li-43}{}\(\int\cl S=\int S\)%
+\item\hypertarget{li-44}{}\(\bd\bd S=\bd S\)%
+\item\hypertarget{li-45}{}\(\ext\ext S=\int S\)%
+\item\hypertarget{li-46}{}\(\int\ext S=\ext S\)%
+\item\hypertarget{li-47}{}\(\int\bd S=\emptyset\)%
+\end{enumerate}
+\end{example}
 %
 %
 \typeout{************************************************}
@@ -517,6 +657,6 @@ The following are known as \terminology{separation axioms} for a topological spa
 \appendix
 %
 \section[{Naive Set Theory}]{Naive Set Theory}\label{set-theory}
-\hypertarget{p-37}{}%
+\hypertarget{p-63}{}%
 A review of basic results concerning sets.%
 \end{document}
