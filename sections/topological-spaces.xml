@@ -389,7 +389,7 @@
 <p>
   A <term>partition</term> of a set <m>X</m> is a collection
   <m>\mc P</m> such that <m>X=\bigcup\mc P</m> and <m>A\cap B=\emptyset</m>
-  for all <m>A,B\in\mc P</m>.
+  for all <m>A,B\in\mc P</m> where <m>A\not=B</m>.
 </p>
 </definition>
 <proposition>
