@@ -23,6 +23,14 @@
   <m>n\in\mb N</m> such that <m>\frac{1}{n}\lt x</m>.
 </p>
 </theorem>
+<theorem>
+<p>
+  <term>De Morgan's Laws</term>: Let <m>\mc A</m> be a collection of subsets of
+  <m>X</m>.
+</p>
+<me>X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)</me>
+<me>X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)</me>
+</theorem>
 </appendix>
 
 <!--<definition>
