@@ -398,15 +398,96 @@
   Then <m>\setList{\int S,\bd S,\ext S}</m> is a partition of <m>X</m>.
 </p>
 </proposition>
+<proposition>
+<p>
+  Let <m>S\subseteq X</m> be a subset of a topological space.
+  Then <m>\cl S=\int S\cup\bd S=S\cup\bd S</m>.
+</p>
+</proposition>
 <example>
-<p>Let <m>S</m> be a subset of a topological space. Prove the following.</p>
+<p>
+  Let <m>A</m> be a subset of a topological space <m>X</m>. 
+  Prove the following.
+</p>
 <ol>
-  <li><m>\int\int S=\int S</m></li>
-  <li><m>\int\cl S=\int S</m></li>
-  <li><m>\bd\bd S=\bd S</m></li>
-  <li><m>\ext\ext S=\int S</m></li>
-  <li><m>\int\ext S=\ext S</m></li>
-  <li><m>\int\bd S=\emptyset</m></li>
+  <li><m>\int\int A=\int A</m></li>
+  <li><m>\int\cl A=\int A</m></li>
+  <li><m>\bd\bd A=\bd A</m></li>
+  <li><m>\ext\ext A=\int A</m></li>
+  <li><m>\int\ext A=\ext A</m></li>
+  <li><m>\int\bd A=\emptyset</m></li>
+  <li><m>\cl\ext A=X\setminus\int A</m></li>
 </ol>
 </example>
+<example>
+<p>
+  Let <m>A,B</m> be subsets of a topological space <m>X</m>. 
+  Prove or disprove the following.
+</p>
+<ol>
+  <li><m>\int(A\cap B)=\int A\cap\int B</m></li>
+  <li><m>\int(A\cup B)=\int A\cup\int B</m></li>
+  <li><m>\bd(A\cap B)=\bd A\cap\bd B</m></li>
+  <li><m>\bd(A\cup B)=\bd A\cup\bd B</m></li>
+  <li><m>\cl(A\cap B)=\cl A\cap\cl B</m></li>
+  <li><m>\cl(A\cup B)=\cl A\cup\cl B</m></li>
+</ol>
+</example>
+<definition>
+<p>
+  The following are also known as <term>separation axioms</term> for a topological space
+  <m>\tuple{X,\mc T}</m>. 
+</p>
+<ol>
+  <li>
+    <m>\mc T</m> is said to be <term>regular</term> 
+    if and only if for all points <m>x\in X</m> and closed subsets <m>H\subseteq X</m>
+    such that <m>x\not\in H</m>, there exist open sets <m>U,V\in\mc T</m>
+    such that <m>x\in U,H\subseteq V,U\cap V=\emptyset</m>.
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_3</m></term> 
+    if and only if it is both regular and <m>T_1</m>
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term>normal</term> 
+    if and only if for all closed subsets <m>H,L\subseteq X</m>
+    such that <m>H\cap L=\emptyset</m>, there exist open sets <m>U,V\in\mc T</m>
+    such that <m>H\subseteq U,L\subseteq V,U\cap V=\emptyset</m>.
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_4</m></term> 
+    if and only if it is both normal and <m>T_1</m>
+  </li>
+</ol>
+</definition>
+<proposition>
+<p>
+  <m>T_{n+1}\Rightarrow T_n</m> for <m>n\in\setList{0,1,2,3}</m>.
+</p>
+</proposition>
+<theorem>
+<p>
+  The real line <m>\mb R</m> equipped with the Euclidean topology is
+  <m>T_4</m>.
+</p>
+</theorem>
+<example>
+<p>
+  Find or create an example of a topological space that is:
+</p>
+<ol>
+  <li><m>T_2</m> but not regular.</li>
+  <li><m>T_3</m> but not normal.</li>
+  <li>Regular but not <m>T_3</m>.</li>
+  <li>Normal but not <m>T_4</m>.</li>
+  <li>Normal but not regular.</li>
+</ol>
+</example>
+<theorem>
+<p>
+  A topological space is <m>T_3</m> if and only if it is regular and <m>T_0</m>.
+</p>
+</theorem>
+<p>TODO: basis and subbasis, local base, first/second countability</p>
 </section>
