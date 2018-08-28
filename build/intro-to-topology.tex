@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-08-28T17:08:10-05:00    *%
+%*    on 2018-08-28T17:40:25-05:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -592,19 +592,74 @@ A \terminology{partition} of a set \(X\) is a collection \(\mc P\) such that \(X
 \hypertarget{p-61}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\).%
 \end{proposition}
-\begin{example}{}{example-6}%
+\begin{proposition}{}{}{proposition-12}%
 \hypertarget{p-62}{}%
-Let \(S\) be a subset of a topological space. Prove the following.%
+Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=\int S\cup\bd S=S\cup\bd S\).%
+\end{proposition}
+\begin{example}{}{example-6}%
+\hypertarget{p-63}{}%
+Let \(A\) be a subset of a topological space \(X\). Prove the following.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-42}{}\(\int\int S=\int S\)%
-\item\hypertarget{li-43}{}\(\int\cl S=\int S\)%
-\item\hypertarget{li-44}{}\(\bd\bd S=\bd S\)%
-\item\hypertarget{li-45}{}\(\ext\ext S=\int S\)%
-\item\hypertarget{li-46}{}\(\int\ext S=\ext S\)%
-\item\hypertarget{li-47}{}\(\int\bd S=\emptyset\)%
+\item\hypertarget{li-42}{}\(\int\int A=\int A\)%
+\item\hypertarget{li-43}{}\(\int\cl A=\int A\)%
+\item\hypertarget{li-44}{}\(\bd\bd A=\bd A\)%
+\item\hypertarget{li-45}{}\(\ext\ext A=\int A\)%
+\item\hypertarget{li-46}{}\(\int\ext A=\ext A\)%
+\item\hypertarget{li-47}{}\(\int\bd A=\emptyset\)%
+\item\hypertarget{li-48}{}\(\cl\ext A=X\setminus\int A\)%
 \end{enumerate}
 \end{example}
+\begin{example}{}{example-7}%
+\hypertarget{p-64}{}%
+Let \(A,B\) be subsets of a topological space \(X\). Prove or disprove the following.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-49}{}\(\int(A\cap B)=\int A\cap\int B\)%
+\item\hypertarget{li-50}{}\(\int(A\cup B)=\int A\cup\int B\)%
+\item\hypertarget{li-51}{}\(\bd(A\cap B)=\bd A\cap\bd B\)%
+\item\hypertarget{li-52}{}\(\bd(A\cup B)=\bd A\cup\bd B\)%
+\item\hypertarget{li-53}{}\(\cl(A\cap B)=\cl A\cap\cl B\)%
+\item\hypertarget{li-54}{}\(\cl(A\cup B)=\cl A\cup\cl B\)%
+\end{enumerate}
+\end{example}
+\begin{definition}{}{definition-20}%
+\hypertarget{p-65}{}%
+The following are also known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\).%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-55}{}\(\mc T\) is said to be \terminology{regular} if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\), there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\).%
+\item\hypertarget{li-56}{}\(\mc T\) is said to be \terminology{\(T_3\)} if and only if it is both regular and \(T_1\)%
+\item\hypertarget{li-57}{}\(\mc T\) is said to be \terminology{normal} if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\), there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\).%
+\item\hypertarget{li-58}{}\(\mc T\) is said to be \terminology{\(T_4\)} if and only if it is both normal and \(T_1\)%
+\end{enumerate}
+\end{definition}
+\begin{proposition}{}{}{proposition-13}%
+\hypertarget{p-66}{}%
+\(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\).%
+\end{proposition}
+\begin{theorem}{}{}{theorem-7}%
+\hypertarget{p-67}{}%
+The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\).%
+\end{theorem}
+\begin{example}{}{example-8}%
+\hypertarget{p-68}{}%
+Find or create an example of a topological space that is:%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-59}{}\(T_2\) but not regular.%
+\item\hypertarget{li-60}{}\(T_3\) but not normal.%
+\item\hypertarget{li-61}{}Regular but not \(T_3\).%
+\item\hypertarget{li-62}{}Normal but not \(T_4\).%
+\item\hypertarget{li-63}{}Normal but not regular.%
+\end{enumerate}
+\end{example}
+\begin{theorem}{}{}{theorem-8}%
+\hypertarget{p-69}{}%
+A topological space is \(T_3\) if and only if it is regular and \(T_0\).%
+\end{theorem}
+\hypertarget{p-70}{}%
+TODO: basis and subbasis, local base, first/second countability%
 %
 %
 \typeout{************************************************}
@@ -657,9 +712,9 @@ Let \(S\) be a subset of a topological space. Prove the following.%
 \appendix
 %
 \section[{Naive Set Theory}]{Naive Set Theory}\label{set-theory}
-\hypertarget{p-63}{}%
+\hypertarget{p-71}{}%
 A review of basic results concerning sets.%
-\begin{definition}{}{definition-20}%
+\begin{definition}{}{definition-21}%
 \leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}\(\mb R\) is the set of real numbers.%
@@ -668,12 +723,12 @@ A review of basic results concerning sets.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}{}{}{theorem-7}%
-\hypertarget{p-64}{}%
+\begin{theorem}{}{}{theorem-9}%
+\hypertarget{p-72}{}%
 The \terminology{Archemedian Property} of the real numbers guarantees that for each real number \(x\in\mb R\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-8}%
-\hypertarget{p-65}{}%
+\begin{theorem}{}{}{theorem-10}%
+\hypertarget{p-73}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
