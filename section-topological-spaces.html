@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-08-28T17:08:10-05:00    *-->
+<!--*    on 2018-08-28T17:40:24-05:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -291,17 +291,61 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <p id="p-60">A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection \(\mc P\) such that \(X=\bigcup\mc P\) and \(A\cap B=\emptyset\) for all \(A,B\in\mc P\) where \(A\not=B\text{.}\)</p></article><article class="theorem-like" id="proposition-11"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">2.38</span>
 </h6>
-<p id="p-61">Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-6" id="example-6"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.39</span>
-</h6></a></article><div id="hk-example-6" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-62">Let \(S\) be a subset of a topological space. Prove the following.</p>
+<p id="p-61">Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\text{.}\)</p></article><article class="theorem-like" id="proposition-12"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.39</span>
+</h6>
+<p id="p-62">Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=\int S\cup\bd S=S\cup\bd S\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-6" id="example-6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.40</span>
+</h6></a></article><div id="hk-example-6" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-63">Let \(A\) be a subset of a topological space \(X\text{.}\) Prove the following.</p>
 <ol class="decimal">
-<li id="li-42">\(\int\int S=\int S\)</li>
-<li id="li-43">\(\int\cl S=\int S\)</li>
-<li id="li-44">\(\bd\bd S=\bd S\)</li>
-<li id="li-45">\(\ext\ext S=\int S\)</li>
-<li id="li-46">\(\int\ext S=\ext S\)</li>
-<li id="li-47">\(\int\bd S=\emptyset\)</li>
-</ol></article></div></section></div></main>
+<li id="li-42">\(\int\int A=\int A\)</li>
+<li id="li-43">\(\int\cl A=\int A\)</li>
+<li id="li-44">\(\bd\bd A=\bd A\)</li>
+<li id="li-45">\(\ext\ext A=\int A\)</li>
+<li id="li-46">\(\int\ext A=\ext A\)</li>
+<li id="li-47">\(\int\bd A=\emptyset\)</li>
+<li id="li-48">\(\cl\ext A=X\setminus\int A\)</li>
+</ol></article></div>
+<article class="example-like"><a knowl="" class="id-ref" refid="hk-example-7" id="example-7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.41</span>
+</h6></a></article><div id="hk-example-7" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-64">Let \(A,B\) be subsets of a topological space \(X\text{.}\) Prove or disprove the following.</p>
+<ol class="decimal">
+<li id="li-49">\(\int(A\cap B)=\int A\cap\int B\)</li>
+<li id="li-50">\(\int(A\cup B)=\int A\cup\int B\)</li>
+<li id="li-51">\(\bd(A\cap B)=\bd A\cap\bd B\)</li>
+<li id="li-52">\(\bd(A\cup B)=\bd A\cup\bd B\)</li>
+<li id="li-53">\(\cl(A\cap B)=\cl A\cap\cl B\)</li>
+<li id="li-54">\(\cl(A\cup B)=\cl A\cup\cl B\)</li>
+</ol></article></div>
+<article class="definition-like" id="definition-20"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.42</span>
+</h6>
+<p id="p-65">The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
+<ol class="decimal">
+<li id="li-55">\(\mc T\) is said to be <dfn class="terminology">regular</dfn> if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\text{.}\)</li>
+<li id="li-56">\(\mc T\) is said to be <dfn class="terminology">\(T_3\)</dfn> if and only if it is both regular and \(T_1\)</li>
+<li id="li-57">\(\mc T\) is said to be <dfn class="terminology">normal</dfn> if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\text{.}\)</li>
+<li id="li-58">\(\mc T\) is said to be <dfn class="terminology">\(T_4\)</dfn> if and only if it is both normal and \(T_1\)</li>
+</ol></article><article class="theorem-like" id="proposition-13"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.43</span>
+</h6>
+<p id="p-66">\(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\text{.}\)</p></article><article class="theorem-like" id="theorem-7"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.44</span>
+</h6>
+<p id="p-67">The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-8" id="example-8"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.45</span>
+</h6></a></article><div id="hk-example-8" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-68">Find or create an example of a topological space that is:</p>
+<ol class="decimal">
+<li id="li-59">\(T_2\) but not regular.</li>
+<li id="li-60">\(T_3\) but not normal.</li>
+<li id="li-61">Regular but not \(T_3\text{.}\)</li>
+<li id="li-62">Normal but not \(T_4\text{.}\)</li>
+<li id="li-63">Normal but not regular.</li>
+</ol></article></div>
+<article class="theorem-like" id="theorem-8"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.46</span>
+</h6>
+<p id="p-69">A topological space is \(T_3\) if and only if it is regular and \(T_0\text{.}\)</p></article><p id="p-70">TODO: basis and subbasis, local base, first/second countability</p></section></div></main>
 </div>
 </body>
 </html>
