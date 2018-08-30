@@ -435,6 +435,23 @@
 </example>
 <definition>
 <p>
+  A subset <m>D\subseteq X</m> of a topological space is called <term>dense</term>
+  if and only if <m>\cl D=X</m>.
+</p>
+</definition>
+<example>
+<p>
+  Determine which of these are dense subsets of <m>\mb R</m>.
+</p>
+<ol>
+  <li><m>\mb Q</m></li>
+  <li><m>\mb Z</m></li>
+  <li><m>\mb R\setminus\mb Q</m></li>
+  <li><m>\mb R\setminus\mb Z</m></li>
+</ol>
+</example>
+<definition>
+<p>
   The following are also known as <term>separation axioms</term> for a topological space
   <m>\tuple{X,\mc T}</m>. 
 </p>
@@ -478,9 +495,10 @@
 </p>
 <ol>
   <li><m>T_2</m> but not regular.</li>
-  <li><m>T_3</m> but not normal.</li>
+  <li><m>T_3</m> but not <m>T_4</m></li>
   <li>Regular but not <m>T_3</m>.</li>
   <li>Normal but not <m>T_4</m>.</li>
+  <li>Regular but not normal.</li>
   <li>Normal but not regular.</li>
 </ol>
 </example>
@@ -489,5 +507,11 @@
   A topological space is <m>T_3</m> if and only if it is regular and <m>T_0</m>.
 </p>
 </theorem>
-<p>TODO: basis and subbasis, local base, first/second countability</p>
+<definition>
+<p>
+  Let <m>\tuple{X,\mc T}</m> be a topological space. A subset <m>\mc B\subseteq\mc T</m>
+  is called a <term>basis</term> for the topology.. TODO.
+</p>
+</definition>
+<p>TODO: subspaces, basis and subbasis, first/second countability</p>
 </section>
