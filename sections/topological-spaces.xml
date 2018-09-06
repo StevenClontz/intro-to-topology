@@ -215,20 +215,20 @@
     if and only if for all points <m>x,y\in X</m>
     such that <m>x\not=y</m>, there either exists a neighborhood <m>U</m> of <m>x</m>
     such that <m>y\not\in U</m>, or there exists a neighborhood <m>V</m> of <m>y</m>
-    such that <m>x\not\in U</m>.
+    such that <m>x\not\in V</m>.
   </li>
   <li>
     <m>\mc T</m> is said to be <term><m>T_1</m></term> 
     if and only if for all points <m>x,y\in X</m>
     such that <m>x\not=y</m>, there exist neighborhoods <m>U,V</m> of <m>x,y</m>
-    (respectively) such that <m>y\not\in U</m> and <m>x\not\in U</m>.
+    (respectively) such that <m>y\not\in U</m> and <m>x\not\in V</m>.
   </li>
   <li>
     <m>\mc T</m> is said to be <term><m>T_2</m></term> 
     (also known as <term>Hausdorff</term>)
     if and only if for all points <m>x,y\in X</m>
     such that <m>x\not=y</m>, there exist neighborhoods <m>U,V</m> of <m>x,y</m>
-    (respectively) such that <m>y\not\in U</m>, <m>x\not\in U</m>,
+    (respectively) such that <m>y\not\in U</m>, <m>x\not\in V</m>,
     and <m>U\cap V=\emptyset</m>.
   </li>
 </ol>
