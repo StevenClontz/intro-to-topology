@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-09-10T16:36:33-05:00    *%
+%*    on 2018-09-10T16:42:53-05:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -638,8 +638,18 @@ Determine which of these are dense subsets of \(\mb R\).%
 \item\hypertarget{li-58}{}\(\mb R\setminus\mb Z\)%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-21}%
+\begin{theorem}{}{}{theorem-7}%
 \hypertarget{p-67}{}%
+A subset \(D\) of a topological space is dense if and only if every open set of the space contains a point of \(D\).%
+\end{theorem}
+\begin{definition}{}{definition-21}%
+\hypertarget{p-68}{}%
+Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a \terminology{basis} for the topology.. TODO.%
+\end{definition}
+\hypertarget{p-69}{}%
+TODO: subspaces, basis and subbasis, first/second countability%
+\begin{definition}{}{definition-22}%
+\hypertarget{p-70}{}%
 The following are also known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\).%
 \leavevmode%
 \begin{enumerate}
@@ -650,15 +660,15 @@ The following are also known as \terminology{separation axioms} for a topologica
 \end{enumerate}
 \end{definition}
 \begin{proposition}{}{}{proposition-13}%
-\hypertarget{p-68}{}%
+\hypertarget{p-71}{}%
 \(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\).%
 \end{proposition}
-\begin{theorem}{}{}{theorem-7}%
-\hypertarget{p-69}{}%
+\begin{theorem}{}{}{theorem-8}%
+\hypertarget{p-72}{}%
 The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\).%
 \end{theorem}
 \begin{example}{}{example-9}%
-\hypertarget{p-70}{}%
+\hypertarget{p-73}{}%
 Find or create an example of a topological space that is:%
 \leavevmode%
 \begin{enumerate}
@@ -670,16 +680,10 @@ Find or create an example of a topological space that is:%
 \item\hypertarget{li-68}{}Normal but not regular.%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-8}%
-\hypertarget{p-71}{}%
+\begin{theorem}{}{}{theorem-9}%
+\hypertarget{p-74}{}%
 A topological space is \(T_3\) if and only if it is regular and \(T_0\).%
 \end{theorem}
-\begin{definition}{}{definition-22}%
-\hypertarget{p-72}{}%
-Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a \terminology{basis} for the topology.. TODO.%
-\end{definition}
-\hypertarget{p-73}{}%
-TODO: subspaces, basis and subbasis, first/second countability%
 %
 %
 \typeout{************************************************}
@@ -732,7 +736,7 @@ TODO: subspaces, basis and subbasis, first/second countability%
 \appendix
 %
 \section[{Naive Set Theory}]{Naive Set Theory}\label{set-theory}
-\hypertarget{p-74}{}%
+\hypertarget{p-75}{}%
 A review of basic results concerning sets.%
 \begin{definition}{}{definition-23}%
 \leavevmode%
@@ -743,12 +747,12 @@ A review of basic results concerning sets.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}{}{}{theorem-9}%
-\hypertarget{p-75}{}%
-The \terminology{Archemedian Property} of the real numbers guarantees that for each real number \(x\in\mb R\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
-\end{theorem}
 \begin{theorem}{}{}{theorem-10}%
 \hypertarget{p-76}{}%
+The \terminology{Archemedian Property} of the real numbers guarantees that for each real number \(x\in\mb R\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
+\end{theorem}
+\begin{theorem}{}{}{theorem-11}%
+\hypertarget{p-77}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
