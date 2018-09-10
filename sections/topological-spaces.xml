@@ -251,7 +251,7 @@
 <theorem>
 <p>
   Let <m>X</m> be a finite topological space. 
-  Then <m>X</m> is Hausdorff if and only if
+  Then <m>X</m> is <m>T_1</m> if and only if
   <m>X</m> has the discrete topology.
 </p>
 </theorem>
