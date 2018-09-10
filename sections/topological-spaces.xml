@@ -450,6 +450,19 @@
   <li><m>\mb R\setminus\mb Z</m></li>
 </ol>
 </example>
+<theorem>
+<p>
+  A subset <m>D</m> of a topological space is dense if and only if
+  every open set of the space contains a point of <m>D</m>.
+</p>
+</theorem>
+<definition>
+<p>
+  Let <m>\tuple{X,\mc T}</m> be a topological space. A subset <m>\mc B\subseteq\mc T</m>
+  is called a <term>basis</term> for the topology.. TODO.
+</p>
+</definition>
+<p>TODO: subspaces, basis and subbasis, first/second countability</p>
 <definition>
 <p>
   The following are also known as <term>separation axioms</term> for a topological space
@@ -507,11 +520,4 @@
   A topological space is <m>T_3</m> if and only if it is regular and <m>T_0</m>.
 </p>
 </theorem>
-<definition>
-<p>
-  Let <m>\tuple{X,\mc T}</m> be a topological space. A subset <m>\mc B\subseteq\mc T</m>
-  is called a <term>basis</term> for the topology.. TODO.
-</p>
-</definition>
-<p>TODO: subspaces, basis and subbasis, first/second countability</p>
 </section>
