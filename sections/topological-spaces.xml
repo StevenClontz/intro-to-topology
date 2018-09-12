@@ -163,8 +163,8 @@
   <li>
     Let <m>X=\mb R</m> and 
     <m>
-      \mc T=\setBuilder{(x,\infty)}{x\in\mb R\cup\setList{-\infty}}
-      \cup\setList{\emptyset}
+      \mc T=\setBuilder{(x,\infty)}{x\in\mb R}
+      \cup\setBuilder{[x,\infty)}{x\in\mb R}\cup\setList{\emptyset,\mb R}
     </m>.
   </li>
   <li>
