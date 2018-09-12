@@ -458,6 +458,16 @@
 </theorem>
 <definition>
 <p>
+  Let <m>Y\subseteq X</m> for a topological space <m>\tuple{X,\mc T}</m>.
+  Then the <term>subspace topology</term> for <m>Y</m> is given by
+  <m>\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}</m>.
+</p>
+</definition>
+<proposition>
+<p>The subspace topology is a valid topology.</p>
+</proposition>
+<definition>
+<p>
   Let <m>\tuple{X,\mc T}</m> be a topological space. A subset <m>\mc B\subseteq\mc T</m>
   is called a <term>basis</term> for the topology.. TODO.
 </p>
