@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-09-12T14:24:29-05:00    *-->
+<!--*    on 2018-09-12T14:41:09-05:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -335,25 +335,31 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <p id="p-67">A subset \(D\) of a topological space is dense if and only if every open set of the space contains a point of \(D\text{.}\)</p></article><article class="definition-like" id="definition-21"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.45</span>
 </h6>
-<p id="p-68">Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a <dfn class="terminology">basis</dfn> for the topology.. TODO.</p></article><p id="p-69">TODO: subspaces, basis and subbasis, first/second countability</p>
-<article class="definition-like" id="definition-22"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.46</span>
+<p id="p-68">Let \(Y\subseteq X\) for a topological space \(\tuple{X,\mc T}\text{.}\) Then the <dfn class="terminology">subspace topology</dfn> for \(Y\) is given by \(\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}\text{.}\)</p></article><article class="theorem-like" id="proposition-13"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.46</span>
 </h6>
-<p id="p-70">The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
+<p id="p-69">The subspace topology is a valid topology.</p></article><article class="definition-like" id="definition-22"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.47</span>
+</h6>
+<p id="p-70">Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a <dfn class="terminology">basis</dfn> for the topology.. TODO.</p></article><p id="p-71">TODO: subspaces, basis and subbasis, first/second countability</p>
+<article class="definition-like" id="definition-23"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.48</span>
+</h6>
+<p id="p-72">The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
 <ol class="decimal">
 <li id="li-59">\(\mc T\) is said to be <dfn class="terminology">regular</dfn> if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\text{.}\)</li>
 <li id="li-60">\(\mc T\) is said to be <dfn class="terminology">\(T_3\)</dfn> if and only if it is both regular and \(T_1\)</li>
 <li id="li-61">\(\mc T\) is said to be <dfn class="terminology">normal</dfn> if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\text{.}\)</li>
 <li id="li-62">\(\mc T\) is said to be <dfn class="terminology">\(T_4\)</dfn> if and only if it is both normal and \(T_1\)</li>
-</ol></article><article class="theorem-like" id="proposition-13"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">2.47</span>
+</ol></article><article class="theorem-like" id="proposition-14"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.49</span>
 </h6>
-<p id="p-71">\(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\text{.}\)</p></article><article class="theorem-like" id="theorem-8"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.48</span>
+<p id="p-73">\(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\text{.}\)</p></article><article class="theorem-like" id="theorem-8"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.50</span>
 </h6>
-<p id="p-72">The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-9" id="example-9"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.49</span>
-</h6></a></article><div id="hk-example-9" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-73">Find or create an example of a topological space that is:</p>
+<p id="p-74">The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-9" id="example-9"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.51</span>
+</h6></a></article><div id="hk-example-9" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-75">Find or create an example of a topological space that is:</p>
 <ol class="decimal">
 <li id="li-63">\(T_2\) but not regular.</li>
 <li id="li-64">\(T_3\) but not \(T_4\)</li>
@@ -363,9 +369,9 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <li id="li-68">Normal but not regular.</li>
 </ol></article></div>
 <article class="theorem-like" id="theorem-9"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.50</span>
+<span class="type">Theorem</span> <span class="codenumber">2.52</span>
 </h6>
-<p id="p-74">A topological space is \(T_3\) if and only if it is regular and \(T_0\text{.}\)</p></article></section></div></main>
+<p id="p-76">A topological space is \(T_3\) if and only if it is regular and \(T_0\text{.}\)</p></article></section></div></main>
 </div>
 </body>
 </html>
