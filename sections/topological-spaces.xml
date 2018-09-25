@@ -455,6 +455,12 @@
   every open set of the space contains a point of <m>D</m>.
 </p>
 </theorem>
+<proposition>
+<p>
+  Let <m>X</m> be a topological space, and let <m>D\subseteq E\subseteq X</m>.
+  If <m>D</m> is dense, then <m>E</m> is also dense.
+</p>
+</proposition>
 <definition>
 <p>
   Let <m>Y\subseteq X</m> for a topological space <m>\tuple{X,\mc T}</m>.
@@ -464,6 +470,9 @@
 </definition>
 <proposition>
 <p>The subspace topology is a valid topology.</p>
+</proposition>
+<proposition>
+<p>Let <m>n\in\setList{0,1,2}</m>. A subspace of a <m>T_n</m> space is also <m>T_n</m>.</p>
 </proposition>
 <definition>
 <p>
@@ -508,8 +517,9 @@
 <theorem>
 <p>
   Let <m>\mc S\subseteq\mc P(X)</m> and 
-  <m>\mc T=\bigcap\setBuilder{\mc U}{\mc S\subseteq\mc U \text{ and }
-  \mc U \text{ is a topology on } X}</m>.
+  <m>\mc T=\bigcap\setBuilder{\mc T^\star}{\mc S\subseteq\mc T^\star \text{ and }
+  \mc T^\star \text{ is a topology on } X}</m>.
+  Then <m>\mc T</m> is a topology. 
 </p>
 </theorem>
 <p>TODO: subspaces, basis and subbasis, first/second countability</p>
