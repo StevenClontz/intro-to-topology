@@ -11,6 +11,8 @@
           \newcommand{\int}{\operatorname{int}}
           \newcommand{\ext}{\operatorname{ext}}
           \newcommand{\bd}{\operatorname{bd}}
+          \newcommand{\glb}{\operatorname{glb}}
+          \newcommand{\lub}{\operatorname{lub}}
           \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
           \newcommand{\setList}[1]{\left\{#1\right\}}
         </macros>
