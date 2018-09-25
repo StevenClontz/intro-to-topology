@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-09-24T12:17:44-05:00    *-->
+<!--*    on 2018-09-25T12:17:06-05:00    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -48,6 +48,8 @@ MathJax.Hub.Config({
 \newcommand{\int}{\operatorname{int}}
 \newcommand{\ext}{\operatorname{ext}}
 \newcommand{\bd}{\operatorname{bd}}
+\newcommand{\glb}{\operatorname{glb}}
+\newcommand{\lub}{\operatorname{lub}}
 \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
 \newcommand{\setList}[1]{\left\{#1\right\}}
 \newcommand{\lt}{&lt;}
@@ -365,25 +367,29 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <li id="li-64">\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R}\)</li>
 <li id="li-65">\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}\)</li>
 </ol></article></div>
-<p id="p-76">TODO: subspaces, basis and subbasis, first/second countability</p>
-<article class="definition-like" id="definition-23"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">2.52</span>
+<article class="theorem-like" id="theorem-9"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.52</span>
 </h6>
-<p id="p-77">The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
+<p id="p-76">Let \(\mc S\subseteq\mc P(X)\) and \(\mc T=\bigcap\setBuilder{\mc U}{\mc S\subseteq\mc U \text{ and }
+\mc U \text{ is a topology on } X}\text{.}\)</p></article><p id="p-77">TODO: subspaces, basis and subbasis, first/second countability</p>
+<article class="definition-like" id="definition-23"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">2.53</span>
+</h6>
+<p id="p-78">The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
 <ol class="decimal">
 <li id="li-66">\(\mc T\) is said to be <dfn class="terminology">regular</dfn> if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\text{.}\)</li>
 <li id="li-67">\(\mc T\) is said to be <dfn class="terminology">\(T_3\)</dfn> if and only if it is both regular and \(T_1\)</li>
 <li id="li-68">\(\mc T\) is said to be <dfn class="terminology">normal</dfn> if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\text{.}\)</li>
 <li id="li-69">\(\mc T\) is said to be <dfn class="terminology">\(T_4\)</dfn> if and only if it is both normal and \(T_1\)</li>
 </ol></article><article class="theorem-like" id="proposition-16"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">2.53</span>
+<span class="type">Proposition</span> <span class="codenumber">2.54</span>
 </h6>
-<p id="p-78">\(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\text{.}\)</p></article><article class="theorem-like" id="theorem-9"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.54</span>
+<p id="p-79">\(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\text{.}\)</p></article><article class="theorem-like" id="theorem-10"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.55</span>
 </h6>
-<p id="p-79">The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-10" id="example-10"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.55</span>
-</h6></a></article><div id="hk-example-10" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-80">Find or create an example of a topological space that is:</p>
+<p id="p-80">The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-10" id="example-10"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.56</span>
+</h6></a></article><div id="hk-example-10" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-81">Find or create an example of a topological space that is:</p>
 <ol class="decimal">
 <li id="li-70">\(T_2\) but not regular.</li>
 <li id="li-71">\(T_3\) but not \(T_4\)</li>
@@ -392,10 +398,10 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <li id="li-74">Regular but not normal.</li>
 <li id="li-75">Normal but not regular.</li>
 </ol></article></div>
-<article class="theorem-like" id="theorem-10"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">2.56</span>
+<article class="theorem-like" id="theorem-11"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">2.57</span>
 </h6>
-<p id="p-81">A topological space is \(T_3\) if and only if it is regular and \(T_0\text{.}\)</p></article></section></div></main>
+<p id="p-82">A topological space is \(T_3\) if and only if it is regular and \(T_0\text{.}\)</p></article></section></div></main>
 </div>
 </body>
 </html>
