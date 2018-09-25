@@ -1,6 +1,8 @@
 <appendix xml:id="set-theory">
-  <title>Naive Set Theory</title>
-    <introduction><p>A review of basic results concerning sets.</p></introduction>
+  <title>Assumed Results</title>
+  <introduction>
+    <p>A review of basic results/definitions concerning sets and the reals.</p>
+  </introduction>
 <definition>
   <ul>
     <li><m>\mb R</m> is the set of real numbers.</li>
@@ -18,7 +20,7 @@
 <theorem>
 <p>
   The <term>Archemedian Property</term> of the real numbers guarantees that
-  for each real number <m>x\in\mb R</m>, there exists a natural number
+  for each positive real number <m>x>0</m>, there exists a natural number
   <m>n\in\mb N</m> such that <m>\frac{1}{n}\lt x</m>.
 </p>
 </theorem>
@@ -29,5 +31,17 @@
 </p>
 <me>X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)</me>
 <me>X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)</me>
+</theorem>
+<theorem>
+<p>
+  Let <m>S\subseteq \mb R</m> be a set of real numbers with a lower bound.
+  Then there exists a <term>greatest lower bound</term> (a.k.a.
+  <term>infimum</term>) <m>\glb S=\inf S</m>.
+</p>
+<p>
+  Let <m>S\subseteq \mb R</m> be a set of real numbers with a lower bound.
+  Then there exists a <term>least upper bound</term> (a.k.a.
+  <term>supremum</term>) <m>\lub S=\sup S</m>.
+</p>
 </theorem>
 </appendix>

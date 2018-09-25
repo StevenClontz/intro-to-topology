@@ -505,6 +505,13 @@
   <li><m>\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}</m></li>
 </ol>
 </example>
+<theorem>
+<p>
+  Let <m>\mc S\subseteq\mc P(X)</m> and 
+  <m>\mc T=\bigcap\setBuilder{\mc U}{\mc S\subseteq\mc U \text{ and }
+  \mc U \text{ is a topology on } X}</m>.
+</p>
+</theorem>
 <p>TODO: subspaces, basis and subbasis, first/second countability</p>
 <definition>
 <p>
