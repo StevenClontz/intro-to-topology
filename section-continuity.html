@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-09-25T12:24:04-05:00    *-->
+<!--*    on 2018-09-26T02:02:30Z    *-->
 <!--*                                    *-->
 <!--*   http://mathbook.pugetsound.edu   *-->
 <!--*                                    *-->
@@ -86,7 +86,66 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-continuity"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span>
 </h2>
-<a href="section-continuity.html" class="permalink">¶</a></section></div></main>
+<a href="section-continuity.html" class="permalink">¶</a><article class="definition-like" id="definition-26"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.1</span>
+</h6>
+<p id="p-88">Let \(f:X\to Y\) be a function. For \(A\subseteq X\text{,}\) let \(f[A]=\setBuilder{f(x)}{x\in A}\text{.}\) For \(y\in Y\text{,}\) let \(f^\leftarrow(y)=\setBuilder{x\in X}{f(x)=y}\text{.}\) For \(B\subseteq Y\text{,}\) let \(f^\leftarrow[B]=\setBuilder{x\in X}{f(x)\in B}\text{.}\)</p></article><article class="definition-like" id="definition-27"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.2</span>
+</h6>
+<p id="p-89">Let \(X,Y\) be topological spaces with \(x\in X\text{,}\) and let \(f:X\to Y\) be a function such that for every neighborhood \(V\) of \(f(x)\text{,}\) there exists a neighborhood \(U\) of \(x\) such that \(f[U]\subseteq V\text{.}\) Then \(f\) is said to be <dfn class="terminology">continuous at the point</dfn> \(x\text{.}\)</p>
+<p id="p-90">A function that is continuous at every point of its domain is called <dfn class="terminology">continuous</dfn>.</p></article><article class="theorem-like" id="proposition-19"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.3</span>
+</h6>
+<p id="p-91">A function \(f:X\to Y\) is continuous if and only if \(f^\leftarrow[V]\) is an open subset of \(X\) for every open \(V\subseteq Y\text{.}\)</p></article><article class="theorem-like" id="proposition-20"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.4</span>
+</h6>
+<p id="p-92">Let \(X,Y\) be topological spaces.</p>
+<ol class="decimal">
+<li id="li-80">The identity function \(\iota:X\to X\) defined by \(\iota(x)=x\) is continuous.</li>
+<li id="li-81">Let \(y\in Y\text{.}\) The constant function \(c_y:X\to Y\) defined by \(c_y(x)=y\) is continuous.</li>
+<li id="li-82">Every function whose domain is a discrete space is continuous.</li>
+<li id="li-83">Every function whose range is an indiscrete space is continuous.</li>
+</ol></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-12" id="example-12"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.5</span> <span class="title">Continuous functions \(\mb R\to\mb R\)</span>
+</h6></a></article><div id="hk-example-12" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-93">Verify that each of the following functions \(f:\mb R\to\mb R\) are continuous.</p>
+<ol class="decimal">
+<li id="li-84">\(f(x)=|x|\)</li>
+<li id="li-85">\(f(x)=x^2\)</li>
+<li id="li-86">\(f(x)=g(x)+h(x)\) for \(g,h:\mb R\to\mb R\) continuous.</li>
+<li id="li-87">\(f(x)=g(x)h(x)\) for \(g,h:\mb R\to\mb R\) continuous.</li>
+</ol></article></div>
+<article class="theorem-like" id="theorem-13"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.6</span>
+</h6>
+<p id="p-94">If \(f:X\to Y\) and \(g:Y\to Z\) are both continuous, then \(g\circ f:X\to Z\) is continuous.</p></article><article class="definition-like" id="definition-28"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">3.7</span>
+</h6>
+<p id="p-95">Let \(f:X\to Y\) be a bijection such that both \(f\) and its inverse \(f^{-1}\) are continuous. Then \(f\) is called a <dfn class="terminology">homeomorphism</dfn> and \(X,Y\) are said to be <dfn class="terminology">homeomorphic</dfn>.</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-example-13" id="example-13"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">3.8</span> <span class="title">Properties preserved by continuous functions</span>
+</h6></a></article><div id="hk-example-13" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-96">Determine if the following hold if \(f:X\to Y\) is a continuous function, continous surjection, continuous bijection, or homeomorphism.</p>
+<ol class="decimal">
+<li id="li-88">If \(X\) is Hausdorff, then \(Y\) is Hausdorff.</li>
+<li id="li-89">If \(U\subseteq X\) is open, then \(f[U]\subseteq Y\) is open.</li>
+<li id="li-90">If \(H\subseteq X\) is closed, then \(f[H]\subseteq Y\) is closed.</li>
+<li id="li-91">If \(x\) is a limit point of \(A\subseteq X\text{,}\) then \(f(x)\) is a limit point of \(f[A]\subseteq Y\text{.}\)</li>
+</ol></article></div>
+<article class="theorem-like" id="proposition-21"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.9</span>
+</h6>
+<p id="p-97">If \(f:X\to Y\) and \(g:Y\to Z\) are both homeomorphisms, then \(g\circ f:X\to Z\) is a homeomorphism.</p></article><article class="theorem-like" id="theorem-14"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.10</span>
+</h6>
+<p id="p-98">Let \(a\lt b\) and \(c\lt d\) be real numbers. Then \((a,b)\) and \((c,d)\) are homeomorphic subspaces of the Euclidean line.</p></article><article class="theorem-like" id="theorem-15"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.11</span>
+</h6>
+<p id="p-99">\(\mb R\) with the Euclidean topology is homeomorphic to its subspace \((0,1)\text{.}\)</p></article><article class="theorem-like" id="theorem-16"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">3.12</span>
+</h6>
+<p id="p-100">Let \(\mc B\) be a basis for the Euclidean topology on \(\mb R\text{.}\) Give \(K=\mb R\cup\setList{-\infty,\infty}\) the topology generated by the basis \(\setBuilder{[-\infty,x)}{x\in\mb R}\cup
+\setBuilder{(x,\infty]}{x\in\mb R}\cup\mc B\text{.}\) Then \(K\) is homeomorphic to the subspace \([0,1]\) of the Euclidean line.</p></article><article class="theorem-like" id="proposition-22"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">3.13</span>
+</h6>
+<p id="p-101">The real line with the Sorgenfrey topology generated by the basis \(\setBuilder{[a,b)}{a,b\in\mb R}\) is homeomorphic to the real line with the reverse Sorgenfrey topology generated by the basis \(\setBuilder{(a,b]}{a,b\in\mb R}\text{.}\)</p></article></section></div></main>
 </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-09-25T12:24:05-05:00    *%
+%*    on 2018-09-26T02:02:35Z    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -26,12 +26,10 @@
 \usepackage{xcolor}
 %% Colored boxes, and much more, though mostly styling
 %% skins library provides "enhanced" skin, employing tikzpicture
-%% vignette library provides fancy shaded frames
 %% boxes may be configured as "breakable" or "unbreakable"
 %% "raster" controls grids of boxes, aka side-by-side
 \usepackage{tcolorbox}
 \tcbuselibrary{skins}
-\tcbuselibrary{vignette}
 \tcbuselibrary{breakable}
 \tcbuselibrary{raster}
 %% xparse allows the construction of more robust commands,
@@ -121,27 +119,91 @@
 %% simply to provide a global counter to use, namely "cthm"
 \newtheorem{cthm}{BadTheoremStringName}[section]
 %% end: General AMS environment setup
-%%
-%% tcolorbox, with styles, for THEOREM-LIKE
-%%
-%% theorem: fairly simple numbered block/structure
-\tcbset{ theoremstyle/.style={size=minimal, boxrule=-0.3pt, frame empty, colback=white, colbacktitle=white, coltitle=black, fonttitle=\normalfont\bfseries, attach title to upper, after title={\space}, } }
-\newtcolorbox[use counter=cthm, number within=section]{theorem}[3]{title={{Theorem~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, label=#3, breakable, fontupper=\itshape, theoremstyle, }
-%% proposition: fairly simple numbered block/structure
-\tcbset{ propositionstyle/.style={size=minimal, boxrule=-0.3pt, frame empty, colback=white, colbacktitle=white, coltitle=black, fonttitle=\normalfont\bfseries, attach title to upper, after title={\space}, } }
-\newtcolorbox[use counter=cthm, number within=section]{proposition}[3]{title={{Proposition~\thetcbcounter\notblank{#1#2}{\space}{}\notblank{#1}{\space#1}{}\notblank{#2}{\space(#2)}{}}}, label=#3, breakable, fontupper=\itshape, propositionstyle, }
-%%
-%% tcolorbox, with styles, for DEFINITION-LIKE
-%%
+%% begin: environments with italicized bodies, theorems and similar
+%% Style is like a theorem, and for statements without proofs
+%% Theorem-like environments in modified "plain" style
+%% We manage the head, do not adjust vertical spacing
+%% Thus "space after theorem head" is necessary
+%% This provides an automatic period after the number
+\newtheoremstyle{ptxplainnotitle}
+  {}% space above
+  {}% space below
+  {\itshape}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {.}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {}% theorem head specification
+%% We now manage punctuation on-sight, elsewhere,
+%% assuming non-trivial content inside a "title"
+\newtheoremstyle{ptxplaintitle}
+  {}% space above
+  {}% space below
+  {\itshape}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% theorem head specification
+%% Only variants actually used in document appear here
+%% Template eventually creates an environment of the given name
+%% No arguments => Theorem 2.6. via "notitle" style variant
+%% One optional argument => Theorem 2.6 Fantastic! via "title" style variant
+\theoremstyle{ptxplainnotitle}
+\newtheorem{theoremnotitle}[cthm]{Theorem}
+\theoremstyle{ptxplaintitle}
+\newtheorem{theoremtitle}[cthm]{Theorem}
+\NewDocumentEnvironment{theorem}{ot+o}
+    { \IfBooleanTF{#2}
+        { \IfValueTF{#1}{ \begin{theoremtitle}[#3 {\mdseries(#1)}] }{ \begin{theoremtitle}[#3]} } 
+        { \IfValueTF{#1}{ \begin{theoremnotitle}[#1]  }{ \begin{theoremnotitle}} }
+    }
+    { \IfBooleanTF{#2}{\end{theoremtitle}}{\end{theoremnotitle}} }
+\theoremstyle{ptxplainnotitle}
+\newtheorem{propositionnotitle}[cthm]{Proposition}
+\theoremstyle{ptxplaintitle}
+\newtheorem{propositiontitle}[cthm]{Proposition}
+\NewDocumentEnvironment{proposition}{ot+o}
+    { \IfBooleanTF{#2}
+        { \IfValueTF{#1}{ \begin{propositiontitle}[#3 {\mdseries(#1)}] }{ \begin{propositiontitle}[#3]} } 
+        { \IfValueTF{#1}{ \begin{propositionnotitle}[#1]  }{ \begin{propositionnotitle}} }
+    }
+    { \IfBooleanTF{#2}{\end{propositiontitle}}{\end{propositionnotitle}} }
+%% AMS proof environment is basically fine as-is and special treatment
+%% would certainly interfere with the functioning of \qed, etc.
+%% So we simply localize the default heading
+%% Redefinition of the "proof" environment is to cause a long alternate
+%% title to line-break appropriately.  Code is cut verbatim, by suggestion,
+%% from "Using the amsthm Package" Version 2.20.3, September 2017
+%% end: environments with italicized bodies, theorems and similar
+%% begin: environments with normal bodies, examples, etc.
+%% Other environments go in modified "definition" style
+%% Similar to above
+\newtheoremstyle{ptxdefinitionnotitle}
+  {}% space above
+  {}% space below
+  {}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {.}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {\thmname{#1}\thmnumber{ #2}}% theorem head specification
+\newtheoremstyle{ptxdefinitiontitle}
+  {}% space above
+  {}% space below
+  {}% body font
+  {}% indent amount
+  {\bfseries}% theorem head font
+  {}% punctuation after theorem head
+  {0.5em}% space after theorem head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}% theorem head specification
 %% definition: fairly simple numbered block/structure
-\tcbset{ definitionstyle/.style={size=minimal, boxrule=-0.3pt, frame empty, colback=white, colbacktitle=white, coltitle=black, fonttitle=\normalfont\bfseries, attach title to upper, after title={\space}, after upper={\hfill{}\(\lozenge\)}, } }
-\newtcolorbox[use counter=cthm, number within=section]{definition}[2]{title={{Definition~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, definitionstyle, }
-%%
-%% tcolorbox, with styles, for EXAMPLE-LIKE
-%%
+\tcbset{ definitionstyle/.style={size=minimal, colback=white, colbacktitle=white, coltitle=black, fonttitle=\bfseries, attach title to upper, after title={\space}} }
+\newtcolorbox[use counter=cthm, number within=section]{definition}[2]{title={{Definition~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, definitionstyle}
 %% example: fairly simple numbered block/structure
-\tcbset{ examplestyle/.style={size=minimal, boxrule=-0.3pt, frame empty, colback=white, colbacktitle=white, coltitle=black, fonttitle=\normalfont\bfseries, attach title to upper, after title={\space}, after upper={\hfill{}\(\square\)}, } }
-\newtcolorbox[use counter=cthm, number within=section]{example}[2]{title={{Example~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, examplestyle, }
+\tcbset{ examplestyle/.style={size=minimal, colback=white, colbacktitle=white, coltitle=black, fonttitle=\bfseries, attach title to upper, after title={\space}} }
+\newtcolorbox[use counter=cthm, number within=section]{example}[2]{title={{Example~\thetcbcounter\notblank{#1}{\space\space#1}{}}}, label=#2, breakable, examplestyle}
+%% end: environments with normal bodies, examples, etc.
 %% Localize LaTeX supplied names (possibly none)
 \renewcommand*{\appendixname}{Appendix}
 \renewcommand*{\abstractname}{Abstract}
@@ -217,7 +279,7 @@
 \author{Steven Clontz\\
 University of South Alabama
 }
-\date{September 25, 2018}
+\date{September 26, 2018}
 \begin{document}
 %% Target for xref to top-level element is document start
 \hypertarget{index}{}
@@ -235,12 +297,9 @@ Dr. Clontz's website for students is \url{https://prof.clontz.org}. His personal
 \end{abstract}
 \hypertarget{p-4}{}%
 These are course notes for an introductory course for general topology, to be used in an inquiry-based learning classroom.%
-%
-%
 \typeout{************************************************}
 \typeout{Section 1 Curves and Surfaces}
 \typeout{************************************************}
-%
 \section[{Curves and Surfaces}]{Curves and Surfaces}\label{section-surfaces}
 \hypertarget{p-5}{}%
 In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.%
@@ -332,12 +391,9 @@ While these shapes appear very different, they can all be defined as a ``quotien
 \par
 \hypertarget{p-19}{}%
 In order to study so-called ``topological spaces'' such as these, we will begin by distilling down the notion of a ``neighborhood'' for an arbitrary set.%
-%
-%
 \typeout{************************************************}
 \typeout{Section 2 Topological Spaces}
 \typeout{************************************************}
-%
 \section[{Topological Spaces}]{Topological Spaces}\label{section-topological-spaces}
 \begin{definition}{}{definition-4}%
 \hypertarget{p-20}{}%
@@ -381,15 +437,15 @@ Determine if each set is open or not open.%
 \item\hypertarget{li-14}{}A finite set \(F\subseteq\mb R\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-1}%
+\begin{theorem}\label{theorem-1}
 \hypertarget{p-25}{}%
 A subset \(U\subseteq\mb R\) is open if and only if there exists a collection of open intervals \(\mc U\) such that \(U=\bigcup\mc U\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-1}%
+\begin{proposition}\label{proposition-1}
 \hypertarget{p-26}{}%
 Let \(x\in\mb R\) and \(S\subseteq\mb R\). The point \(x\) is a limit point of the set \(S\) if and only if for every open set \(U\) containing \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\).%
 \end{proposition}
-\begin{theorem}{}{}{euclidean-topology-verification}%
+\begin{theorem}\label{euclidean-topology-verification}
 \hypertarget{p-27}{}%
 The open subsets of \(\mb R\) satisfy the following properties.%
 \leavevmode%
@@ -415,7 +471,7 @@ Then \(\mc T\) is called a \terminology{topology} on \(X\), the pair \(\tuple{X,
 \hypertarget{p-30}{}%
 Let \(\mc T\subseteq\mc P(\mb R)\) be the collection of open subsets of \(\mb R\) defined by \hyperref[euclidean-open-sets]{Definition~\ref{euclidean-open-sets}}. Then by \hyperref[euclidean-topology-verification]{Theorem~\ref{euclidean-topology-verification}}, \(\mc T\) is a valid topology for \(\mb R\) called the \terminology{Euclidean topology}.%
 \end{definition}
-\begin{theorem}{}{}{theorem-3}%
+\begin{theorem}\label{theorem-3}
 \hypertarget{p-31}{}%
 Let \(X\) be any set. Then the following sets are topologies on \(X\).%
 \leavevmode%
@@ -424,11 +480,11 @@ Let \(X\) be any set. Then the following sets are topologies on \(X\).%
 \item\hypertarget{li-22}{}\(\mc T=\{\emptyset,X\}\) is called the \terminology{indiscrete topology}.%
 \end{enumerate}
 \end{theorem}
-\begin{proposition}{}{}{proposition-2}%
+\begin{proposition}\label{proposition-2}
 \hypertarget{p-32}{}%
 Let \(\mc T\) be a topology, and let \(\mc U\subseteq\mc T\) be finite. Then \(\bigcap\mc U\in\mc T\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-3}%
+\begin{proposition}\label{proposition-3}
 \hypertarget{p-33}{}%
 Let \(\mc T\) be the Euclidean topology. There exists a collection \(\mc U=\{U_n:n\in\mb N\}\) such that \(\bigcap\mc U\not\in\mc T\).%
 \end{proposition}
@@ -471,7 +527,7 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 \hypertarget{p-36}{}%
 Let \(\tuple{X,\mc T}\) be a topological space and let \(x\in X\). The set \(N\subseteq X\) is called a \terminology{neighborhood} of \(x\) if and only if there exists an open set \(U\in\mc T\) such that \(x\in U\subseteq N\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-4}%
+\begin{proposition}\label{proposition-4}
 \hypertarget{p-37}{}%
 A subset \(U\) of a topological space \(X\) is open if and only if \(U\) is a neighborhood of every point it contains.%
 \end{proposition}
@@ -485,7 +541,7 @@ The following are known as \terminology{separation axioms} for a topological spa
 \item\hypertarget{li-30}{}\(\mc T\) is said to be \terminology{\(T_2\)} (also known as \terminology{Hausdorff}) if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(U\cap V=\emptyset\).%
 \end{enumerate}
 \end{definition}
-\begin{proposition}{}{}{proposition-5}%
+\begin{proposition}\label{proposition-5}
 \hypertarget{p-39}{}%
 \(T_2\Rightarrow T_1\Rightarrow T_0\).%
 \end{proposition}
@@ -499,11 +555,11 @@ Find or create an example of a topological space \(\tuple{X,\mc T}\) that is:%
 \item\hypertarget{li-33}{}\(T_1\) but not \(T_2\).%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-4}%
+\begin{theorem}\label{theorem-4}
 \hypertarget{p-41}{}%
 Let \(X\) be a finite topological space. Then \(X\) is \(T_1\) if and only if \(X\) has the discrete topology.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-6}%
+\begin{proposition}\label{proposition-6}
 \hypertarget{p-42}{}%
 The Euclidean real line is a non-discrete Hausdorff topological space.%
 \end{proposition}
@@ -511,7 +567,7 @@ The Euclidean real line is a non-discrete Hausdorff topological space.%
 \hypertarget{p-43}{}%
 Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{limit point} of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-7}%
+\begin{proposition}\label{proposition-7}
 \hypertarget{p-44}{}%
 The point \(x\in\mb R\) is a limit point of \(S\subseteq \mb R\) according to \hyperref[limit-point-intro]{Definition~\ref{limit-point-intro}} if and only if it is a limit point according to \hyperref[limit-point]{Definition~\ref{limit-point}} (where \(\mb R\) is assumed to have the Euclidean topology).%
 \end{proposition}
@@ -539,11 +595,11 @@ Calculate \(\cl S\) for each of the following examples.%
 \hypertarget{p-48}{}%
 Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is called \terminology{closed} if and only if \(H=\cl S\).%
 \end{definition}
-\begin{theorem}{}{}{theorem-5}%
+\begin{theorem}\label{theorem-5}
 \hypertarget{p-49}{}%
 Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is closed if and only if there exists an open set \(U\) such that \(H=X\setminus U\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-8}%
+\begin{proposition}\label{proposition-8}
 \hypertarget{p-50}{}%
 The closed subsets of a topological space \(X\) satisfy the following properties.%
 \leavevmode%
@@ -553,7 +609,7 @@ The closed subsets of a topological space \(X\) satisfy the following properties
 \item\hypertarget{li-41}{}If \(H,L\) are closed sets, then \(H\cup L\) is a closed set.%
 \end{enumerate}
 \end{proposition}
-\begin{theorem}{}{}{theorem-6}%
+\begin{theorem}\label{theorem-6}
 \hypertarget{p-51}{}%
 A topological space \(X\) is \(T_1\) if and only if every finite subset of \(X\) is closed.%
 \end{theorem}
@@ -564,7 +620,7 @@ Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \t
 \hypertarget{p-53}{}%
 Let \(\bd S\) collect all the boundary points of \(S\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-9}%
+\begin{proposition}\label{proposition-9}
 \hypertarget{p-54}{}%
 Let \(a,b\in\mb R\). Then \(\bd (a,b)=\bd (a,b]=\bd [a,b)=\bd [a,b]=\{a,b\}\) with respect to the Eudlidean topology.%
 \end{proposition}
@@ -575,7 +631,7 @@ Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \t
 \hypertarget{p-56}{}%
 Let \(\int S\) collect all the interior points of \(S\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-10}%
+\begin{proposition}\label{proposition-10}
 \hypertarget{p-57}{}%
 Let \(U\subseteq X\) be a subset of a topological space. Then \(U\) is open if and only if \(U=\int U\).%
 \end{proposition}
@@ -590,11 +646,11 @@ Let \(\ext S\) collect all the exterior points of \(S\).%
 \hypertarget{p-60}{}%
 A \terminology{partition} of a set \(X\) is a collection \(\mc P\) such that \(X=\bigcup\mc P\) and \(A\cap B=\emptyset\) for all \(A,B\in\mc P\) where \(A\not=B\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-11}%
+\begin{proposition}\label{proposition-11}
 \hypertarget{p-61}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-12}%
+\begin{proposition}\label{proposition-12}
 \hypertarget{p-62}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=\int S\cup\bd S=S\cup\bd S\).%
 \end{proposition}
@@ -640,11 +696,11 @@ Determine which of these are dense subsets of \(\mb R\).%
 \item\hypertarget{li-58}{}\(\mb R\setminus\mb Z\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-7}%
+\begin{theorem}\label{theorem-7}
 \hypertarget{p-67}{}%
 A subset \(D\) of a topological space is dense if and only if every open set of the space contains a point of \(D\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-13}%
+\begin{proposition}\label{proposition-13}
 \hypertarget{p-68}{}%
 Let \(X\) be a topological space, and let \(D\subseteq E\subseteq X\). If \(D\) is dense, then \(E\) is also dense.%
 \end{proposition}
@@ -652,39 +708,48 @@ Let \(X\) be a topological space, and let \(D\subseteq E\subseteq X\). If \(D\) 
 \hypertarget{p-69}{}%
 Let \(Y\subseteq X\) for a topological space \(\tuple{X,\mc T}\). Then the \terminology{subspace topology} for \(Y\) is given by \(\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-14}%
+\begin{proposition}\label{proposition-14}
 \hypertarget{p-70}{}%
 The subspace topology is a valid topology.%
 \end{proposition}
-\begin{proposition}{}{}{proposition-15}%
+\begin{proposition}\label{proposition-15}
 \hypertarget{p-71}{}%
 Let \(n\in\setList{0,1,2}\). A subspace of a \(T_n\) space is also \(T_n\).%
 \end{proposition}
 \begin{definition}{}{definition-22}%
 \hypertarget{p-72}{}%
+The \terminology{Cantor set} is the subset \(C\subseteq\mb R\) defined by \(C=\bigcap_{n\in\mb N} C_n\), where \(C_0=[0,1]\) and%
+\begin{equation*}
+C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n} 
+\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right).
+\end{equation*}
+This set is usually considered as a closed subset of the Euclidean line, or as a subspace of the Euclidean line.%
+\end{definition}
+\begin{definition}{}{definition-23}%
+\hypertarget{p-73}{}%
 Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a \terminology{basis} for the topology if for every \(x\in X\) and neighborhood \(U\) of \(x\), there exists \(B\in\mc B\) such that \(x\in B\subseteq U\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-16}%
-\hypertarget{p-73}{}%
+\begin{proposition}\label{proposition-16}
+\hypertarget{p-74}{}%
 \(\mc B=\setBuilder{(a,b)}{a,b\in\mb R}\) is a basis for the Euclidean topology.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-8}%
-\hypertarget{p-74}{}%
+\begin{theorem}\label{theorem-8}
+\hypertarget{p-75}{}%
 Let \(\mc B\subseteq\mc P(X)\) satisfy the following properties:%
 \leavevmode%
 \begin{enumerate}
 \item\hypertarget{li-59}{}For all \(x\in X\), there exists \(B\in\mc B\) such that \(x\in B\).%
 \item\hypertarget{li-60}{}If \(x\in A\in\mc B\) and \(x\in B\in\mc B\), there exists \(C\in\mc B\) such that \(x\in C\subseteq A\cap B\).%
 \end{enumerate}
-\hypertarget{p-75}{}%
+\hypertarget{p-76}{}%
 Then \(\mc T=\setBuilder{\bigcup\mc U}{\mc U\subseteq\mc B}\) is a topology, and \(\mc B\) is a basis for that topology. We call this the \terminology{topology generated by the basis}.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-17}%
-\hypertarget{p-76}{}%
+\begin{proposition}\label{proposition-17}
+\hypertarget{p-77}{}%
 \(\mc B=\setBuilder{[a,b)}{a,b\in\mb R}\) is a basis for a topology different from the Euclidean topology, called the \terminology{Sorgenfrey topology}.%
 \end{proposition}
-\begin{example}{Examples of bases.}{example-9}%
-\hypertarget{p-77}{}%
+\begin{example}{Examples of bases}{example-9}%
+\hypertarget{p-78}{}%
 Calculate the topology generated by each basis on \(\mb R\).%
 \leavevmode%
 \begin{enumerate}
@@ -695,104 +760,192 @@ Calculate the topology generated by each basis on \(\mb R\).%
 \item\hypertarget{li-65}{}\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-9}%
-\hypertarget{p-78}{}%
-Let \(\mc S\subseteq\mc P(X)\) and \(\mc T=\bigcap\setBuilder{\mc T^\star}{\mc S\subseteq\mc T^\star \text{ and }
-\mc T^\star \text{ is a topology on } X}\). Then \(\mc T\) is a topology.%
-\end{theorem}
+\begin{theorem}\label{subbasis}
 \hypertarget{p-79}{}%
-TODO: subspaces, basis and subbasis, first/second countability%
-\begin{definition}{}{definition-23}%
+Let \(\mc S\subseteq\mc P(X)\) and%
+\begin{equation*}
+\mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
+\mc T^\star \text{ is a topology on } X}.
+\end{equation*}
+Then \(\mc T\) is a topology.%
+\end{theorem}
+\begin{definition}{}{definition-24}%
 \hypertarget{p-80}{}%
+The set \(\mc S\subseteq\mc P(X)\) in \hyperref[subbasis]{Theorem~\ref{subbasis}} is called a \terminology{subbasis} generating the topology%
+\begin{equation*}
+\mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
+\mc T^\star \text{ is a topology on } X}.
+\end{equation*}
+%
+\end{definition}
+\begin{example}{Topologies generated from subbases}{example-10}%
+\hypertarget{p-81}{}%
+Calculate the topology on \(\mb R\) generated by each subbasis.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-66}{}\(\setBuilder{(-\infty,x)}{x\in\mb R}\cup\setBuilder{(y,\infty)}{y\in\mb R}\)%
+\item\hypertarget{li-67}{}\(\setBuilder{(-\infty,x]}{x\in\mb R}\cup\setBuilder{[y,\infty)}{y\in\mb R}\)%
+\item\hypertarget{li-68}{}\(\setList{\setList{0}}\)%
+\item\hypertarget{li-69}{}\(\mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\mb N}}\)%
+\end{enumerate}
+\end{example}
+\begin{theorem}\label{theorem-10}
+\hypertarget{p-82}{}%
+Let \(\mc S\subseteq\mc P(X)\) and%
+\begin{equation*}
+\mc B=\setList{X}\cup\bigcap\setBuilder{\mc B^\star\subseteq\mc P(X)}
+{\mc S\subseteq\mc B^\star\text{ and }
+B_1,B_2\in\mc B^\star\Rightarrow B_1\cap B_2\in\mc B^\star}.
+\end{equation*}
+Then \(\mc B\) is a basis for a topology on \(X\), and the topology generated by the basis \(\mc B\) is same as the topology generated by the subbasis \(\mc S\).%
+\end{theorem}
+\begin{definition}{}{definition-25}%
+\hypertarget{p-83}{}%
 The following are also known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-66}{}\(\mc T\) is said to be \terminology{regular} if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\), there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\).%
-\item\hypertarget{li-67}{}\(\mc T\) is said to be \terminology{\(T_3\)} if and only if it is both regular and \(T_1\)%
-\item\hypertarget{li-68}{}\(\mc T\) is said to be \terminology{normal} if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\), there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\).%
-\item\hypertarget{li-69}{}\(\mc T\) is said to be \terminology{\(T_4\)} if and only if it is both normal and \(T_1\)%
+\item\hypertarget{li-70}{}\(\mc T\) is said to be \terminology{regular} if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\), there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\).%
+\item\hypertarget{li-71}{}\(\mc T\) is said to be \terminology{\(T_3\)} if and only if it is both regular and \(T_1\)%
+\item\hypertarget{li-72}{}\(\mc T\) is said to be \terminology{normal} if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\), there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\).%
+\item\hypertarget{li-73}{}\(\mc T\) is said to be \terminology{\(T_4\)} if and only if it is both normal and \(T_1\)%
 \end{enumerate}
 \end{definition}
-\begin{proposition}{}{}{proposition-18}%
-\hypertarget{p-81}{}%
+\begin{proposition}\label{proposition-18}
+\hypertarget{p-84}{}%
 \(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\).%
 \end{proposition}
-\begin{theorem}{}{}{theorem-10}%
-\hypertarget{p-82}{}%
+\begin{theorem}\label{theorem-11}
+\hypertarget{p-85}{}%
 The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\).%
 \end{theorem}
-\begin{example}{}{example-10}%
-\hypertarget{p-83}{}%
+\begin{example}{}{example-11}%
+\hypertarget{p-86}{}%
 Find or create an example of a topological space that is:%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-70}{}\(T_2\) but not regular.%
-\item\hypertarget{li-71}{}\(T_3\) but not \(T_4\)%
-\item\hypertarget{li-72}{}Regular but not \(T_3\).%
-\item\hypertarget{li-73}{}Normal but not \(T_4\).%
-\item\hypertarget{li-74}{}Regular but not normal.%
-\item\hypertarget{li-75}{}Normal but not regular.%
+\item\hypertarget{li-74}{}\(T_2\) but not regular.%
+\item\hypertarget{li-75}{}\(T_3\) but not \(T_4\)%
+\item\hypertarget{li-76}{}Regular but not \(T_3\).%
+\item\hypertarget{li-77}{}Normal but not \(T_4\).%
+\item\hypertarget{li-78}{}Regular but not normal.%
+\item\hypertarget{li-79}{}Normal but not regular.%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-11}%
-\hypertarget{p-84}{}%
+\begin{theorem}\label{theorem-12}
+\hypertarget{p-87}{}%
 A topological space is \(T_3\) if and only if it is regular and \(T_0\).%
 \end{theorem}
-%
-%
 \typeout{************************************************}
 \typeout{Section 3 Continuity \& Homeomorphisms}
 \typeout{************************************************}
-%
 \section[{Continuity \& Homeomorphisms}]{Continuity \& Homeomorphisms}\label{section-continuity}
-%
-%
+\begin{definition}{}{definition-26}%
+\hypertarget{p-88}{}%
+Let \(f:X\to Y\) be a function. For \(A\subseteq X\), let \(f[A]=\setBuilder{f(x)}{x\in A}\). For \(y\in Y\), let \(f^\leftarrow(y)=\setBuilder{x\in X}{f(x)=y}\). For \(B\subseteq Y\), let \(f^\leftarrow[B]=\setBuilder{x\in X}{f(x)\in B}\).%
+\end{definition}
+\begin{definition}{}{definition-27}%
+\hypertarget{p-89}{}%
+Let \(X,Y\) be topological spaces with \(x\in X\), and let \(f:X\to Y\) be a function such that for every neighborhood \(V\) of \(f(x)\), there exists a neighborhood \(U\) of \(x\) such that \(f[U]\subseteq V\). Then \(f\) is said to be \terminology{continuous at the point} \(x\).%
+\par
+\hypertarget{p-90}{}%
+A function that is continuous at every point of its domain is called \terminology{continuous}.%
+\end{definition}
+\begin{proposition}\label{proposition-19}
+\hypertarget{p-91}{}%
+A function \(f:X\to Y\) is continuous if and only if \(f^\leftarrow[V]\) is an open subset of \(X\) for every open \(V\subseteq Y\).%
+\end{proposition}
+\begin{proposition}\label{proposition-20}
+\hypertarget{p-92}{}%
+Let \(X,Y\) be topological spaces.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-80}{}The identity function \(\iota:X\to X\) defined by \(\iota(x)=x\) is continuous.%
+\item\hypertarget{li-81}{}Let \(y\in Y\). The constant function \(c_y:X\to Y\) defined by \(c_y(x)=y\) is continuous.%
+\item\hypertarget{li-82}{}Every function whose domain is a discrete space is continuous.%
+\item\hypertarget{li-83}{}Every function whose range is an indiscrete space is continuous.%
+\end{enumerate}
+\end{proposition}
+\begin{example}{Continuous functions \(\mb R\to\mb R\)}{example-12}%
+\hypertarget{p-93}{}%
+Verify that each of the following functions \(f:\mb R\to\mb R\) are continuous.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-84}{}\(f(x)=|x|\)%
+\item\hypertarget{li-85}{}\(f(x)=x^2\)%
+\item\hypertarget{li-86}{}\(f(x)=g(x)+h(x)\) for \(g,h:\mb R\to\mb R\) continuous.%
+\item\hypertarget{li-87}{}\(f(x)=g(x)h(x)\) for \(g,h:\mb R\to\mb R\) continuous.%
+\end{enumerate}
+\end{example}
+\begin{theorem}\label{theorem-13}
+\hypertarget{p-94}{}%
+If \(f:X\to Y\) and \(g:Y\to Z\) are both continuous, then \(g\circ f:X\to Z\) is continuous.%
+\end{theorem}
+\begin{definition}{}{definition-28}%
+\hypertarget{p-95}{}%
+Let \(f:X\to Y\) be a bijection such that both \(f\) and its inverse \(f^{-1}\) are continuous. Then \(f\) is called a \terminology{homeomorphism} and \(X,Y\) are said to be \terminology{homeomorphic}.%
+\end{definition}
+\begin{example}{Properties preserved by continuous functions}{example-13}%
+\hypertarget{p-96}{}%
+Determine if the following hold if \(f:X\to Y\) is a continuous function, continous surjection, continuous bijection, or homeomorphism.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-88}{}If \(X\) is Hausdorff, then \(Y\) is Hausdorff.%
+\item\hypertarget{li-89}{}If \(U\subseteq X\) is open, then \(f[U]\subseteq Y\) is open.%
+\item\hypertarget{li-90}{}If \(H\subseteq X\) is closed, then \(f[H]\subseteq Y\) is closed.%
+\item\hypertarget{li-91}{}If \(x\) is a limit point of \(A\subseteq X\), then \(f(x)\) is a limit point of \(f[A]\subseteq Y\).%
+\end{enumerate}
+\end{example}
+\begin{proposition}\label{proposition-21}
+\hypertarget{p-97}{}%
+If \(f:X\to Y\) and \(g:Y\to Z\) are both homeomorphisms, then \(g\circ f:X\to Z\) is a homeomorphism.%
+\end{proposition}
+\begin{theorem}\label{theorem-14}
+\hypertarget{p-98}{}%
+Let \(a\lt b\) and \(c\lt d\) be real numbers. Then \((a,b)\) and \((c,d)\) are homeomorphic subspaces of the Euclidean line.%
+\end{theorem}
+\begin{theorem}\label{theorem-15}
+\hypertarget{p-99}{}%
+\(\mb R\) with the Euclidean topology is homeomorphic to its subspace \((0,1)\).%
+\end{theorem}
+\begin{theorem}\label{theorem-16}
+\hypertarget{p-100}{}%
+Let \(\mc B\) be a basis for the Euclidean topology on \(\mb R\). Give \(K=\mb R\cup\setList{-\infty,\infty}\) the topology generated by the basis \(\setBuilder{[-\infty,x)}{x\in\mb R}\cup
+\setBuilder{(x,\infty]}{x\in\mb R}\cup\mc B\). Then \(K\) is homeomorphic to the subspace \([0,1]\) of the Euclidean line.%
+\end{theorem}
+\begin{proposition}\label{proposition-22}
+\hypertarget{p-101}{}%
+The real line with the Sorgenfrey topology generated by the basis \(\setBuilder{[a,b)}{a,b\in\mb R}\) is homeomorphic to the real line with the reverse Sorgenfrey topology generated by the basis \(\setBuilder{(a,b]}{a,b\in\mb R}\).%
+\end{proposition}
 \typeout{************************************************}
 \typeout{Section 4 Compactness}
 \typeout{************************************************}
-%
 \section[{Compactness}]{Compactness}\label{section-compactness}
-%
-%
 \typeout{************************************************}
 \typeout{Section 5 Connectedness}
 \typeout{************************************************}
-%
 \section[{Connectedness}]{Connectedness}\label{section-connectedness}
-%
-%
 \typeout{************************************************}
 \typeout{Section 6 Metric Spaces}
 \typeout{************************************************}
-%
 \section[{Metric Spaces}]{Metric Spaces}\label{section-metric-spaces}
-%
-%
 \typeout{************************************************}
 \typeout{Section 7 Product Spaces}
 \typeout{************************************************}
-%
 \section[{Product Spaces}]{Product Spaces}\label{section-product-spaces}
-%
-%
 \typeout{************************************************}
 \typeout{Section 8 Quotient Spaces}
 \typeout{************************************************}
-%
 \section[{Quotient Spaces}]{Quotient Spaces}\label{section-quotient-spaces}
-%
-%
 \typeout{************************************************}
 \typeout{Appendix A Assumed Results}
 \typeout{************************************************}
 %
-%
 \appendix
 %
 \section[{Assumed Results}]{Assumed Results}\label{set-theory}
-\hypertarget{p-85}{}%
+\hypertarget{p-102}{}%
 A review of basic results/definitions concerning sets and the reals.%
-\begin{definition}{}{definition-24}%
+\begin{definition}{}{definition-29}%
 \leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}\(\mb R\) is the set of real numbers.%
@@ -801,12 +954,12 @@ A review of basic results/definitions concerning sets and the reals.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}{}{}{theorem-12}%
-\hypertarget{p-86}{}%
+\begin{theorem}\label{theorem-17}
+\hypertarget{p-103}{}%
 The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-13}%
-\hypertarget{p-87}{}%
+\begin{theorem}\label{theorem-18}
+\hypertarget{p-104}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
@@ -817,11 +970,11 @@ X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
 X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 \end{equation*}
 \end{theorem}
-\begin{theorem}{}{}{theorem-14}%
-\hypertarget{p-88}{}%
+\begin{theorem}\label{theorem-19}
+\hypertarget{p-105}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{greatest lower bound} (a.k.a. \terminology{infimum}) \(\glb S=\inf S\).%
 \par
-\hypertarget{p-89}{}%
+\hypertarget{p-106}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{least upper bound} (a.k.a. \terminology{supremum}) \(\lub S=\sup S\).%
 \end{theorem}
 \end{document}
