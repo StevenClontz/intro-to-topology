@@ -58,7 +58,7 @@
 
 <xi:include href="sections/surfaces.xml" />
 <xi:include href="sections/topological-spaces.xml" />
-<section xml:id="section-continuity"><title>Continuity <ampersand/> Homeomorphisms</title></section>
+<xi:include href="sections/continuity.xml" />
 <section xml:id="section-compactness"><title>Compactness</title></section>
 <section xml:id="section-connectedness"><title>Connectedness</title></section>
 <section xml:id="section-metric-spaces"><title>Metric Spaces</title></section>
