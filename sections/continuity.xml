@@ -73,17 +73,24 @@
 <example><title>Properties preserved by continuous functions</title>
 <p>
   Determine if the following hold if <m>f:X\to Y</m> is 
-  a continuous function, continous surjection, continuous bijection, or
-  homeomorphism.
+  a continous surjection. If not, determine if they hold if <m>f</m>
+  is a continuous bijection. If not, show that they hold if <m>f</m>
+  is a homeomorphism.
 </p>
 <ol>
   <li>If <m>X</m> is Hausdorff, then <m>Y</m> is Hausdorff.</li>
+  <li>If <m>Y</m> is Hausdorff, then <m>X</m> is Hausdorff.</li>
   <li>If <m>U\subseteq X</m> is open, then <m>f[U]\subseteq Y</m> is open.</li>
   <li>If <m>H\subseteq X</m> is closed, then <m>f[H]\subseteq Y</m> is closed.</li>
   <li>If <m>x</m> is a limit point of <m>A\subseteq X</m>, 
   then <m>f(x)</m> is a limit point of <m>f[A]\subseteq Y</m>.</li>
 </ol>
 </example>
+<proposition>
+<p>
+  Every topological space is homeomorphic to itself.
+</p>
+</proposition>
 <proposition>
 <p>
   If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both homeomorphisms,
@@ -108,8 +115,8 @@
   Let <m>\mc B</m> be a basis for the Euclidean topology on <m>\mb R</m>.
   Give <m>K=\mb R\cup\setList{-\infty,\infty}</m> the topology generated
   by the basis 
-  <m>\setBuilder{[-\infty,x)}{x\in\mb R}\cup
-  \setBuilder{(x,\infty]}{x\in\mb R}\cup\mc B</m>.
+  <m>\setBuilder{[-\infty,x)}{x\in\mb Q}\cup
+  \setBuilder{(x,\infty]}{x\in\mb Q}\cup\mc B</m>.
   Then <m>K</m> is homeomorphic to the subspace <m>[0,1]</m> of
   the Euclidean line.
 </p>
