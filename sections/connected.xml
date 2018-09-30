@@ -59,7 +59,14 @@
 </proposition>
 <corollary>
 <p>Connectedness is a topological property.</p>
-</corollay>
+</corollary>
+<proposition>
+<p>
+  Let <m>\setList{0,1}</m> have the discrete topology.
+  Then a topological space <m>X</m> is connected if and only if
+  every continuous function <m>f:X\to\setList{0,1}</m> is constant.
+</p>
+</proposition>
 <theorem>
 <p>
   If <m>\mc A</m> is a collection of connected subsets of a topological
