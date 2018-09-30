@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-09-30T17:15:48Z    *%
+%*    on 2018-09-30T17:26:58Z    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -1170,16 +1170,20 @@ Let \(\mc T=\setList{\emptyset}\cup
 \hypertarget{p-149}{}%
 Let \(f:X\to Y\) be continuous and \(K\subseteq X\) be compact. Then \(f[K]\) is compact.%
 \end{theorem}
-\begin{theorem}\label{theorem-35}
+\begin{corollary}\label{corollary-1}
 \hypertarget{p-150}{}%
+Compactness is a topological property.%
+\end{corollary}
+\begin{theorem}\label{theorem-35}
+\hypertarget{p-151}{}%
 Every infinite subset of a compact set has a limit point.%
 \end{theorem}
 \begin{theorem}\label{theorem-36}
-\hypertarget{p-151}{}%
+\hypertarget{p-152}{}%
 Let \(\mc K=\setBuilder{K_n}{n\in\mb N}\) be a collection of non-empty compact subsets of a topological space such that \(K_{n+1}\subseteq K_n\) for all \(n\in\mb N\). Then \(\bigcap\mc K\) is a non-empty compact set.%
 \end{theorem}
 \begin{theorem}\label{theorem-37}
-\hypertarget{p-152}{}%
+\hypertarget{p-153}{}%
 Let \(X\) be metrizable. Then the following are equivalent for \(K\subseteq X\).%
 \leavevmode%
 \begin{enumerate}
@@ -1189,11 +1193,11 @@ Let \(X\) be metrizable. Then the following are equivalent for \(K\subseteq X\).
 \end{enumerate}
 \end{theorem}
 \begin{lemma}\label{lemma-1}
-\hypertarget{p-153}{}%
+\hypertarget{p-154}{}%
 A topological space \(X\) is Hausdorff if and only if for every pair of disjoint compact subsets \(H,K\) there exist disjoint open sets \(U,V\) such that \(H\subseteq U\) and \(K\subseteq V\).%
 \end{lemma}
 \begin{theorem}\label{theorem-38}
-\hypertarget{p-154}{}%
+\hypertarget{p-155}{}%
 Every compact Hausdorff space is \(T_4\).%
 \end{theorem}
 \typeout{************************************************}
@@ -1201,54 +1205,62 @@ Every compact Hausdorff space is \(T_4\).%
 \typeout{************************************************}
 \section[{Connectedness}]{Connectedness}\label{section-connected}
 \begin{definition}{}{definition-42}%
-\hypertarget{p-155}{}%
+\hypertarget{p-156}{}%
 A pair of nonempty open sets \(\setList{A,B}\) satisfying \(Y\subseteq A\cup B\) and \(A\cap B\cap Y=\emptyset\) for a subset \(Y\) of a topological space \(X\) is called a \terminology{disconnection} of \(Y\).%
 \par
-\hypertarget{p-156}{}%
+\hypertarget{p-157}{}%
 A space for which a diconnection exists is called \terminology{disconnected}; otherwise, the space is called \terminology{connected}.%
 \end{definition}
 \begin{proposition}\label{proposition-34}
-\hypertarget{p-157}{}%
+\hypertarget{p-158}{}%
 The set \(\setList{A,B}\) is a disconnection of \(Y\subseteq X\) if and only if \(\setList{A\cap Y,B\cap Y}\) is a partition of \(Y\) by clopen (both closed and open) sets in the subspace topology.%
 \end{proposition}
 \begin{proposition}\label{proposition-35}
-\hypertarget{p-158}{}%
+\hypertarget{p-159}{}%
 The Euclidean line with a point removed \(\mb R\setminus\setList{0}\) is disconnected.%
 \end{proposition}
 \begin{lemma}\label{lemma-2}
-\hypertarget{p-159}{}%
+\hypertarget{p-160}{}%
 Let \(\mb R=U\cup V\) for open sets \(U,V\) and let \(x\in U,y\in V\) with \(x\leq y\).  Then \(\inf\setBuilder{z\in[x,y]}{z\in V}\in U\cap V\).%
 \end{lemma}
-\begin{corollary}\label{corollary-1}
-\hypertarget{p-160}{}%
+\begin{corollary}\label{corollary-2}
+\hypertarget{p-161}{}%
 The Euclidean line is connected.%
 \end{corollary}
 \begin{theorem}\label{theorem-39}
-\hypertarget{p-161}{}%
+\hypertarget{p-162}{}%
 The Sorgenfrey topology on \(\mb R\) is disconnected.%
 \end{theorem}
 \begin{theorem}\label{theorem-40}
-\hypertarget{p-162}{}%
+\hypertarget{p-163}{}%
 If a subset \(A\) of a topological space is connected, then \(\cl A\) is connected.%
 \end{theorem}
 \begin{proposition}\label{proposition-36}
-\hypertarget{p-163}{}%
+\hypertarget{p-164}{}%
 If a subset \(A\) of a topological space is connected and \(f:X\to Y\) is continuous, then \(f[A]\) is connected.%
 \end{proposition}
+\begin{corollary}\label{corollary-3}
+\hypertarget{p-165}{}%
+Connectedness is a topological property.%
+\end{corollary}
+\begin{proposition}\label{proposition-37}
+\hypertarget{p-166}{}%
+Let \(\setList{0,1}\) have the discrete topology. Then a topological space \(X\) is connected if and only if every continuous function \(f:X\to\setList{0,1}\) is constant.%
+\end{proposition}
 \begin{theorem}\label{theorem-41}
-\hypertarget{p-164}{}%
+\hypertarget{p-167}{}%
 If \(\mc A\) is a collection of connected subsets of a topological space with \(\bigcap\mc A\not=\emptyset\), then \(\bigcup\mc A\) is connected.%
 \end{theorem}
 \begin{definition}{}{definition-43}%
-\hypertarget{p-165}{}%
+\hypertarget{p-168}{}%
 Suppose for every two points \(x,y\in A\subseteq X\), there exists a continuous function \(f:[0,1]\to A\) such that \(f(0)=x\) and \(f(1)=y\). Such a space is said to be \terminology{path connected}.%
 \end{definition}
-\begin{proposition}\label{proposition-37}
-\hypertarget{p-166}{}%
+\begin{proposition}\label{proposition-38}
+\hypertarget{p-169}{}%
 Every path connected space is connected.%
 \end{proposition}
 \begin{theorem}\label{theorem-42}
-\hypertarget{p-167}{}%
+\hypertarget{p-170}{}%
 For \(\vec x,\vec y\in\mb R^2\), let%
 \begin{equation*}
 B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
@@ -1258,7 +1270,7 @@ B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
 Then \(\mc B=\setBuilder{B(\vec x,\vec y)}{\vec x,\vec y\in\mb R^2}\) is a basis for a topology on \(\mb R^2\) that is connected but not path connected.%
 \end{theorem}
 \begin{theorem}\label{theorem-43}
-\hypertarget{p-168}{}%
+\hypertarget{p-171}{}%
 Let%
 \begin{equation*}
 S=
@@ -1282,7 +1294,7 @@ y=\sin\left(\frac{1}{x}\right)}
 \appendix
 %
 \section[{Assumed Results}]{Assumed Results}\label{set-theory}
-\hypertarget{p-169}{}%
+\hypertarget{p-172}{}%
 A review of basic results/definitions concerning sets and the reals.%
 \begin{definition}{}{definition-44}%
 \leavevmode%
@@ -1294,11 +1306,11 @@ A review of basic results/definitions concerning sets and the reals.%
 \end{itemize}
 \end{definition}
 \begin{theorem}\label{theorem-44}
-\hypertarget{p-170}{}%
+\hypertarget{p-173}{}%
 The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
 \end{theorem}
 \begin{theorem}\label{theorem-45}
-\hypertarget{p-171}{}%
+\hypertarget{p-174}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
@@ -1310,10 +1322,10 @@ X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 \end{equation*}
 \end{theorem}
 \begin{theorem}\label{theorem-46}
-\hypertarget{p-172}{}%
+\hypertarget{p-175}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{greatest lower bound} (a.k.a. \terminology{infimum}) \(\glb S=\inf S\).%
 \par
-\hypertarget{p-173}{}%
+\hypertarget{p-176}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{least upper bound} (a.k.a. \terminology{supremum}) \(\lub S=\sup S\).%
 \end{theorem}
 \end{document}
