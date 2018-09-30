@@ -90,6 +90,11 @@
   be compact. Then <m>f[K]</m> is compact.
 </p>
 </theorem>
+<corollary>
+<p>
+  Compactness is a topological property.
+</p>
+</corollary>
 <theorem>
 <p>
   Every infinite subset of a compact set has a limit point.

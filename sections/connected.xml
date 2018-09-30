@@ -57,6 +57,9 @@
   then <m>f[A]</m> is connected.
 </p>
 </proposition>
+<corollary>
+<p>Connectedness is a topological property.</p>
+</corollay>
 <theorem>
 <p>
   If <m>\mc A</m> is a collection of connected subsets of a topological
