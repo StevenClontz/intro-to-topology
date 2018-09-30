@@ -57,7 +57,7 @@
     extends unboundedly.
     <fn>
       This topological distinction makes sense as both are closed subsets of 
-      <m>\mathbb R^2</m>; see <xref ref="section-compactness"/>
+      <m>\mathbb R^2</m>; see <xref ref="section-compact"/>
       for more info.
     </fn>
   </li>
