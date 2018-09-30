@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-09-30T02:40:27Z    *%
+%*    on 2018-09-30T17:15:48Z    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -159,6 +159,16 @@
         { \IfValueTF{#1}{ \begin{theoremnotitle}[#1]  }{ \begin{theoremnotitle}} }
     }
     { \IfBooleanTF{#2}{\end{theoremtitle}}{\end{theoremnotitle}} }
+\theoremstyle{ptxplainnotitle}
+\newtheorem{corollarynotitle}[cthm]{Corollary}
+\theoremstyle{ptxplaintitle}
+\newtheorem{corollarytitle}[cthm]{Corollary}
+\NewDocumentEnvironment{corollary}{ot+o}
+    { \IfBooleanTF{#2}
+        { \IfValueTF{#1}{ \begin{corollarytitle}[#3 {\mdseries(#1)}] }{ \begin{corollarytitle}[#3]} } 
+        { \IfValueTF{#1}{ \begin{corollarynotitle}[#1]  }{ \begin{corollarynotitle}} }
+    }
+    { \IfBooleanTF{#2}{\end{corollarytitle}}{\end{corollarynotitle}} }
 \theoremstyle{ptxplainnotitle}
 \newtheorem{lemmanotitle}[cthm]{Lemma}
 \theoremstyle{ptxplaintitle}
@@ -1189,7 +1199,74 @@ Every compact Hausdorff space is \(T_4\).%
 \typeout{************************************************}
 \typeout{Section 6 Connectedness}
 \typeout{************************************************}
-\section[{Connectedness}]{Connectedness}\label{section-connectedness}
+\section[{Connectedness}]{Connectedness}\label{section-connected}
+\begin{definition}{}{definition-42}%
+\hypertarget{p-155}{}%
+A pair of nonempty open sets \(\setList{A,B}\) satisfying \(Y\subseteq A\cup B\) and \(A\cap B\cap Y=\emptyset\) for a subset \(Y\) of a topological space \(X\) is called a \terminology{disconnection} of \(Y\).%
+\par
+\hypertarget{p-156}{}%
+A space for which a diconnection exists is called \terminology{disconnected}; otherwise, the space is called \terminology{connected}.%
+\end{definition}
+\begin{proposition}\label{proposition-34}
+\hypertarget{p-157}{}%
+The set \(\setList{A,B}\) is a disconnection of \(Y\subseteq X\) if and only if \(\setList{A\cap Y,B\cap Y}\) is a partition of \(Y\) by clopen (both closed and open) sets in the subspace topology.%
+\end{proposition}
+\begin{proposition}\label{proposition-35}
+\hypertarget{p-158}{}%
+The Euclidean line with a point removed \(\mb R\setminus\setList{0}\) is disconnected.%
+\end{proposition}
+\begin{lemma}\label{lemma-2}
+\hypertarget{p-159}{}%
+Let \(\mb R=U\cup V\) for open sets \(U,V\) and let \(x\in U,y\in V\) with \(x\leq y\).  Then \(\inf\setBuilder{z\in[x,y]}{z\in V}\in U\cap V\).%
+\end{lemma}
+\begin{corollary}\label{corollary-1}
+\hypertarget{p-160}{}%
+The Euclidean line is connected.%
+\end{corollary}
+\begin{theorem}\label{theorem-39}
+\hypertarget{p-161}{}%
+The Sorgenfrey topology on \(\mb R\) is disconnected.%
+\end{theorem}
+\begin{theorem}\label{theorem-40}
+\hypertarget{p-162}{}%
+If a subset \(A\) of a topological space is connected, then \(\cl A\) is connected.%
+\end{theorem}
+\begin{proposition}\label{proposition-36}
+\hypertarget{p-163}{}%
+If a subset \(A\) of a topological space is connected and \(f:X\to Y\) is continuous, then \(f[A]\) is connected.%
+\end{proposition}
+\begin{theorem}\label{theorem-41}
+\hypertarget{p-164}{}%
+If \(\mc A\) is a collection of connected subsets of a topological space with \(\bigcap\mc A\not=\emptyset\), then \(\bigcup\mc A\) is connected.%
+\end{theorem}
+\begin{definition}{}{definition-43}%
+\hypertarget{p-165}{}%
+Suppose for every two points \(x,y\in A\subseteq X\), there exists a continuous function \(f:[0,1]\to A\) such that \(f(0)=x\) and \(f(1)=y\). Such a space is said to be \terminology{path connected}.%
+\end{definition}
+\begin{proposition}\label{proposition-37}
+\hypertarget{p-166}{}%
+Every path connected space is connected.%
+\end{proposition}
+\begin{theorem}\label{theorem-42}
+\hypertarget{p-167}{}%
+For \(\vec x,\vec y\in\mb R^2\), let%
+\begin{equation*}
+B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
+\text{ or } (\vec x(0)=\vec y(0)=\vec z(0) \text{ and }
+\vec z(1)\in(\vec x(1),\vec y(1))}\text{.}
+\end{equation*}
+Then \(\mc B=\setBuilder{B(\vec x,\vec y)}{\vec x,\vec y\in\mb R^2}\) is a basis for a topology on \(\mb R^2\) that is connected but not path connected.%
+\end{theorem}
+\begin{theorem}\label{theorem-43}
+\hypertarget{p-168}{}%
+Let%
+\begin{equation*}
+S=
+\setBuilder{\tuple{x,y}}{x\in(0,1]\text{ and }
+y=\sin\left(\frac{1}{x}\right)}
+\end{equation*}
+(the \terminology{topologist's sine curve}). Then \(\cl S\) is a subset of the Euclidean space \(\mb R^2\) that is connected but not path connected.%
+\end{theorem}
 \typeout{************************************************}
 \typeout{Section 7 Product Spaces}
 \typeout{************************************************}
@@ -1205,9 +1282,9 @@ Every compact Hausdorff space is \(T_4\).%
 \appendix
 %
 \section[{Assumed Results}]{Assumed Results}\label{set-theory}
-\hypertarget{p-155}{}%
+\hypertarget{p-169}{}%
 A review of basic results/definitions concerning sets and the reals.%
-\begin{definition}{}{definition-42}%
+\begin{definition}{}{definition-44}%
 \leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}\(\mb R\) is the set of real numbers.%
@@ -1216,12 +1293,12 @@ A review of basic results/definitions concerning sets and the reals.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}\label{theorem-39}
-\hypertarget{p-156}{}%
+\begin{theorem}\label{theorem-44}
+\hypertarget{p-170}{}%
 The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
 \end{theorem}
-\begin{theorem}\label{theorem-40}
-\hypertarget{p-157}{}%
+\begin{theorem}\label{theorem-45}
+\hypertarget{p-171}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
@@ -1232,11 +1309,11 @@ X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
 X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 \end{equation*}
 \end{theorem}
-\begin{theorem}\label{theorem-41}
-\hypertarget{p-158}{}%
+\begin{theorem}\label{theorem-46}
+\hypertarget{p-172}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{greatest lower bound} (a.k.a. \terminology{infimum}) \(\glb S=\inf S\).%
 \par
-\hypertarget{p-159}{}%
+\hypertarget{p-173}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{least upper bound} (a.k.a. \terminology{supremum}) \(\lub S=\sup S\).%
 \end{theorem}
 \end{document}
