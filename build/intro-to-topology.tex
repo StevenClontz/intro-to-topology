@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-09-30T01:29:27Z    *%
+%*    on 2018-09-30T02:40:27Z    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -159,6 +159,16 @@
         { \IfValueTF{#1}{ \begin{theoremnotitle}[#1]  }{ \begin{theoremnotitle}} }
     }
     { \IfBooleanTF{#2}{\end{theoremtitle}}{\end{theoremnotitle}} }
+\theoremstyle{ptxplainnotitle}
+\newtheorem{lemmanotitle}[cthm]{Lemma}
+\theoremstyle{ptxplaintitle}
+\newtheorem{lemmatitle}[cthm]{Lemma}
+\NewDocumentEnvironment{lemma}{ot+o}
+    { \IfBooleanTF{#2}
+        { \IfValueTF{#1}{ \begin{lemmatitle}[#3 {\mdseries(#1)}] }{ \begin{lemmatitle}[#3]} } 
+        { \IfValueTF{#1}{ \begin{lemmanotitle}[#1]  }{ \begin{lemmanotitle}} }
+    }
+    { \IfBooleanTF{#2}{\end{lemmatitle}}{\end{lemmanotitle}} }
 \theoremstyle{ptxplainnotitle}
 \newtheorem{propositionnotitle}[cthm]{Proposition}
 \theoremstyle{ptxplaintitle}
@@ -332,7 +342,7 @@ Note the following differences between \hyperref[circle-fig]{Figure~\ref{circle-
 \leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}Removing a point from \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} would split it into two disconnected parts, but \hyperref[circle-fig]{Figure~\ref{circle-fig}} would remain connected after a point is removed.%
-\item{}\hyperref[circle-fig]{Figure~\ref{circle-fig}} is bounded while \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} extends unboundedly. \footnote{This topological distinction makes sense as both are closed subsets of \(\mathbb R^2\); see \hyperref[section-compactness]{Section~\ref{section-compactness}} for more info.\label{fn-1}}%
+\item{}\hyperref[circle-fig]{Figure~\ref{circle-fig}} is bounded while \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} extends unboundedly. \footnote{This topological distinction makes sense as both are closed subsets of \(\mathbb R^2\); see \hyperref[section-compact]{Section~\ref{section-compact}} for more info.\label{fn-1}}%
 \end{itemize}
 \hypertarget{p-10}{}%
 These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween \hyperref[figure-parabola]{Figure~\ref{figure-parabola}} and \hyperref[figure-helix]{Figure~\ref{figure-helix}}, they are in a certain sense the same object that has been bent or stretched into a different shape.%
@@ -1091,7 +1101,91 @@ Metrizable and completely metrizable are topological properties. That is, if \(X
 \typeout{************************************************}
 \typeout{Section 5 Compactness}
 \typeout{************************************************}
-\section[{Compactness}]{Compactness}\label{section-compactness}
+\section[{Compactness}]{Compactness}\label{section-compact}
+\begin{definition}{}{definition-39}%
+\hypertarget{p-138}{}%
+A collection \(\mc A\subseteq \mc P(X)\) is said to \terminology{cover} a subset \(Y\subseteq X\) iff \(Y\subseteq\bigcup\mc A\).%
+\end{definition}
+\begin{definition}{}{definition-40}%
+\hypertarget{p-139}{}%
+A subset \(K\subseteq X\) of a topological space is said to be \terminology{compact} iff for every collection of open sets \(\mc U\) covering \(K\), there exists a finite subcollection \(\mc F\subseteq\mc U\) that also covers \(K\).%
+\end{definition}
+\begin{example}{}{compact-examples}%
+\hypertarget{p-140}{}%
+Determine if each of the following subsets of the Euclidean line is compact.%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-104}{}\(\mb R\)%
+\item\hypertarget{li-105}{}\(\mb Z\)%
+\item\hypertarget{li-106}{}\(\setBuilder{2^{-n}}{n\in\mb N}\)%
+\item\hypertarget{li-107}{}\(\setList{0}\cup\setBuilder{2^{-n}}{n\in\mb N}\)%
+\item\hypertarget{li-108}{}\((0,1)\)%
+\item\hypertarget{li-109}{}\([0,1]\)%
+\end{enumerate}
+\end{example}
+\begin{definition}{}{definition-41}%
+\hypertarget{p-141}{}%
+A subset \(R\subseteq X\) of a topological space is said to be \terminology{relatively compact} iff for every collection of open sets \(\mc U\) covering \(X\), there exists a finite subcollection \(\mc F\subseteq\mc U\) that covers \(K\).%
+\end{definition}
+\begin{theorem}\label{theorem-30}
+\hypertarget{p-142}{}%
+A space is regular if and only if for every point \(x\) and neighborhood \(U\), there exists a neighborhood \(V\) of \(x\) such that \(x\in V\subseteq\cl V\subseteq U\).%
+\end{theorem}
+\begin{theorem}\label{theorem-31}
+\hypertarget{p-143}{}%
+Let \(X\) be regular. A subset \(R\subseteq X\) is relatively compact if and only if \(\cl R\) is compact.%
+\end{theorem}
+\begin{theorem}\label{theorem-32}
+\hypertarget{p-144}{}%
+Let \(X\) be compact and \(K\) be a closed subset of \(X\). Then \(K\) is compact.%
+\end{theorem}
+\begin{proposition}\label{proposition-31}
+\hypertarget{p-145}{}%
+Every finite subset of a space is compact.%
+\end{proposition}
+\begin{proposition}\label{proposition-32}
+\hypertarget{p-146}{}%
+Every finite union of compact subsets is compact.%
+\end{proposition}
+\begin{theorem}\label{theorem-33}
+\hypertarget{p-147}{}%
+Every compact subset of a Hausdorff space is closed.%
+\end{theorem}
+\begin{proposition}\label{proposition-33}
+\hypertarget{p-148}{}%
+Let \(\mc T=\setList{\emptyset}\cup
+\setBuilder{\mb N\setminus F}{F\text{ is finite}}\) be the cofinite topology on \(\mb N\). Every subset of \(\mb N\) is compact under this topology.%
+\end{proposition}
+\begin{theorem}\label{theorem-34}
+\hypertarget{p-149}{}%
+Let \(f:X\to Y\) be continuous and \(K\subseteq X\) be compact. Then \(f[K]\) is compact.%
+\end{theorem}
+\begin{theorem}\label{theorem-35}
+\hypertarget{p-150}{}%
+Every infinite subset of a compact set has a limit point.%
+\end{theorem}
+\begin{theorem}\label{theorem-36}
+\hypertarget{p-151}{}%
+Let \(\mc K=\setBuilder{K_n}{n\in\mb N}\) be a collection of non-empty compact subsets of a topological space such that \(K_{n+1}\subseteq K_n\) for all \(n\in\mb N\). Then \(\bigcap\mc K\) is a non-empty compact set.%
+\end{theorem}
+\begin{theorem}\label{theorem-37}
+\hypertarget{p-152}{}%
+Let \(X\) be metrizable. Then the following are equivalent for \(K\subseteq X\).%
+\leavevmode%
+\begin{enumerate}
+\item\hypertarget{li-110}{}\(K\) is compact%
+\item\hypertarget{li-111}{}Every infinite subset of \(K\) has a limit point.%
+\item\hypertarget{li-112}{}Every infinite subset of \(K\) has a sequential limit point.%
+\end{enumerate}
+\end{theorem}
+\begin{lemma}\label{lemma-1}
+\hypertarget{p-153}{}%
+A topological space \(X\) is Hausdorff if and only if for every pair of disjoint compact subsets \(H,K\) there exist disjoint open sets \(U,V\) such that \(H\subseteq U\) and \(K\subseteq V\).%
+\end{lemma}
+\begin{theorem}\label{theorem-38}
+\hypertarget{p-154}{}%
+Every compact Hausdorff space is \(T_4\).%
+\end{theorem}
 \typeout{************************************************}
 \typeout{Section 6 Connectedness}
 \typeout{************************************************}
@@ -1111,9 +1205,9 @@ Metrizable and completely metrizable are topological properties. That is, if \(X
 \appendix
 %
 \section[{Assumed Results}]{Assumed Results}\label{set-theory}
-\hypertarget{p-138}{}%
+\hypertarget{p-155}{}%
 A review of basic results/definitions concerning sets and the reals.%
-\begin{definition}{}{definition-39}%
+\begin{definition}{}{definition-42}%
 \leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}\(\mb R\) is the set of real numbers.%
@@ -1122,12 +1216,12 @@ A review of basic results/definitions concerning sets and the reals.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}\label{theorem-30}
-\hypertarget{p-139}{}%
+\begin{theorem}\label{theorem-39}
+\hypertarget{p-156}{}%
 The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
 \end{theorem}
-\begin{theorem}\label{theorem-31}
-\hypertarget{p-140}{}%
+\begin{theorem}\label{theorem-40}
+\hypertarget{p-157}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
@@ -1138,11 +1232,11 @@ X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
 X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 \end{equation*}
 \end{theorem}
-\begin{theorem}\label{theorem-32}
-\hypertarget{p-141}{}%
+\begin{theorem}\label{theorem-41}
+\hypertarget{p-158}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{greatest lower bound} (a.k.a. \terminology{infimum}) \(\glb S=\inf S\).%
 \par
-\hypertarget{p-142}{}%
+\hypertarget{p-159}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{least upper bound} (a.k.a. \terminology{supremum}) \(\lub S=\sup S\).%
 \end{theorem}
 \end{document}
