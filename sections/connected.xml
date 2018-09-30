@@ -1,0 +1,113 @@
+<section xml:id="section-connected">
+  <title>Connectedness</title>
+<definition>
+<p>
+  A pair of nonempty open sets <m>\setList{A,B}</m>
+  satisfying 
+  <m>Y\subseteq A\cup B</m> and <m>A\cap B\cap Y=\emptyset</m>
+  for a subset <m>Y</m>
+  of a topological space <m>X</m> 
+  is called a <term>disconnection</term> of <m>Y</m>. 
+</p>
+<p>
+  A space for which a diconnection exists is called
+  <term>disconnected</term>; otherwise, the space is called
+  <term>connected</term>. 
+</p>
+</definition>
+<proposition>
+<p>
+  The set <m>\setList{A,B}</m> is a disconnection of <m>Y\subseteq X</m>
+  if and only if <m>\setList{A\cap Y,B\cap Y}</m> is a partition
+  of <m>Y</m> by clopen (both closed and open) sets in the subspace topology.
+</p>
+</proposition>
+<proposition>
+<p>
+  The Euclidean line with a point removed <m>\mb R\setminus\setList{0}</m> 
+  is disconnected.
+</p>
+</proposition>
+<lemma>
+<p>
+  Let <m>\mb R=U\cup V</m> for open sets <m>U,V</m> and let <m>x\in U,y\in V</m>
+  with <m>x\leq y</m>.  Then <m>\inf\setBuilder{z\in[x,y]}{z\in V}\in U\cap V</m>.
+</p>
+</lemma>
+<corollary>
+<p>
+  The Euclidean line is connected.
+</p>
+</corollary>
+<theorem>
+<p>
+  The Sorgenfrey topology on <m>\mb R</m> is disconnected.
+</p>
+</theorem>
+<theorem>
+<p>
+  If a subset <m>A</m> of a topological space is connected,
+  then <m>\cl A</m> is connected.
+</p>
+</theorem>
+<proposition>
+<p>
+  If a subset <m>A</m> of a topological space is connected
+  and <m>f:X\to Y</m> is continuous,
+  then <m>f[A]</m> is connected.
+</p>
+</proposition>
+<theorem>
+<p>
+  If <m>\mc A</m> is a collection of connected subsets of a topological
+  space with <m>\bigcap\mc A\not=\emptyset</m>, then <m>\bigcup\mc A</m>
+  is connected.
+</p>
+</theorem>
+<definition>
+<p>
+  Suppose for every two points <m>x,y\in A\subseteq X</m>, there exists
+  a continuous function <m>f:[0,1]\to A</m> such that <m>f(0)=x</m>
+  and <m>f(1)=y</m>. Such a space is said to be <term>path connected</term>.
+</p>
+</definition>
+<proposition>
+<p>
+  Every path connected space is connected.
+</p>
+</proposition>
+<theorem>
+<p>
+  For <m>\vec x,\vec y\in\mb R^2</m>, let 
+  <me>B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
+  \text{ or } (\vec x(0)=\vec y(0)=\vec z(0) \text{ and }
+  \vec z(1)\in(\vec x(1),\vec y(1))}</me>.
+  Then <m>\mc B=\setBuilder{B(\vec x,\vec y)}{\vec x,\vec y\in\mb R^2}</m>
+  is a basis for a topology on <m>\mb R^2</m> that is connected but
+  not path connected. 
+</p>
+</theorem>
+<theorem>
+<p>
+  Let <me>S=
+  \setBuilder{\tuple{x,y}}{x\in(0,1]\text{ and }
+  y=\sin\left(\frac{1}{x}\right)}</me>
+  (the <term>topologist's sine curve</term>).
+  Then <m>\cl S</m> is a subset of the Euclidean space <m>\mb R^2</m>
+  that is connected but not path connected.
+</p>
+</theorem>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

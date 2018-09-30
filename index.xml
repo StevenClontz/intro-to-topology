@@ -61,7 +61,7 @@
 <xi:include href="sections/continuity.xml" />
 <xi:include href="sections/metric.xml" />
 <xi:include href="sections/compact.xml" />
-<section xml:id="section-connectedness"><title>Connectedness</title></section>
+<xi:include href="sections/connected.xml" />
 <section xml:id="section-product-spaces"><title>Product Spaces</title></section>
 <section xml:id="section-quotient-spaces"><title>Quotient Spaces</title></section>
 
