@@ -343,7 +343,7 @@
   Let <m>S\subseteq X</m> be a subset of a topological space.
   The point <m>x</m> is a <term>boundary point</term> of the set
   <m>S</m> if and only if for every neighborhood of <m>U</m> of <m>x</m>,
-  both <m>S\cap U</m> and <m>S\setminus U</m> are non-empty.
+  both <m>U\cap S</m> and <m>U\setminus S</m> are non-empty.
 </p>
 <p>
   Let <m>\bd S</m> collect all the boundary points of <m>S</m>.
