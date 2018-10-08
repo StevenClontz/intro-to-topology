@@ -406,7 +406,7 @@
 <example>
 <p>
   Let <m>A</m> be a subset of a topological space <m>X</m>. 
-  Prove the following.
+  Prove or disprove the following.
 </p>
 <ol>
   <li><m>\int\int A=\int A</m></li>
