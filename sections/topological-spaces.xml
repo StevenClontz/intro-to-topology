@@ -452,7 +452,7 @@
 <theorem>
 <p>
   A subset <m>D</m> of a topological space is dense if and only if
-  every open set of the space contains a point of <m>D</m>.
+  every nonempty open set of the space contains a point of <m>D</m>.
 </p>
 </theorem>
 <proposition>
