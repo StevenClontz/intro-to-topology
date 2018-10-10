@@ -17,12 +17,12 @@
 </theorem>
 <proposition>
 <p>
-  If <m>X,Y</m> are Hausdorff, then <m>X\times Y</m> is Hausdorff.
+The product <m>X\times Y</m> is Hausdorff if and only if <m>X,Y</m> are each Hausdorff.
 </p>
 </proposition>
 <theorem>
 <p>
-  If <m>X,Y</m> are regular, then <m>X\times Y</m> is regular.
+The product <m>X\times Y</m> is regular if and only if <m>X,Y</m> are each regular.
 </p>
 </theorem>
 <lemma>
@@ -74,6 +74,29 @@ Verify the following properties of projection maps.
 <li>The projection of a closed set is not always closed.</li>
 </ol>
 </example>
+<theorem>
+<p>
+The product <m>X\times Y</m> is metrizable if and only if <m>X,Y</m> are each metrizable.
+</p>
+</theorem>
+<lemma>
+<p>
+Let <m>Y</m> be compact. If <m>\mc U</m> is an open cover of <m>X\times Y</m>,
+then for each <m>x\in X</m> there exists a finite subcollection <m>\mc F_x\subseteq\mc U</m>
+and an open neighborhood <m>U_x</m> of <m>x</m>
+such that <m>U_x\times Y\subseteq\bigcup\mc F_x</m>.
+</p>
+</lemma>
+<theorem>
+<p>
+The product <m>X\times Y</m> is compact if and only if <m>X,Y</m> are each compact.
+</p>
+</theorem>
+<theorem>
+<p>
+The product <m>X\times Y</m> is connected if and only if <m>X,Y</m> are each connected.
+</p>
+</theorem>
 </section>
 
 

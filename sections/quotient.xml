@@ -1,0 +1,154 @@
+<section xml:id="section-quotient">
+  <title>Quotient Spaces</title>
+<definition>
+<p>
+  A <term>quotient map</term> is a surjection <m>f:X\to Y</m>
+  such that <m>V\subseteq Y</m> is open
+  if and only if <m>f^\leftarrow[V]\subseteq X</m>
+  is open.
+</p>
+</definition>
+<proposition xml:id="quotient-topology-thm">
+<p>
+  Let <m>\tuple{X,\mc T_X}</m> be a topological space, and let <m>f:X\to Y</m> 
+  be a surjection. Then <m>\mc T_Y=\setBuilder{V\subseteq Y}{f^\leftarrow[V]\in\mc T_X}</m>
+  is a topology on <m>Y</m> such that <m>f</m> is a quotient map.
+</p>
+</proposition>
+<definition>
+<p>
+  The topology defined in <xref ref="quotient-topology-thm"/> is known as
+  the <term>quotient topology</term> induced by <m>f</m>.
+</p>
+</definition>
+<definition>
+<p>
+  Let <m>X^*</m> be a partition of a topological space <m>X</m>, and let
+  <m>f:X\to X^*</m> be the surjection given by letting <m>f(x)=A</m> iff 
+  <m>x\in A</m>. Then <m>X^*</m> paired with the quotient topology
+  induced by <m>f</m> is called a <term>quotient space</term> or
+  <term>identification space</term>.
+</p>
+</definition>
+<theorem>
+<p>
+  Let <m>(X\times Y)^*=\setBuilder{\setList{x}\times Y}{x\in X}</m> partition
+  the product <m>X\times Y</m>. Then the quotient space <m>(X\times Y)^*</m>
+  is homeomorphic to <m>X</m>.
+</p>
+</theorem>
+<definition>
+<p>
+  A subset <m>R\subseteq X^2</m> is called a <term>relation</term> on <m>X</m>, where
+  the notation <m>xRy</m> is equivalent to writing <m>\tuple{x,y}\in R</m>. 
+</p>
+<p>
+  A relation <m>\sim</m> on <m>X</m> is called an <term>equivalence relation</term>
+  if it satisfies the following for all <m>x,y,z\in X</m>.
+</p>
+<ol>
+<li><m>x\sim x</m>. (Reflexivity)</li>
+<li><m>x\sim y</m> implies <m>y\sim x</m>. (Symmetry)</li>
+<li><m>x\sim y</m> and <m>y\sim z</m> implies <m>y\sim z</m>. (Transitivity)</li>
+</ol>
+</definition>
+<theorem>
+<p>
+  Let <m>X^*</m> be a partition of <m>X</m> and define the relation <m>\sim</m> on <m>X</m>
+  such that <m>x\sim y</m> if and only if <m>\setList{x,y}\subseteq A</m> for some
+  <m>A\in X^*</m>. Then <m>\sim</m> is an equivalence relation.
+</p>
+</theorem>
+<theorem xml:id="equivalence-partition">
+<p>
+  Let <m>\sim</m> be an equivalence relation on <m>X</m>, and let
+  <m>[x]=\setBuilder{y\in X}{x\sim y}</m>. Then 
+  <m>X^*=\setBuilder{[x]}{x\in X}</m> is a partition of <m>X</m>.
+</p>
+</theorem>
+<definition>
+<p>
+  Let <m>\sim</m> be an equivalence relation on a topological space <m>X</m>.
+  Then <m>X/\sim</m> denotes the quotient space defined by the partition <m>X^*</m>
+  given in <xref ref="equivalence-partition"/>.
+</p>
+</definition>
+<proposition>
+<p>
+  Let <m>R</m> be a relation on <m>X</m>. Then
+  <me>\sim=\bigcap\setBuilder{\sim^\star\subseteq X^2}{R\subseteq\sim^\star\text{ and }\sim^\star
+  \text{ is an equivalence relation on }X}</me> is an equivalence relation
+  on <m>X</m>.
+</p>
+<p>
+  (Therefore, an equivalence relation may be defined as the minimal equivalence relation satisfying
+  a list of relationships.)
+</p>
+</proposition>
+<example><title>Curves and surfaces defined as quotients</title>
+<p>
+  Show that each of the following Euclidean subspaces and quotients of Euclidean subspaces are homeomorphic.
+</p>
+<ol>
+<li><m>[0,1]/\sim</m> where <m>0\sim 1</m>, and <m>\setBuilder{\tuple{x,y}\in\mb R^2}{x^2+y^2=1}</m>.</li>
+<li>
+  <m>[0,2]/\sim</m> where <m>0\sim 1\sim 2</m>, and 
+  <m>\setBuilder{\tuple{x,y}\in\mb R^2}{(x-1)^2+y^2=1}\cup\setBuilder{\tuple{x,y}\in\mb R^2}{(x+1)^2+y^2=1}</m>.
+</li>
+<li>
+  <m>[0,1]^2/\sim</m> where <m>\tuple{0,y}\sim\tuple{1,y}</m>, and 
+  <m>\setBuilder{\tuple{x,y}\in\mb R^2}{1\leq x^2+y^2\leq 2}</m>.
+</li>
+<li>
+  <m>[0,1]^2/\sim</m> where <m>\tuple{x,y}\sim\tuple{z,w}</m> whenever
+  at least one of <m>x,y</m> and at least one of <m>z,w</m> is in
+  <m>\setList{0,1}</m>, and 
+  <m>\setBuilder{\tuple{x,y,z}\in\mb R^2}{1\leq x^2+y^2+z^2=1}</m>.
+</li>
+</ol>
+</example>
+<definition>
+<p>
+  The <term>hypersphere</term> of dimension <m>n</m> 
+  is the quotient space <m>S^n=[0,1]^n/\sim</m>
+  given by <m>\vec x\sim\vec y</m> whenever there exist <m>i,j\in\setList{0,\dots,n}</m>
+  such that <m>\vec x(i),\vec y(j)\in\setList{0,1}</m>.
+</p>
+</definition>
+<definition>
+<p>
+  The <term>Möbius strip</term>
+  is the quotient space <m>M=[0,1]^2/\sim</m>
+  given by <m>\tuple{0,y}\sim\tuple{1,1-y}</m>.
+</p>
+</definition>
+<definition>
+<p>
+  The <term>torus</term>
+  is the quotient space <m>T=[0,1]^2/\sim</m>
+  given by <m>\tuple{0,y}\sim\tuple{1,y}</m> and <m>\tuple{x,0}\sim\tuple{x,1}</m>.
+</p>
+</definition>
+<definition>
+<p>
+  The <term>Klein bottle</term>
+  is the quotient space <m>K=[0,1]^2/\sim</m>
+  given by <m>\tuple{0,y}\sim\tuple{1,1-y}</m> and <m>\tuple{x,0}\sim\tuple{x,1}</m>.
+</p>
+</definition>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -63,7 +63,7 @@
 <xi:include href="sections/compact.xml" />
 <xi:include href="sections/connected.xml" />
 <xi:include href="sections/product.xml" />
-<section xml:id="section-quotient-spaces"><title>Quotient Spaces</title></section>
+<xi:include href="sections/quotient.xml" />
 
 <backmatter>
 <xi:include href="sections/set-theory.xml" />

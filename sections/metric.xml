@@ -2,7 +2,7 @@
   <title>Metric Spaces</title>
 <definition>
 <p>
-  Let <m>f:X\to[0,\infty)</m> be a function satisfying the following
+  Let <m>f:X^2\to[0,\infty)</m> be a function satisfying the following
   for all <m>x,y,z\in X</m>.
 </p>
 <ol>
