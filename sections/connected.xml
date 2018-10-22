@@ -2,9 +2,9 @@
   <title>Connectedness</title>
 <definition>
 <p>
-  A pair of nonempty open sets <m>\setList{A,B}</m>
-  satisfying 
-  <m>Y\subseteq A\cup B</m> and <m>A\cap B\cap Y=\emptyset</m>
+  A pair of open sets <m>\setList{A,B}</m>
+  satisfying <m>A\cap Y\not=\emptyset</m>, <m>B\cap Y\not=\emptyset</m>, 
+  <m>Y\subseteq A\cup B</m>, and <m>A\cap B\cap Y=\emptyset</m>
   for a subset <m>Y</m>
   of a topological space <m>X</m> 
   is called a <term>disconnection</term> of <m>Y</m>. 
@@ -19,9 +19,12 @@
 <p>
   The set <m>\setList{A,B}</m> is a disconnection of <m>Y\subseteq X</m>
   if and only if <m>\setList{A\cap Y,B\cap Y}</m> is a partition
-  of <m>Y</m> by clopen (both closed and open) sets in the subspace topology.
+  of <m>Y</m> by non-empty clopen (both closed and open) sets in the subspace topology.
 </p>
 </proposition>
+<p>(Corollary: A space itself is disconnected iff it is the union of two disjoint
+non-empty clopen subsets.)</p> 
+<!-- TODO make an actual corollary -->
 <proposition>
 <p>
   The Euclidean line with a point removed <m>\mb R\setminus\setList{0}</m> 
