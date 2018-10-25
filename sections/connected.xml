@@ -17,7 +17,7 @@
 </definition>
 <proposition>
 <p>
-  The set <m>\setList{A,B}</m> is a disconnection of <m>Y\subseteq X</m>
+  A pair <m>\setList{A,B}</m> of open sets is a disconnection of <m>Y\subseteq X</m>
   if and only if <m>\setList{A\cap Y,B\cap Y}</m> is a partition
   of <m>Y</m> by non-empty clopen (both closed and open) sets in the subspace topology.
 </p>
