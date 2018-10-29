@@ -2,7 +2,7 @@
   <title>Metric Spaces</title>
 <definition>
 <p>
-  Let <m>f:X^2\to[0,\infty)</m> be a function satisfying the following
+  Let <m>d:X^2\to[0,\infty)</m> be a function satisfying the following
   for all <m>x,y,z\in X</m>.
 </p>
 <ol>
@@ -11,7 +11,7 @@
   <li><m>d(x,z)\leq d(x,y)+d(y,z)</m></li>
 </ol>
 <p>
-  Then <m>f</m> is said to be a <term>metric</term> on the set <m>X</m>,
+  Then <m>d</m> is said to be a <term>metric</term> on the set <m>X</m>,
   and
   <me>B_r(x)=\setBuilder{y\in X}{d(x,y)\lt r}</me>
   is said to be a <term>metric ball around <m>x</m></term>.
