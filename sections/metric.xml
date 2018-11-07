@@ -195,7 +195,7 @@
   A <term>Cauchy sequence</term> is a countably infinte set 
   <m>\setBuilder{x_n}{n\in\mb N}</m> 
   such that for all <m>\epsilon\gt0</m>, the set
-  <m>\setBuilder{m\in\mb N}{\exists n>m(d(x_m,x_n)\geq\epsilon}</m>
+  <m>\setBuilder{m\in\mb N}{\exists n>m(d(x_m,x_n)\geq\epsilon)}</m>
   is finite.
 </p>
 </definition>
