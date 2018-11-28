@@ -32,6 +32,12 @@
 </definition>
 <theorem>
 <p>
+  Let <m>X^*</m> be a quotient space of <m>X</m>. Then <m>V\subseteq X^*</m>
+  is open if and only if <m>\bigcup V\subseteq X</m> is open.
+</p>
+</theorem>
+<theorem>
+<p>
   Let <m>(X\times Y)^*=\setBuilder{\setList{x}\times Y}{x\in X}</m> partition
   the product <m>X\times Y</m>. Then the quotient space <m>(X\times Y)^*</m>
   is homeomorphic to <m>X</m>.
