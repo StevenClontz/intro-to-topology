@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2018-11-07T10:17:30-06:00    *%
+%*    on 2018-11-28T12:06:28-06:00    *%
 %*                                    *%
 %*   http://mathbook.pugetsound.edu   *%
 %*                                    *%
@@ -223,7 +223,7 @@
 \author{Steven Clontz\\
 University of South Alabama
 }
-\date{November 7, 2018}
+\date{November 28, 2018}
 \begin{document}
 %% Target for xref to top-level element is document start
 \hypertarget{index}{}
@@ -1321,13 +1321,17 @@ Let \(X^*\) be a partition of a topological space \(X\), and let \(f:X\to X^*\) 
 \end{definition}
 \begin{theorem}{}{}{theorem-50}%
 \hypertarget{p-192}{}%
+Let \(X^*\) be a quotient space of \(X\). Then \(V\subseteq X^*\) is open if and only if \(\bigcup V\subseteq X\) is open.%
+\end{theorem}
+\begin{theorem}{}{}{theorem-51}%
+\hypertarget{p-193}{}%
 Let \((X\times Y)^*=\setBuilder{\setList{x}\times Y}{x\in X}\) partition the product \(X\times Y\). Then the quotient space \((X\times Y)^*\) is homeomorphic to \(X\).%
 \end{theorem}
 \begin{definition}{}{definition-49}%
-\hypertarget{p-193}{}%
+\hypertarget{p-194}{}%
 A subset \(R\subseteq X^2\) is called a \terminology{relation} on \(X\), where the notation \(xRy\) is equivalent to writing \(\tuple{x,y}\in R\).%
 \par
-\hypertarget{p-194}{}%
+\hypertarget{p-195}{}%
 A relation \(\sim\) on \(X\) is called an \terminology{equivalence relation} if it satisfies the following for all \(x,y,z\in X\).%
 \leavevmode%
 \begin{enumerate}
@@ -1336,20 +1340,20 @@ A relation \(\sim\) on \(X\) is called an \terminology{equivalence relation} if 
 \item\hypertarget{li-118}{}\(x\sim y\) and \(y\sim z\) implies \(y\sim z\). (Transitivity)%
 \end{enumerate}
 \end{definition}
-\begin{theorem}{}{}{theorem-51}%
-\hypertarget{p-195}{}%
+\begin{theorem}{}{}{theorem-52}%
+\hypertarget{p-196}{}%
 Let \(X^*\) be a partition of \(X\) and define the relation \(\sim\) on \(X\) such that \(x\sim y\) if and only if \(\setList{x,y}\subseteq A\) for some \(A\in X^*\). Then \(\sim\) is an equivalence relation.%
 \end{theorem}
 \begin{theorem}{}{}{equivalence-partition}%
-\hypertarget{p-196}{}%
+\hypertarget{p-197}{}%
 Let \(\sim\) be an equivalence relation on \(X\), and let \([x]=\setBuilder{y\in X}{x\sim y}\). Then \(X^*=\setBuilder{[x]}{x\in X}\) is a partition of \(X\).%
 \end{theorem}
 \begin{definition}{}{definition-50}%
-\hypertarget{p-197}{}%
+\hypertarget{p-198}{}%
 Let \(\sim\) be an equivalence relation on a topological space \(X\). Then \(X/\sim\) denotes the quotient space defined by the partition \(X^*\) given in \hyperref[equivalence-partition]{Theorem~\ref{equivalence-partition}}.%
 \end{definition}
 \begin{proposition}{}{}{proposition-44}%
-\hypertarget{p-198}{}%
+\hypertarget{p-199}{}%
 Let \(R\) be a relation on \(X\). Then%
 \begin{equation*}
 \sim=\bigcap\setBuilder{\sim^\star\subseteq X^2}{R\subseteq\sim^\star\text{ and }\sim^\star
@@ -1357,11 +1361,11 @@ Let \(R\) be a relation on \(X\). Then%
 \end{equation*}
 is an equivalence relation on \(X\).%
 \par
-\hypertarget{p-199}{}%
+\hypertarget{p-200}{}%
 (Therefore, an equivalence relation may be defined as the minimal equivalence relation satisfying a list of relationships.)%
 \end{proposition}
 \begin{example}{Curves and surfaces defined as quotients.}{example-17}%
-\hypertarget{p-200}{}%
+\hypertarget{p-201}{}%
 Show that each of the following Euclidean subspaces and quotients of Euclidean subspaces are homeomorphic.%
 \leavevmode%
 \begin{enumerate}
@@ -1372,19 +1376,19 @@ Show that each of the following Euclidean subspaces and quotients of Euclidean s
 \end{enumerate}
 \end{example}
 \begin{definition}{}{definition-51}%
-\hypertarget{p-201}{}%
+\hypertarget{p-202}{}%
 The \terminology{hypersphere} of dimension \(n\) is the quotient space \(S^n=[0,1]^n/\sim\) given by \(\vec x\sim\vec y\) whenever there exist \(i,j\in\setList{0,\dots,n}\) such that \(\vec x(i),\vec y(j)\in\setList{0,1}\).%
 \end{definition}
 \begin{definition}{}{definition-52}%
-\hypertarget{p-202}{}%
+\hypertarget{p-203}{}%
 The \terminology{Möbius strip} is the quotient space \(M=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\).%
 \end{definition}
 \begin{definition}{}{definition-53}%
-\hypertarget{p-203}{}%
+\hypertarget{p-204}{}%
 The \terminology{torus} is the quotient space \(T=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,y}\) and \(\tuple{x,0}\sim\tuple{x,1}\).%
 \end{definition}
 \begin{definition}{}{definition-54}%
-\hypertarget{p-204}{}%
+\hypertarget{p-205}{}%
 The \terminology{Klein bottle} is the quotient space \(K=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\) and \(\tuple{x,0}\sim\tuple{x,1}\).%
 \end{definition}
 %
@@ -1397,7 +1401,7 @@ The \terminology{Klein bottle} is the quotient space \(K=[0,1]^2/\sim\) given by
 \appendix
 %
 \section[{Assumed Results}]{Assumed Results}\label{set-theory}
-\hypertarget{p-205}{}%
+\hypertarget{p-206}{}%
 A review of basic results/definitions concerning sets and the reals.%
 \begin{definition}{}{definition-55}%
 \leavevmode%
@@ -1408,12 +1412,12 @@ A review of basic results/definitions concerning sets and the reals.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}{}{}{theorem-53}%
-\hypertarget{p-206}{}%
-The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
-\end{theorem}
 \begin{theorem}{}{}{theorem-54}%
 \hypertarget{p-207}{}%
+The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
+\end{theorem}
+\begin{theorem}{}{}{theorem-55}%
+\hypertarget{p-208}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
@@ -1424,11 +1428,11 @@ X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
 X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 \end{equation*}
 \end{theorem}
-\begin{theorem}{}{}{theorem-55}%
-\hypertarget{p-208}{}%
+\begin{theorem}{}{}{theorem-56}%
+\hypertarget{p-209}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{greatest lower bound} (a.k.a. \terminology{infimum}) \(\glb S=\inf S\).%
 \par
-\hypertarget{p-209}{}%
+\hypertarget{p-210}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{least upper bound} (a.k.a. \terminology{supremum}) \(\lub S=\sup S\).%
 \end{theorem}
 \end{document}
