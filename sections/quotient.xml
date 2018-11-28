@@ -32,8 +32,9 @@
 </definition>
 <theorem>
 <p>
-  Let <m>X^*</m> be a quotient space of <m>X</m>. Then <m>V\subseteq X^*</m>
-  is open if and only if <m>\bigcup V\subseteq X</m> is open.
+  Let <m>X^*</m> be a quotient space of <m>X</m> and <m>V\subseteq X^*</m>. 
+  Then <m>V</m> is open in <m>X^*</m> if and only if 
+  <m>\bigcup V\subseteq X</m> is open in <m>X</m>.
 </p>
 </theorem>
 <theorem>
