@@ -8,7 +8,7 @@
           \newcommand{\mb}{\mathbb}
           \newcommand{\mc}{\mathcal}
           \newcommand{\cl}{\operatorname{cl}}
-          \newcommand{\int}{\operatorname{int}}
+          \renewcommand{\int}{\operatorname{int}}
           \newcommand{\ext}{\operatorname{ext}}
           \newcommand{\bd}{\operatorname{bd}}
           \newcommand{\glb}{\operatorname{glb}}
