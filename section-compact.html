@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-11-28T14:15:20-06:00    *-->
+<!--*    on 2019-06-08T19:26:33Z    *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -12,13 +12,19 @@
 <title>Compactness</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -35,17 +41,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
-\newcommand{\int}{\operatorname{int}}
+\renewcommand{\int}{\operatorname{int}}
 \newcommand{\ext}{\operatorname{ext}}
 \newcommand{\bd}{\operatorname{bd}}
 \newcommand{\glb}{\operatorname{glb}}
@@ -65,36 +81,35 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-metric.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-connected.html" title="Next">Next</a></span></div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-metric.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-connected.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></h2>
-<h2 class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></h2>
-<h2 class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></h2>
-<h2 class="link"><a href="section-metric.html" data-scroll="section-metric"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></h2>
-<h2 class="link active"><a href="section-compact.html" data-scroll="section-compact"><span class="codenumber">5</span> <span class="title">Compactness</span></a></h2>
-<h2 class="link"><a href="section-connected.html" data-scroll="section-connected"><span class="codenumber">6</span> <span class="title">Connectedness</span></a></h2>
-<h2 class="link"><a href="section-product.html" data-scroll="section-product"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></h2>
-<h2 class="link"><a href="section-quotient.html" data-scroll="section-quotient"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></h2>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></li>
+<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></li>
+<li class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
+<li class="link"><a href="section-metric.html" data-scroll="section-metric"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></li>
+<li class="link active"><a href="section-compact.html" data-scroll="section-compact"><span class="codenumber">5</span> <span class="title">Compactness</span></a></li>
+<li class="link"><a href="section-connected.html" data-scroll="section-connected"><span class="codenumber">6</span> <span class="title">Connectedness</span></a></li>
+<li class="link"><a href="section-product.html" data-scroll="section-product"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></li>
+<li class="link"><a href="section-quotient.html" data-scroll="section-quotient"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="set-theory.html" data-scroll="set-theory"><span class="codenumber">A</span> <span class="title">Assumed Results</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-compact"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-compact"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5</span> <span class="title">Compactness</span>
 </h2>
 <a href="section-compact.html" class="permalink">¶</a><article class="definition-like" id="definition-39"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.1</span>
-</h6>
+<span class="type">Definition</span> <span class="codenumber">5.1</span>.</h6>
 <p id="p-138">A collection \(\mc A\subseteq \mc P(X)\) is said to <dfn class="terminology">cover</dfn> a subset \(Y\subseteq X\) iff \(Y\subseteq\bigcup\mc A\text{.}\)</p></article><article class="definition-like" id="definition-40"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.2</span>
-</h6>
-<p id="p-139">A subset \(K\subseteq X\) of a topological space is said to be <dfn class="terminology">compact</dfn> iff for every collection of open sets \(\mc U\) covering \(K\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that also covers \(K\text{.}\)</p></article><article class="example-like"><a knowl="" class="id-ref" refid="hk-compact-examples" id="compact-examples"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.3</span>
-</h6></a></article><div id="hk-compact-examples" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-140">Determine if each of the following subsets of the Euclidean line is compact.</p>
+<span class="type">Definition</span> <span class="codenumber">5.2</span>.</h6>
+<p id="p-139">A subset \(K\subseteq X\) of a topological space is said to be <dfn class="terminology">compact</dfn> iff for every collection of open sets \(\mc U\) covering \(K\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that also covers \(K\text{.}\)</p></article><article class="example-like" id="compact-examples"><a data-knowl="" class="id-ref" data-refid="hk-compact-examples"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">5.3</span>.</h6></a></article><div id="hk-compact-examples" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-140">Determine if each of the following subsets of the Euclidean line is compact.</p>
 <ol class="decimal">
 <li id="li-104">\(\mb R\)</li>
 <li id="li-105">\(\mb Z\)</li>
@@ -104,57 +119,44 @@ MathJax.Hub.Config({
 <li id="li-109">\([0,1]\)</li>
 </ol></article></div>
 <article class="definition-like" id="definition-41"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.4</span>
-</h6>
+<span class="type">Definition</span> <span class="codenumber">5.4</span>.</h6>
 <p id="p-141">A subset \(R\subseteq X\) of a topological space is said to be <dfn class="terminology">relatively compact</dfn> iff for every collection of open sets \(\mc U\) covering \(X\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that covers \(K\text{.}\)</p></article><article class="theorem-like" id="theorem-30"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.5</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.5</span>.</h6>
 <p id="p-142">A space is regular if and only if for every point \(x\) and neighborhood \(U\text{,}\) there exists a neighborhood \(V\) of \(x\) such that \(x\in V\subseteq\cl V\subseteq U\text{.}\)</p></article><article class="theorem-like" id="theorem-31"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.6</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.6</span>.</h6>
 <p id="p-143">Let \(X\) be regular. A subset \(R\subseteq X\) is relatively compact if and only if \(\cl R\) is compact.</p></article><article class="theorem-like" id="theorem-32"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.7</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.7</span>.</h6>
 <p id="p-144">Let \(X\) be compact and \(K\) be a closed subset of \(X\text{.}\) Then \(K\) is compact.</p></article><article class="theorem-like" id="proposition-31"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">5.8</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">5.8</span>.</h6>
 <p id="p-145">Every finite subset of a space is compact.</p></article><article class="theorem-like" id="proposition-32"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">5.9</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">5.9</span>.</h6>
 <p id="p-146">Every finite union of compact subsets is compact.</p></article><article class="theorem-like" id="theorem-33"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.10</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.10</span>.</h6>
 <p id="p-147">Every compact subset of a Hausdorff space is closed.</p></article><article class="theorem-like" id="proposition-33"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">5.11</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">5.11</span>.</h6>
 <p id="p-148">Let \(\mc T=\setList{\emptyset}\cup
 \setBuilder{\mb N\setminus F}{F\text{ is finite}}\) be the cofinite topology on \(\mb N\text{.}\) Every subset of \(\mb N\) is compact under this topology.</p></article><article class="theorem-like" id="theorem-34"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.12</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.12</span>.</h6>
 <p id="p-149">Let \(f:X\to Y\) be continuous and \(K\subseteq X\) be compact. Then \(f[K]\) is compact.</p></article><article class="theorem-like" id="corollary-1"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">5.13</span>
-</h6>
+<span class="type">Corollary</span> <span class="codenumber">5.13</span>.</h6>
 <p id="p-150">Compactness is a topological property.</p></article><article class="theorem-like" id="theorem-35"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.14</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.14</span>.</h6>
 <p id="p-151">Every infinite subset of a compact set has a limit point.</p></article><article class="theorem-like" id="theorem-36"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.15</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.15</span>.</h6>
 <p id="p-152">Let \(\mc K=\setBuilder{K_n}{n\in\mb N}\) be a collection of non-empty compact subsets of a topological space such that \(K_{n+1}\subseteq K_n\) for all \(n\in\mb N\text{.}\) Then \(\bigcap\mc K\) is a non-empty compact set.</p></article><article class="theorem-like" id="theorem-37"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.16</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.16</span>.</h6>
 <p id="p-153">Let \(X\) be metrizable. Then the following are equivalent for \(K\subseteq X\text{.}\)</p>
 <ol class="decimal">
 <li id="li-110">\(K\) is compact</li>
 <li id="li-111">Every infinite subset of \(K\) has a limit point.</li>
 <li id="li-112">Every infinite subset of \(K\) has a sequential limit point.</li>
 </ol></article><article class="theorem-like" id="lemma-1"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">5.17</span>
-</h6>
+<span class="type">Lemma</span> <span class="codenumber">5.17</span>.</h6>
 <p id="p-154">A topological space \(X\) is Hausdorff if and only if for every pair of disjoint compact subsets \(H,K\) there exist disjoint open sets \(U,V\) such that \(H\subseteq U\) and \(K\subseteq V\text{.}\)</p></article><article class="theorem-like" id="theorem-38"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.18</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">5.18</span>.</h6>
 <p id="p-155">Every compact Hausdorff space is \(T_4\text{.}\)</p></article></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

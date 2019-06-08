@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2018-11-28T14:15:20-06:00    *-->
+<!--*    on 2019-06-08T19:26:33Z    *-->
 <!--*                                    *-->
-<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
 <!--**************************************-->
 <html lang="en-US">
@@ -12,13 +12,19 @@
 <title>Connectedness</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script type="text/x-mathjax-config">
+<script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
-        inlineMath: [['\\(','\\)']],
+        inlineMath: [['\\(','\\)']]
     },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -35,17 +41,27 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
-<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
 </head>
 <body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
-\newcommand{\int}{\operatorname{int}}
+\renewcommand{\int}{\operatorname{int}}
 \newcommand{\ext}{\operatorname{ext}}
 \newcommand{\bd}{\operatorname{bd}}
 \newcommand{\glb}{\operatorname{glb}}
@@ -65,71 +81,59 @@ MathJax.Hub.Config({
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-compact.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-product.html" title="Next">Next</a></span></div>
-<button class="sidebar-right-toggle-button button active">Annotations</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-compact.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-product.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
-<h2 class="link"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></h2>
-<h2 class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></h2>
-<h2 class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></h2>
-<h2 class="link"><a href="section-metric.html" data-scroll="section-metric"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></h2>
-<h2 class="link"><a href="section-compact.html" data-scroll="section-compact"><span class="codenumber">5</span> <span class="title">Compactness</span></a></h2>
-<h2 class="link active"><a href="section-connected.html" data-scroll="section-connected"><span class="codenumber">6</span> <span class="title">Connectedness</span></a></h2>
-<h2 class="link"><a href="section-product.html" data-scroll="section-product"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></h2>
-<h2 class="link"><a href="section-quotient.html" data-scroll="section-quotient"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></h2>
-<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://mathbook.pugetsound.edu">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<nav id="toc"><ul>
+<li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></li>
+<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></li>
+<li class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
+<li class="link"><a href="section-metric.html" data-scroll="section-metric"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></li>
+<li class="link"><a href="section-compact.html" data-scroll="section-compact"><span class="codenumber">5</span> <span class="title">Compactness</span></a></li>
+<li class="link active"><a href="section-connected.html" data-scroll="section-connected"><span class="codenumber">6</span> <span class="title">Connectedness</span></a></li>
+<li class="link"><a href="section-product.html" data-scroll="section-product"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></li>
+<li class="link"><a href="section-quotient.html" data-scroll="section-quotient"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="set-theory.html" data-scroll="set-theory"><span class="codenumber">A</span> <span class="title">Assumed Results</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-connected"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-connected"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6</span> <span class="title">Connectedness</span>
 </h2>
 <a href="section-connected.html" class="permalink">¶</a><article class="definition-like" id="definition-42"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">6.1</span>
-</h6>
+<span class="type">Definition</span> <span class="codenumber">6.1</span>.</h6>
 <p id="p-156">A pair of open sets \(\setList{A,B}\) satisfying \(A\cap Y\not=\emptyset\text{,}\) \(B\cap Y\not=\emptyset\text{,}\) \(Y\subseteq A\cup B\text{,}\) and \(A\cap B\cap Y=\emptyset\) for a subset \(Y\) of a topological space \(X\) is called a <dfn class="terminology">disconnection</dfn> of \(Y\text{.}\)</p>
 <p id="p-157">A space for which a diconnection exists is called <dfn class="terminology">disconnected</dfn>; otherwise, the space is called <dfn class="terminology">connected</dfn>.</p></article><article class="theorem-like" id="proposition-34"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">6.2</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">6.2</span>.</h6>
 <p id="p-158">A pair \(\setList{A,B}\) of open sets is a disconnection of \(Y\subseteq X\) if and only if \(\setList{A\cap Y,B\cap Y}\) is a partition of \(Y\) by non-empty clopen (both closed and open) sets in the subspace topology.</p></article><p id="p-159">(Corollary: A space itself is disconnected iff it is the union of two disjoint non-empty clopen subsets.)</p>
 <article class="theorem-like" id="proposition-35"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">6.3</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">6.3</span>.</h6>
 <p id="p-160">The Euclidean line with a point removed \(\mb R\setminus\setList{0}\) is disconnected.</p></article><article class="theorem-like" id="lemma-2"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">6.4</span>
-</h6>
+<span class="type">Lemma</span> <span class="codenumber">6.4</span>.</h6>
 <p id="p-161">Let \(\mb R=U\cup V\) for open sets \(U,V\) and let \(x\in U,y\in V\) with \(x\leq y\text{.}\)  Then \(\inf\setBuilder{z\in[x,y]}{z\in V}\in U\cap V\text{.}\)</p></article><article class="theorem-like" id="corollary-2"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">6.5</span>
-</h6>
+<span class="type">Corollary</span> <span class="codenumber">6.5</span>.</h6>
 <p id="p-162">The Euclidean line is connected.</p></article><article class="theorem-like" id="theorem-39"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">6.6</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">6.6</span>.</h6>
 <p id="p-163">The Sorgenfrey topology on \(\mb R\) is disconnected.</p></article><article class="theorem-like" id="theorem-40"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">6.7</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">6.7</span>.</h6>
 <p id="p-164">If a subset \(A\) of a topological space is connected, then \(\cl A\) is connected.</p></article><article class="theorem-like" id="proposition-36"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">6.8</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">6.8</span>.</h6>
 <p id="p-165">If a subset \(A\) of a topological space is connected and \(f:X\to Y\) is continuous, then \(f[A]\) is connected.</p></article><article class="theorem-like" id="corollary-3"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">6.9</span>
-</h6>
+<span class="type">Corollary</span> <span class="codenumber">6.9</span>.</h6>
 <p id="p-166">Connectedness is a topological property.</p></article><article class="theorem-like" id="proposition-37"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">6.10</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">6.10</span>.</h6>
 <p id="p-167">Let \(\setList{0,1}\) have the discrete topology. Then a topological space \(X\) is connected if and only if every continuous function \(f:X\to\setList{0,1}\) is constant.</p></article><article class="theorem-like" id="theorem-41"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">6.11</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">6.11</span>.</h6>
 <p id="p-168">If \(\mc A\) is a collection of connected subsets of a topological space with \(\bigcap\mc A\not=\emptyset\text{,}\) then \(\bigcup\mc A\) is connected.</p></article><article class="definition-like" id="definition-43"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">6.12</span>
-</h6>
+<span class="type">Definition</span> <span class="codenumber">6.12</span>.</h6>
 <p id="p-169">Suppose for every two points \(x,y\in A\subseteq X\text{,}\) there exists a continuous function \(f:[0,1]\to A\) such that \(f(0)=x\) and \(f(1)=y\text{.}\) Such a space is said to be <dfn class="terminology">path connected</dfn>.</p></article><article class="theorem-like" id="proposition-38"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">6.13</span>
-</h6>
+<span class="type">Proposition</span> <span class="codenumber">6.13</span>.</h6>
 <p id="p-170">Every path connected space is connected.</p></article><article class="theorem-like" id="theorem-42"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">6.14</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">6.14</span>.</h6>
 <p id="p-171">For \(\vec x,\vec y\in\mb R^2\text{,}\) let</p>
 <div class="displaymath">
 \begin{equation*}
@@ -139,8 +143,7 @@ B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
 \end{equation*}
 </div>
 <p>Then \(\mc B=\setBuilder{B(\vec x,\vec y)}{\vec x,\vec y\in\mb R^2}\) is a basis for a topology on \(\mb R^2\) that is connected but not path connected.</p></article><article class="theorem-like" id="theorem-43"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">6.15</span>
-</h6>
+<span class="type">Theorem</span> <span class="codenumber">6.15</span>.</h6>
 <p id="p-172">Let</p>
 <div class="displaymath">
 \begin{equation*}
@@ -151,5 +154,7 @@ y=\sin\left(\frac{1}{x}\right)}
 </div>
 <p>(the <dfn class="terminology">topologist's sine curve</dfn>). Then \(\cl S\) is a subset of the Euclidean space \(\mb R^2\) that is connected but not path connected.</p></article></section></div></main>
 </div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>
