@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
- <mathbook xmlns:xi="http://www.w3.org/2001/XInclude">
+ <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <docinfo>
         <macros>
@@ -70,7 +70,7 @@
 </backmatter>
 </article>
 
-</mathbook>
+</pretext>
 <!--********************************************************************
 Copyright 2015 Robert A. Beezer
 
