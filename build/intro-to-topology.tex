@@ -1,6 +1,6 @@
 %**************************************%
 %*    Generated from PreTeXt source   *%
-%*    on 2019-06-08T19:26:35Z    *%
+%*    on 2019-06-09T19:16:45Z    *%
 %*                                    *%
 %*      https://pretextbook.org       *%
 %*                                    *%
@@ -140,6 +140,19 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \newcommand{\authorsptx}{\relax}%
 \newcommand{\epigraphptx}{\relax}%
 %% Create environments for possible occurences of each division
+%% Environment for a PTX "preface" at the level of a LaTeX "chapter"
+\NewDocumentEnvironment{preface}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Preface}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\chapter*{#1}%
+\addcontentsline{toc}{chapter}{#3}
+\label{#6}%
+}{}%
 %% Environment for a PTX "section" at the level of a LaTeX "section"
 \NewDocumentEnvironment{sectionptx}{mmmmmm}
 {%
@@ -346,7 +359,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \author{Steven Clontz\\
 University of South Alabama
 }
-\date{June 8, 2019}
+\date{June 9, 2019}
 \begin{document}
 %% Target for xref to top-level element is document start
 \hypertarget{article-4}{}
@@ -354,116 +367,106 @@ University of South Alabama
 \thispagestyle{empty}
 \begin{abstract}
 \hypertarget{p-14}{}%
-These are course notes for an introductory course for general topology, to be used in an inquiry-based learning classroom.%
-\par
-\hypertarget{p-15}{}%
-Some of this content has been adapted from Michel Smith's undergraduate topology notes, used with permission.%
-\par
-\hypertarget{p-16}{}%
-Dr. Clontz's website for students is \url{https://prof.clontz.org}. His personal website is \url{https://clontz.org}.%
+These are course notes for an introductory undergraduate or dual-listed course for general topology, to be used in an inquiry-based learning classroom.%
 \end{abstract}
-\begin{introduction}{}%
-\hypertarget{p-20}{}%
-These are course notes for an introductory course for general topology, to be used in an inquiry-based learning classroom.%
-\end{introduction}%
 %
 %
 \typeout{************************************************}
 \typeout{Section 1 Curves and Surfaces}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Curves and Surfaces}{}{Curves and Surfaces}{}{}{section-21}
+\begin{sectionptx}{Curves and Surfaces}{}{Curves and Surfaces}{}{}{section-27}
 \begin{introduction}{}%
-\hypertarget{p-24}{}%
+\hypertarget{p-30}{}%
 In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.%
 \par
-\hypertarget{p-25}{}%
-Unlike the rest of these notes, this section is not meant to be studied rigorously. (For example, what do I mean by ``locally looks like'' in \hyperref[definition-28]{Definition~\ref{definition-28}}?)  However, many of these ideas will return later in the course and be handled more carefully.%
+\hypertarget{p-31}{}%
+Unlike the rest of these notes, we will not rigorously define these concepts. (For example, what do I mean by ``locally looks like'' in \hyperref[definition-34]{Definition~\ref{definition-34}}?)  However, many of these ideas will return later in the course and be handled more carefully.%
 \end{introduction}%
-\begin{definition}{}{definition-28}%
-\hypertarget{p-29}{}%
+\begin{definition}{}{definition-34}%
+\hypertarget{p-35}{}%
 A \terminology{curve} is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the real line \(\mathbb R\) or the half line \(\mathbb R^*=\{x\in\mathbb R:x\geq 0\}\).%
 \end{definition}
-\hypertarget{p-33}{}%
-For example, \hyperref[figure-37]{Figure~\ref{figure-37}}, \hyperref[figure-40]{Figure~\ref{figure-40}}, and \hyperref[figure-43]{Figure~\ref{figure-43}} are all examples of curves in two or three-dimensional Euclidean space.%
+\hypertarget{p-39}{}%
+For example, \hyperref[figure-43]{Figure~\ref{figure-43}}, \hyperref[figure-46]{Figure~\ref{figure-46}}, and \hyperref[figure-49]{Figure~\ref{figure-49}} are all examples of curves in two or three-dimensional Euclidean space.%
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/circle.jpg}
-\caption{A circle\label{figure-37}}
+\caption{A circle\label{figure-43}}
 \end{figure}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/parabola.jpg}
-\caption{A parabola\label{figure-40}}
+\caption{A parabola\label{figure-46}}
 \end{figure}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/helix.jpg}
-\caption{A helix\label{figure-43}}
+\caption{A helix\label{figure-49}}
 \end{figure}
-\hypertarget{p-46}{}%
-Note the following differences between \hyperref[figure-37]{Figure~\ref{figure-37}} and \hyperref[figure-40]{Figure~\ref{figure-40}}:%
+\hypertarget{p-52}{}%
+Note the following differences between \hyperref[figure-43]{Figure~\ref{figure-43}} and \hyperref[figure-46]{Figure~\ref{figure-46}}:%
 \leavevmode%
 \begin{itemize}[label=\textbullet]
-\item{}Removing a point from \hyperref[figure-40]{Figure~\ref{figure-40}} would split it into two disconnected parts, but \hyperref[figure-37]{Figure~\ref{figure-37}} would remain connected after a point is removed.%
-\item{}\hyperref[figure-37]{Figure~\ref{figure-37}} is bounded while \hyperref[figure-40]{Figure~\ref{figure-40}} extends unboundedly. \footnote{This topological distinction makes sense as both are closed subsets of \(\mathbb R^2\); see \hyperref[section-1050]{Section~\ref{section-1050}} for more info.\label{fn-56}}%
+\item{}Removing a point from \hyperref[figure-46]{Figure~\ref{figure-46}} would split it into two disconnected parts, but \hyperref[figure-43]{Figure~\ref{figure-43}} would remain connected after a point is removed.%
+\item{}\hyperref[figure-43]{Figure~\ref{figure-43}} is bounded while \hyperref[figure-46]{Figure~\ref{figure-46}} extends unboundedly. \footnote{This topological distinction makes sense as both are closed subsets of \(\mathbb R^2\); see \hyperref[section-1055]{Section~\ref{section-1055}} for more info.\label{fn-62}}%
 \end{itemize}
-\hypertarget{p-59}{}%
-These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween \hyperref[figure-40]{Figure~\ref{figure-40}} and \hyperref[figure-43]{Figure~\ref{figure-43}}, they are in a certain sense the same object that has been bent or stretched into a different shape.%
-\begin{definition}{}{definition-62}%
-\hypertarget{p-63}{}%
+\hypertarget{p-65}{}%
+These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween \hyperref[figure-46]{Figure~\ref{figure-46}} and \hyperref[figure-49]{Figure~\ref{figure-49}}, they are in a certain sense the same object that has been bent or stretched into a different shape.%
+\begin{definition}{}{definition-68}%
+\hypertarget{p-69}{}%
 Two objects are said to be \terminology{topologically equivalent} or \terminology{homeomorphic} if one may be bent or stretched into the shape of the other.%
 \end{definition}
-\hypertarget{p-66}{}%
-So this means that all geometrically similar shapes are homeomorphic (as in \hyperref[figure-71]{Figure~\ref{figure-71}}), but we also use the idea of homeomorphism to compare other objects in our daily lives.%
+\hypertarget{p-72}{}%
+So this means that all geometrically similar shapes are homeomorphic (as in \hyperref[figure-77]{Figure~\ref{figure-77}}), but we also use the idea of homeomorphism to compare other objects in our daily lives.%
 \par
-\hypertarget{p-68}{}%
-For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. \hyperref[figure-74]{Figure~\ref{figure-74}} illustrates several homeomorphic expressions of the letter ``A''.%
+\hypertarget{p-74}{}%
+For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. \hyperref[figure-80]{Figure~\ref{figure-80}} illustrates several homeomorphic expressions of the letter ``A''.%
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/similar-triangles.jpg}
-\caption{Two similar triangles\label{figure-71}}
+\caption{Two similar triangles\label{figure-77}}
 \end{figure}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/letter-a.jpg}
-\caption{The letter ``A'' in several fonts.\label{figure-74}}
+\caption{The letter ``A'' in several fonts.\label{figure-80}}
 \end{figure}
-\hypertarget{p-78}{}%
-A homeomorphism is more carefully defined in \hyperref[section-731]{Section~\ref{section-731}}, but the central idea is that of ``neighborhoods''. For each of the letters ``A'' in \hyperref[figure-74]{Figure~\ref{figure-74}}, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see \hyperref[figure-84]{Figure~\ref{figure-84}}.%
+\hypertarget{p-84}{}%
+A homeomorphism is more carefully defined in \hyperref[section-737]{Section~\ref{section-737}}, but the central idea is that of ``neighborhoods''. For each of the letters ``A'' in \hyperref[figure-80]{Figure~\ref{figure-80}}, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see \hyperref[figure-90]{Figure~\ref{figure-90}}.%
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/letter-a-neighborhoods.jpg}
-\caption{Neighborhoods within the letter ``A''.\label{figure-84}}
+\caption{Neighborhoods within the letter ``A''.\label{figure-90}}
 \end{figure}
-\begin{definition}{}{definition-88}%
-\hypertarget{p-89}{}%
+\begin{definition}{}{definition-94}%
+\hypertarget{p-95}{}%
 A \terminology{surface} is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the plane \(\mathbb R^2\) or the half-plane \(\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}\).%
 \end{definition}
-\hypertarget{p-93}{}%
-A classic example of the topology of surfaces is the following joke: ``A topologist is a mathematician who cannot tell the difference between his doughnut and coffee cup.'' The joke is a lot funnier\footnote{Eh, maybe.\label{fn-95}} once you've seen \href{https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif}{this animated GIF on Wikipedia}.%
+\hypertarget{p-99}{}%
+A classic example of the topology of surfaces is the following joke: ``A topologist is a mathematician who cannot tell the difference between his doughnut and coffee cup.'' The joke is a lot funnier\footnote{Eh, maybe.\label{fn-101}} once you've seen \href{https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif}{this animated GIF on Wikipedia}.%
 \par
-\hypertarget{p-97}{}%
-The ``doughnut'''s surface is known mathematically as a ``torus'', shown in \hyperref[figure-104]{Figure~\ref{figure-104}}. A sphere is shown in \hyperref[figure-107]{Figure~\ref{figure-107}}, and a surface that cannot be cannot be embedded in \(\mathbb R^3\), the Klein bottle, is shown in \hyperref[figure-110]{Figure~\ref{figure-110}}.%
+\hypertarget{p-103}{}%
+The ``doughnut'''s surface is known mathematically as a ``torus'', shown in \hyperref[figure-110]{Figure~\ref{figure-110}}. A sphere is shown in \hyperref[figure-113]{Figure~\ref{figure-113}}, and a surface that cannot be cannot be embedded in \(\mathbb R^3\), the Klein bottle, is shown in \hyperref[figure-116]{Figure~\ref{figure-116}}.%
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/torus.jpg}
-\caption{A torus.\label{figure-104}}
+\caption{A torus.\label{figure-110}}
 \end{figure}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/sphere.jpg}
-\caption{A sphere.\label{figure-107}}
+\caption{A sphere.\label{figure-113}}
 \end{figure}
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{images/klein-bottle.png}
-\caption{A Klein bottle.\label{figure-110}}
+\caption{A Klein bottle.\label{figure-116}}
 \end{figure}
-\hypertarget{p-113}{}%
-While these shapes appear very different, they can all be defined as a ``quotient space'' (\hyperref[section-1319]{Section~\ref{section-1319}}) of the unit square in \(\mathbb R^2\).%
+\hypertarget{p-119}{}%
+While these shapes appear very different, they can all be defined as a ``quotient space'' (\hyperref[section-1324]{Section~\ref{section-1324}}) of the unit square in \(\mathbb R^2\).%
 \par
-\hypertarget{p-117}{}%
+\hypertarget{p-123}{}%
 In order to study so-called ``topological spaces'' such as these, we will begin by distilling down the notion of a ``neighborhood'' for an arbitrary set.%
 \end{sectionptx}
 %
@@ -472,102 +475,102 @@ In order to study so-called ``topological spaces'' such as these, we will begin 
 \typeout{Section 2 Topological Spaces}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Topological Spaces}{}{Topological Spaces}{}{}{section-120}
-\begin{definition}{}{definition-122}%
-\hypertarget{p-123}{}%
+\begin{sectionptx}{Topological Spaces}{}{Topological Spaces}{}{}{section-126}
+\begin{definition}{}{definition-128}%
+\hypertarget{p-129}{}%
 Let \(a,b\in\mb R\). The \terminology{open interval} from \(a\) to \(b\) is the set%
 %
 \begin{equation*}
 (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 \end{equation*}
 \end{definition}
-\begin{definition}{}{definition-129}%
-\hypertarget{p-130}{}%
+\begin{definition}{}{definition-135}%
+\hypertarget{p-136}{}%
 Let \(x\in\mb R\) and \(S\subseteq\mb R\). The point \(x\) is a \terminology{limit point} of the set \(S\) if and only if for every open interval \((a,b)\) containing \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in(a,b)\).%
 \end{definition}
-\begin{example}{}{example-141}%
-\hypertarget{p-142}{}%
+\begin{example}{}{example-147}%
+\hypertarget{p-148}{}%
 Determine if each set has the number \(0\) as a limit point.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-145}{}\(\mb Z\)%
-\item\hypertarget{li-147}{}\(\mb R\setminus\mb Z\)%
-\item\hypertarget{li-149}{}\(\setBuilder{\frac{1}{n+1}}{n\in\mb N}\)%
-\item\hypertarget{li-151}{}\(\mb Q\)%
-\item\hypertarget{li-153}{}A finite set \(F\subseteq\mb R\)%
+\item\hypertarget{li-151}{}\(\mb Z\)%
+\item\hypertarget{li-153}{}\(\mb R\setminus\mb Z\)%
+\item\hypertarget{li-155}{}\(\setBuilder{\frac{1}{n+1}}{n\in\mb N}\)%
+\item\hypertarget{li-157}{}\(\mb Q\)%
+\item\hypertarget{li-159}{}A finite set \(F\subseteq\mb R\)%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-155}%
-\hypertarget{p-156}{}%
+\begin{definition}{}{definition-161}%
+\hypertarget{p-162}{}%
 A subset \(U\subseteq\mb R\) is called \terminology{open} if and only if for every point \(x\in U\), there exists an open interval \((a,b)\) such that \(x\in(a,b)\subseteq U\).%
 \end{definition}
-\begin{example}{}{example-162}%
-\hypertarget{p-163}{}%
+\begin{example}{}{example-168}%
+\hypertarget{p-169}{}%
 Determine if each set is open or not open.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-165}{}\([\pi,42)\)%
-\item\hypertarget{li-167}{}\((-3,-1)\cup(4,5.5)\)%
-\item\hypertarget{li-169}{}\(\setBuilder{x}{2x+1>5}\)%
-\item\hypertarget{li-171}{}\(\mb Z\)%
-\item\hypertarget{li-173}{}\(\mb R\setminus\mb Z\)%
-\item\hypertarget{li-175}{}\(\mb Q\)%
-\item\hypertarget{li-177}{}A finite set \(F\subseteq\mb R\)%
+\item\hypertarget{li-171}{}\([\pi,42)\)%
+\item\hypertarget{li-173}{}\((-3,-1)\cup(4,5.5)\)%
+\item\hypertarget{li-175}{}\(\setBuilder{x}{2x+1>5}\)%
+\item\hypertarget{li-177}{}\(\mb Z\)%
+\item\hypertarget{li-179}{}\(\mb R\setminus\mb Z\)%
+\item\hypertarget{li-181}{}\(\mb Q\)%
+\item\hypertarget{li-183}{}A finite set \(F\subseteq\mb R\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-179}%
-\hypertarget{p-180}{}%
+\begin{theorem}{}{}{theorem-185}%
+\hypertarget{p-186}{}%
 A subset \(U\subseteq\mb R\) is open if and only if there exists a collection of open intervals \(\mc U\) such that \(U=\bigcup\mc U\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-184}%
-\hypertarget{p-185}{}%
+\begin{proposition}{}{}{proposition-190}%
+\hypertarget{p-191}{}%
 Let \(x\in\mb R\) and \(S\subseteq\mb R\). The point \(x\) is a limit point of the set \(S\) if and only if for every open set \(U\) containing \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\).%
 \end{proposition}
-\begin{theorem}{}{}{theorem-195}%
-\hypertarget{p-196}{}%
+\begin{theorem}{}{}{theorem-201}%
+\hypertarget{p-202}{}%
 The open subsets of \(\mb R\) satisfy the following properties.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-199}{}\(\emptyset\) and \(\mb R\) are open sets.%
-\item\hypertarget{li-202}{}If \(\mc U\) is a collection of open sets, then \(\bigcup\mc U\) is also an open set.%
-\item\hypertarget{li-205}{}If \(U,V\) are open sets, then \(U\cap V\) is an open set.%
+\item\hypertarget{li-205}{}\(\emptyset\) and \(\mb R\) are open sets.%
+\item\hypertarget{li-208}{}If \(\mc U\) is a collection of open sets, then \(\bigcup\mc U\) is also an open set.%
+\item\hypertarget{li-211}{}If \(U,V\) are open sets, then \(U\cap V\) is an open set.%
 \end{enumerate}
 \end{theorem}
-\begin{definition}{}{definition-208}%
-\hypertarget{p-209}{}%
+\begin{definition}{}{definition-214}%
+\hypertarget{p-215}{}%
 Let \(X\) be a set, and let \(\mc T\subseteq \mc P(X)\) satisfy the following properties.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-213}{}\(\emptyset,X\in\mc T\).%
-\item\hypertarget{li-215}{}If \(\mc U\subseteq\mc T\), then \(\bigcup\mc U\in\mc T\).%
-\item\hypertarget{li-218}{}If \(U,V\in\mc T\), then \(U\cap V\in\mc T\).%
+\item\hypertarget{li-219}{}\(\emptyset,X\in\mc T\).%
+\item\hypertarget{li-221}{}If \(\mc U\subseteq\mc T\), then \(\bigcup\mc U\in\mc T\).%
+\item\hypertarget{li-224}{}If \(U,V\in\mc T\), then \(U\cap V\in\mc T\).%
 \end{enumerate}
-\hypertarget{p-221}{}%
+\hypertarget{p-227}{}%
 Then \(\mc T\) is called a \terminology{topology} on \(X\), the pair \(\tuple{X,\mc T}\) is called a \terminology{topological space}, and elements \(U\in\mc T\) are called \terminology{open sets} of the space. (Usually \(\tuple{X,\mc T}\) is abbreviated to just \(X\) when the topology is known from context.)%
 \end{definition}
-\begin{definition}{}{definition-231}%
-\hypertarget{p-232}{}%
-Let \(\mc T\subseteq\mc P(\mb R)\) be the collection of open subsets of \(\mb R\) defined by \hyperref[definition-155]{Definition~\ref{definition-155}}. Then by \hyperref[theorem-195]{Theorem~\ref{theorem-195}}, \(\mc T\) is a valid topology for \(\mb R\) called the \terminology{Euclidean topology}.%
+\begin{definition}{}{definition-237}%
+\hypertarget{p-238}{}%
+Let \(\mc T\subseteq\mc P(\mb R)\) be the collection of open subsets of \(\mb R\) defined by \hyperref[definition-161]{Definition~\ref{definition-161}}. Then by \hyperref[theorem-201]{Theorem~\ref{theorem-201}}, \(\mc T\) is a valid topology for \(\mb R\) called the \terminology{Euclidean topology}.%
 \end{definition}
-\begin{theorem}{}{}{theorem-240}%
-\hypertarget{p-241}{}%
+\begin{theorem}{}{}{theorem-246}%
+\hypertarget{p-247}{}%
 Let \(X\) be any set. Then the following sets are topologies on \(X\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-245}{}\(\mc T=\mc P(X)\) is called the \terminology{discrete topology}.%
-\item\hypertarget{li-248}{}\(\mc T=\{\emptyset,X\}\) is called the \terminology{indiscrete topology}.%
+\item\hypertarget{li-251}{}\(\mc T=\mc P(X)\) is called the \terminology{discrete topology}.%
+\item\hypertarget{li-254}{}\(\mc T=\{\emptyset,X\}\) is called the \terminology{indiscrete topology}.%
 \end{enumerate}
 \end{theorem}
-\begin{proposition}{}{}{proposition-251}%
-\hypertarget{p-252}{}%
+\begin{proposition}{}{}{proposition-257}%
+\hypertarget{p-258}{}%
 Let \(\mc T\) be a topology, and let \(\mc U\subseteq\mc T\) be finite. Then \(\bigcap\mc U\in\mc T\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-256}%
-\hypertarget{p-257}{}%
+\begin{proposition}{}{}{proposition-262}%
+\hypertarget{p-263}{}%
 Let \(\mc T\) be the Euclidean topology. There exists a collection \(\mc U=\{U_n:n\in\mb N\}\) such that \(\bigcap\mc U\not\in\mc T\).%
 \end{proposition}
-\begin{definition}{}{definition-261}%
-\hypertarget{p-262}{}%
+\begin{definition}{}{definition-267}%
+\hypertarget{p-268}{}%
 Let \(a,b\in\mb R\cup\setList{-\infty,\infty}\). The following are called \terminology{intervals} of real numbers.%
 %
 \begin{equation*}
@@ -586,216 +589,216 @@ Let \(a,b\in\mb R\cup\setList{-\infty,\infty}\). The following are called \termi
 [a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
 \end{equation*}
 \end{definition}
-\begin{example}{}{example-269}%
-\hypertarget{p-270}{}%
+\begin{example}{}{example-275}%
+\hypertarget{p-276}{}%
 Show that each of the following is an example of a topological space \(\tuple{X,\mc T}\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-273}{}Let \(X=\mb R\) and \(\mc T=\setBuilder{(x,\infty)}{x\in\mb R}
+\item\hypertarget{li-279}{}Let \(X=\mb R\) and \(\mc T=\setBuilder{(x,\infty)}{x\in\mb R}
 \cup\setBuilder{[x,\infty)}{x\in\mb R}\cup\setList{\emptyset,\mb R}\).%
-\item\hypertarget{li-276}{}Let \(X=\mb R\) and \(\mc T=\setBuilder{(x,y)}{
+\item\hypertarget{li-282}{}Let \(X=\mb R\) and \(\mc T=\setBuilder{(x,y)}{
 x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 }\cup\setList{\emptyset}\).%
-\item\hypertarget{li-279}{}Let \(X=\mb R\) and \(U\in\mc T\) if for each \(x\in U\), there exists \(a,b\in\mb R\) such that \(x\in[a,b)\subseteq U\).%
-\item\hypertarget{li-285}{}Let \(X=\setList{0,1}\) and \(\mc T=\setList{\emptyset,\setList{0},X}\).%
-\item\hypertarget{li-288}{}Let \(X=\mb Z\), \(E=\setBuilder{n\in\mb Z}{n\text{ is even}}\), \(D=\setBuilder{n\in\mb Z}{n\text{ is odd}}\), and \(\mc T=\setList{\emptyset,E,D,X}\).%
+\item\hypertarget{li-285}{}Let \(X=\mb R\) and \(U\in\mc T\) if for each \(x\in U\), there exists \(a,b\in\mb R\) such that \(x\in[a,b)\subseteq U\).%
+\item\hypertarget{li-291}{}Let \(X=\setList{0,1}\) and \(\mc T=\setList{\emptyset,\setList{0},X}\).%
+\item\hypertarget{li-294}{}Let \(X=\mb Z\), \(E=\setBuilder{n\in\mb Z}{n\text{ is even}}\), \(D=\setBuilder{n\in\mb Z}{n\text{ is odd}}\), and \(\mc T=\setList{\emptyset,E,D,X}\).%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-293}%
-\hypertarget{p-294}{}%
+\begin{definition}{}{definition-299}%
+\hypertarget{p-300}{}%
 Let \(\tuple{X,\mc T}\) be a topological space and let \(x\in X\). The set \(N\subseteq X\) is called a \terminology{neighborhood} of \(x\) if and only if there exists an open set \(U\in\mc T\) such that \(x\in U\subseteq N\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-302}%
-\hypertarget{p-303}{}%
+\begin{proposition}{}{}{proposition-308}%
+\hypertarget{p-309}{}%
 A subset \(U\) of a topological space \(X\) is open if and only if \(U\) is a neighborhood of every point it contains.%
 \end{proposition}
-\begin{definition}{}{definition-307}%
-\hypertarget{p-308}{}%
+\begin{definition}{}{definition-313}%
+\hypertarget{p-314}{}%
 The following are known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-312}{}\(\mc T\) is said to be \terminology{\(T_0\)} if and only if for all points \(x,y\in X\) such that \(x\not=y\), there either exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\), or there exists a neighborhood \(V\) of \(y\) such that \(x\not\in V\).%
-\item\hypertarget{li-324}{}\(\mc T\) is said to be \terminology{\(T_1\)} if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\).%
-\item\hypertarget{li-333}{}\(\mc T\) is said to be \terminology{\(T_2\)} (also known as \terminology{Hausdorff}) if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(U\cap V=\emptyset\).%
+\item\hypertarget{li-318}{}\(\mc T\) is said to be \terminology{\(T_0\)} if and only if for all points \(x,y\in X\) such that \(x\not=y\), there either exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\), or there exists a neighborhood \(V\) of \(y\) such that \(x\not\in V\).%
+\item\hypertarget{li-330}{}\(\mc T\) is said to be \terminology{\(T_1\)} if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\).%
+\item\hypertarget{li-339}{}\(\mc T\) is said to be \terminology{\(T_2\)} (also known as \terminology{Hausdorff}) if and only if for all points \(x,y\in X\) such that \(x\not=y\), there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(U\cap V=\emptyset\).%
 \end{enumerate}
 \end{definition}
-\begin{proposition}{}{}{proposition-343}%
-\hypertarget{p-344}{}%
+\begin{proposition}{}{}{proposition-349}%
+\hypertarget{p-350}{}%
 \(T_2\Rightarrow T_1\Rightarrow T_0\).%
 \end{proposition}
-\begin{example}{}{example-346}%
-\hypertarget{p-347}{}%
+\begin{example}{}{example-352}%
+\hypertarget{p-353}{}%
 Find or create an example of a topological space \(\tuple{X,\mc T}\) that is:%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-350}{}Not \(T_0\).%
-\item\hypertarget{li-352}{}\(T_0\) but not \(T_1\).%
-\item\hypertarget{li-355}{}\(T_1\) but not \(T_2\).%
+\item\hypertarget{li-356}{}Not \(T_0\).%
+\item\hypertarget{li-358}{}\(T_0\) but not \(T_1\).%
+\item\hypertarget{li-361}{}\(T_1\) but not \(T_2\).%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-358}%
-\hypertarget{p-359}{}%
+\begin{theorem}{}{}{theorem-364}%
+\hypertarget{p-365}{}%
 Let \(X\) be a finite topological space. Then \(X\) is \(T_1\) if and only if \(X\) has the discrete topology.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-364}%
-\hypertarget{p-365}{}%
+\begin{proposition}{}{}{proposition-370}%
+\hypertarget{p-371}{}%
 The Euclidean real line is a non-discrete Hausdorff topological space.%
 \end{proposition}
-\begin{definition}{}{definition-366}%
-\hypertarget{p-367}{}%
+\begin{definition}{}{definition-372}%
+\hypertarget{p-373}{}%
 Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{limit point} of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\), there is a point \(y\in S\) such that \(x\not=y\) and \(y\in U\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-377}%
-\hypertarget{p-378}{}%
-The point \(x\in\mb R\) is a limit point of \(S\subseteq \mb R\) according to \hyperref[definition-129]{Definition~\ref{definition-129}} if and only if it is a limit point according to \hyperref[definition-366]{Definition~\ref{definition-366}} (where \(\mb R\) is assumed to have the Euclidean topology).%
+\begin{proposition}{}{}{proposition-383}%
+\hypertarget{p-384}{}%
+The point \(x\in\mb R\) is a limit point of \(S\subseteq \mb R\) according to \hyperref[definition-135]{Definition~\ref{definition-135}} if and only if it is a limit point according to \hyperref[definition-372]{Definition~\ref{definition-372}} (where \(\mb R\) is assumed to have the Euclidean topology).%
 \end{proposition}
-\begin{definition}{}{definition-384}%
-\hypertarget{p-385}{}%
+\begin{definition}{}{definition-390}%
+\hypertarget{p-391}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(S'\) is the set of all limit points of \(S\), called the \terminology{derived set} of \(S\).%
 \end{definition}
-\begin{definition}{}{definition-391}%
-\hypertarget{p-392}{}%
+\begin{definition}{}{definition-397}%
+\hypertarget{p-398}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=S\cup S'\) is called the \terminology{closure} of \(S\).%
 \end{definition}
-\begin{example}{}{example-397}%
-\hypertarget{p-398}{}%
+\begin{example}{}{example-403}%
+\hypertarget{p-404}{}%
 Calculate \(\cl S\) for each of the following examples.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-401}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
-\item\hypertarget{li-404}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the discrete topology.%
-\item\hypertarget{li-407}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the indiscrete topology.%
-\item\hypertarget{li-410}{}\(S=\mb Z\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
-\item\hypertarget{li-413}{}\(S=\mb Q\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
+\item\hypertarget{li-407}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
+\item\hypertarget{li-410}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the discrete topology.%
+\item\hypertarget{li-413}{}\(S=(-1,1)\subseteq\mb R\) where \(\mb R\) has the indiscrete topology.%
+\item\hypertarget{li-416}{}\(S=\mb Z\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
+\item\hypertarget{li-419}{}\(S=\mb Q\subseteq\mb R\) where \(\mb R\) has the Euclidean topology.%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-416}%
-\hypertarget{p-417}{}%
+\begin{definition}{}{definition-422}%
+\hypertarget{p-423}{}%
 Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is called \terminology{closed} if and only if \(H=\cl S\).%
 \end{definition}
-\begin{theorem}{}{}{theorem-422}%
-\hypertarget{p-423}{}%
+\begin{theorem}{}{}{theorem-428}%
+\hypertarget{p-429}{}%
 Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is closed if and only if there exists an open set \(U\) such that \(H=X\setminus U\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-428}%
-\hypertarget{p-429}{}%
+\begin{proposition}{}{}{proposition-434}%
+\hypertarget{p-435}{}%
 The closed subsets of a topological space \(X\) satisfy the following properties.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-432}{}\(\emptyset\) and \(X\) are closed sets.%
-\item\hypertarget{li-435}{}If \(\mc H\) is a collection of closed sets, then \(\bigcap\mc H\) is also a closed set.%
-\item\hypertarget{li-438}{}If \(H,L\) are closed sets, then \(H\cup L\) is a closed set.%
+\item\hypertarget{li-438}{}\(\emptyset\) and \(X\) are closed sets.%
+\item\hypertarget{li-441}{}If \(\mc H\) is a collection of closed sets, then \(\bigcap\mc H\) is also a closed set.%
+\item\hypertarget{li-444}{}If \(H,L\) are closed sets, then \(H\cup L\) is a closed set.%
 \end{enumerate}
 \end{proposition}
-\begin{theorem}{}{}{theorem-441}%
-\hypertarget{p-442}{}%
+\begin{theorem}{}{}{theorem-447}%
+\hypertarget{p-448}{}%
 A topological space \(X\) is \(T_1\) if and only if every finite subset of \(X\) is closed.%
 \end{theorem}
-\begin{definition}{}{definition-446}%
-\hypertarget{p-447}{}%
+\begin{definition}{}{definition-452}%
+\hypertarget{p-453}{}%
 Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{boundary point} of the set \(S\) if and only if for every neighborhood of \(U\) of \(x\), both \(U\cap S\) and \(U\setminus S\) are non-empty.%
 \par
-\hypertarget{p-456}{}%
+\hypertarget{p-462}{}%
 Let \(\bd S\) collect all the boundary points of \(S\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-459}%
-\hypertarget{p-460}{}%
+\begin{proposition}{}{}{proposition-465}%
+\hypertarget{p-466}{}%
 Let \(a,b\in\mb R\). Then \(\bd (a,b)=\bd (a,b]=\bd [a,b)=\bd [a,b]=\{a,b\}\) with respect to the Eudlidean topology.%
 \end{proposition}
-\begin{definition}{}{definition-463}%
-\hypertarget{p-464}{}%
+\begin{definition}{}{definition-469}%
+\hypertarget{p-470}{}%
 Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{interior point} of the set \(S\) if and only if there exists a neighborhood \(U\) of \(x\) such that \(x\in U\subseteq S\).%
 \par
-\hypertarget{p-472}{}%
+\hypertarget{p-478}{}%
 Let \(\int S\) collect all the interior points of \(S\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-475}%
-\hypertarget{p-476}{}%
+\begin{proposition}{}{}{proposition-481}%
+\hypertarget{p-482}{}%
 Let \(U\subseteq X\) be a subset of a topological space. Then \(U\) is open if and only if \(U=\int U\).%
 \end{proposition}
-\begin{definition}{}{definition-480}%
-\hypertarget{p-481}{}%
+\begin{definition}{}{definition-486}%
+\hypertarget{p-487}{}%
 Let \(S\subseteq X\) be a subset of a topological space. The point \(x\) is a \terminology{exterior point} of the set \(S\) if and only if there exists a neighborhood \(U\) of \(x\) such that \(x\in U\subseteq X\setminus S\).%
 \par
-\hypertarget{p-489}{}%
+\hypertarget{p-495}{}%
 Let \(\ext S\) collect all the exterior points of \(S\).%
 \end{definition}
-\begin{definition}{}{definition-492}%
-\hypertarget{p-493}{}%
+\begin{definition}{}{definition-498}%
+\hypertarget{p-499}{}%
 A \terminology{partition} of a set \(X\) is a collection \(\mc P\) such that \(X=\bigcup\mc P\) and \(A\cap B=\emptyset\) for all \(A,B\in\mc P\) where \(A\not=B\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-501}%
-\hypertarget{p-502}{}%
+\begin{proposition}{}{}{proposition-507}%
+\hypertarget{p-508}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(\setList{\int S,\bd S,\ext S}\) is a partition of \(X\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-506}%
-\hypertarget{p-507}{}%
+\begin{proposition}{}{}{proposition-512}%
+\hypertarget{p-513}{}%
 Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=\int S\cup\bd S=S\cup\bd S\).%
 \end{proposition}
-\begin{example}{}{example-510}%
-\hypertarget{p-511}{}%
+\begin{example}{}{example-516}%
+\hypertarget{p-517}{}%
 Let \(A\) be a subset of a topological space \(X\). Prove or disprove the following.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-515}{}\(\int\int A=\int A\)%
-\item\hypertarget{li-517}{}\(\int\cl A=\int A\)%
-\item\hypertarget{li-519}{}\(\bd\bd A=\bd A\)%
-\item\hypertarget{li-521}{}\(\ext\ext A=\int A\)%
-\item\hypertarget{li-523}{}\(\int\ext A=\ext A\)%
-\item\hypertarget{li-525}{}\(\int\bd A=\emptyset\)%
-\item\hypertarget{li-527}{}\(\cl\ext A=X\setminus\int A\)%
+\item\hypertarget{li-521}{}\(\int\int A=\int A\)%
+\item\hypertarget{li-523}{}\(\int\cl A=\int A\)%
+\item\hypertarget{li-525}{}\(\bd\bd A=\bd A\)%
+\item\hypertarget{li-527}{}\(\ext\ext A=\int A\)%
+\item\hypertarget{li-529}{}\(\int\ext A=\ext A\)%
+\item\hypertarget{li-531}{}\(\int\bd A=\emptyset\)%
+\item\hypertarget{li-533}{}\(\cl\ext A=X\setminus\int A\)%
 \end{enumerate}
 \end{example}
-\begin{example}{}{example-529}%
-\hypertarget{p-530}{}%
+\begin{example}{}{example-535}%
+\hypertarget{p-536}{}%
 Let \(A,B\) be subsets of a topological space \(X\). Prove or disprove the following.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-534}{}\(\int(A\cap B)=\int A\cap\int B\)%
-\item\hypertarget{li-536}{}\(\int(A\cup B)=\int A\cup\int B\)%
-\item\hypertarget{li-538}{}\(\bd(A\cap B)=\bd A\cap\bd B\)%
-\item\hypertarget{li-540}{}\(\bd(A\cup B)=\bd A\cup\bd B\)%
-\item\hypertarget{li-542}{}\(\cl(A\cap B)=\cl A\cap\cl B\)%
-\item\hypertarget{li-544}{}\(\cl(A\cup B)=\cl A\cup\cl B\)%
+\item\hypertarget{li-540}{}\(\int(A\cap B)=\int A\cap\int B\)%
+\item\hypertarget{li-542}{}\(\int(A\cup B)=\int A\cup\int B\)%
+\item\hypertarget{li-544}{}\(\bd(A\cap B)=\bd A\cap\bd B\)%
+\item\hypertarget{li-546}{}\(\bd(A\cup B)=\bd A\cup\bd B\)%
+\item\hypertarget{li-548}{}\(\cl(A\cap B)=\cl A\cap\cl B\)%
+\item\hypertarget{li-550}{}\(\cl(A\cup B)=\cl A\cup\cl B\)%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-546}%
-\hypertarget{p-547}{}%
+\begin{definition}{}{definition-552}%
+\hypertarget{p-553}{}%
 A subset \(D\subseteq X\) of a topological space is called \terminology{dense} if and only if \(\cl D=X\).%
 \end{definition}
-\begin{example}{}{example-551}%
-\hypertarget{p-552}{}%
+\begin{example}{}{example-557}%
+\hypertarget{p-558}{}%
 Determine which of these are dense subsets of \(\mb R\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-555}{}\(\mb Q\)%
-\item\hypertarget{li-557}{}\(\mb Z\)%
-\item\hypertarget{li-559}{}\(\mb R\setminus\mb Q\)%
-\item\hypertarget{li-561}{}\(\mb R\setminus\mb Z\)%
+\item\hypertarget{li-561}{}\(\mb Q\)%
+\item\hypertarget{li-563}{}\(\mb Z\)%
+\item\hypertarget{li-565}{}\(\mb R\setminus\mb Q\)%
+\item\hypertarget{li-567}{}\(\mb R\setminus\mb Z\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-563}%
-\hypertarget{p-564}{}%
+\begin{theorem}{}{}{theorem-569}%
+\hypertarget{p-570}{}%
 A subset \(D\) of a topological space is dense if and only if every nonempty open set of the space contains a point of \(D\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-567}%
-\hypertarget{p-568}{}%
+\begin{proposition}{}{}{proposition-573}%
+\hypertarget{p-574}{}%
 Let \(X\) be a topological space, and let \(D\subseteq E\subseteq X\). If \(D\) is dense, then \(E\) is also dense.%
 \end{proposition}
-\begin{definition}{}{definition-573}%
-\hypertarget{p-574}{}%
+\begin{definition}{}{definition-579}%
+\hypertarget{p-580}{}%
 Let \(Y\subseteq X\) for a topological space \(\tuple{X,\mc T}\). Then the \terminology{subspace topology} for \(Y\) is given by \(\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-580}%
-\hypertarget{p-581}{}%
+\begin{proposition}{}{}{proposition-586}%
+\hypertarget{p-587}{}%
 The subspace topology is a valid topology.%
 \end{proposition}
-\begin{proposition}{}{}{proposition-582}%
-\hypertarget{p-583}{}%
+\begin{proposition}{}{}{proposition-588}%
+\hypertarget{p-589}{}%
 Let \(n\in\setList{0,1,2}\). A subspace of a \(T_n\) space is also \(T_n\).%
 \end{proposition}
-\begin{definition}{}{definition-587}%
-\hypertarget{p-588}{}%
+\begin{definition}{}{definition-593}%
+\hypertarget{p-594}{}%
 The \terminology{Cantor set} is the subset \(C\subseteq\mb R\) defined by \(C=\bigcap_{n\in\mb N} C_n\), where \(C_0=[0,1]\) and%
 \begin{equation*}
 C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n} 
@@ -803,43 +806,43 @@ C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n}
 \end{equation*}
 This set is usually considered as a closed subset of the Euclidean line, or as a subspace of the Euclidean line.%
 \end{definition}
-\begin{definition}{}{definition-594}%
-\hypertarget{p-595}{}%
+\begin{definition}{}{definition-600}%
+\hypertarget{p-601}{}%
 Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a \terminology{basis} for the topology if for every \(x\in X\) and neighborhood \(U\) of \(x\), there exists \(B\in\mc B\) such that \(x\in B\subseteq U\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-604}%
-\hypertarget{p-605}{}%
+\begin{proposition}{}{}{proposition-610}%
+\hypertarget{p-611}{}%
 \(\mc B=\setBuilder{(a,b)}{a,b\in\mb R}\) is a basis for the Euclidean topology.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-607}%
-\hypertarget{p-608}{}%
+\begin{theorem}{}{}{theorem-613}%
+\hypertarget{p-614}{}%
 Let \(\mc B\subseteq\mc P(X)\) satisfy the following properties:%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-611}{}For all \(x\in X\), there exists \(B\in\mc B\) such that \(x\in B\).%
-\item\hypertarget{li-615}{}If \(x\in A\in\mc B\) and \(x\in B\in\mc B\), there exists \(C\in\mc B\) such that \(x\in C\subseteq A\cap B\).%
+\item\hypertarget{li-617}{}For all \(x\in X\), there exists \(B\in\mc B\) such that \(x\in B\).%
+\item\hypertarget{li-621}{}If \(x\in A\in\mc B\) and \(x\in B\in\mc B\), there exists \(C\in\mc B\) such that \(x\in C\subseteq A\cap B\).%
 \end{enumerate}
-\hypertarget{p-620}{}%
+\hypertarget{p-626}{}%
 Then \(\mc T=\setBuilder{\bigcup\mc U}{\mc U\subseteq\mc B}\) is a topology, and \(\mc B\) is a basis for that topology. We call this the \terminology{topology generated by the basis}.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-624}%
-\hypertarget{p-625}{}%
+\begin{proposition}{}{}{proposition-630}%
+\hypertarget{p-631}{}%
 \(\mc B=\setBuilder{[a,b)}{a,b\in\mb R}\) is a basis for a topology different from the Euclidean topology, called the \terminology{Sorgenfrey topology}.%
 \end{proposition}
-\begin{example}{Examples of bases.}{example-628}%
-\hypertarget{p-630}{}%
+\begin{example}{Examples of bases.}{example-634}%
+\hypertarget{p-636}{}%
 Calculate the topology generated by each basis on \(\mb R\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-633}{}\(\mc B=\setBuilder{(a,b)}{a,b\in\mb Q}\)%
-\item\hypertarget{li-635}{}\(\mc B=\setBuilder{(a,\infty)}{a\in\mb R}\)%
-\item\hypertarget{li-637}{}\(\mc B=\setBuilder{\setList{x}}{x\in\mb R}\)%
-\item\hypertarget{li-639}{}\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R}\)%
-\item\hypertarget{li-641}{}\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}\)%
+\item\hypertarget{li-639}{}\(\mc B=\setBuilder{(a,b)}{a,b\in\mb Q}\)%
+\item\hypertarget{li-641}{}\(\mc B=\setBuilder{(a,\infty)}{a\in\mb R}\)%
+\item\hypertarget{li-643}{}\(\mc B=\setBuilder{\setList{x}}{x\in\mb R}\)%
+\item\hypertarget{li-645}{}\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R}\)%
+\item\hypertarget{li-647}{}\(\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-643}%
-\hypertarget{p-644}{}%
+\begin{theorem}{}{}{theorem-649}%
+\hypertarget{p-650}{}%
 Let \(\mc S\subseteq\mc P(X)\) and%
 \begin{equation*}
 \mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
@@ -847,28 +850,28 @@ Let \(\mc S\subseteq\mc P(X)\) and%
 \end{equation*}
 Then \(\mc T\) is a topology.%
 \end{theorem}
-\begin{definition}{}{definition-648}%
-\hypertarget{p-649}{}%
-The set \(\mc S\subseteq\mc P(X)\) in \hyperref[theorem-643]{Theorem~\ref{theorem-643}} is called a \terminology{subbasis} generating the topology%
+\begin{definition}{}{definition-654}%
+\hypertarget{p-655}{}%
+The set \(\mc S\subseteq\mc P(X)\) in \hyperref[theorem-649]{Theorem~\ref{theorem-649}} is called a \terminology{subbasis} generating the topology%
 \begin{equation*}
 \mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
 \mc T^\star \text{ is a topology on } X}.
 \end{equation*}
 %
 \end{definition}
-\begin{example}{Topologies generated from subbases.}{example-654}%
-\hypertarget{p-656}{}%
+\begin{example}{Topologies generated from subbases.}{example-660}%
+\hypertarget{p-662}{}%
 Calculate the topology on \(\mb R\) generated by each subbasis.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-659}{}\(\setBuilder{(-\infty,x)}{x\in\mb R}\cup\setBuilder{(y,\infty)}{y\in\mb R}\)%
-\item\hypertarget{li-661}{}\(\setBuilder{(-\infty,x]}{x\in\mb R}\cup\setBuilder{[y,\infty)}{y\in\mb R}\)%
-\item\hypertarget{li-663}{}\(\setList{\setList{0}}\)%
-\item\hypertarget{li-665}{}\(\mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\mb N}}\)%
+\item\hypertarget{li-665}{}\(\setBuilder{(-\infty,x)}{x\in\mb R}\cup\setBuilder{(y,\infty)}{y\in\mb R}\)%
+\item\hypertarget{li-667}{}\(\setBuilder{(-\infty,x]}{x\in\mb R}\cup\setBuilder{[y,\infty)}{y\in\mb R}\)%
+\item\hypertarget{li-669}{}\(\setList{\setList{0}}\)%
+\item\hypertarget{li-671}{}\(\mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\mb N}}\)%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-667}%
-\hypertarget{p-668}{}%
+\begin{theorem}{}{}{theorem-673}%
+\hypertarget{p-674}{}%
 Let \(\mc S\subseteq\mc P(X)\) and%
 \begin{equation*}
 \mc B=\setList{X}\cup\bigcap\setBuilder{\mc B^\star\subseteq\mc P(X)}
@@ -877,40 +880,40 @@ B_1,B_2\in\mc B^\star\Rightarrow B_1\cap B_2\in\mc B^\star}.
 \end{equation*}
 Then \(\mc B\) is a basis for a topology on \(X\), and the topology generated by the basis \(\mc B\) is same as the topology generated by the subbasis \(\mc S\).%
 \end{theorem}
-\begin{definition}{}{definition-675}%
-\hypertarget{p-676}{}%
+\begin{definition}{}{definition-681}%
+\hypertarget{p-682}{}%
 The following are also known as \terminology{separation axioms} for a topological space \(\tuple{X,\mc T}\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-680}{}\(\mc T\) is said to be \terminology{regular} if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\), there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\).%
-\item\hypertarget{li-688}{}\(\mc T\) is said to be \terminology{\(T_3\)} if and only if it is both regular and \(T_1\)%
-\item\hypertarget{li-693}{}\(\mc T\) is said to be \terminology{normal} if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\), there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\).%
-\item\hypertarget{li-700}{}\(\mc T\) is said to be \terminology{\(T_4\)} if and only if it is both normal and \(T_1\)%
+\item\hypertarget{li-686}{}\(\mc T\) is said to be \terminology{regular} if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\), there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\).%
+\item\hypertarget{li-694}{}\(\mc T\) is said to be \terminology{\(T_3\)} if and only if it is both regular and \(T_1\)%
+\item\hypertarget{li-699}{}\(\mc T\) is said to be \terminology{normal} if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\), there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\).%
+\item\hypertarget{li-706}{}\(\mc T\) is said to be \terminology{\(T_4\)} if and only if it is both normal and \(T_1\)%
 \end{enumerate}
 \end{definition}
-\begin{proposition}{}{}{proposition-705}%
-\hypertarget{p-706}{}%
+\begin{proposition}{}{}{proposition-711}%
+\hypertarget{p-712}{}%
 \(T_{n+1}\Rightarrow T_n\) for \(n\in\setList{0,1,2,3}\).%
 \end{proposition}
-\begin{theorem}{}{}{theorem-709}%
-\hypertarget{p-710}{}%
+\begin{theorem}{}{}{theorem-715}%
+\hypertarget{p-716}{}%
 The real line \(\mb R\) equipped with the Euclidean topology is \(T_4\).%
 \end{theorem}
-\begin{example}{}{example-713}%
-\hypertarget{p-714}{}%
+\begin{example}{}{example-719}%
+\hypertarget{p-720}{}%
 Find or create an example of a topological space that is:%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-716}{}\(T_2\) but not regular.%
-\item\hypertarget{li-718}{}\(T_3\) but not \(T_4\)%
-\item\hypertarget{li-721}{}Regular but not \(T_3\).%
-\item\hypertarget{li-723}{}Normal but not \(T_4\).%
-\item\hypertarget{li-725}{}Regular but not normal.%
-\item\hypertarget{li-726}{}Normal but not regular.%
+\item\hypertarget{li-722}{}\(T_2\) but not regular.%
+\item\hypertarget{li-724}{}\(T_3\) but not \(T_4\)%
+\item\hypertarget{li-727}{}Regular but not \(T_3\).%
+\item\hypertarget{li-729}{}Normal but not \(T_4\).%
+\item\hypertarget{li-731}{}Regular but not normal.%
+\item\hypertarget{li-732}{}Normal but not regular.%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-727}%
-\hypertarget{p-728}{}%
+\begin{theorem}{}{}{theorem-733}%
+\hypertarget{p-734}{}%
 A topological space is \(T_3\) if and only if it is regular and \(T_0\).%
 \end{theorem}
 \end{sectionptx}
@@ -920,87 +923,87 @@ A topological space is \(T_3\) if and only if it is regular and \(T_0\).%
 \typeout{Section 3 Continuity \& Homeomorphisms}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Continuity \& Homeomorphisms}{}{Continuity \& Homeomorphisms}{}{}{section-731}
-\begin{definition}{}{definition-734}%
-\hypertarget{p-735}{}%
+\begin{sectionptx}{Continuity \& Homeomorphisms}{}{Continuity \& Homeomorphisms}{}{}{section-737}
+\begin{definition}{}{definition-739}%
+\hypertarget{p-740}{}%
 Let \(f:X\to Y\) be a function. For \(A\subseteq X\), let \(f[A]=\setBuilder{f(x)}{x\in A}\). For \(y\in Y\), let \(f^\leftarrow(y)=\setBuilder{x\in X}{f(x)=y}\). For \(B\subseteq Y\), let \(f^\leftarrow[B]=\setBuilder{x\in X}{f(x)\in B}\).%
 \end{definition}
-\begin{definition}{}{definition-743}%
-\hypertarget{p-744}{}%
+\begin{definition}{}{definition-748}%
+\hypertarget{p-749}{}%
 Let \(X,Y\) be topological spaces with \(x\in X\), and let \(f:X\to Y\) be a function such that for every neighborhood \(V\) of \(f(x)\), there exists a neighborhood \(U\) of \(x\) such that \(f[U]\subseteq V\). Then \(f\) is said to be \terminology{continuous at the point} \(x\).%
 \par
-\hypertarget{p-756}{}%
+\hypertarget{p-761}{}%
 A function that is continuous at every point of its domain is called \terminology{continuous}.%
 \end{definition}
-\begin{proposition}{}{}{proposition-758}%
-\hypertarget{p-759}{}%
+\begin{proposition}{}{}{proposition-763}%
+\hypertarget{p-764}{}%
 A function \(f:X\to Y\) is continuous if and only if \(f^\leftarrow[V]\) is an open subset of \(X\) for every open \(V\subseteq Y\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-764}%
-\hypertarget{p-765}{}%
+\begin{proposition}{}{}{proposition-769}%
+\hypertarget{p-770}{}%
 Let \(X,Y\) be topological spaces.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-768}{}The identity function \(\iota:X\to X\) defined by \(\iota(x)=x\) is continuous.%
-\item\hypertarget{li-771}{}Let \(y\in Y\). The constant function \(c_y:X\to Y\) defined by \(c_y(x)=y\) is continuous.%
-\item\hypertarget{li-775}{}Every function whose domain is a discrete space is continuous.%
-\item\hypertarget{li-776}{}Every function whose range is an indiscrete space is continuous.%
+\item\hypertarget{li-773}{}The identity function \(\iota:X\to X\) defined by \(\iota(x)=x\) is continuous.%
+\item\hypertarget{li-776}{}Let \(y\in Y\). The constant function \(c_y:X\to Y\) defined by \(c_y(x)=y\) is continuous.%
+\item\hypertarget{li-780}{}Every function whose domain is a discrete space is continuous.%
+\item\hypertarget{li-781}{}Every function whose range is an indiscrete space is continuous.%
 \end{enumerate}
 \end{proposition}
-\begin{example}{Continuous functions \(\mb R\to\mb R\).}{example-777}%
-\hypertarget{p-780}{}%
+\begin{example}{Continuous functions \(\mb R\to\mb R\).}{example-782}%
+\hypertarget{p-785}{}%
 Verify that each of the following functions \(f:\mb R\to\mb R\) are continuous.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-783}{}\(f(x)=|x|\)%
-\item\hypertarget{li-785}{}\(f(x)=x^2\)%
-\item\hypertarget{li-787}{}\(f(x)=g(x)+h(x)\) for \(g,h:\mb R\to\mb R\) continuous.%
-\item\hypertarget{li-790}{}\(f(x)=g(x)h(x)\) for \(g,h:\mb R\to\mb R\) continuous.%
+\item\hypertarget{li-788}{}\(f(x)=|x|\)%
+\item\hypertarget{li-790}{}\(f(x)=x^2\)%
+\item\hypertarget{li-792}{}\(f(x)=g(x)+h(x)\) for \(g,h:\mb R\to\mb R\) continuous.%
+\item\hypertarget{li-795}{}\(f(x)=g(x)h(x)\) for \(g,h:\mb R\to\mb R\) continuous.%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-793}%
-\hypertarget{p-794}{}%
+\begin{theorem}{}{}{theorem-798}%
+\hypertarget{p-799}{}%
 If \(f:X\to Y\) and \(g:Y\to Z\) are both continuous, then \(g\circ f:X\to Z\) is continuous.%
 \end{theorem}
-\begin{definition}{}{definition-798}%
-\hypertarget{p-799}{}%
+\begin{definition}{}{definition-803}%
+\hypertarget{p-804}{}%
 Let \(f:X\to Y\) be a bijection such that both \(f\) and its inverse \(f^{-1}\) are continuous. Then \(f\) is called a \terminology{homeomorphism} and \(X,Y\) are said to be \terminology{homeomorphic}.%
 \end{definition}
-\begin{example}{Properties preserved by continuous functions.}{example-807}%
-\hypertarget{p-809}{}%
+\begin{example}{Properties preserved by continuous functions.}{example-812}%
+\hypertarget{p-814}{}%
 Determine if the following hold if \(f:X\to Y\) is a continous surjection. If not, determine if they hold if \(f\) is a continuous bijection. If not, show that they hold if \(f\) is a homeomorphism.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-814}{}If \(X\) is Hausdorff, then \(Y\) is Hausdorff.%
-\item\hypertarget{li-817}{}If \(Y\) is Hausdorff, then \(X\) is Hausdorff.%
-\item\hypertarget{li-820}{}If \(U\subseteq X\) is open, then \(f[U]\subseteq Y\) is open.%
-\item\hypertarget{li-823}{}If \(H\subseteq X\) is closed, then \(f[H]\subseteq Y\) is closed.%
-\item\hypertarget{li-826}{}If \(x\) is a limit point of \(A\subseteq X\), then \(f(x)\) is a limit point of \(f[A]\subseteq Y\).%
+\item\hypertarget{li-819}{}If \(X\) is Hausdorff, then \(Y\) is Hausdorff.%
+\item\hypertarget{li-822}{}If \(Y\) is Hausdorff, then \(X\) is Hausdorff.%
+\item\hypertarget{li-825}{}If \(U\subseteq X\) is open, then \(f[U]\subseteq Y\) is open.%
+\item\hypertarget{li-828}{}If \(H\subseteq X\) is closed, then \(f[H]\subseteq Y\) is closed.%
+\item\hypertarget{li-831}{}If \(x\) is a limit point of \(A\subseteq X\), then \(f(x)\) is a limit point of \(f[A]\subseteq Y\).%
 \end{enumerate}
 \end{example}
-\begin{proposition}{}{}{proposition-831}%
-\hypertarget{p-832}{}%
+\begin{proposition}{}{}{proposition-836}%
+\hypertarget{p-837}{}%
 Every topological space is homeomorphic to itself.%
 \end{proposition}
-\begin{proposition}{}{}{proposition-833}%
-\hypertarget{p-834}{}%
+\begin{proposition}{}{}{proposition-838}%
+\hypertarget{p-839}{}%
 If \(f:X\to Y\) and \(g:Y\to Z\) are both homeomorphisms, then \(g\circ f:X\to Z\) is a homeomorphism.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-838}%
-\hypertarget{p-839}{}%
+\begin{theorem}{}{}{theorem-843}%
+\hypertarget{p-844}{}%
 Let \(a\lt b\) and \(c\lt d\) be real numbers. Then \((a,b)\) and \((c,d)\) are homeomorphic subspaces of the Euclidean line.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-844}%
-\hypertarget{p-845}{}%
+\begin{theorem}{}{}{theorem-849}%
+\hypertarget{p-850}{}%
 \(\mb R\) with the Euclidean topology is homeomorphic to its subspace \((0,1)\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-848}%
-\hypertarget{p-849}{}%
+\begin{theorem}{}{}{theorem-853}%
+\hypertarget{p-854}{}%
 Let \(\mc B\) be a basis for the Euclidean topology on \(\mb R\). Give \(K=\mb R\cup\setList{-\infty,\infty}\) the topology generated by the basis \(\setBuilder{[-\infty,x)}{x\in\mb Q}\cup
 \setBuilder{(x,\infty]}{x\in\mb Q}\cup\mc B\). Then \(K\) is homeomorphic to the subspace \([0,1]\) of the Euclidean line.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-856}%
-\hypertarget{p-857}{}%
+\begin{proposition}{}{}{proposition-861}%
+\hypertarget{p-862}{}%
 The real line with the Sorgenfrey topology generated by the basis \(\setBuilder{[a,b)}{a,b\in\mb R}\) is homeomorphic to the real line with the reverse Sorgenfrey topology generated by the basis \(\setBuilder{(a,b]}{a,b\in\mb R}\).%
 \end{proposition}
 \end{sectionptx}
@@ -1010,168 +1013,168 @@ The real line with the Sorgenfrey topology generated by the basis \(\setBuilder{
 \typeout{Section 4 Metric Spaces}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Metric Spaces}{}{Metric Spaces}{}{}{section-860}
-\begin{definition}{}{definition-862}%
-\hypertarget{p-863}{}%
+\begin{sectionptx}{Metric Spaces}{}{Metric Spaces}{}{}{section-865}
+\begin{definition}{}{definition-867}%
+\hypertarget{p-868}{}%
 Let \(d:X^2\to[0,\infty)\) be a function satisfying the following for all \(x,y,z\in X\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-867}{}\(d(x,y)=0\) if and only if \(x=y\).%
-\item\hypertarget{li-870}{}\(d(x,y)=d(y,x)\)%
-\item\hypertarget{li-872}{}\(d(x,z)\leq d(x,y)+d(y,z)\)%
+\item\hypertarget{li-872}{}\(d(x,y)=0\) if and only if \(x=y\).%
+\item\hypertarget{li-875}{}\(d(x,y)=d(y,x)\)%
+\item\hypertarget{li-877}{}\(d(x,z)\leq d(x,y)+d(y,z)\)%
 \end{enumerate}
-\hypertarget{p-874}{}%
+\hypertarget{p-879}{}%
 Then \(d\) is said to be a \terminology{metric} on the set \(X\), and%
 \begin{equation*}
 B_r(x)=\setBuilder{y\in X}{d(x,y)\lt r}
 \end{equation*}
 is said to be a \terminology{metric ball around \(x\)}.%
 \end{definition}
-\begin{example}{Examples of metrics.}{example-881}%
-\hypertarget{p-883}{}%
+\begin{example}{Examples of metrics.}{example-886}%
+\hypertarget{p-888}{}%
 Verify that each of the following is a metric.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-885}{}\(d(x,y)=1\) for all distinct \(x,y\in X\), and \(d(x,x)=0\)%
-\item\hypertarget{li-889}{}\(d(x,y)=|y-x|\) for all \(x,y\in\mb R\)%
-\item\hypertarget{li-892}{}\(d(\tuple{x_0,x_1},\tuple{y_0,y_1})=\sqrt{(y_1-y_0)^2+(x_1-x_0)^2}\) for all \(\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2\).%
-\item\hypertarget{li-895}{}\(d(\tuple{x_0,x_1},\tuple{y_0,y_1})=|y_1-y_0|+|x_1-x_0|\) for all \(\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2\).%
-\item\hypertarget{li-898}{}\(d(\tuple{x_0,x_1},\tuple{y_0,y_1})=\max\setList{|y_1-y_0|,|x_1-x_0|}\) for all \(\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2\).%
+\item\hypertarget{li-890}{}\(d(x,y)=1\) for all distinct \(x,y\in X\), and \(d(x,x)=0\)%
+\item\hypertarget{li-894}{}\(d(x,y)=|y-x|\) for all \(x,y\in\mb R\)%
+\item\hypertarget{li-897}{}\(d(\tuple{x_0,x_1},\tuple{y_0,y_1})=\sqrt{(y_1-y_0)^2+(x_1-x_0)^2}\) for all \(\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2\).%
+\item\hypertarget{li-900}{}\(d(\tuple{x_0,x_1},\tuple{y_0,y_1})=|y_1-y_0|+|x_1-x_0|\) for all \(\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2\).%
+\item\hypertarget{li-903}{}\(d(\tuple{x_0,x_1},\tuple{y_0,y_1})=\max\setList{|y_1-y_0|,|x_1-x_0|}\) for all \(\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2\).%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-901}%
-\hypertarget{p-902}{}%
+\begin{theorem}{}{}{theorem-906}%
+\hypertarget{p-907}{}%
 Let \(d\) be a metric on a set \(X\). Then%
 \begin{equation*}
 \mc B=\setBuilder{B_r(x)}{x\in X,r>0}
 \end{equation*}
 is a basis for a topology on \(X\).%
 \end{theorem}
-\begin{definition}{}{definition-907}%
-\hypertarget{p-908}{}%
-The topology generated by the basis given in \hyperref[theorem-901]{Theorem~\ref{theorem-901}} is called the \terminology{topology generated by the metric}.%
+\begin{definition}{}{definition-912}%
+\hypertarget{p-913}{}%
+The topology generated by the basis given in \hyperref[theorem-906]{Theorem~\ref{theorem-906}} is called the \terminology{topology generated by the metric}.%
 \par
-\hypertarget{p-911}{}%
+\hypertarget{p-916}{}%
 A given topology is said to be \terminology{metrizable} if there exists some metric that generates it. Two metrics are said to be \terminology{topologically equivalent} if they generate the same topology.%
 \end{definition}
-\begin{proposition}{}{}{proposition-914}%
-\hypertarget{p-915}{}%
+\begin{proposition}{}{}{proposition-919}%
+\hypertarget{p-920}{}%
 Every discrete space is metrizable.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-916}%
-\hypertarget{p-917}{}%
+\begin{theorem}{}{}{theorem-921}%
+\hypertarget{p-922}{}%
 Every metrizable space is \(T_4\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-919}%
-\hypertarget{p-920}{}%
+\begin{theorem}{}{}{theorem-924}%
+\hypertarget{p-925}{}%
 Two bases \(\mc B_0,\mc B_1\) generate the same topology if and only if for all \(x\in B_0\in\mc B_0\) there exists \(B_1\in\mc B_1\) such that \(x\in B_1\subseteq B_0\), and for all \(x\in B_1\in\mc B_1\) there exists \(B_0\in\mc B_0\) such that \(x\in B_0\subseteq B_1\). %
 \end{theorem}
-\begin{theorem}{}{}{theorem-928}%
-\hypertarget{p-929}{}%
+\begin{theorem}{}{}{theorem-933}%
+\hypertarget{p-934}{}%
 Let \(B_{0,r}(x),B_{1,r}(x)\) be the metric balls around \(x\) given by two metrics \(d_0,d_1\) respectively. Then \(d_0,d_1\) are topologically equivalent if and only if for all \(x\in X\) and \(\epsilon\gt 0\), there exists \(\delta\gt 0\) such that \(B_{0,\delta}(x)\subseteq B_{1,\epsilon}\) and \(B_{1,\delta}(x)\subseteq B_{0,\epsilon}(x)\).%
 \end{theorem}
-\begin{definition}{}{definition-939}%
-\hypertarget{p-940}{}%
+\begin{definition}{}{definition-944}%
+\hypertarget{p-945}{}%
 For \(\vec x=\tuple{x_0,\dots,x_{n-1}}\in\mb R^n\), let \(\vec x(i)=x_i\).%
 \end{definition}
-\begin{theorem}{}{}{theorem-943}%
-\hypertarget{p-944}{}%
+\begin{theorem}{}{}{theorem-948}%
+\hypertarget{p-949}{}%
 The following metrics on \(\mb R^n\) are topologically equivalent.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-947}{}\(d(\vec x,\vec y)=\sqrt{\sum_{0\leq i\lt n}(\vec y(i)-\vec x(i))^2}\)%
-\item\hypertarget{li-949}{}\(d(\vec x,\vec y)=\sum_{0\leq i\lt n}|\vec y(i)-\vec x(i)|\)%
-\item\hypertarget{li-951}{}\(d(\vec x,\vec y)=\max\setBuilder{|\vec y(i)-\vec x(i)|}{0\leq i\lt n}\)%
+\item\hypertarget{li-952}{}\(d(\vec x,\vec y)=\sqrt{\sum_{0\leq i\lt n}(\vec y(i)-\vec x(i))^2}\)%
+\item\hypertarget{li-954}{}\(d(\vec x,\vec y)=\sum_{0\leq i\lt n}|\vec y(i)-\vec x(i)|\)%
+\item\hypertarget{li-956}{}\(d(\vec x,\vec y)=\max\setBuilder{|\vec y(i)-\vec x(i)|}{0\leq i\lt n}\)%
 \end{enumerate}
 \end{theorem}
-\begin{definition}{}{definition-953}%
-\hypertarget{p-954}{}%
-The topology generated by the metrics given in \hyperref[theorem-943]{Theorem~\ref{theorem-943}} is called the \terminology{Euclidean topology} on \(\mb R^n\).%
-\end{definition}
 \begin{definition}{}{definition-958}%
 \hypertarget{p-959}{}%
+The topology generated by the metrics given in \hyperref[theorem-948]{Theorem~\ref{theorem-948}} is called the \terminology{Euclidean topology} on \(\mb R^n\).%
+\end{definition}
+\begin{definition}{}{definition-963}%
+\hypertarget{p-964}{}%
 A \terminology{local basis at a point \(x\)} is a collection of open sets \(\mc B_x\) such that for every neighborhood \(U\) of \(x\), there exists \(B\in\mc B_x\) such that \(x\in B_x\subseteq U\).%
 \end{definition}
-\begin{definition}{}{definition-967}%
-\hypertarget{p-968}{}%
+\begin{definition}{}{definition-972}%
+\hypertarget{p-973}{}%
 A space is said to be \terminology{first-countable} if there exists a countable local basis at every point of the space.%
 \par
-\hypertarget{p-970}{}%
+\hypertarget{p-975}{}%
 A space is said to be \terminology{second-countable} if there exists  a countable basis for the space.%
 \end{definition}
-\begin{proposition}{}{}{proposition-972}%
-\hypertarget{p-973}{}%
+\begin{proposition}{}{}{proposition-977}%
+\hypertarget{p-978}{}%
 Every second-countable space is first-countable.%
 \end{proposition}
-\begin{proposition}{}{}{proposition-974}%
-\hypertarget{p-975}{}%
+\begin{proposition}{}{}{proposition-979}%
+\hypertarget{p-980}{}%
 Every metrizable space is first-countable%
 \end{proposition}
-\begin{definition}{}{definition-976}%
-\hypertarget{p-977}{}%
+\begin{definition}{}{definition-981}%
+\hypertarget{p-982}{}%
 A space is said to be \terminology{separable} if there exists a countable dense subset of the space.%
 \end{definition}
-\begin{theorem}{}{}{theorem-979}%
-\hypertarget{p-980}{}%
+\begin{theorem}{}{}{theorem-984}%
+\hypertarget{p-985}{}%
 Let \(X\) be metrizable. Then \(X\) is second-countable if and only if it is separable.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-983}%
-\hypertarget{p-984}{}%
+\begin{proposition}{}{}{proposition-988}%
+\hypertarget{p-989}{}%
 Every Euclidean space is separable and second-countable.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-985}%
-\hypertarget{p-986}{}%
+\begin{theorem}{}{}{theorem-990}%
+\hypertarget{p-991}{}%
 For \(\vec x,\vec y\in\mb R^2\), let \(d(\vec x,\vec y)=1\) if \(\vec x(1)\not=\vec y(1)\), and \(d(\vec x,\vec y)=|\vec y(0)-\vec x(0)|\) otherwise. Then \(d\) is a metric generating a non-separable, non-discrete topology on \(\mb R^2\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-993}%
-\hypertarget{p-994}{}%
-The subspace \(\setBuilder{\vec x}{\vec{x}(1)\in\setList{0,1}}\) of the space defined in \hyperref[theorem-985]{Theorem~\ref{theorem-985}} is homeomorphic to the subspace \((0,1)\cup(2,3)\) of the Euclidean line.%
-\end{theorem}
-\begin{definition}{}{definition-998}%
+\begin{theorem}{}{}{theorem-998}%
 \hypertarget{p-999}{}%
+The subspace \(\setBuilder{\vec x}{\vec{x}(1)\in\setList{0,1}}\) of the space defined in \hyperref[theorem-990]{Theorem~\ref{theorem-990}} is homeomorphic to the subspace \((0,1)\cup(2,3)\) of the Euclidean line.%
+\end{theorem}
+\begin{definition}{}{definition-1003}%
+\hypertarget{p-1004}{}%
 A point \(x\) is called a \terminology{sequential limit point} of a set \(A\) iff there exists a countable subset \(B\subseteq A\setminus\setList{x}\) such that every neighborhood of \(x\) contains all but finitely many points of \(B\).%
 \end{definition}
-\begin{proposition}{}{}{proposition-1006}%
-\hypertarget{p-1007}{}%
+\begin{proposition}{}{}{proposition-1011}%
+\hypertarget{p-1012}{}%
 Every sequential limit point of a set is a limit point of that set.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1008}%
-\hypertarget{p-1009}{}%
+\begin{theorem}{}{}{theorem-1013}%
+\hypertarget{p-1014}{}%
 Let \(X\) be first-countable. Then \(x\) is a limit point of a set if and only if \(x\) is a sequental limit point of that set.%
 \end{theorem}
-\begin{definition}{}{definition-1013}%
-\hypertarget{p-1014}{}%
+\begin{definition}{}{definition-1018}%
+\hypertarget{p-1019}{}%
 A \terminology{Cauchy sequence} is a countably infinte set \(A\) such that for all \(\epsilon\gt0\), the set \(\setBuilder{x\in A}{\exists y\in A(d(x,y)\geq\epsilon)}\) is finite.%
 \end{definition}
-\begin{definition}{}{definition-1019}%
-\hypertarget{p-1020}{}%
+\begin{definition}{}{definition-1024}%
+\hypertarget{p-1025}{}%
 A \terminology{complete metric} is a metric such that every Cauchy sequence has a sequential limit point.%
 \par
-\hypertarget{p-1022}{}%
+\hypertarget{p-1027}{}%
 A topology that can be generated by a complete metric is said to be \terminology{completely metrizable}.%
 \end{definition}
-\begin{proposition}{}{}{proposition-1024}%
-\hypertarget{p-1025}{}%
+\begin{proposition}{}{}{proposition-1029}%
+\hypertarget{p-1030}{}%
 Every Euclidean space is completely metrizable.%
 \end{proposition}
-\begin{proposition}{}{}{proposition-1026}%
-\hypertarget{p-1027}{}%
+\begin{proposition}{}{}{proposition-1031}%
+\hypertarget{p-1032}{}%
 Let \(d:X\to[0,\infty)\) be a metric and \(Y\subseteq X\). Then \(d\) restricted to \(Y\) generates the subspace topology on \(Y\). (Therefore, every subspace of a metrizable space is metrizable.)%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1033}%
-\hypertarget{p-1034}{}%
+\begin{theorem}{}{}{theorem-1038}%
+\hypertarget{p-1039}{}%
 The subspace \((0,1)\) of the Euclidean line is completely metrizable, but not by the topology inherited from \(\mb R\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1037}%
-\hypertarget{p-1038}{}%
+\begin{theorem}{}{}{theorem-1042}%
+\hypertarget{p-1043}{}%
 The subspace \(\mb Q\) of the Euclidean line is metrizable, but not completely metrizable.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1040}%
-\hypertarget{p-1041}{}%
+\begin{theorem}{}{}{theorem-1045}%
+\hypertarget{p-1046}{}%
 The subspace \(\mb R\setminus\mb Q\) of the Euclidean line is completely metrizable, but not by the topology inherited from \(\mb R\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1044}%
-\hypertarget{p-1045}{}%
+\begin{theorem}{}{}{theorem-1049}%
+\hypertarget{p-1050}{}%
 Metrizable and completely metrizable are topological properties. That is, if \(X\) and \(Y\) are homeomorphic, then \(X\) is (completely) metrizable if and only if \(Y\) is too.%
 \end{theorem}
 \end{sectionptx}
@@ -1181,93 +1184,93 @@ Metrizable and completely metrizable are topological properties. That is, if \(X
 \typeout{Section 5 Compactness}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Compactness}{}{Compactness}{}{}{section-1050}
-\begin{definition}{}{definition-1052}%
-\hypertarget{p-1053}{}%
+\begin{sectionptx}{Compactness}{}{Compactness}{}{}{section-1055}
+\begin{definition}{}{definition-1057}%
+\hypertarget{p-1058}{}%
 A collection \(\mc A\subseteq \mc P(X)\) is said to \terminology{cover} a subset \(Y\subseteq X\) iff \(Y\subseteq\bigcup\mc A\).%
 \end{definition}
-\begin{definition}{}{definition-1058}%
-\hypertarget{p-1059}{}%
+\begin{definition}{}{definition-1063}%
+\hypertarget{p-1064}{}%
 A subset \(K\subseteq X\) of a topological space is said to be \terminology{compact} iff for every collection of open sets \(\mc U\) covering \(K\), there exists a finite subcollection \(\mc F\subseteq\mc U\) that also covers \(K\).%
 \end{definition}
-\begin{example}{}{example-1066}%
-\hypertarget{p-1067}{}%
+\begin{example}{}{example-1071}%
+\hypertarget{p-1072}{}%
 Determine if each of the following subsets of the Euclidean line is compact.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-1069}{}\(\mb R\)%
-\item\hypertarget{li-1071}{}\(\mb Z\)%
-\item\hypertarget{li-1073}{}\(\setBuilder{2^{-n}}{n\in\mb N}\)%
-\item\hypertarget{li-1075}{}\(\setList{0}\cup\setBuilder{2^{-n}}{n\in\mb N}\)%
-\item\hypertarget{li-1077}{}\((0,1)\)%
-\item\hypertarget{li-1079}{}\([0,1]\)%
+\item\hypertarget{li-1074}{}\(\mb R\)%
+\item\hypertarget{li-1076}{}\(\mb Z\)%
+\item\hypertarget{li-1078}{}\(\setBuilder{2^{-n}}{n\in\mb N}\)%
+\item\hypertarget{li-1080}{}\(\setList{0}\cup\setBuilder{2^{-n}}{n\in\mb N}\)%
+\item\hypertarget{li-1082}{}\((0,1)\)%
+\item\hypertarget{li-1084}{}\([0,1]\)%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-1081}%
-\hypertarget{p-1082}{}%
+\begin{definition}{}{definition-1086}%
+\hypertarget{p-1087}{}%
 A subset \(R\subseteq X\) of a topological space is said to be \terminology{relatively compact} iff for every collection of open sets \(\mc U\) covering \(X\), there exists a finite subcollection \(\mc F\subseteq\mc U\) that covers \(K\).%
 \end{definition}
-\begin{theorem}{}{}{theorem-1089}%
-\hypertarget{p-1090}{}%
+\begin{theorem}{}{}{theorem-1094}%
+\hypertarget{p-1095}{}%
 A space is regular if and only if for every point \(x\) and neighborhood \(U\), there exists a neighborhood \(V\) of \(x\) such that \(x\in V\subseteq\cl V\subseteq U\).%
-\end{theorem}
-\begin{theorem}{}{}{theorem-1096}%
-\hypertarget{p-1097}{}%
-Let \(X\) be regular. A subset \(R\subseteq X\) is relatively compact if and only if \(\cl R\) is compact.%
 \end{theorem}
 \begin{theorem}{}{}{theorem-1101}%
 \hypertarget{p-1102}{}%
+Let \(X\) be regular. A subset \(R\subseteq X\) is relatively compact if and only if \(\cl R\) is compact.%
+\end{theorem}
+\begin{theorem}{}{}{theorem-1106}%
+\hypertarget{p-1107}{}%
 Let \(X\) be compact and \(K\) be a closed subset of \(X\). Then \(K\) is compact.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-1107}%
-\hypertarget{p-1108}{}%
+\begin{proposition}{}{}{proposition-1112}%
+\hypertarget{p-1113}{}%
 Every finite subset of a space is compact.%
 \end{proposition}
-\begin{proposition}{}{}{proposition-1109}%
-\hypertarget{p-1110}{}%
+\begin{proposition}{}{}{proposition-1114}%
+\hypertarget{p-1115}{}%
 Every finite union of compact subsets is compact.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1111}%
-\hypertarget{p-1112}{}%
+\begin{theorem}{}{}{theorem-1116}%
+\hypertarget{p-1117}{}%
 Every compact subset of a Hausdorff space is closed.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-1113}%
-\hypertarget{p-1114}{}%
+\begin{proposition}{}{}{proposition-1118}%
+\hypertarget{p-1119}{}%
 Let \(\mc T=\setList{\emptyset}\cup
 \setBuilder{\mb N\setminus F}{F\text{ is finite}}\) be the cofinite topology on \(\mb N\). Every subset of \(\mb N\) is compact under this topology.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1118}%
-\hypertarget{p-1119}{}%
+\begin{theorem}{}{}{theorem-1123}%
+\hypertarget{p-1124}{}%
 Let \(f:X\to Y\) be continuous and \(K\subseteq X\) be compact. Then \(f[K]\) is compact.%
 \end{theorem}
-\begin{corollary}{}{}{corollary-1123}%
-\hypertarget{p-1124}{}%
+\begin{corollary}{}{}{corollary-1128}%
+\hypertarget{p-1129}{}%
 Compactness is a topological property.%
 \end{corollary}
-\begin{theorem}{}{}{theorem-1125}%
-\hypertarget{p-1126}{}%
+\begin{theorem}{}{}{theorem-1130}%
+\hypertarget{p-1131}{}%
 Every infinite subset of a compact set has a limit point.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1127}%
-\hypertarget{p-1128}{}%
+\begin{theorem}{}{}{theorem-1132}%
+\hypertarget{p-1133}{}%
 Let \(\mc K=\setBuilder{K_n}{n\in\mb N}\) be a collection of non-empty compact subsets of a topological space such that \(K_{n+1}\subseteq K_n\) for all \(n\in\mb N\). Then \(\bigcap\mc K\) is a non-empty compact set.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1133}%
-\hypertarget{p-1134}{}%
+\begin{theorem}{}{}{theorem-1138}%
+\hypertarget{p-1139}{}%
 Let \(X\) be metrizable. Then the following are equivalent for \(K\subseteq X\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-1138}{}\(K\) is compact%
-\item\hypertarget{li-1140}{}Every infinite subset of \(K\) has a limit point.%
-\item\hypertarget{li-1142}{}Every infinite subset of \(K\) has a sequential limit point.%
+\item\hypertarget{li-1143}{}\(K\) is compact%
+\item\hypertarget{li-1145}{}Every infinite subset of \(K\) has a limit point.%
+\item\hypertarget{li-1147}{}Every infinite subset of \(K\) has a sequential limit point.%
 \end{enumerate}
 \end{theorem}
-\begin{lemma}{}{}{lemma-1144}%
-\hypertarget{p-1145}{}%
+\begin{lemma}{}{}{lemma-1149}%
+\hypertarget{p-1150}{}%
 A topological space \(X\) is Hausdorff if and only if for every pair of disjoint compact subsets \(H,K\) there exist disjoint open sets \(U,V\) such that \(H\subseteq U\) and \(K\subseteq V\).%
 \end{lemma}
-\begin{theorem}{}{}{theorem-1151}%
-\hypertarget{p-1152}{}%
+\begin{theorem}{}{}{theorem-1156}%
+\hypertarget{p-1157}{}%
 Every compact Hausdorff space is \(T_4\).%
 \end{theorem}
 \end{sectionptx}
@@ -1277,66 +1280,66 @@ Every compact Hausdorff space is \(T_4\).%
 \typeout{Section 6 Connectedness}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Connectedness}{}{Connectedness}{}{}{section-1154}
-\begin{definition}{}{definition-1156}%
-\hypertarget{p-1157}{}%
+\begin{sectionptx}{Connectedness}{}{Connectedness}{}{}{section-1159}
+\begin{definition}{}{definition-1161}%
+\hypertarget{p-1162}{}%
 A pair of open sets \(\setList{A,B}\) satisfying \(A\cap Y\not=\emptyset\), \(B\cap Y\not=\emptyset\), \(Y\subseteq A\cup B\), and \(A\cap B\cap Y=\emptyset\) for a subset \(Y\) of a topological space \(X\) is called a \terminology{disconnection} of \(Y\).%
 \par
-\hypertarget{p-1167}{}%
+\hypertarget{p-1172}{}%
 A space for which a diconnection exists is called \terminology{disconnected}; otherwise, the space is called \terminology{connected}.%
 \end{definition}
-\begin{proposition}{}{}{proposition-1170}%
-\hypertarget{p-1171}{}%
+\begin{proposition}{}{}{proposition-1175}%
+\hypertarget{p-1176}{}%
 A pair \(\setList{A,B}\) of open sets is a disconnection of \(Y\subseteq X\) if and only if \(\setList{A\cap Y,B\cap Y}\) is a partition of \(Y\) by non-empty clopen (both closed and open) sets in the subspace topology.%
 \end{proposition}
-\hypertarget{p-1176}{}%
+\hypertarget{p-1181}{}%
 (Corollary: A space itself is disconnected iff it is the union of two disjoint non-empty clopen subsets.)%
-\begin{proposition}{}{}{proposition-1177}%
-\hypertarget{p-1178}{}%
+\begin{proposition}{}{}{proposition-1182}%
+\hypertarget{p-1183}{}%
 The Euclidean line with a point removed \(\mb R\setminus\setList{0}\) is disconnected.%
 \end{proposition}
-\begin{lemma}{}{}{lemma-1180}%
-\hypertarget{p-1181}{}%
+\begin{lemma}{}{}{lemma-1185}%
+\hypertarget{p-1186}{}%
 Let \(\mb R=U\cup V\) for open sets \(U,V\) and let \(x\in U,y\in V\) with \(x\leq y\).  Then \(\inf\setBuilder{z\in[x,y]}{z\in V}\in U\cap V\).%
 \end{lemma}
-\begin{corollary}{}{}{corollary-1187}%
-\hypertarget{p-1188}{}%
+\begin{corollary}{}{}{corollary-1192}%
+\hypertarget{p-1193}{}%
 The Euclidean line is connected.%
 \end{corollary}
-\begin{theorem}{}{}{theorem-1189}%
-\hypertarget{p-1190}{}%
+\begin{theorem}{}{}{theorem-1194}%
+\hypertarget{p-1195}{}%
 The Sorgenfrey topology on \(\mb R\) is disconnected.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1192}%
-\hypertarget{p-1193}{}%
+\begin{theorem}{}{}{theorem-1197}%
+\hypertarget{p-1198}{}%
 If a subset \(A\) of a topological space is connected, then \(\cl A\) is connected.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-1196}%
-\hypertarget{p-1197}{}%
+\begin{proposition}{}{}{proposition-1201}%
+\hypertarget{p-1202}{}%
 If a subset \(A\) of a topological space is connected and \(f:X\to Y\) is continuous, then \(f[A]\) is connected.%
 \end{proposition}
-\begin{corollary}{}{}{corollary-1201}%
-\hypertarget{p-1202}{}%
+\begin{corollary}{}{}{corollary-1206}%
+\hypertarget{p-1207}{}%
 Connectedness is a topological property.%
 \end{corollary}
-\begin{proposition}{}{}{proposition-1203}%
-\hypertarget{p-1204}{}%
+\begin{proposition}{}{}{proposition-1208}%
+\hypertarget{p-1209}{}%
 Let \(\setList{0,1}\) have the discrete topology. Then a topological space \(X\) is connected if and only if every continuous function \(f:X\to\setList{0,1}\) is constant.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1208}%
-\hypertarget{p-1209}{}%
+\begin{theorem}{}{}{theorem-1213}%
+\hypertarget{p-1214}{}%
 If \(\mc A\) is a collection of connected subsets of a topological space with \(\bigcap\mc A\not=\emptyset\), then \(\bigcup\mc A\) is connected.%
 \end{theorem}
-\begin{definition}{}{definition-1213}%
-\hypertarget{p-1214}{}%
+\begin{definition}{}{definition-1218}%
+\hypertarget{p-1219}{}%
 Suppose for every two points \(x,y\in A\subseteq X\), there exists a continuous function \(f:[0,1]\to A\) such that \(f(0)=x\) and \(f(1)=y\). Such a space is said to be \terminology{path connected}.%
 \end{definition}
-\begin{proposition}{}{}{proposition-1220}%
-\hypertarget{p-1221}{}%
+\begin{proposition}{}{}{proposition-1225}%
+\hypertarget{p-1226}{}%
 Every path connected space is connected.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1222}%
-\hypertarget{p-1223}{}%
+\begin{theorem}{}{}{theorem-1227}%
+\hypertarget{p-1228}{}%
 For \(\vec x,\vec y\in\mb R^2\), let%
 \begin{equation*}
 B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
@@ -1345,8 +1348,8 @@ B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
 \end{equation*}
 Then \(\mc B=\setBuilder{B(\vec x,\vec y)}{\vec x,\vec y\in\mb R^2}\) is a basis for a topology on \(\mb R^2\) that is connected but not path connected.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1228}%
-\hypertarget{p-1229}{}%
+\begin{theorem}{}{}{theorem-1233}%
+\hypertarget{p-1234}{}%
 Let%
 \begin{equation*}
 S=
@@ -1362,71 +1365,71 @@ y=\sin\left(\frac{1}{x}\right)}
 \typeout{Section 7 Product Spaces}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Product Spaces}{}{Product Spaces}{}{}{section-1234}
-\begin{definition}{}{definition-1236}%
-\hypertarget{p-1237}{}%
+\begin{sectionptx}{Product Spaces}{}{Product Spaces}{}{}{section-1239}
+\begin{definition}{}{definition-1241}%
+\hypertarget{p-1242}{}%
 Let \(X,Y\) be topological spaces, generated respectively by the bases \(\mc B_X,\mc B_Y\). Then the \terminology{product space} is given by the set \(X\times Y=\setBuilder{\tuple{x,y}}{x\in X,y\in Y}\) with the topology generated by the basis \(\mc B=\setBuilder{U\times V}{U\in\mc B_X,V\in\mc B_Y}\).%
 \end{definition}
-\begin{theorem}{}{}{theorem-1243}%
-\hypertarget{p-1244}{}%
+\begin{theorem}{}{}{theorem-1248}%
+\hypertarget{p-1249}{}%
 The Euclidean space \(\mb R^{n+1}\) is homeomorphic to the product space \(\mb R^n\times\mb R\).%
 \end{theorem}
-\begin{proposition}{}{}{proposition-1247}%
-\hypertarget{p-1248}{}%
+\begin{proposition}{}{}{proposition-1252}%
+\hypertarget{p-1253}{}%
 The product \(X\times Y\) is Hausdorff if and only if \(X,Y\) are each Hausdorff.%
 \end{proposition}
-\begin{theorem}{}{}{theorem-1251}%
-\hypertarget{p-1252}{}%
+\begin{theorem}{}{}{theorem-1256}%
+\hypertarget{p-1257}{}%
 The product \(X\times Y\) is regular if and only if \(X,Y\) are each regular.%
 \end{theorem}
-\begin{lemma}{}{}{lemma-1255}%
-\hypertarget{p-1256}{}%
+\begin{lemma}{}{}{lemma-1260}%
+\hypertarget{p-1261}{}%
 Let \(S=\mb R\) equipped with the Sorgenfrey topology. Then the product space \(S\times S\) contains two disjoint closed subsets \(H=\setBuilder{\tuple{x,-x}}{x\in\mb Q}\) and \(L=\setBuilder{\tuple{x,-x}}{x\in\mb R\setminus\mb Q}\) that cannot be separated by a pair of open sets.%
 \end{lemma}
-\begin{theorem}{}{}{theorem-1261}%
-\hypertarget{p-1262}{}%
+\begin{theorem}{}{}{theorem-1266}%
+\hypertarget{p-1267}{}%
 Let \(S=\mb R\) equipped with the Sorgenfrey topology. Then \(S\) is normal, but \(S\times S\) is not normal.%
 \end{theorem}
-\begin{proposition}{}{}{proposition-1266}%
-\hypertarget{p-1267}{}%
+\begin{proposition}{}{}{proposition-1271}%
+\hypertarget{p-1272}{}%
 Let \(p\in Y\). The subspace \(\setBuilder{\tuple{x,p}}{x\in X}\) of \(X\times Y\) is homeomorphic to \(X\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-1272}%
-\hypertarget{p-1273}{}%
+\begin{proposition}{}{}{proposition-1277}%
+\hypertarget{p-1278}{}%
 The \terminology{diagonal} \(\Delta=\setBuilder{\tuple{x,x}}{x\in X}\) of \(X\times X\) is homeomorphic to \(X\).%
 \end{proposition}
-\begin{proposition}{}{}{proposition-1278}%
-\hypertarget{p-1279}{}%
+\begin{proposition}{}{}{proposition-1283}%
+\hypertarget{p-1284}{}%
 The product spaces \(X\times Y\) and \(Y\times X\) are homeomorphic.%
 \end{proposition}
-\begin{definition}{}{definition-1282}%
-\hypertarget{p-1283}{}%
+\begin{definition}{}{definition-1287}%
+\hypertarget{p-1288}{}%
 For a product space \(X\times Y\), its \terminology{projection maps} \(\pi_X:X\times Y\to X\) and \(\pi_Y:X\times Y\to Y\) are defined by \(\pi_X(\tuple{x,y})=x\) and \(\pi_Y(\tuple{x,y})=y\).%
 \end{definition}
-\begin{example}{Properties of projection maps.}{example-1290}%
-\hypertarget{p-1292}{}%
+\begin{example}{Properties of projection maps.}{example-1295}%
+\hypertarget{p-1297}{}%
 Verify the following properties of projection maps.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-1294}{}Every projection map is continuous.%
-\item\hypertarget{li-1295}{}The projection of an open set is always open.%
-\item\hypertarget{li-1296}{}The projection of a closed set is not always closed.%
+\item\hypertarget{li-1299}{}Every projection map is continuous.%
+\item\hypertarget{li-1300}{}The projection of an open set is always open.%
+\item\hypertarget{li-1301}{}The projection of a closed set is not always closed.%
 \end{enumerate}
 \end{example}
-\begin{theorem}{}{}{theorem-1297}%
-\hypertarget{p-1298}{}%
+\begin{theorem}{}{}{theorem-1302}%
+\hypertarget{p-1303}{}%
 The product \(X\times Y\) is metrizable if and only if \(X,Y\) are each metrizable.%
 \end{theorem}
-\begin{lemma}{}{}{lemma-1301}%
-\hypertarget{p-1302}{}%
+\begin{lemma}{}{}{lemma-1306}%
+\hypertarget{p-1307}{}%
 Let \(Y\) be compact. If \(\mc U\) is an open cover of \(X\times Y\), then for each \(x\in X\) there exists a finite subcollection \(\mc F_x\subseteq\mc U\) and an open neighborhood \(U_x\) of \(x\) such that \(U_x\times Y\subseteq\bigcup\mc F_x\).%
 \end{lemma}
-\begin{theorem}{}{}{theorem-1311}%
-\hypertarget{p-1312}{}%
+\begin{theorem}{}{}{theorem-1316}%
+\hypertarget{p-1317}{}%
 The product \(X\times Y\) is compact if and only if \(X,Y\) are each compact.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1315}%
-\hypertarget{p-1316}{}%
+\begin{theorem}{}{}{theorem-1320}%
+\hypertarget{p-1321}{}%
 The product \(X\times Y\) is connected if and only if \(X,Y\) are each connected.%
 \end{theorem}
 \end{sectionptx}
@@ -1436,58 +1439,58 @@ The product \(X\times Y\) is connected if and only if \(X,Y\) are each connected
 \typeout{Section 8 Quotient Spaces}
 \typeout{************************************************}
 %
-\begin{sectionptx}{Quotient Spaces}{}{Quotient Spaces}{}{}{section-1319}
-\begin{definition}{}{definition-1321}%
-\hypertarget{p-1322}{}%
+\begin{sectionptx}{Quotient Spaces}{}{Quotient Spaces}{}{}{section-1324}
+\begin{definition}{}{definition-1326}%
+\hypertarget{p-1327}{}%
 A \terminology{quotient map} is a surjection \(f:X\to Y\) such that \(V\subseteq Y\) is open if and only if \(f^\leftarrow[V]\subseteq X\) is open.%
 \end{definition}
-\begin{proposition}{}{}{proposition-1327}%
-\hypertarget{p-1328}{}%
+\begin{proposition}{}{}{proposition-1332}%
+\hypertarget{p-1333}{}%
 Let \(\tuple{X,\mc T_X}\) be a topological space, and let \(f:X\to Y\) be a surjection. Then \(\mc T_Y=\setBuilder{V\subseteq Y}{f^\leftarrow[V]\in\mc T_X}\) is a topology on \(Y\) such that \(f\) is a quotient map.%
 \end{proposition}
-\begin{definition}{}{definition-1334}%
-\hypertarget{p-1335}{}%
-The topology defined in \hyperref[proposition-1327]{Proposition~\ref{proposition-1327}} is known as the \terminology{quotient topology} induced by \(f\).%
-\end{definition}
 \begin{definition}{}{definition-1339}%
 \hypertarget{p-1340}{}%
+The topology defined in \hyperref[proposition-1332]{Proposition~\ref{proposition-1332}} is known as the \terminology{quotient topology} induced by \(f\).%
+\end{definition}
+\begin{definition}{}{definition-1344}%
+\hypertarget{p-1345}{}%
 Let \(X^*\) be a partition of a topological space \(X\), and let \(f:X\to X^*\) be the surjection given by letting \(f(x)=A\) iff \(x\in A\). Then \(X^*\) paired with the quotient topology induced by \(f\) is called a \terminology{quotient space} or \terminology{identification space}.%
 \end{definition}
-\begin{theorem}{}{}{theorem-1350}%
-\hypertarget{p-1351}{}%
+\begin{theorem}{}{}{theorem-1355}%
+\hypertarget{p-1356}{}%
 Let \(X^*\) be a quotient space of \(X\) and \(V\subseteq X^*\). Then \(V\) is open in \(X^*\) if and only if \(\bigcup V\subseteq X\) is open in \(X\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1359}%
-\hypertarget{p-1360}{}%
+\begin{theorem}{}{}{theorem-1364}%
+\hypertarget{p-1365}{}%
 Let \((X\times Y)^*=\setBuilder{\setList{x}\times Y}{x\in X}\) partition the product \(X\times Y\). Then the quotient space \((X\times Y)^*\) is homeomorphic to \(X\).%
 \end{theorem}
-\begin{definition}{}{definition-1365}%
-\hypertarget{p-1366}{}%
+\begin{definition}{}{definition-1370}%
+\hypertarget{p-1371}{}%
 A subset \(R\subseteq X^2\) is called a \terminology{relation} on \(X\), where the notation \(xRy\) is equivalent to writing \(\tuple{x,y}\in R\).%
 \par
-\hypertarget{p-1372}{}%
+\hypertarget{p-1377}{}%
 A relation \(\sim\) on \(X\) is called an \terminology{equivalence relation} if it satisfies the following for all \(x,y,z\in X\).%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-1378}{}\(x\sim x\). (Reflexivity)%
-\item\hypertarget{li-1380}{}\(x\sim y\) implies \(y\sim x\). (Symmetry)%
-\item\hypertarget{li-1383}{}\(x\sim y\) and \(y\sim z\) implies \(y\sim z\). (Transitivity)%
+\item\hypertarget{li-1383}{}\(x\sim x\). (Reflexivity)%
+\item\hypertarget{li-1385}{}\(x\sim y\) implies \(y\sim x\). (Symmetry)%
+\item\hypertarget{li-1388}{}\(x\sim y\) and \(y\sim z\) implies \(y\sim z\). (Transitivity)%
 \end{enumerate}
 \end{definition}
-\begin{theorem}{}{}{theorem-1387}%
-\hypertarget{p-1388}{}%
+\begin{theorem}{}{}{theorem-1392}%
+\hypertarget{p-1393}{}%
 Let \(X^*\) be a partition of \(X\) and define the relation \(\sim\) on \(X\) such that \(x\sim y\) if and only if \(\setList{x,y}\subseteq A\) for some \(A\in X^*\). Then \(\sim\) is an equivalence relation.%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1397}%
-\hypertarget{p-1398}{}%
+\begin{theorem}{}{}{theorem-1402}%
+\hypertarget{p-1403}{}%
 Let \(\sim\) be an equivalence relation on \(X\), and let \([x]=\setBuilder{y\in X}{x\sim y}\). Then \(X^*=\setBuilder{[x]}{x\in X}\) is a partition of \(X\).%
 \end{theorem}
-\begin{definition}{}{definition-1404}%
-\hypertarget{p-1405}{}%
-Let \(\sim\) be an equivalence relation on a topological space \(X\). Then \(X/\sim\) denotes the quotient space defined by the partition \(X^*\) given in \hyperref[theorem-1397]{Theorem~\ref{theorem-1397}}.%
+\begin{definition}{}{definition-1409}%
+\hypertarget{p-1410}{}%
+Let \(\sim\) be an equivalence relation on a topological space \(X\). Then \(X/\sim\) denotes the quotient space defined by the partition \(X^*\) given in \hyperref[theorem-1402]{Theorem~\ref{theorem-1402}}.%
 \end{definition}
-\begin{proposition}{}{}{proposition-1411}%
-\hypertarget{p-1412}{}%
+\begin{proposition}{}{}{proposition-1416}%
+\hypertarget{p-1417}{}%
 Let \(R\) be a relation on \(X\). Then%
 \begin{equation*}
 \sim=\bigcap\setBuilder{\sim^\star\subseteq X^2}{R\subseteq\sim^\star\text{ and }\sim^\star
@@ -1495,34 +1498,34 @@ Let \(R\) be a relation on \(X\). Then%
 \end{equation*}
 is an equivalence relation on \(X\).%
 \par
-\hypertarget{p-1417}{}%
+\hypertarget{p-1422}{}%
 (Therefore, an equivalence relation may be defined as the minimal equivalence relation satisfying a list of relationships.)%
 \end{proposition}
-\begin{example}{Curves and surfaces defined as quotients.}{example-1418}%
-\hypertarget{p-1420}{}%
+\begin{example}{Curves and surfaces defined as quotients.}{example-1423}%
+\hypertarget{p-1425}{}%
 Show that each of the following Euclidean subspaces and quotients of Euclidean subspaces are homeomorphic.%
 \leavevmode%
 \begin{enumerate}
-\item\hypertarget{li-1422}{}\([0,1]/\sim\) where \(0\sim 1\), and \(\setBuilder{\tuple{x,y}\in\mb R^2}{x^2+y^2=1}\).%
-\item\hypertarget{li-1426}{}\([0,2]/\sim\) where \(0\sim 1\sim 2\), and \(\setBuilder{\tuple{x,y}\in\mb R^2}{(x-1)^2+y^2=1}\cup\setBuilder{\tuple{x,y}\in\mb R^2}{(x+1)^2+y^2=1}\).%
-\item\hypertarget{li-1430}{}\([0,1]^2/\sim\) where \(\tuple{0,y}\sim\tuple{1,y}\), and \(\setBuilder{\tuple{x,y}\in\mb R^2}{1\leq x^2+y^2\leq 2}\).%
-\item\hypertarget{li-1434}{}\([0,1]^2/\sim\) where \(\tuple{x,y}\sim\tuple{z,w}\) whenever at least one of \(x,y\) and at least one of \(z,w\) is in \(\setList{0,1}\), and \(\setBuilder{\tuple{x,y,z}\in\mb R^2}{1\leq x^2+y^2+z^2=1}\).%
+\item\hypertarget{li-1427}{}\([0,1]/\sim\) where \(0\sim 1\), and \(\setBuilder{\tuple{x,y}\in\mb R^2}{x^2+y^2=1}\).%
+\item\hypertarget{li-1431}{}\([0,2]/\sim\) where \(0\sim 1\sim 2\), and \(\setBuilder{\tuple{x,y}\in\mb R^2}{(x-1)^2+y^2=1}\cup\setBuilder{\tuple{x,y}\in\mb R^2}{(x+1)^2+y^2=1}\).%
+\item\hypertarget{li-1435}{}\([0,1]^2/\sim\) where \(\tuple{0,y}\sim\tuple{1,y}\), and \(\setBuilder{\tuple{x,y}\in\mb R^2}{1\leq x^2+y^2\leq 2}\).%
+\item\hypertarget{li-1439}{}\([0,1]^2/\sim\) where \(\tuple{x,y}\sim\tuple{z,w}\) whenever at least one of \(x,y\) and at least one of \(z,w\) is in \(\setList{0,1}\), and \(\setBuilder{\tuple{x,y,z}\in\mb R^2}{1\leq x^2+y^2+z^2=1}\).%
 \end{enumerate}
 \end{example}
-\begin{definition}{}{definition-1441}%
-\hypertarget{p-1442}{}%
+\begin{definition}{}{definition-1446}%
+\hypertarget{p-1447}{}%
 The \terminology{hypersphere} of dimension \(n\) is the quotient space \(S^n=[0,1]^n/\sim\) given by \(\vec x\sim\vec y\) whenever there exist \(i,j\in\setList{0,\dots,n}\) such that \(\vec x(i),\vec y(j)\in\setList{0,1}\).%
-\end{definition}
-\begin{definition}{}{definition-1449}%
-\hypertarget{p-1450}{}%
-The \terminology{Möbius strip} is the quotient space \(M=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\).%
 \end{definition}
 \begin{definition}{}{definition-1454}%
 \hypertarget{p-1455}{}%
+The \terminology{Möbius strip} is the quotient space \(M=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\).%
+\end{definition}
+\begin{definition}{}{definition-1459}%
+\hypertarget{p-1460}{}%
 The \terminology{torus} is the quotient space \(T=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,y}\) and \(\tuple{x,0}\sim\tuple{x,1}\).%
 \end{definition}
-\begin{definition}{}{definition-1460}%
-\hypertarget{p-1461}{}%
+\begin{definition}{}{definition-1465}%
+\hypertarget{p-1466}{}%
 The \terminology{Klein bottle} is the quotient space \(K=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\) and \(\tuple{x,0}\sim\tuple{x,1}\).%
 \end{definition}
 \end{sectionptx}
@@ -1535,12 +1538,12 @@ The \terminology{Klein bottle} is the quotient space \(K=[0,1]^2/\sim\) given by
 %
 \appendix
 %
-\begin{appendixptx}{Assumed Results}{}{Assumed Results}{}{}{appendix-1467}
+\begin{appendixptx}{Assumed Results}{}{Assumed Results}{}{}{appendix-1472}
 \begin{introduction}{}%
-\hypertarget{p-1470}{}%
+\hypertarget{p-1475}{}%
 A review of basic results\slash{}definitions concerning sets and the reals.%
 \end{introduction}%
-\begin{definition}{}{definition-1471}%
+\begin{definition}{}{definition-1476}%
 \leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}\(\mb R\) is the set of real numbers.%
@@ -1549,12 +1552,12 @@ A review of basic results\slash{}definitions concerning sets and the reals.%
 \item{}\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.%
 \end{itemize}
 \end{definition}
-\begin{theorem}{}{}{theorem-1481}%
-\hypertarget{p-1482}{}%
+\begin{theorem}{}{}{theorem-1486}%
+\hypertarget{p-1487}{}%
 The \terminology{Archemedian Property} of the real numbers guarantees that for each positive real number \(x>0\), there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\).%
 \end{theorem}
-\begin{theorem}{}{}{theorem-1487}%
-\hypertarget{p-1488}{}%
+\begin{theorem}{}{}{theorem-1492}%
+\hypertarget{p-1493}{}%
 \terminology{De Morgan's Laws}: Let \(\mc A\) be a collection of subsets of \(X\).%
 %
 \begin{equation*}
@@ -1565,11 +1568,11 @@ X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
 X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 \end{equation*}
 \end{theorem}
-\begin{theorem}{}{}{theorem-1494}%
-\hypertarget{p-1495}{}%
+\begin{theorem}{}{}{theorem-1499}%
+\hypertarget{p-1500}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{greatest lower bound} (a.k.a. \terminology{infimum}) \(\glb S=\inf S\).%
 \par
-\hypertarget{p-1500}{}%
+\hypertarget{p-1505}{}%
 Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a \terminology{least upper bound} (a.k.a. \terminology{supremum}) \(\lub S=\sup S\).%
 \end{theorem}
 \end{appendixptx}
