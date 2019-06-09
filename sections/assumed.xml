@@ -1,7 +1,11 @@
-<appendix xml:id="set-theory">
-  <title>Assumed Results</title>
+<appendix xml:id="assumed">
+  <title>Assumptions</title>
   <introduction>
-    <p>A review of basic results/definitions concerning sets and the reals.</p>
+    <p>
+      Here is a brief overview of basic results and definitions 
+      concerning sets and the reals that should be assumed for
+      this course.
+    </p>
   </introduction>
 <definition>
   <ul>
@@ -19,18 +23,18 @@
 </definition>
 <theorem>
 <p>
-  The <term>Archemedian Property</term> of the real numbers guarantees that
-  for each positive real number <m>x>0</m>, there exists a natural number
-  <m>n\in\mb N</m> such that <m>\frac{1}{n}\lt x</m>.
-</p>
-</theorem>
-<theorem>
-<p>
   <term>De Morgan's Laws</term>: Let <m>\mc A</m> be a collection of subsets of
   <m>X</m>.
 </p>
 <me>X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)</me>
 <me>X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)</me>
+</theorem>
+<theorem>
+<p>
+  The <term>Archemedian Property</term> of the real numbers guarantees that
+  for each positive real number <m>x>0</m>, there exists a natural number
+  <m>n\in\mb N</m> such that <m>\frac{1}{n}\lt x</m>.
+</p>
 </theorem>
 <theorem>
 <p>
