@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd build
-rm -rf *
+# rm -rf *
 cp -r ../images .
 xsltproc --xinclude ../../pretext/xsl/mathbook-html.xsl ../index.xml
 xsltproc -o intro-to-topology.tex --xinclude ../../pretext/xsl/mathbook-latex.xsl ../index.xml
