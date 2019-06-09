@@ -70,7 +70,7 @@
               <p>
                 The only prerequisite for this course is an undergraduate-level introduction
                 to proofs course, which should include all the naive set theory necessary
-                to study topology at the introductory level. <xref ref="assumed"/> provides
+                to study topology at the introductory level. <xref ref="assumptions"/> provides
                 a few definitions and theorems that should be assumed for this course 
                 (e.g. properties of the reals, <m>0\in\mathbb N</m>).
               </p>
@@ -90,7 +90,7 @@
 <xi:include href="sections/quotient.xml" />
 
 <backmatter>
-<xi:include href="sections/assumed.xml" />
+<xi:include href="sections/assumptions.xml" />
 </backmatter>
 </article>
 
