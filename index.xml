@@ -33,27 +33,44 @@
 
             <abstract>
                 <p>
-                  These are course notes for an introductory course for
-                  general topology, to be used in an inquiry-based learning classroom.
+		  These are course notes for an introductory undergraduate or dual-listed
+		  course for general topology, to be used in an inquiry-based learning classroom.
+                </p>
+            </abstract>
+            <colophon>
+                <p>
+                  The first draft of these notes were adapted from 
+                  <a href="https://www.auburn.edu/cosam/faculty/math_stats/smith/index.htm">
+                  Michel Smith</a>'s undergraduate topology notes, used with permission.
                 </p>
                 <p>
-                  Some of this content has been adapted from Michel Smith's undergraduate
-                  topology notes, used with permission.
+                  All rights reserved, only until the author chooses an appropriate open license.
                 </p>
                 <p>
                   Dr. Clontz's website for students is <url href="https://prof.clontz.org"/>.
                   His personal website is <url href="https://clontz.org"/>.
                 </p>
-            </abstract>
+            </colophon>
+            <preface>
+              <p>
+                These notes have been written to serve as an introduction to topology
+                for undergraduate or beginning graduate students of mathematics.
+                Unlike a more comprehensive textbook, these notes are written to be used
+                in an inquiry-based learning classroom. As such, no proofs have been
+                provided. Instead, the results of the course have been carefully
+                scaffolded to allow students to prove most of the theorems on their
+                own, with the support of the instructor.
+              </p>
+              <p>
+                The exception to this format is <xref ref="section-surfaces"/>, which
+                provides a short narrative to movitave the study of topology by discussing
+                the neighborhoods of points in subspaces of <m>\mathbb R^3</m>, particularly 
+                unions of curves and surfaces.
+              </p>
+            </preface>
 
         </frontmatter>
 
-        <introduction>
-           <p>
-                  These are course notes for an introductory course for
-                  general topology, to be used in an inquiry-based learning classroom.
-           </p>
-        </introduction>
 
 
 <xi:include href="sections/surfaces.xml" />
