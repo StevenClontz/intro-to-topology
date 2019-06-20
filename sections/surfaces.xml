@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <section xml:id="section-surfaces">
 <title>Curves and Surfaces</title>
 <introduction>
@@ -17,7 +18,7 @@
     and be handled more carefully.
   </p>
 </introduction>
-<definition xml:id="curve-defn">
+<definition xml:id="curve-defn"><statement>
   <p>
     A <term>curve</term> is a set of points such
     that for every point in the set, the set locally
@@ -25,7 +26,7 @@
     the real line <m>\mathbb R</m> or 
     the half line <m>\mathbb R^*=\{x\in\mathbb R:x\geq 0\}</m>.
   </p> 
-</definition>
+</statement></definition>
 <p>
   For example, <xref ref="circle-fig"/>, <xref ref="figure-parabola"/>,
   and <xref ref="figure-helix"/> are all examples of curves in
@@ -72,13 +73,13 @@
   they are in a certain sense the same object that has been bent
   or stretched into a different shape.
 </p>
-<definition slide="single">
+<definition><statement>
   <p>
     Two objects are said to be <term>topologically equivalent</term>
     or <term>homeomorphic</term> if one may be bent or stretched into
     the shape of the other.
   </p>
-</definition>
+</statement></definition>
 <p>
   So this means that all geometrically similar shapes are homeomorphic
   (as in <xref ref="figure-similar-triangles"/>),
@@ -111,7 +112,7 @@
   <caption>Neighborhoods within the letter <q>A</q>.</caption>
   <image source="images/letter-a-neighborhoods.jpg"/>
 </figure>
-<definition xml:id="definition-surface"> 
+<definition xml:id="definition-surface"><statement>
   <p>
     A <term>surface</term> is a set of points such
     that for every point in the set, the set locally
@@ -120,7 +121,7 @@
     or the half-plane 
     <m>\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}</m>.
   </p> 
-</definition>
+</statement></definition>
 <p>
   A classic example of the topology of surfaces is the following joke:
   <q>

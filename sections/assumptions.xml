@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <appendix xml:id="assumptions">
   <title>Assumptions</title>
   <introduction>
@@ -21,22 +22,22 @@
     </li>
   </ul>
 </definition>
-<theorem>
+<theorem><statement>
 <p>
   <term>De Morgan's Laws</term>: Let <m>\mc A</m> be a collection of subsets of
   <m>X</m>.
 </p>
 <me>X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)</me>
 <me>X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)</me>
-</theorem>
-<theorem>
+</statement></theorem>
+<theorem><statement>
 <p>
   The <term>Archemedian Property</term> of the real numbers guarantees that
-  for each positive real number <m>x>0</m>, there exists a natural number
+  for each positive real number <m>x&gt;0</m>, there exists a natural number
   <m>n\in\mb N</m> such that <m>\frac{1}{n}\lt x</m>.
 </p>
-</theorem>
-<theorem>
+</statement></theorem>
+<theorem><statement>
 <p>
   Let <m>S\subseteq \mb R</m> be a set of real numbers with a lower bound.
   Then there exists a <term>greatest lower bound</term> (a.k.a.
@@ -47,5 +48,5 @@
   Then there exists a <term>least upper bound</term> (a.k.a.
   <term>supremum</term>) <m>\lub S=\sup S</m>.
 </p>
-</theorem>
+</statement></theorem>
 </appendix>

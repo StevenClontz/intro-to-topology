@@ -1,13 +1,14 @@
+<?xml version="1.0"?>
 <section xml:id="section-compact">
   <title>Compactness</title>
-<definition slide="single">
+<definition><statement>
 <p>
   A collection <m>\mc A\subseteq \mc P(X)</m> is said to 
   <term>cover</term> a subset <m>Y\subseteq X</m> iff
   <m>Y\subseteq\bigcup\mc A</m>. 
 </p>
-</definition>
-<definition slide="single">
+</statement></definition>
+<definition><statement>
 <p>
   A subset <m>K\subseteq X</m> of a topological space is said
   to be <term>compact</term> iff for every collection of
@@ -15,7 +16,7 @@
   there exists a finite subcollection
   <m>\mc F\subseteq\mc U</m> that also covers <m>K</m>. 
 </p>
-</definition>
+</statement></definition>
 <example xml:id="compact-examples">
 <p>
   Determine if each of the following subsets of the Euclidean line
@@ -30,7 +31,7 @@
   <li><m>[0,1]</m></li>
 </ol>
 </example>
-<definition slide="single">
+<definition><statement>
 <p>
   A subset <m>R\subseteq X</m> of a topological space is said
   to be <term>relatively compact</term> iff for every collection of
@@ -38,28 +39,28 @@
   there exists a finite subcollection
   <m>\mc F\subseteq\mc U</m> that covers <m>K</m>. 
 </p>
-</definition>
-<theorem>
+</statement></definition>
+<theorem><statement>
 <p>
   A space is regular if and only if for every point <m>x</m> and
   neighborhood <m>U</m>, there exists a neighborhood <m>V</m> of
   <m>x</m> such that <m>x\in V\subseteq\cl V\subseteq U</m>.
 </p>
-<!-- TODO move -->
-</theorem>
-<theorem>
+
+</statement></theorem>
+<theorem><statement>
 <p>
   Let <m>X</m> be regular. A subset <m>R\subseteq X</m> 
   is relatively compact
   if and only if <m>\cl R</m> is compact.
 </p>
-</theorem>
-<theorem>
+</statement></theorem>
+<theorem><statement>
 <p>
   Let <m>X</m> be compact and <m>K</m> be a closed subset of <m>X</m>.
   Then <m>K</m> is compact.
 </p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   Every finite subset of a space is compact.
@@ -70,11 +71,11 @@
   Every finite union of compact subsets is compact.
 </p>
 </proposition>
-<theorem>
+<theorem><statement>
 <p>
   Every compact subset of a Hausdorff space is closed.
 </p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   Let 
@@ -84,31 +85,31 @@
   <m>\mb N</m> is compact under this topology.
 </p>
 </proposition>
-<theorem>
+<theorem><statement>
 <p>
   Let <m>f:X\to Y</m> be continuous and <m>K\subseteq X</m>
   be compact. Then <m>f[K]</m> is compact.
 </p>
-</theorem>
+</statement></theorem>
 <corollary>
 <p>
   Compactness is a topological property.
 </p>
 </corollary>
-<theorem>
+<theorem><statement>
 <p>
   Every infinite subset of a compact set has a limit point.
 </p>
-</theorem>
-<theorem>
+</statement></theorem>
+<theorem><statement>
 <p>
   Let <m>\mc K=\setBuilder{K_n}{n\in\mb N}</m> be a collection of
   non-empty compact subsets of a topological space such that
   <m>K_{n+1}\subseteq K_n</m> for all <m>n\in\mb N</m>.
   Then <m>\bigcap\mc K</m> is a non-empty compact set.
 </p>
-</theorem>
-<theorem>
+</statement></theorem>
+<theorem><statement>
 <p>
   Let <m>X</m> be metrizable. Then the following are equivalent
   for <m>K\subseteq X</m>.
@@ -118,7 +119,7 @@
   <li>Every infinite subset of <m>K</m> has a limit point.</li>
   <li>Every infinite subset of <m>K</m> has a sequential limit point.</li>
 </ol>
-</theorem>
+</statement></theorem>
 <lemma>
 <p>
   A topological space <m>X</m> is Hausdorff if and only if
@@ -127,22 +128,9 @@
   and <m>K\subseteq V</m>.
 </p>
 </lemma>
-<theorem>
+<theorem><statement>
 <p>
   Every compact Hausdorff space is <m>T_4</m>.
 </p>
-</theorem>
+</statement></theorem>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-

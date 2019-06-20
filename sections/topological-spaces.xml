@@ -1,6 +1,7 @@
+<?xml version="1.0"?>
 <section xml:id="section-topological-spaces">
 <title>Topological Spaces</title>
-<definition slide="single">
+<definition><statement>
 <p>
   Let <m>a,b\in\mb R</m>. The <term>open interval</term>
   from <m>a</m> to <m>b</m> is the set
@@ -8,8 +9,8 @@
 <me>
   (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 </me>
-</definition>
-<definition xml:id="limit-point-intro">
+</statement></definition>
+<definition xml:id="limit-point-intro"><statement> 
 <p>
   Let <m>x\in\mb R</m> and <m>S\subseteq\mb R</m>.
   The point <m>x</m> is a <term>limit point</term> of the set
@@ -17,7 +18,7 @@
   there is a point <m>y\in S</m> such that <m>x\not=y</m> and
   <m>y\in(a,b)</m>.
 </p>
-</definition>
+</statement></definition>
 <example>
 <p>
   Determine if each set has the number <m>0</m> as a limit point. 
@@ -30,13 +31,13 @@
   <li>A finite set <m>F\subseteq\mb R</m></li>
 </ol>
 </example>
-<definition xml:id="euclidean-open-sets">
+<definition xml:id="euclidean-open-sets"><statement>
 <p>
   A subset <m>U\subseteq\mb R</m> is called <term>open</term>
   if and only if for every point <m>x\in U</m>, there exists an open interval
   <m>(a,b)</m> such that <m>x\in(a,b)\subseteq U</m>.
 </p>
-</definition>
+</statement></definition>
 <example>
 <p>
   Determine if each set is open or not open.
@@ -44,19 +45,19 @@
 <ol>
   <li><m>[\pi,42)</m></li>
   <li><m>(-3,-1)\cup(4,5.5)</m></li>
-  <li><m>\setBuilder{x}{2x+1>5}</m></li>
+  <li><m>\setBuilder{x}{2x+1&gt;5}</m></li>
   <li><m>\mb Z</m></li>
   <li><m>\mb R\setminus\mb Z</m></li>
   <li><m>\mb Q</m></li>
   <li>A finite set <m>F\subseteq\mb R</m></li>
 </ol>
 </example>
-<theorem>
+<theorem><statement>
 <p>
   A subset <m>U\subseteq\mb R</m> is open if and only if there exists a
   collection of open intervals <m>\mc U</m> such that <m>U=\bigcup\mc U</m>.
 </p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   Let <m>x\in\mb R</m> and <m>S\subseteq\mb R</m>.
@@ -66,7 +67,7 @@
   <m>y\in U</m>.
 </p>
 </proposition>
-<theorem xml:id="euclidean-topology-verification">
+<theorem xml:id="euclidean-topology-verification"><statement>
 <p>
   The open subsets of <m>\mb R</m> satisfy the following properties.
 </p>
@@ -82,8 +83,8 @@
     If <m>U,V</m> are open sets, then <m>U\cap V</m> is an open set.
   </li>
 </ol>
-</theorem>
-<definition slide="single">
+</statement></theorem>
+<definition><statement>
 <p>
   Let <m>X</m> be a set, and let <m>\mc T\subseteq \mc P(X)</m> satisfy
   the following properties.
@@ -106,16 +107,16 @@
   (Usually <m>\tuple{X,\mc T}</m> is abbreviated to just <m>X</m> when the
   topology is known from context.)
 </p>
-</definition>
-<definition slide="single">
+</statement></definition>
+<definition><statement>
 <p>
   Let <m>\mc T\subseteq\mc P(\mb R)</m> be the collection of open subsets
   of <m>\mb R</m> defined by <xref ref="euclidean-open-sets"/>.
   Then by <xref ref="euclidean-topology-verification"/>, <m>\mc T</m>
   is a valid topology for <m>\mb R</m> called the <term>Euclidean topology</term>.
 </p>
-</definition>
-<theorem>
+</statement></definition>
+<theorem><statement>
 <p>
   Let <m>X</m> be any set. Then the following sets are topologies on <m>X</m>.
 </p>
@@ -123,7 +124,7 @@
   <li><m>\mc T=\mc P(X)</m> is called the <term>discrete topology</term>.</li>
   <li><m>\mc T=\{\emptyset,X\}</m> is called the <term>indiscrete topology</term>.</li>
 </ol>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   Let <m>\mc T</m> be a topology, and let <m>\mc U\subseteq\mc T</m> be finite. 
@@ -136,7 +137,7 @@
   <m>\mc U=\{U_n:n\in\mb N\}</m> such that <m>\bigcap\mc U\not\in\mc T</m>.
 </p>
 </proposition>
-<definition slide="single">
+<definition><statement>
 <p>
   Let <m>a,b\in\mb R\cup\setList{-\infty,\infty}</m>. The
   following are called <term>intervals</term> of real numbers.
@@ -153,7 +154,7 @@
 <me>
   [a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
 </me>
-</definition>
+</statement></definition>
 <example>
 <p>
   Show that each of the following is an example of a topological space 
@@ -190,21 +191,21 @@
   </li>
 </ol>
 </example>
-<definition slide="single">
+<definition><statement>
 <p>
   Let <m>\tuple{X,\mc T}</m> be a topological space and let <m>x\in X</m>.
   The set <m>N\subseteq X</m> is called a <term>neighborhood</term> of <m>x</m>
   if and only if there exists an open set <m>U\in\mc T</m> such that
   <m>x\in U\subseteq N</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   A subset <m>U</m> of a topological space <m>X</m> is open if and only if
   <m>U</m> is a neighborhood of every point it contains.
 </p>
 </proposition>
-<definition slide="single">
+<definition><statement>
 <p>
   The following are known as <term>separation axioms</term> for a topological space
   <m>\tuple{X,\mc T}</m>. 
@@ -231,7 +232,7 @@
     (respectively) such that <m>U\cap V=\emptyset</m>.
   </li>
 </ol>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   <m>T_2\Rightarrow T_1\Rightarrow T_0</m>.
@@ -247,19 +248,19 @@
   <li><m>T_1</m> but not <m>T_2</m>.</li>
 </ol>
 </example>
-<theorem>
+<theorem><statement>
 <p>
   Let <m>X</m> be a finite topological space. 
   Then <m>X</m> is <m>T_1</m> if and only if
   <m>X</m> has the discrete topology.
 </p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   The Euclidean real line is a non-discrete Hausdorff topological space.
 </p>
 </proposition>
-<definition xml:id="limit-point">
+<definition xml:id="limit-point"><statement>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   The point <m>x</m> is a <term>limit point</term> of the set
@@ -267,7 +268,7 @@
   there is a point <m>y\in S</m> such that <m>x\not=y</m> and
   <m>y\in U</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   The point <m>x\in\mb R</m> is a limit point of <m>S\subseteq \mb R</m> according to
@@ -276,19 +277,19 @@
   topology).
 </p>
 </proposition>
-<definition slide="single">
+<definition><statement>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   Then <m>S'</m> is the set of all limit points of <m>S</m>,
   called the <term>derived set</term> of <m>S</m>.
 </p>
-</definition>
-<definition slide="single">
+</statement></definition>
+<definition><statement>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   Then <m>\cl S=S\cup S'</m> is called the <term>closure</term> of <m>S</m>.
 </p>
-</definition>
+</statement></definition>
 <example>
 <p>
   Calculate <m>\cl S</m> for each of the following examples.
@@ -301,20 +302,20 @@
   <li><m>S=\mb Q\subseteq\mb R</m> where <m>\mb R</m> has the Euclidean topology.</li>
 </ol>
 </example>
-<definition slide="single">
+<definition><statement>
 <p>
   Let <m>H\subseteq X</m> be a subset of a topological space.
   Then <m>H</m> is called <term>closed</term> if and only if
   <m>H=\cl S</m>.
 </p>
-</definition>
-<theorem>
+</statement></definition>
+<theorem><statement>
 <p>
   Let <m>H\subseteq X</m> be a subset of a topological space.
   Then <m>H</m> is closed if and only if there exists an open set <m>U</m>
   such that <m>H=X\setminus U</m>.
 </p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   The closed subsets of a topological space <m>X</m> satisfy the following properties.
@@ -332,13 +333,13 @@
   </li>
 </ol>
 </proposition>
-<theorem>
+<theorem><statement>
 <p>
   A topological space <m>X</m> is <m>T_1</m> if and only if
   every finite subset of <m>X</m> is closed.
 </p>
-</theorem>
-<definition xml:id="boundary-point">
+</statement></theorem>
+<definition xml:id="boundary-point"><statement>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   The point <m>x</m> is a <term>boundary point</term> of the set
@@ -348,7 +349,7 @@
 <p>
   Let <m>\bd S</m> collect all the boundary points of <m>S</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   Let <m>a,b\in\mb R</m>. Then 
@@ -356,7 +357,7 @@
   with respect to the Eudlidean topology.
 </p>
 </proposition>
-<definition xml:id="interior-point">
+<definition xml:id="interior-point"><statement>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   The point <m>x</m> is a <term>interior point</term> of the set
@@ -366,14 +367,14 @@
 <p>
   Let <m>\int S</m> collect all the interior points of <m>S</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   Let <m>U\subseteq X</m> be a subset of a topological space.
   Then <m>U</m> is open if and only if <m>U=\int U</m>.
 </p>
 </proposition>
-<definition xml:id="exterior-point">
+<definition xml:id="exterior-point"><statement>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   The point <m>x</m> is a <term>exterior point</term> of the set
@@ -383,14 +384,14 @@
 <p>
   Let <m>\ext S</m> collect all the exterior points of <m>S</m>.
 </p>
-</definition>
-<definition slide="single">
+</statement></definition>
+<definition><statement>
 <p>
   A <term>partition</term> of a set <m>X</m> is a collection
   <m>\mc P</m> such that <m>X=\bigcup\mc P</m> and <m>A\cap B=\emptyset</m>
   for all <m>A,B\in\mc P</m> where <m>A\not=B</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
@@ -432,12 +433,12 @@
   <li><m>\cl(A\cup B)=\cl A\cup\cl B</m></li>
 </ol>
 </example>
-<definition slide="single">
+<definition><statement>
 <p>
   A subset <m>D\subseteq X</m> of a topological space is called <term>dense</term>
   if and only if <m>\cl D=X</m>.
 </p>
-</definition>
+</statement></definition>
 <example>
 <p>
   Determine which of these are dense subsets of <m>\mb R</m>.
@@ -449,32 +450,32 @@
   <li><m>\mb R\setminus\mb Z</m></li>
 </ol>
 </example>
-<theorem>
+<theorem><statement>
 <p>
   A subset <m>D</m> of a topological space is dense if and only if
   every nonempty open set of the space contains a point of <m>D</m>.
 </p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   Let <m>X</m> be a topological space, and let <m>D\subseteq E\subseteq X</m>.
   If <m>D</m> is dense, then <m>E</m> is also dense.
 </p>
 </proposition>
-<definition slide="single">
+<definition><statement>
 <p>
   Let <m>Y\subseteq X</m> for a topological space <m>\tuple{X,\mc T}</m>.
   Then the <term>subspace topology</term> for <m>Y</m> is given by
   <m>\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>The subspace topology is a valid topology.</p>
 </proposition>
 <proposition>
 <p>Let <m>n\in\setList{0,1,2}</m>. A subspace of a <m>T_n</m> space is also <m>T_n</m>.</p>
 </proposition>
-<definition slide="single">
+<definition><statement>
 <p>
   The <term>Cantor set</term> is the subset <m>C\subseteq\mb R</m> defined by
   <m>C=\bigcap_{n\in\mb N} C_n</m>, where <m>C_0=[0,1]</m> and
@@ -483,21 +484,21 @@
   This set is usually considered as a closed subset of the Euclidean line, or
   as a subspace of the Euclidean line.
 </p>
-</definition>
-<definition slide="single">
+</statement></definition>
+<definition><statement>
 <p>
   Let <m>\tuple{X,\mc T}</m> be a topological space. A subset <m>\mc B\subseteq\mc T</m>
   is called a <term>basis</term> for the topology if for every <m>x\in X</m>
   and neighborhood <m>U</m> of <m>x</m>, there exists <m>B\in\mc B</m> such that
   <m>x\in B\subseteq U</m>.
 </p>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   <m>\mc B=\setBuilder{(a,b)}{a,b\in\mb R}</m> is a basis for the Euclidean topology.
 </p>
 </proposition>
-<theorem>
+<theorem><statement>
 <p>Let <m>\mc B\subseteq\mc P(X)</m> satisfy the following properties:</p>
 <ol>
 <li>For all <m>x\in X</m>, there exists <m>B\in\mc B</m> such that <m>x\in B</m>.</li>
@@ -507,7 +508,7 @@
 <p>Then <m>\mc T=\setBuilder{\bigcup\mc U}{\mc U\subseteq\mc B}</m> is a topology,
   and <m>\mc B</m> is a basis for that topology. We call this the
   <term>topology generated by the basis</term>.</p>
-</theorem>
+</statement></theorem>
 <proposition>
 <p>
   <m>\mc B=\setBuilder{[a,b)}{a,b\in\mb R}</m> is a basis for a topology different
@@ -524,22 +525,22 @@
   <li><m>\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}</m></li>
 </ol>
 </example>
-<theorem xml:id="subbasis">
+<theorem xml:id="subbasis"><statement>
 <p>
   Let <m>\mc S\subseteq\mc P(X)</m> and 
   <me>\mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
   \mc T^\star \text{ is a topology on } X}.</me>
   Then <m>\mc T</m> is a topology. 
 </p>
-</theorem>
-<definition slide="single">
+</statement></theorem>
+<definition><statement>
 <p>
   The set <m>\mc S\subseteq\mc P(X)</m> in <xref ref="subbasis"/> is 
   called a <term>subbasis</term> generating the topology 
   <me>\mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
   \mc T^\star \text{ is a topology on } X}.</me>
 </p>
-</definition>
+</statement></definition>
 <example><title>Topologies generated from subbases</title>
 <p>
   Calculate the topology on <m>\mb R</m> generated by each subbasis. 
@@ -551,7 +552,7 @@
   <li><m>\mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\mb N}}</m></li>
 </ol>
 </example>
-<theorem>
+<theorem><statement>
 <p>
   Let <m>\mc S\subseteq\mc P(X)</m> and 
   <me>\mc B=\setList{X}\cup\bigcap\setBuilder{\mc B^\star\subseteq\mc P(X)}
@@ -560,8 +561,8 @@
   Then <m>\mc B</m> is a basis for a topology on <m>X</m>, and the topology generated by
   the basis <m>\mc B</m> is same as the topology generated by the subbasis <m>\mc S</m>.
 </p>
-</theorem>
-<definition slide="single">
+</statement></theorem>
+<definition><statement>
 <p>
   The following are also known as <term>separation axioms</term> for a topological space
   <m>\tuple{X,\mc T}</m>. 
@@ -588,18 +589,18 @@
     if and only if it is both normal and <m>T_1</m>
   </li>
 </ol>
-</definition>
+</statement></definition>
 <proposition>
 <p>
   <m>T_{n+1}\Rightarrow T_n</m> for <m>n\in\setList{0,1,2,3}</m>.
 </p>
 </proposition>
-<theorem>
+<theorem><statement>
 <p>
   The real line <m>\mb R</m> equipped with the Euclidean topology is
   <m>T_4</m>.
 </p>
-</theorem>
+</statement></theorem>
 <example>
 <p>
   Find or create an example of a topological space that is:
@@ -613,9 +614,9 @@
   <li>Normal but not regular.</li>
 </ol>
 </example>
-<theorem>
+<theorem><statement>
 <p>
   A topological space is <m>T_3</m> if and only if it is regular and <m>T_0</m>.
 </p>
-</theorem>
+</statement></theorem>
 </section>
