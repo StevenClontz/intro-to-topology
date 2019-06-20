@@ -1,6 +1,6 @@
 <section xml:id="section-quotient">
   <title>Quotient Spaces</title>
-<definition>
+<definition slide="single">
 <p>
   A <term>quotient map</term> is a surjection <m>f:X\to Y</m>
   such that <m>V\subseteq Y</m> is open
@@ -15,13 +15,13 @@
   is a topology on <m>Y</m> such that <m>f</m> is a quotient map.
 </p>
 </proposition>
-<definition>
+<definition slide="single">
 <p>
   The topology defined in <xref ref="quotient-topology-thm"/> is known as
   the <term>quotient topology</term> induced by <m>f</m>.
 </p>
 </definition>
-<definition>
+<definition slide="single">
 <p>
   Let <m>X^*</m> be a partition of a topological space <m>X</m>, and let
   <m>f:X\to X^*</m> be the surjection given by letting <m>f(x)=A</m> iff 
@@ -44,7 +44,7 @@
   is homeomorphic to <m>X</m>.
 </p>
 </theorem>
-<definition>
+<definition slide="single">
 <p>
   A subset <m>R\subseteq X^2</m> is called a <term>relation</term> on <m>X</m>, where
   the notation <m>xRy</m> is equivalent to writing <m>\tuple{x,y}\in R</m>. 
@@ -73,7 +73,7 @@
   <m>X^*=\setBuilder{[x]}{x\in X}</m> is a partition of <m>X</m>.
 </p>
 </theorem>
-<definition>
+<definition slide="single">
 <p>
   Let <m>\sim</m> be an equivalence relation on a topological space <m>X</m>.
   Then <m>X/\sim</m> denotes the quotient space defined by the partition <m>X^*</m>
@@ -114,7 +114,7 @@
 </li>
 </ol>
 </example>
-<definition>
+<definition slide="single">
 <p>
   The <term>hypersphere</term> of dimension <m>n</m> 
   is the quotient space <m>S^n=[0,1]^n/\sim</m>
@@ -122,21 +122,21 @@
   such that <m>\vec x(i),\vec y(j)\in\setList{0,1}</m>.
 </p>
 </definition>
-<definition>
+<definition slide="single">
 <p>
   The <term>Möbius strip</term>
   is the quotient space <m>M=[0,1]^2/\sim</m>
   given by <m>\tuple{0,y}\sim\tuple{1,1-y}</m>.
 </p>
 </definition>
-<definition>
+<definition slide="single">
 <p>
   The <term>torus</term>
   is the quotient space <m>T=[0,1]^2/\sim</m>
   given by <m>\tuple{0,y}\sim\tuple{1,y}</m> and <m>\tuple{x,0}\sim\tuple{x,1}</m>.
 </p>
 </definition>
-<definition>
+<definition slide="single">
 <p>
   The <term>Klein bottle</term>
   is the quotient space <m>K=[0,1]^2/\sim</m>

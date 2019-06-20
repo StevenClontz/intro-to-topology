@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-06-20T16:55:29Z    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Assumptions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\cl}{\operatorname{cl}}
+\renewcommand{\int}{\operatorname{int}}
+\newcommand{\ext}{\operatorname{ext}}
+\newcommand{\bd}{\operatorname{bd}}
+\newcommand{\glb}{\operatorname{glb}}
+\newcommand{\lub}{\operatorname{lub}}
+\newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+\newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="backmatter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="backmatter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Preface</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-1.html" data-scroll="chapter-1"><span class="codenumber">1</span> <span class="title">The only chapter</span></a><ul>
+<li><a href="section-surfaces.html" data-scroll="section-surfaces">Curves and Surfaces</a></li>
+<li><a href="section-topological-spaces.html" data-scroll="section-topological-spaces">Topological Spaces</a></li>
+<li><a href="section-continuity.html" data-scroll="section-continuity">Continuity &amp; Homeomorphisms</a></li>
+<li><a href="section-metric.html" data-scroll="section-metric">Metric Spaces</a></li>
+<li><a href="section-compact.html" data-scroll="section-compact">Compactness</a></li>
+<li><a href="section-connected.html" data-scroll="section-connected">Connectedness</a></li>
+<li><a href="section-product.html" data-scroll="section-product">Product Spaces</a></li>
+<li><a href="section-quotient.html" data-scroll="section-quotient">Quotient Spaces</a></li>
+</ul>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link active"><a href="assumptions.html" data-scroll="assumptions"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="appendix" id="assumptions"><h2 class="heading hide-type">
+<span class="type">Appendix</span> <span class="codenumber">A</span> <span class="title">Assumptions</span>
+</h2>
+<a href="assumptions.html" class="permalink">¶</a><section class="introduction" id="introduction-2"><p id="p-209">Here is a brief overview of basic results and definitions concerning sets and the reals that should be assumed for this course.</p></section><article class="definition-like" id="definition-55"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">A.0.1</span>.</h6>
+<ul class="disc">
+<li id="li-123">\(\mb R\) is the set of real numbers.</li>
+<li id="li-124">\(\mb Z\) is the set of integers.</li>
+<li id="li-125">\(\mb N=\setBuilder{z\in\mb Z}{z\geq 0}=\setList{0,1,2,\dots}\) is the set of natural numbers, which includes zero.</li>
+<li id="li-126">\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}\) is the set of rational numbers.</li>
+</ul></article><article class="theorem-like" id="theorem-54"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">A.0.2</span>.</h6>
+<p id="p-210"><dfn class="terminology">De Morgan's Laws</dfn>: Let \(\mc A\) be a collection of subsets of \(X\text{.}\)</p>
+<div class="displaymath">
+\begin{equation*}
+X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
+\end{equation*}
+</div></article><article class="theorem-like" id="theorem-55"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">A.0.3</span>.</h6>
+<p id="p-211">The <dfn class="terminology">Archemedian Property</dfn> of the real numbers guarantees that for each positive real number \(x&gt;0\text{,}\) there exists a natural number \(n\in\mb N\) such that \(\frac{1}{n}\lt x\text{.}\)</p></article><article class="theorem-like" id="theorem-56"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">A.0.4</span>.</h6>
+<p id="p-212">Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a <dfn class="terminology">greatest lower bound</dfn> (a.k.a. <dfn class="terminology">infimum</dfn>) \(\glb S=\inf S\text{.}\)</p>
+<p id="p-213">Let \(S\subseteq \mb R\) be a set of real numbers with a lower bound. Then there exists a <dfn class="terminology">least upper bound</dfn> (a.k.a. <dfn class="terminology">supremum</dfn>) \(\lub S=\sup S\text{.}\)</p></article></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 <section xml:id="section-product">
   <title>Product Spaces</title>
-<definition>
+<definition slide="single">
 <p>
   Let <m>X,Y</m> be topological spaces, generated respectively by the bases
   <m>\mc B_X,\mc B_Y</m>. Then the <term>product space</term> is given
@@ -57,7 +57,7 @@ The product <m>X\times Y</m> is regular if and only if <m>X,Y</m> are each regul
   The product spaces <m>X\times Y</m> and <m>Y\times X</m> are homeomorphic.
 </p>
 </proposition>
-<definition>
+<definition slide="single">
 <p>
   For a product space <m>X\times Y</m>, its <term>projection maps</term>
   <m>\pi_X:X\times Y\to X</m> and <m>\pi_Y:X\times Y\to Y</m>

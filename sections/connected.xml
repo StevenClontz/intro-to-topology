@@ -1,6 +1,6 @@
 <section xml:id="section-connected">
   <title>Connectedness</title>
-<definition>
+<definition slide="single">
 <p>
   A pair of open sets <m>\setList{A,B}</m>
   satisfying <m>A\cap Y\not=\emptyset</m>, <m>B\cap Y\not=\emptyset</m>, 
@@ -77,7 +77,7 @@ non-empty clopen subsets.)</p>
   is connected.
 </p>
 </theorem>
-<definition>
+<definition slide="single">
 <p>
   Suppose for every two points <m>x,y\in A\subseteq X</m>, there exists
   a continuous function <m>f:[0,1]\to A</m> such that <m>f(0)=x</m>

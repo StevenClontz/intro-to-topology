@@ -1,6 +1,6 @@
 <section xml:id="section-continuity">
   <title>Continuity &amp; Homeomorphisms</title>
-<definition>
+<definition slide="single">
 <p>
   Let <m>f:X\to Y</m> be a function. For <m>A\subseteq X</m>,
   let <m>f[A]=\setBuilder{f(x)}{x\in A}</m>. For <m>y\in Y</m>,
@@ -9,7 +9,7 @@
   <m>f^\leftarrow[B]=\setBuilder{x\in X}{f(x)\in B}</m>.
 </p>
 </definition>
-<definition>
+<definition slide="single">
 <p>
   Let <m>X,Y</m> be topological spaces with <m>x\in X</m>, and let
   <m>f:X\to Y</m> be a function such that for every neighborhood
@@ -62,7 +62,7 @@
   then <m>g\circ f:X\to Z</m> is continuous.
 </p>
 </theorem>
-<definition>
+<definition slide="single">
 <p>
   Let <m>f:X\to Y</m> be a bijection such that both <m>f</m> and
   its inverse <m>f^{-1}</m> are continuous. Then <m>f</m>

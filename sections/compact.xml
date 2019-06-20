@@ -1,13 +1,13 @@
 <section xml:id="section-compact">
   <title>Compactness</title>
-<definition>
+<definition slide="single">
 <p>
   A collection <m>\mc A\subseteq \mc P(X)</m> is said to 
   <term>cover</term> a subset <m>Y\subseteq X</m> iff
   <m>Y\subseteq\bigcup\mc A</m>. 
 </p>
 </definition>
-<definition>
+<definition slide="single">
 <p>
   A subset <m>K\subseteq X</m> of a topological space is said
   to be <term>compact</term> iff for every collection of
@@ -30,7 +30,7 @@
   <li><m>[0,1]</m></li>
 </ol>
 </example>
-<definition>
+<definition slide="single">
 <p>
   A subset <m>R\subseteq X</m> of a topological space is said
   to be <term>relatively compact</term> iff for every collection of
