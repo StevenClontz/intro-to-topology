@@ -1,0 +1,47 @@
+<section xml:id="section-topological-size">
+<title>Topological Size</title>
+<introduction>
+  <p>
+    Just as area or measure might be used to
+    describe the size of certain subsets of
+    Euclidean spaces in geometry or analysis,
+    topologists also have notions of size.
+    But since <q>stretching</q> should not
+    affect the topological properties of
+    a space, topological size instead considers
+    the cardinality of certain types of subsets
+    of the space or its topology.
+  </p>
+</introduction>
+<definition>
+<p>
+  A set is said to be <term>finite</term> if there
+  exists an injection from that set to the
+  set <m>\setList{0,1,\dots,n-1}</m> for some
+  <m>n\in\mathbb N</m>. A set is <term>infinite</term>
+  if it is not finite.
+</p>
+<p>
+  A set is said to be <term>countable</term> if there
+  exists an injection from that set to the
+  set <m>\mb N</m>. A set is <term>uncountable</term>
+  if it is not countable.
+</p>
+<p>
+  The <term>cardinality</term> of a set describes
+</definition>
+<proposition>
+<p>
+  A set <m>S</m> is infinite if and only if there exists a
+  surjection from <m>S</m> to <m>\mb N</m>.
+</p>
+</proposition>
+<proposition>
+<p>
+  A set <m>S</m> is infinite and countable
+  if and only if there exists a
+  bijection from <m>S</m> to <m>\mb N</m>.
+</p>
+</proposition>
+</section>
+

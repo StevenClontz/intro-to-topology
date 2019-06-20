@@ -1,5 +1,14 @@
 <section xml:id="section-topological-spaces">
 <title>Topological Spaces</title>
+<introduction>
+  <p>
+    We may rigorously characterizing
+    a topological space by its <q>set</q> of points, 
+    and its
+    <q>topology</q> of neighborhoods describing
+    points nearby each point.
+  </p>
+</introduction>
 <definition>
 <p>
   Let <m>a,b\in\mb R</m>. The <term>open interval</term>

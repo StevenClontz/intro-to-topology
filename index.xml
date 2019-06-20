@@ -82,6 +82,7 @@
 
 <xi:include href="sections/surfaces.xml" />
 <xi:include href="sections/topological-spaces.xml" />
+<xi:include href="sections/topological-size.xml" />
 <xi:include href="sections/continuity.xml" />
 <xi:include href="sections/metric.xml" />
 <xi:include href="sections/compact.xml" />
