@@ -15,204 +15,205 @@
           \newcommand{\setList}[1]{\left\{#1\right\}}
         </macros>
   </docinfo>
-  <slideshow>
-    <title>Intro to Topology</title>
-    <frontmatter>
-      <titlepage>
-        <author>
-          <personname>Steven Clontz</personname>
-          <institution>University of South Alabama</institution>
-        </author>
-        <date>
-          <today/>
-        </date>
-      </titlepage>
-    </frontmatter>
-    <section>
-      <slide source-label="Chapter" source-number="1">
-        <title>The only chapter</title>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.1">
-        <title>Curves and Surfaces</title>
-      </slide>
-      <slide>
-        <definition source-number="1.1.5">
-          <p>
+  <article>
+    <slideshow>
+      <title>Intro to Topology</title>
+      <frontmatter>
+        <titlepage>
+          <author>
+            <personname>Steven Clontz</personname>
+            <institution>University of South Alabama</institution>
+          </author>
+          <date>
+            <today/>
+          </date>
+        </titlepage>
+      </frontmatter>
+      <section>
+        <slide source-label="Chapter" source-number="1">
+          <title>The only chapter</title>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.1">
+          <title>Curves and Surfaces</title>
+        </slide>
+        <slide>
+          <definition source-number="1.1.5">
+            <p>
     Two objects are said to be <term>topologically equivalent</term>
     or <term>homeomorphic</term> if one may be bent or stretched into
     the shape of the other.
   </p>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.2">
-        <title>Topological Spaces</title>
-      </slide>
-      <slide>
-        <definition source-number="1.2.1">
-          <p>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.2">
+          <title>Topological Spaces</title>
+        </slide>
+        <slide>
+          <definition source-number="1.2.1">
+            <p>
   Let <m>a,b\in\mb R</m>. The <term>open interval</term>
   from <m>a</m> to <m>b</m> is the set
 </p>
-          <me>
+            <me>
   (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 </me>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.9">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.9">
+            <p>
   Let <m>X</m> be a set, and let <m>\mc T\subseteq \mc P(X)</m> satisfy
   the following properties.
 </p>
-          <ol>
-            <li>
+            <ol>
+              <li>
     <m>\emptyset,X\in\mc T</m>.
   </li>
-            <li>
+              <li>
     If <m>\mc U\subseteq\mc T</m>, then <m>\bigcup\mc U\in\mc T</m>.
   </li>
-            <li>
+              <li>
     If <m>U,V\in\mc T</m>, then <m>U\cap V\in\mc T</m>.
   </li>
-          </ol>
-          <p>
+            </ol>
+            <p>
   Then <m>\mc T</m> is called a <term>topology</term> on <m>X</m>,
   the pair <m>\tuple{X,\mc T}</m> is called a <term>topological space</term>,
   and elements <m>U\in\mc T</m> are called <term>open sets</term> of the space.
   (Usually <m>\tuple{X,\mc T}</m> is abbreviated to just <m>X</m> when the
   topology is known from context.)
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.10">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.10">
+            <p>
   Let <m>\mc T\subseteq\mc P(\mb R)</m> be the collection of open subsets
   of <m>\mb R</m> defined by <xref ref="euclidean-open-sets"/>.
   Then by <xref ref="euclidean-topology-verification"/>, <m>\mc T</m>
   is a valid topology for <m>\mb R</m> called the <term>Euclidean topology</term>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.14">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.14">
+            <p>
   Let <m>a,b\in\mb R\cup\setList{-\infty,\infty}</m>. The
   following are called <term>intervals</term> of real numbers.
 </p>
-          <me>
+            <me>
   (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 </me>
-          <me>
+            <me>
   [a,b)=\setBuilder{x\in\mb R}{a\leq x\lt b}
 </me>
-          <me>
+            <me>
   (a,b]=\setBuilder{x\in\mb R}{a\lt x\leq b}
 </me>
-          <me>
+            <me>
   [a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
 </me>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.16">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.16">
+            <p>
   Let <m>\tuple{X,\mc T}</m> be a topological space and let <m>x\in X</m>.
   The set <m>N\subseteq X</m> is called a <term>neighborhood</term> of <m>x</m>
   if and only if there exists an open set <m>U\in\mc T</m> such that
   <m>x\in U\subseteq N</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.18">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.18">
+            <p>
   The following are known as <term>separation axioms</term> for a topological space
   <m>\tuple{X,\mc T}</m>. 
 </p>
-          <ol>
-            <li>
+            <ol>
+              <li>
     <m>\mc T</m> is said to be <term><m>T_0</m></term> 
     if and only if for all points <m>x,y\in X</m>
     such that <m>x\not=y</m>, there either exists a neighborhood <m>U</m> of <m>x</m>
     such that <m>y\not\in U</m>, or there exists a neighborhood <m>V</m> of <m>y</m>
     such that <m>x\not\in V</m>.
   </li>
-            <li>
+              <li>
     <m>\mc T</m> is said to be <term><m>T_1</m></term> 
     if and only if for all points <m>x,y\in X</m>
     such that <m>x\not=y</m>, there exists a neighborhood <m>U</m> of <m>x</m>
     such that <m>y\not\in U</m>.
   </li>
-            <li>
+              <li>
     <m>\mc T</m> is said to be <term><m>T_2</m></term> 
     (also known as <term>Hausdorff</term>)
     if and only if for all points <m>x,y\in X</m>
     such that <m>x\not=y</m>, there exist neighborhoods <m>U,V</m> of <m>x,y</m>
     (respectively) such that <m>U\cap V=\emptyset</m>.
   </li>
-          </ol>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.25">
-          <p>
+            </ol>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.25">
+            <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   Then <m>S'</m> is the set of all limit points of <m>S</m>,
   called the <term>derived set</term> of <m>S</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.26">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.26">
+            <p>
   Let <m>S\subseteq X</m> be a subset of a topological space.
   Then <m>\cl S=S\cup S'</m> is called the <term>closure</term> of <m>S</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.28">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.28">
+            <p>
   Let <m>H\subseteq X</m> be a subset of a topological space.
   Then <m>H</m> is called <term>closed</term> if and only if
   <m>H=\cl S</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.37">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.37">
+            <p>
   A <term>partition</term> of a set <m>X</m> is a collection
   <m>\mc P</m> such that <m>X=\bigcup\mc P</m> and <m>A\cap B=\emptyset</m>
   for all <m>A,B\in\mc P</m> where <m>A\not=B</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.42">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.42">
+            <p>
   A subset <m>D\subseteq X</m> of a topological space is called <term>dense</term>
   if and only if <m>\cl D=X</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.46">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.46">
+            <p>
   Let <m>Y\subseteq X</m> for a topological space <m>\tuple{X,\mc T}</m>.
   Then the <term>subspace topology</term> for <m>Y</m> is given by
   <m>\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.49">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.49">
+            <p>
   The <term>Cantor set</term> is the subset <m>C\subseteq\mb R</m> defined by
   <m>C=\bigcap_{n\in\mb N} C_n</m>, where <m>C_0=[0,1]</m> and
   <me>C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n} 
@@ -220,261 +221,261 @@
   This set is usually considered as a closed subset of the Euclidean line, or
   as a subspace of the Euclidean line.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.50">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.50">
+            <p>
   Let <m>\tuple{X,\mc T}</m> be a topological space. A subset <m>\mc B\subseteq\mc T</m>
   is called a <term>basis</term> for the topology if for every <m>x\in X</m>
   and neighborhood <m>U</m> of <m>x</m>, there exists <m>B\in\mc B</m> such that
   <m>x\in B\subseteq U</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.56">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.56">
+            <p>
   The set <m>\mc S\subseteq\mc P(X)</m> in <xref ref="subbasis"/> is 
   called a <term>subbasis</term> generating the topology 
   <me>\mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
   \mc T^\star \text{ is a topology on } X}.</me>
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.2.59">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.2.59">
+            <p>
   The following are also known as <term>separation axioms</term> for a topological space
   <m>\tuple{X,\mc T}</m>. 
 </p>
-          <ol>
-            <li>
+            <ol>
+              <li>
     <m>\mc T</m> is said to be <term>regular</term> 
     if and only if for all points <m>x\in X</m> and closed subsets <m>H\subseteq X</m>
     such that <m>x\not\in H</m>, there exist open sets <m>U,V\in\mc T</m>
     such that <m>x\in U,H\subseteq V,U\cap V=\emptyset</m>.
   </li>
-            <li>
+              <li>
     <m>\mc T</m> is said to be <term><m>T_3</m></term> 
     if and only if it is both regular and <m>T_1</m>
   </li>
-            <li>
+              <li>
     <m>\mc T</m> is said to be <term>normal</term> 
     if and only if for all closed subsets <m>H,L\subseteq X</m>
     such that <m>H\cap L=\emptyset</m>, there exist open sets <m>U,V\in\mc T</m>
     such that <m>H\subseteq U,L\subseteq V,U\cap V=\emptyset</m>.
   </li>
-            <li>
+              <li>
     <m>\mc T</m> is said to be <term><m>T_4</m></term> 
     if and only if it is both normal and <m>T_1</m>
   </li>
-          </ol>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.3">
-        <title>Continuity &amp; Homeomorphisms</title>
-      </slide>
-      <slide>
-        <definition source-number="1.3.1">
-          <p>
+            </ol>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.3">
+          <title>Continuity &amp; Homeomorphisms</title>
+        </slide>
+        <slide>
+          <definition source-number="1.3.1">
+            <p>
   Let <m>f:X\to Y</m> be a function. For <m>A\subseteq X</m>,
   let <m>f[A]=\setBuilder{f(x)}{x\in A}</m>. For <m>y\in Y</m>,
   let <m>f^\leftarrow(y)=\setBuilder{x\in X}{f(x)=y}</m>. 
   For <m>B\subseteq Y</m>, let 
   <m>f^\leftarrow[B]=\setBuilder{x\in X}{f(x)\in B}</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.3.2">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.3.2">
+            <p>
   Let <m>X,Y</m> be topological spaces with <m>x\in X</m>, and let
   <m>f:X\to Y</m> be a function such that for every neighborhood
   <m>V</m> of <m>f(x)</m>, there exists a neighborhood <m>U</m>
   of <m>x</m> such that <m>f[U]\subseteq V</m>.
   Then <m>f</m> is said to be <term>continuous at the point</term> <m>x</m>.
 </p>
-          <p>
+            <p>
   A function that is continuous at every point of its domain is called
   <term>continuous</term>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.3.7">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.3.7">
+            <p>
   Let <m>f:X\to Y</m> be a bijection such that both <m>f</m> and
   its inverse <m>f^{-1}</m> are continuous. Then <m>f</m>
   is called a <term>homeomorphism</term> and <m>X,Y</m> are said
   to be <term>homeomorphic</term>.
 </p>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.4">
-        <title>Metric Spaces</title>
-      </slide>
-      <slide>
-        <definition source-number="1.4.1">
-          <p>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.4">
+          <title>Metric Spaces</title>
+        </slide>
+        <slide>
+          <definition source-number="1.4.1">
+            <p>
   Let <m>d:X^2\to[0,\infty)</m> be a function satisfying the following
   for all <m>x,y,z\in X</m>.
 </p>
-          <ol>
-            <li><m>d(x,y)=0</m> if and only if <m>x=y</m>.</li>
-            <li>
-              <m>d(x,y)=d(y,x)</m>
-            </li>
-            <li>
-              <m>d(x,z)\leq d(x,y)+d(y,z)</m>
-            </li>
-          </ol>
-          <p>
+            <ol>
+              <li><m>d(x,y)=0</m> if and only if <m>x=y</m>.</li>
+              <li>
+                <m>d(x,y)=d(y,x)</m>
+              </li>
+              <li>
+                <m>d(x,z)\leq d(x,y)+d(y,z)</m>
+              </li>
+            </ol>
+            <p>
   Then <m>d</m> is said to be a <term>metric</term> on the set <m>X</m>,
   and
   <me>B_r(x)=\setBuilder{y\in X}{d(x,y)\lt r}</me>
   is said to be a <term>metric ball around <m>x</m></term>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.4">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.4">
+            <p>
   The topology generated by the basis given in <xref ref="metric-basis"/>
   is called the <term>topology generated by the metric</term>. 
 </p>
-          <p>
+            <p>
   A given topology is said to be <term>metrizable</term> if there exists
   some metric that generates it. Two metrics are said to be
   <term>topologically equivalent</term> if they generate the same topology.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.9">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.9">
+            <p>
   For <m>\vec x=\tuple{x_0,\dots,x_{n-1}}\in\mb R^n</m>, let <m>\vec x(i)=x_i</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.11">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.11">
+            <p>
   The topology generated by the metrics given in <xref ref="euclidean-metrics"/>
   is called the <term>Euclidean topology</term> on <m>\mb R^n</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.12">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.12">
+            <p>
   A <term>local basis at a point <m>x</m></term> is a collection of open sets
   <m>\mc B_x</m> such that for every neighborhood <m>U</m> of <m>x</m>,
   there exists <m>B\in\mc B_x</m> such that <m>x\in B_x\subseteq U</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.13">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.13">
+            <p>
   A space is said to be <term>first-countable</term> if there exists a countable
   local basis at every point of the space.
 </p>
-          <p>
+            <p>
   A space is said to be <term>second-countable</term> if there exists  a countable
   basis for the space.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.16">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.16">
+            <p>
   A space is said to be <term>separable</term> if there exists a countable
   dense subset of the space.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.21">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.21">
+            <p>
   A point <m>x</m> is called a <term>sequential limit point</term>
   of a set <m>A</m> iff there exists a countable subset 
   <m>B\subseteq A\setminus\setList{x}</m>
   such that every neighborhood of <m>x</m> contains all but finitely many
   points of <m>B</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.24">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.24">
+            <p>
   A <term>Cauchy sequence</term> is a countably infinte set <m>A</m> 
   such that for all <m>\epsilon\gt0</m>, the set
   <m>\setBuilder{x\in A}{\exists y\in A(d(x,y)\geq\epsilon)}</m>
   is finite.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.4.25">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.4.25">
+            <p>
   A <term>complete metric</term> is a metric such that
   every Cauchy sequence has a sequential limit point.
 </p>
-          <p>
+            <p>
   A topology that can be generated by a complete metric
   is said to be <term>completely metrizable</term>.
 </p>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.5">
-        <title>Compactness</title>
-      </slide>
-      <slide>
-        <definition source-number="1.5.1">
-          <p>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.5">
+          <title>Compactness</title>
+        </slide>
+        <slide>
+          <definition source-number="1.5.1">
+            <p>
   A collection <m>\mc A\subseteq \mc P(X)</m> is said to 
   <term>cover</term> a subset <m>Y\subseteq X</m> iff
   <m>Y\subseteq\bigcup\mc A</m>. 
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.5.2">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.5.2">
+            <p>
   A subset <m>K\subseteq X</m> of a topological space is said
   to be <term>compact</term> iff for every collection of
   open sets <m>\mc U</m> covering <m>K</m>, 
   there exists a finite subcollection
   <m>\mc F\subseteq\mc U</m> that also covers <m>K</m>. 
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.5.4">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.5.4">
+            <p>
   A subset <m>R\subseteq X</m> of a topological space is said
   to be <term>relatively compact</term> iff for every collection of
   open sets <m>\mc U</m> covering <m>X</m>, 
   there exists a finite subcollection
   <m>\mc F\subseteq\mc U</m> that covers <m>K</m>. 
 </p>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.6">
-        <title>Connectedness</title>
-      </slide>
-      <slide>
-        <definition source-number="1.6.1">
-          <p>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.6">
+          <title>Connectedness</title>
+        </slide>
+        <slide>
+          <definition source-number="1.6.1">
+            <p>
   A pair of open sets <m>\setList{A,B}</m>
   satisfying <m>A\cap Y\not=\emptyset</m>, <m>B\cap Y\not=\emptyset</m>, 
   <m>Y\subseteq A\cup B</m>, and <m>A\cap B\cap Y=\emptyset</m>
@@ -482,144 +483,145 @@
   of a topological space <m>X</m> 
   is called a <term>disconnection</term> of <m>Y</m>. 
 </p>
-          <p>
+            <p>
   A space for which a diconnection exists is called
   <term>disconnected</term>; otherwise, the space is called
   <term>connected</term>. 
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.6.12">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.6.12">
+            <p>
   Suppose for every two points <m>x,y\in A\subseteq X</m>, there exists
   a continuous function <m>f:[0,1]\to A</m> such that <m>f(0)=x</m>
   and <m>f(1)=y</m>. Such a space is said to be <term>path connected</term>.
 </p>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.7">
-        <title>Product Spaces</title>
-      </slide>
-      <slide>
-        <definition source-number="1.7.1">
-          <p>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.7">
+          <title>Product Spaces</title>
+        </slide>
+        <slide>
+          <definition source-number="1.7.1">
+            <p>
   Let <m>X,Y</m> be topological spaces, generated respectively by the bases
   <m>\mc B_X,\mc B_Y</m>. Then the <term>product space</term> is given
   by the set <m>X\times Y=\setBuilder{\tuple{x,y}}{x\in X,y\in Y}</m>
   with the topology generated by the basis
   <m>\mc B=\setBuilder{U\times V}{U\in\mc B_X,V\in\mc B_Y}</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.7.10">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.7.10">
+            <p>
   For a product space <m>X\times Y</m>, its <term>projection maps</term>
   <m>\pi_X:X\times Y\to X</m> and <m>\pi_Y:X\times Y\to Y</m>
   are defined by <m>\pi_X(\tuple{x,y})=x</m> and <m>\pi_Y(\tuple{x,y})=y</m>.
 </p>
-        </definition>
-      </slide>
-    </section>
-    <section>
-      <slide source-label="Section" source-number="1.8">
-        <title>Quotient Spaces</title>
-      </slide>
-      <slide>
-        <definition source-number="1.8.1">
-          <p>
+          </definition>
+        </slide>
+      </section>
+      <section>
+        <slide source-label="Section" source-number="1.8">
+          <title>Quotient Spaces</title>
+        </slide>
+        <slide>
+          <definition source-number="1.8.1">
+            <p>
   A <term>quotient map</term> is a surjection <m>f:X\to Y</m>
   such that <m>V\subseteq Y</m> is open
   if and only if <m>f^\leftarrow[V]\subseteq X</m>
   is open.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.3">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.3">
+            <p>
   The topology defined in <xref ref="quotient-topology-thm"/> is known as
   the <term>quotient topology</term> induced by <m>f</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.4">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.4">
+            <p>
   Let <m>X^*</m> be a partition of a topological space <m>X</m>, and let
   <m>f:X\to X^*</m> be the surjection given by letting <m>f(x)=A</m> iff 
   <m>x\in A</m>. Then <m>X^*</m> paired with the quotient topology
   induced by <m>f</m> is called a <term>quotient space</term> or
   <term>identification space</term>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.7">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.7">
+            <p>
   A subset <m>R\subseteq X^2</m> is called a <term>relation</term> on <m>X</m>, where
   the notation <m>xRy</m> is equivalent to writing <m>\tuple{x,y}\in R</m>. 
 </p>
-          <p>
+            <p>
   A relation <m>\sim</m> on <m>X</m> is called an <term>equivalence relation</term>
   if it satisfies the following for all <m>x,y,z\in X</m>.
 </p>
-          <ol>
-            <li><m>x\sim x</m>. (Reflexivity)</li>
-            <li><m>x\sim y</m> implies <m>y\sim x</m>. (Symmetry)</li>
-            <li><m>x\sim y</m> and <m>y\sim z</m> implies <m>y\sim z</m>. (Transitivity)</li>
-          </ol>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.10">
-          <p>
+            <ol>
+              <li><m>x\sim x</m>. (Reflexivity)</li>
+              <li><m>x\sim y</m> implies <m>y\sim x</m>. (Symmetry)</li>
+              <li><m>x\sim y</m> and <m>y\sim z</m> implies <m>y\sim z</m>. (Transitivity)</li>
+            </ol>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.10">
+            <p>
   Let <m>\sim</m> be an equivalence relation on a topological space <m>X</m>.
   Then <m>X/\sim</m> denotes the quotient space defined by the partition <m>X^*</m>
   given in <xref ref="equivalence-partition"/>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.13">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.13">
+            <p>
   The <term>hypersphere</term> of dimension <m>n</m> 
   is the quotient space <m>S^n=[0,1]^n/\sim</m>
   given by <m>\vec x\sim\vec y</m> whenever there exist <m>i,j\in\setList{0,\dots,n}</m>
   such that <m>\vec x(i),\vec y(j)\in\setList{0,1}</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.14">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.14">
+            <p>
   The <term>Möbius strip</term>
   is the quotient space <m>M=[0,1]^2/\sim</m>
   given by <m>\tuple{0,y}\sim\tuple{1,1-y}</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.15">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.15">
+            <p>
   The <term>torus</term>
   is the quotient space <m>T=[0,1]^2/\sim</m>
   given by <m>\tuple{0,y}\sim\tuple{1,y}</m> and <m>\tuple{x,0}\sim\tuple{x,1}</m>.
 </p>
-        </definition>
-      </slide>
-      <slide>
-        <definition source-number="1.8.16">
-          <p>
+          </definition>
+        </slide>
+        <slide>
+          <definition source-number="1.8.16">
+            <p>
   The <term>Klein bottle</term>
   is the quotient space <m>K=[0,1]^2/\sim</m>
   given by <m>\tuple{0,y}\sim\tuple{1,1-y}</m> and <m>\tuple{x,0}\sim\tuple{x,1}</m>.
 </p>
-        </definition>
-      </slide>
-    </section>
-  </slideshow>
+          </definition>
+        </slide>
+      </section>
+    </slideshow>
+  </article>
 </pretext>

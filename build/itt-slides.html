@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Intro to Topology</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reset.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/reveal.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/css/theme/simple.min.css" rel="stylesheet">
+<style>
+    ul {
+      display: block !important;
+    }
+    .reveal img {
+      border: 0.5px !important;
+      border-radius: 2px 10px 2px;
+      padding: 4px;
+    }
+    .definition {
+      border-width: 0.5px;
+      border-style: solid;
+      border-radius: 2px 10px 2px;
+      background: #00608010;
+      padding: 1%;
+    }
+    .theorem, .corollary {
+      border-width: 0.5px;
+      border-style: solid;
+      border-radius: 2px 10px 2px;
+      background: #ff000010;
+      padding: 1%;
+    }
+    .proof {
+      background: #ffffff90;
+    }
+    .activity {
+      border-width: 0.5px;
+      border-style: solid;
+      border-radius: 2px 10px 2px;
+      background: #60800010;
+      padding: 1%;
+    }
+  </style>
+</head>
+<body>
+<div style="display: none;">\(
+          \newcommand{\tuple}[1]{\langle #1 \rangle}
+          \newcommand{\mb}{\mathbb}
+          \newcommand{\mc}{\mathcal}
+          \newcommand{\cl}{\operatorname{cl}}
+          \renewcommand{\int}{\operatorname{int}}
+          \newcommand{\ext}{\operatorname{ext}}
+          \newcommand{\bd}{\operatorname{bd}}
+          \newcommand{\glb}{\operatorname{glb}}
+          \newcommand{\lub}{\operatorname{lub}}
+          \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+          \newcommand{\setList}[1]{\left\{#1\right\}}
+        \)</div>
+<div class="reveal"><div class="slides">
+<section><h1>Intro to Topology</h1>
+<h2></h2>
+<table>
+<tr><th align="center" style="border-bottom: 0px;">Steven Clontz</th></tr>
+<tr><td align="center" style="border-bottom: 0px;">University of South Alabama</td></tr>
+<tr><td align="center"></td></tr>
+</table></section><section><section><h2>The only chapter</h2>
+<div align="left"></div></section></section><section><section><h2>Curves and Surfaces</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.1.5):
+      </h3>
+<p>Two objects are said to be <dfn class="terminology">topologically equivalent</dfn> or <dfn class="terminology">homeomorphic</dfn> if one may be bent or stretched into the shape of the other.</p>
+</div></div></section></section><section><section><h2>Topological Spaces</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.1):
+      </h3>
+<p>Let \(a,b\in\mb R\text{.}\) The <dfn class="terminology">open interval</dfn> from \(a\) to \(b\) is the set</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
+\end{equation*}
+</div>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.9):
+      </h3>
+<p>Let \(X\) be a set, and let \(\mc T\subseteq \mc P(X)\) satisfy the following properties.</p>
+<ol>
+<li>\(\emptyset,X\in\mc T\text{.}\)</li>
+<li>If \(\mc U\subseteq\mc T\text{,}\) then \(\bigcup\mc U\in\mc T\text{.}\)</li>
+<li>If \(U,V\in\mc T\text{,}\) then \(U\cap V\in\mc T\text{.}\)</li>
+</ol>
+<p>Then \(\mc T\) is called a <dfn class="terminology">topology</dfn> on \(X\text{,}\) the pair \(\tuple{X,\mc T}\) is called a <dfn class="terminology">topological space</dfn>, and elements \(U\in\mc T\) are called <dfn class="terminology">open sets</dfn> of the space. (Usually \(\tuple{X,\mc T}\) is abbreviated to just \(X\) when the topology is known from context.)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.10):
+      </h3>
+<p>Let \(\mc T\subseteq\mc P(\mb R)\) be the collection of open subsets of \(\mb R\) defined by 
+  [REF=TODO]
+. Then by 
+  [REF=TODO]
+, \(\mc T\) is a valid topology for \(\mb R\) called the <dfn class="terminology">Euclidean topology</dfn>.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.14):
+      </h3>
+<p>Let \(a,b\in\mb R\cup\setList{-\infty,\infty}\text{.}\) The following are called <dfn class="terminology">intervals</dfn> of real numbers.</p>
+<div class="displaymath">
+\begin{equation*}
+(a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+[a,b)=\setBuilder{x\in\mb R}{a\leq x\lt b}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+(a,b]=\setBuilder{x\in\mb R}{a\lt x\leq b}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+[a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
+\end{equation*}
+</div>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.16):
+      </h3>
+<p>Let \(\tuple{X,\mc T}\) be a topological space and let \(x\in X\text{.}\) The set \(N\subseteq X\) is called a <dfn class="terminology">neighborhood</dfn> of \(x\) if and only if there exists an open set \(U\in\mc T\) such that \(x\in U\subseteq N\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.18):
+      </h3>
+<p>The following are known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
+<ol>
+<li>\(\mc T\) is said to be <dfn class="terminology">\(T_0\)</dfn> if and only if for all points \(x,y\in X\) such that \(x\not=y\text{,}\) there either exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\text{,}\) or there exists a neighborhood \(V\) of \(y\) such that \(x\not\in V\text{.}\)</li>
+<li>\(\mc T\) is said to be <dfn class="terminology">\(T_1\)</dfn> if and only if for all points \(x,y\in X\) such that \(x\not=y\text{,}\) there exists a neighborhood \(U\) of \(x\) such that \(y\not\in U\text{.}\)</li>
+<li>\(\mc T\) is said to be <dfn class="terminology">\(T_2\)</dfn> (also known as <dfn class="terminology">Hausdorff</dfn>) if and only if for all points \(x,y\in X\) such that \(x\not=y\text{,}\) there exist neighborhoods \(U,V\) of \(x,y\) (respectively) such that \(U\cap V=\emptyset\text{.}\)</li>
+</ol>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.25):
+      </h3>
+<p>Let \(S\subseteq X\) be a subset of a topological space. Then \(S'\) is the set of all limit points of \(S\text{,}\) called the <dfn class="terminology">derived set</dfn> of \(S\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.26):
+      </h3>
+<p>Let \(S\subseteq X\) be a subset of a topological space. Then \(\cl S=S\cup S'\) is called the <dfn class="terminology">closure</dfn> of \(S\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.28):
+      </h3>
+<p>Let \(H\subseteq X\) be a subset of a topological space. Then \(H\) is called <dfn class="terminology">closed</dfn> if and only if \(H=\cl S\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.37):
+      </h3>
+<p>A <dfn class="terminology">partition</dfn> of a set \(X\) is a collection \(\mc P\) such that \(X=\bigcup\mc P\) and \(A\cap B=\emptyset\) for all \(A,B\in\mc P\) where \(A\not=B\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.42):
+      </h3>
+<p>A subset \(D\subseteq X\) of a topological space is called <dfn class="terminology">dense</dfn> if and only if \(\cl D=X\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.46):
+      </h3>
+<p>Let \(Y\subseteq X\) for a topological space \(\tuple{X,\mc T}\text{.}\) Then the <dfn class="terminology">subspace topology</dfn> for \(Y\) is given by \(\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.49):
+      </h3>
+<p>The <dfn class="terminology">Cantor set</dfn> is the subset \(C\subseteq\mb R\) defined by \(C=\bigcap_{n\in\mb N} C_n\text{,}\) where \(C_0=[0,1]\) and<div class="displaymath">
+\begin{equation*}
+C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n} 
+\left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right).
+\end{equation*}
+</div>This set is usually considered as a closed subset of the Euclidean line, or as a subspace of the Euclidean line.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.50):
+      </h3>
+<p>Let \(\tuple{X,\mc T}\) be a topological space. A subset \(\mc B\subseteq\mc T\) is called a <dfn class="terminology">basis</dfn> for the topology if for every \(x\in X\) and neighborhood \(U\) of \(x\text{,}\) there exists \(B\in\mc B\) such that \(x\in B\subseteq U\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.56):
+      </h3>
+<p>The set \(\mc S\subseteq\mc P(X)\) in 
+  [REF=TODO]
+ is called a <dfn class="terminology">subbasis</dfn> generating the topology<div class="displaymath">
+\begin{equation*}
+\mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
+\mc T^\star \text{ is a topology on } X}.
+\end{equation*}
+</div></p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.2.59):
+      </h3>
+<p>The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space \(\tuple{X,\mc T}\text{.}\)</p>
+<ol>
+<li>\(\mc T\) is said to be <dfn class="terminology">regular</dfn> if and only if for all points \(x\in X\) and closed subsets \(H\subseteq X\) such that \(x\not\in H\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(x\in U,H\subseteq V,U\cap V=\emptyset\text{.}\)</li>
+<li>\(\mc T\) is said to be <dfn class="terminology">\(T_3\)</dfn> if and only if it is both regular and \(T_1\)</li>
+<li>\(\mc T\) is said to be <dfn class="terminology">normal</dfn> if and only if for all closed subsets \(H,L\subseteq X\) such that \(H\cap L=\emptyset\text{,}\) there exist open sets \(U,V\in\mc T\) such that \(H\subseteq U,L\subseteq V,U\cap V=\emptyset\text{.}\)</li>
+<li>\(\mc T\) is said to be <dfn class="terminology">\(T_4\)</dfn> if and only if it is both normal and \(T_1\)</li>
+</ol>
+</div></div></section></section><section><section><h2>Continuity &amp; Homeomorphisms</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.3.1):
+      </h3>
+<p>Let \(f:X\to Y\) be a function. For \(A\subseteq X\text{,}\) let \(f[A]=\setBuilder{f(x)}{x\in A}\text{.}\) For \(y\in Y\text{,}\) let \(f^\leftarrow(y)=\setBuilder{x\in X}{f(x)=y}\text{.}\) For \(B\subseteq Y\text{,}\) let \(f^\leftarrow[B]=\setBuilder{x\in X}{f(x)\in B}\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.3.2):
+      </h3>
+<p>Let \(X,Y\) be topological spaces with \(x\in X\text{,}\) and let \(f:X\to Y\) be a function such that for every neighborhood \(V\) of \(f(x)\text{,}\) there exists a neighborhood \(U\) of \(x\) such that \(f[U]\subseteq V\text{.}\) Then \(f\) is said to be <dfn class="terminology">continuous at the point</dfn> \(x\text{.}\)</p>
+<p>A function that is continuous at every point of its domain is called <dfn class="terminology">continuous</dfn>.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.3.7):
+      </h3>
+<p>Let \(f:X\to Y\) be a bijection such that both \(f\) and its inverse \(f^{-1}\) are continuous. Then \(f\) is called a <dfn class="terminology">homeomorphism</dfn> and \(X,Y\) are said to be <dfn class="terminology">homeomorphic</dfn>.</p>
+</div></div></section></section><section><section><h2>Metric Spaces</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.1):
+      </h3>
+<p>Let \(d:X^2\to[0,\infty)\) be a function satisfying the following for all \(x,y,z\in X\text{.}\)</p>
+<ol>
+<li>\(d(x,y)=0\) if and only if \(x=y\text{.}\)</li>
+<li>\(d(x,y)=d(y,x)\)</li>
+<li>\(d(x,z)\leq d(x,y)+d(y,z)\)</li>
+</ol>
+<p>Then \(d\) is said to be a <dfn class="terminology">metric</dfn> on the set \(X\text{,}\) and<div class="displaymath">
+\begin{equation*}
+B_r(x)=\setBuilder{y\in X}{d(x,y)\lt r}
+\end{equation*}
+</div>is said to be a <dfn class="terminology">metric ball around \(x\)</dfn>.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.4):
+      </h3>
+<p>The topology generated by the basis given in 
+  [REF=TODO]
+ is called the <dfn class="terminology">topology generated by the metric</dfn>.</p>
+<p>A given topology is said to be <dfn class="terminology">metrizable</dfn> if there exists some metric that generates it. Two metrics are said to be <dfn class="terminology">topologically equivalent</dfn> if they generate the same topology.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.9):
+      </h3>
+<p>For \(\vec x=\tuple{x_0,\dots,x_{n-1}}\in\mb R^n\text{,}\) let \(\vec x(i)=x_i\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.11):
+      </h3>
+<p>The topology generated by the metrics given in 
+  [REF=TODO]
+ is called the <dfn class="terminology">Euclidean topology</dfn> on \(\mb R^n\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.12):
+      </h3>
+<p>A <dfn class="terminology">local basis at a point \(x\)</dfn> is a collection of open sets \(\mc B_x\) such that for every neighborhood \(U\) of \(x\text{,}\) there exists \(B\in\mc B_x\) such that \(x\in B_x\subseteq U\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.13):
+      </h3>
+<p>A space is said to be <dfn class="terminology">first-countable</dfn> if there exists a countable local basis at every point of the space.</p>
+<p>A space is said to be <dfn class="terminology">second-countable</dfn> if there exists  a countable basis for the space.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.16):
+      </h3>
+<p>A space is said to be <dfn class="terminology">separable</dfn> if there exists a countable dense subset of the space.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.21):
+      </h3>
+<p>A point \(x\) is called a <dfn class="terminology">sequential limit point</dfn> of a set \(A\) iff there exists a countable subset \(B\subseteq A\setminus\setList{x}\) such that every neighborhood of \(x\) contains all but finitely many points of \(B\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.24):
+      </h3>
+<p>A <dfn class="terminology">Cauchy sequence</dfn> is a countably infinte set \(A\) such that for all \(\epsilon\gt0\text{,}\) the set \(\setBuilder{x\in A}{\exists y\in A(d(x,y)\geq\epsilon)}\) is finite.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.4.25):
+      </h3>
+<p>A <dfn class="terminology">complete metric</dfn> is a metric such that every Cauchy sequence has a sequential limit point.</p>
+<p>A topology that can be generated by a complete metric is said to be <dfn class="terminology">completely metrizable</dfn>.</p>
+</div></div></section></section><section><section><h2>Compactness</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.5.1):
+      </h3>
+<p>A collection \(\mc A\subseteq \mc P(X)\) is said to <dfn class="terminology">cover</dfn> a subset \(Y\subseteq X\) iff \(Y\subseteq\bigcup\mc A\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.5.2):
+      </h3>
+<p>A subset \(K\subseteq X\) of a topological space is said to be <dfn class="terminology">compact</dfn> iff for every collection of open sets \(\mc U\) covering \(K\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that also covers \(K\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.5.4):
+      </h3>
+<p>A subset \(R\subseteq X\) of a topological space is said to be <dfn class="terminology">relatively compact</dfn> iff for every collection of open sets \(\mc U\) covering \(X\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that covers \(K\text{.}\)</p>
+</div></div></section></section><section><section><h2>Connectedness</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.6.1):
+      </h3>
+<p>A pair of open sets \(\setList{A,B}\) satisfying \(A\cap Y\not=\emptyset\text{,}\) \(B\cap Y\not=\emptyset\text{,}\) \(Y\subseteq A\cup B\text{,}\) and \(A\cap B\cap Y=\emptyset\) for a subset \(Y\) of a topological space \(X\) is called a <dfn class="terminology">disconnection</dfn> of \(Y\text{.}\)</p>
+<p>A space for which a diconnection exists is called <dfn class="terminology">disconnected</dfn>; otherwise, the space is called <dfn class="terminology">connected</dfn>.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.6.12):
+      </h3>
+<p>Suppose for every two points \(x,y\in A\subseteq X\text{,}\) there exists a continuous function \(f:[0,1]\to A\) such that \(f(0)=x\) and \(f(1)=y\text{.}\) Such a space is said to be <dfn class="terminology">path connected</dfn>.</p>
+</div></div></section></section><section><section><h2>Product Spaces</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.7.1):
+      </h3>
+<p>Let \(X,Y\) be topological spaces, generated respectively by the bases \(\mc B_X,\mc B_Y\text{.}\) Then the <dfn class="terminology">product space</dfn> is given by the set \(X\times Y=\setBuilder{\tuple{x,y}}{x\in X,y\in Y}\) with the topology generated by the basis \(\mc B=\setBuilder{U\times V}{U\in\mc B_X,V\in\mc B_Y}\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.7.10):
+      </h3>
+<p>For a product space \(X\times Y\text{,}\) its <dfn class="terminology">projection maps</dfn> \(\pi_X:X\times Y\to X\) and \(\pi_Y:X\times Y\to Y\) are defined by \(\pi_X(\tuple{x,y})=x\) and \(\pi_Y(\tuple{x,y})=y\text{.}\)</p>
+</div></div></section></section><section><section><h2>Quotient Spaces</h2>
+<div align="left"></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.1):
+      </h3>
+<p>A <dfn class="terminology">quotient map</dfn> is a surjection \(f:X\to Y\) such that \(V\subseteq Y\) is open if and only if \(f^\leftarrow[V]\subseteq X\) is open.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.3):
+      </h3>
+<p>The topology defined in 
+  [REF=TODO]
+ is known as the <dfn class="terminology">quotient topology</dfn> induced by \(f\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.4):
+      </h3>
+<p>Let \(X^*\) be a partition of a topological space \(X\text{,}\) and let \(f:X\to X^*\) be the surjection given by letting \(f(x)=A\) iff \(x\in A\text{.}\) Then \(X^*\) paired with the quotient topology induced by \(f\) is called a <dfn class="terminology">quotient space</dfn> or <dfn class="terminology">identification space</dfn>.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.7):
+      </h3>
+<p>A subset \(R\subseteq X^2\) is called a <dfn class="terminology">relation</dfn> on \(X\text{,}\) where the notation \(xRy\) is equivalent to writing \(\tuple{x,y}\in R\text{.}\)</p>
+<p>A relation \(\sim\) on \(X\) is called an <dfn class="terminology">equivalence relation</dfn> if it satisfies the following for all \(x,y,z\in X\text{.}\)</p>
+<ol>
+<li>\(x\sim x\text{.}\) (Reflexivity)</li>
+<li>\(x\sim y\) implies \(y\sim x\text{.}\) (Symmetry)</li>
+<li>\(x\sim y\) and \(y\sim z\) implies \(y\sim z\text{.}\) (Transitivity)</li>
+</ol>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.10):
+      </h3>
+<p>Let \(\sim\) be an equivalence relation on a topological space \(X\text{.}\) Then \(X/\sim\) denotes the quotient space defined by the partition \(X^*\) given in 
+  [REF=TODO]
+.</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.13):
+      </h3>
+<p>The <dfn class="terminology">hypersphere</dfn> of dimension \(n\) is the quotient space \(S^n=[0,1]^n/\sim\) given by \(\vec x\sim\vec y\) whenever there exist \(i,j\in\setList{0,\dots,n}\) such that \(\vec x(i),\vec y(j)\in\setList{0,1}\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.14):
+      </h3>
+<p>The <dfn class="terminology">Möbius strip</dfn> is the quotient space \(M=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.15):
+      </h3>
+<p>The <dfn class="terminology">torus</dfn> is the quotient space \(T=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,y}\) and \(\tuple{x,0}\sim\tuple{x,1}\text{.}\)</p>
+</div></div></section><section><h2></h2>
+<div align="left"><div class="boxed definition">
+<h3>Definition (1.8.16):
+      </h3>
+<p>The <dfn class="terminology">Klein bottle</dfn> is the quotient space \(K=[0,1]^2/\sim\) given by \(\tuple{0,y}\sim\tuple{1,1-y}\) and \(\tuple{x,0}\sim\tuple{x,1}\text{.}\)</p>
+</div></div></section></section>
+</div></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/js/reveal.min.js"></script><script>
+    Reveal.initialize({
+    				controls: false,
+    				progress: false,
+    				center: false,
+    				hash: true,
+    				transition: 'fade',
+            width: "80%",
+            height: "90%",
+    				dependencies: [
+              { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.8.0/plugin/math/math.min.js', async: true },
+              ]
+            });
+  </script>
+</html>
