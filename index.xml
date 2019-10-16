@@ -67,6 +67,13 @@
                 the neighborhoods of points in subspaces of <m>\mathbb R^3</m>, particularly 
                 unions of curves and surfaces.
               </p>
+              <p>
+                The only prerequisite for this course is an undergraduate-level introduction
+                to proofs course, which should include all the naive set theory necessary
+                to study topology at the introductory level. <xref ref="assumed"/> provides
+                a few definitions and theorems that should be assumed for this course 
+                (e.g. properties of the reals, <m>0\in\mathbb N</m>).
+              </p>
             </preface>
 
         </frontmatter>
@@ -75,7 +82,6 @@
 
 <xi:include href="sections/surfaces.xml" />
 <xi:include href="sections/topological-spaces.xml" />
-<xi:include href="sections/topological-size.xml" />
 <xi:include href="sections/continuity.xml" />
 <xi:include href="sections/metric.xml" />
 <xi:include href="sections/compact.xml" />
@@ -84,7 +90,7 @@
 <xi:include href="sections/quotient.xml" />
 
 <backmatter>
-<xi:include href="sections/set-theory.xml" />
+<xi:include href="sections/assumed.xml" />
 </backmatter>
 </article>
 
