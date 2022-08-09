@@ -18,7 +18,7 @@
         </macros>
     </docinfo>
 
-    <article xml:id="index">
+    <article xml:id="intro-to-topology">
         <title>Intro to Topology</title>
 
         <frontmatter>
@@ -44,11 +44,11 @@
                   Michel Smith</a>'s undergraduate topology notes, used with permission.
                 </p>
                 <p>
-                  All rights reserved, only until the author chooses an appropriate open license.
+                  Copyright 2022 Steven Clontz. Available for use under the terms of
+                  <url href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</url>.
                 </p>
                 <p>
-                  Dr. Clontz's website for students is <url href="https://prof.clontz.org"/>.
-                  His personal website is <url href="https://clontz.org"/>.
+                  Clontz's website is <url href="https://clontz.org"/>.
                 </p>
             </colophon>
             <preface>
