@@ -25,7 +25,7 @@
 <ol>
   <li><m>\mb Z</m></li>
   <li><m>\mb R\setminus\mb Z</m></li>
-  <li><m>\setBuilder{\frac{1}{n+1}}{n\in\mb N}</m></li>
+  <li><m>\setBuilder{\frac{1}{n+1}}{n\in\omega}</m></li>
   <li><m>\mb Q</m></li>
   <li>A finite set <m>F\subseteq\mb R</m></li>
 </ol>
@@ -133,7 +133,7 @@
 <proposition>
 <p>
   Let <m>\mc T</m> be the Euclidean topology. There exists a collection
-  <m>\mc U=\{U_n:n\in\mb N\}</m> such that <m>\bigcap\mc U\not\in\mc T</m>.
+  <m>\mc U=\{U_n:n\in\omega\}</m> such that <m>\bigcap\mc U\not\in\mc T</m>.
 </p>
 </proposition>
 <definition>
@@ -477,7 +477,7 @@
 <definition>
 <p>
   The <term>Cantor set</term> is the subset <m>C\subseteq\mb R</m> defined by
-  <m>C=\bigcap_{n\in\mb N} C_n</m>, where <m>C_0=[0,1]</m> and
+  <m>C=\bigcap_{n\in\omega} C_n</m>, where <m>C_0=[0,1]</m> and
   <me>C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n} 
   \left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right).</me>
   This set is usually considered as a closed subset of the Euclidean line, or
@@ -548,7 +548,7 @@
   <li><m>\setBuilder{(-\infty,x)}{x\in\mb R}\cup\setBuilder{(y,\infty)}{y\in\mb R}</m></li>
   <li><m>\setBuilder{(-\infty,x]}{x\in\mb R}\cup\setBuilder{[y,\infty)}{y\in\mb R}</m></li>
   <li><m>\setList{\setList{0}}</m></li>
-  <li><m>\mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\mb N}}</m></li>
+  <li><m>\mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\omega}}</m></li>
 </ol>
 </example>
 <theorem>

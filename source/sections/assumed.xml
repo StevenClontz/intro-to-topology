@@ -12,11 +12,11 @@
     <li><m>\mb R</m> is the set of real numbers.</li>
     <li><m>\mb Z</m> is the set of integers.</li>
     <li>
-      <m>\mb N=\setBuilder{z\in\mb Z}{z\geq 0}=\setList{0,1,2,\dots}</m>
+      <m>\omega=\setBuilder{z\in\mb Z}{z\geq 0}=\setList{0,1,2,\dots}</m>
       is the set of natural numbers, which includes zero.
     </li>
     <li>
-      <m>\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\mb N}</m>
+      <m>\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\omega}</m>
       is the set of rational numbers.
     </li>
   </ul>
@@ -33,7 +33,7 @@
 <p>
   The <term>Archemedian Property</term> of the real numbers guarantees that
   for each positive real number <m>x>0</m>, there exists a natural number
-  <m>n\in\mb N</m> such that <m>\frac{1}{n}\lt x</m>.
+  <m>n\in\omega</m> such that <m>\frac{1}{n}\lt x</m>.
 </p>
 </theorem>
 <theorem>

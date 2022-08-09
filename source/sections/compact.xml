@@ -24,8 +24,8 @@
 <ol>
   <li><m>\mb R</m></li>
   <li><m>\mb Z</m></li>
-  <li><m>\setBuilder{2^{-n}}{n\in\mb N}</m></li>
-  <li><m>\setList{0}\cup\setBuilder{2^{-n}}{n\in\mb N}</m></li>
+  <li><m>\setBuilder{2^{-n}}{n\in\omega}</m></li>
+  <li><m>\setList{0}\cup\setBuilder{2^{-n}}{n\in\omega}</m></li>
   <li><m>(0,1)</m></li>
   <li><m>[0,1]</m></li>
 </ol>
@@ -79,9 +79,9 @@
 <p>
   Let 
   <m>\mc T=\setList{\emptyset}\cup
-  \setBuilder{\mb N\setminus F}{F\text{ is finite}}</m>
-  be the cofinite topology on <m>\mb N</m>. Every subset of
-  <m>\mb N</m> is compact under this topology.
+  \setBuilder{\omega\setminus F}{F\text{ is finite}}</m>
+  be the cofinite topology on <m>\omega</m>. Every subset of
+  <m>\omega</m> is compact under this topology.
 </p>
 </proposition>
 <theorem>
@@ -102,9 +102,9 @@
 </theorem>
 <theorem>
 <p>
-  Let <m>\mc K=\setBuilder{K_n}{n\in\mb N}</m> be a collection of
+  Let <m>\mc K=\setBuilder{K_n}{n\in\omega}</m> be a collection of
   non-empty compact subsets of a topological space such that
-  <m>K_{n+1}\subseteq K_n</m> for all <m>n\in\mb N</m>.
+  <m>K_{n+1}\subseteq K_n</m> for all <m>n\in\omega</m>.
   Then <m>\bigcap\mc K</m> is a non-empty compact set.
 </p>
 </theorem>
