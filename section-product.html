@@ -1,63 +1,60 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-06-09T19:16:42Z    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Product Spaces</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
@@ -67,82 +64,100 @@ var js_version = 0.11;
 \newcommand{\glb}{\operatorname{glb}}
 \newcommand{\lub}{\operatorname{lub}}
 \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+\newcommand{\setB}{\setBuilder}
 \newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\setL}{\setList}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Intro to Topology</span></a></h1>
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
 <p class="byline">Steven Clontz</p>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-connected.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-quotient.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-connected.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-quotient.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-connected.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-quotient.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-connected.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-quotient.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
-<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></li>
-<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></li>
-<li class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
-<li class="link"><a href="section-metric.html" data-scroll="section-metric"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></li>
-<li class="link"><a href="section-compact.html" data-scroll="section-compact"><span class="codenumber">5</span> <span class="title">Compactness</span></a></li>
-<li class="link"><a href="section-connected.html" data-scroll="section-connected"><span class="codenumber">6</span> <span class="title">Connectedness</span></a></li>
-<li class="link active"><a href="section-product.html" data-scroll="section-product"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></li>
-<li class="link"><a href="section-quotient.html" data-scroll="section-quotient"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="set-theory.html" data-scroll="set-theory"><span class="codenumber">A</span> <span class="title">Assumed Results</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Intro: Curves and Surfaces</span></a></li>
+<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
+<li class="link"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
+<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
+<li class="link"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
+<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
+<li class="link"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
+<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
+<li class="link active"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
+<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-product"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">7</span> <span class="title">Product Spaces</span>
+<span class="type">Section</span> <span class="codenumber">8</span> <span class="title">Product Spaces</span>
 </h2>
-<a href="section-product.html" class="permalink">¶</a><article class="definition-like" id="definition-44"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">7.1</span>.</h6>
-<p id="p-175">Let \(X,Y\) be topological spaces, generated respectively by the bases \(\mc B_X,\mc B_Y\text{.}\) Then the <dfn class="terminology">product space</dfn> is given by the set \(X\times Y=\setBuilder{\tuple{x,y}}{x\in X,y\in Y}\) with the topology generated by the basis \(\mc B=\setBuilder{U\times V}{U\in\mc B_X,V\in\mc B_Y}\text{.}\)</p></article><article class="theorem-like" id="theorem-44"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">7.2</span>.</h6>
-<p id="p-176">The Euclidean space \(\mb R^{n+1}\) is homeomorphic to the product space \(\mb R^n\times\mb R\text{.}\)</p></article><article class="theorem-like" id="proposition-39"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">7.3</span>.</h6>
-<p id="p-177">The product \(X\times Y\) is Hausdorff if and only if \(X,Y\) are each Hausdorff.</p></article><article class="theorem-like" id="theorem-45"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">7.4</span>.</h6>
-<p id="p-178">The product \(X\times Y\) is regular if and only if \(X,Y\) are each regular.</p></article><article class="theorem-like" id="lemma-3"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">7.5</span>.</h6>
-<p id="p-179">Let \(S=\mb R\) equipped with the Sorgenfrey topology. Then the product space \(S\times S\) contains two disjoint closed subsets \(H=\setBuilder{\tuple{x,-x}}{x\in\mb Q}\) and \(L=\setBuilder{\tuple{x,-x}}{x\in\mb R\setminus\mb Q}\) that cannot be separated by a pair of open sets.</p></article><article class="theorem-like" id="theorem-46"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">7.6</span>.</h6>
-<p id="p-180">Let \(S=\mb R\) equipped with the Sorgenfrey topology. Then \(S\) is normal, but \(S\times S\) is not normal.</p></article><article class="theorem-like" id="proposition-40"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">7.7</span>.</h6>
-<p id="p-181">Let \(p\in Y\text{.}\) The subspace \(\setBuilder{\tuple{x,p}}{x\in X}\) of \(X\times Y\) is homeomorphic to \(X\text{.}\)</p></article><article class="theorem-like" id="proposition-41"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">7.8</span>.</h6>
-<p id="p-182">The <dfn class="terminology">diagonal</dfn> \(\Delta=\setBuilder{\tuple{x,x}}{x\in X}\) of \(X\times X\) is homeomorphic to \(X\text{.}\)</p></article><article class="theorem-like" id="proposition-42"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">7.9</span>.</h6>
-<p id="p-183">The product spaces \(X\times Y\) and \(Y\times X\) are homeomorphic.</p></article><article class="definition-like" id="definition-45"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">7.10</span>.</h6>
-<p id="p-184">For a product space \(X\times Y\text{,}\) its <dfn class="terminology">projection maps</dfn> \(\pi_X:X\times Y\to X\) and \(\pi_Y:X\times Y\to Y\) are defined by \(\pi_X(\tuple{x,y})=x\) and \(\pi_Y(\tuple{x,y})=y\text{.}\)</p></article><article class="example-like" id="example-16"><a data-knowl="" class="id-ref" data-refid="hk-example-16"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">7.11</span>. <span class="title">Properties of projection maps.</span>
-</h6></a></article><div id="hk-example-16" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-185">Verify the following properties of projection maps.</p>
+<article class="definition definition-like" id="definition-46"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span>
+</h3>
+<p id="p-186">Let <span class="process-math">\(X,Y\)</span> be topological spaces, generated respectively by the bases <span class="process-math">\(\mc B_X,\mc B_Y\text{.}\)</span> Then the <dfn class="terminology">product space</dfn> is given by the set <span class="process-math">\(X\times Y=\setBuilder{\tuple{x,y}}{x\in X,y\in Y}\)</span> with the topology generated by the basis <span class="process-math">\(\mc B=\setBuilder{U\times V}{U\in\mc B_X,V\in\mc B_Y}\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-45"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.2</span><span class="period">.</span>
+</h3>
+<p id="p-187">The Euclidean space <span class="process-math">\(\mb R^{n+1}\)</span> is homeomorphic to the product space <span class="process-math">\(\mb R^n\times\mb R\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-40"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span>
+</h3>
+<p id="p-188">The product <span class="process-math">\(X\times Y\)</span> is Hausdorff if and only if <span class="process-math">\(X,Y\)</span> are each Hausdorff.</p></article><article class="theorem theorem-like" id="theorem-46"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.4</span><span class="period">.</span>
+</h3>
+<p id="p-189">The product <span class="process-math">\(X\times Y\)</span> is regular if and only if <span class="process-math">\(X,Y\)</span> are each regular.</p></article><article class="lemma theorem-like" id="lemma-3"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.5</span><span class="period">.</span>
+</h3>
+<p id="p-190">Let <span class="process-math">\(S=\mb R\)</span> equipped with the Sorgenfrey topology. Then the product space <span class="process-math">\(S\times S\)</span> contains two disjoint closed subsets <span class="process-math">\(H=\setBuilder{\tuple{x,-x}}{x\in\mb Q}\)</span> and <span class="process-math">\(L=\setBuilder{\tuple{x,-x}}{x\in\mb R\setminus\mb Q}\)</span> that cannot be separated by a pair of open sets.</p></article><article class="theorem theorem-like" id="theorem-47"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span>
+</h3>
+<p id="p-191">Let <span class="process-math">\(S=\mb R\)</span> equipped with the Sorgenfrey topology. Then <span class="process-math">\(S\)</span> is normal, but <span class="process-math">\(S\times S\)</span> is not normal.</p></article><article class="proposition theorem-like" id="proposition-41"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.7</span><span class="period">.</span>
+</h3>
+<p id="p-192">Let <span class="process-math">\(p\in Y\text{.}\)</span> The subspace <span class="process-math">\(\setBuilder{\tuple{x,p}}{x\in X}\)</span> of <span class="process-math">\(X\times Y\)</span> is homeomorphic to <span class="process-math">\(X\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-42"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.8</span><span class="period">.</span>
+</h3>
+<p id="p-193">The <dfn class="terminology">diagonal</dfn> <span class="process-math">\(\Delta=\setBuilder{\tuple{x,x}}{x\in X}\)</span> of <span class="process-math">\(X\times X\)</span> is homeomorphic to <span class="process-math">\(X\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-43"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.9</span><span class="period">.</span>
+</h3>
+<p id="p-194">The product spaces <span class="process-math">\(X\times Y\)</span> and <span class="process-math">\(Y\times X\)</span> are homeomorphic.</p></article><article class="definition definition-like" id="definition-47"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">8.10</span><span class="period">.</span>
+</h3>
+<p id="p-195">For a product space <span class="process-math">\(X\times Y\text{,}\)</span> its <dfn class="terminology">projection maps</dfn> <span class="process-math">\(\pi_X:X\times Y\to X\)</span> and <span class="process-math">\(\pi_Y:X\times Y\to Y\)</span> are defined by <span class="process-math">\(\pi_X(\tuple{x,y})=x\)</span> and <span class="process-math">\(\pi_Y(\tuple{x,y})=y\text{.}\)</span></p></article><article class="example example-like" id="example-7"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.11</span><span class="period">.</span><span class="space"> </span><span class="title">Properties of projection maps.</span>
+</h3>
+<p id="p-196">Verify the following properties of projection maps.</p>
 <ol class="decimal">
-<li id="li-113">Every projection map is continuous.</li>
-<li id="li-114">The projection of an open set is always open.</li>
-<li id="li-115">The projection of a closed set is not always closed.</li>
-</ol></article></div>
-<article class="theorem-like" id="theorem-47"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">7.12</span>.</h6>
-<p id="p-186">The product \(X\times Y\) is metrizable if and only if \(X,Y\) are each metrizable.</p></article><article class="theorem-like" id="lemma-4"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">7.13</span>.</h6>
-<p id="p-187">Let \(Y\) be compact. If \(\mc U\) is an open cover of \(X\times Y\text{,}\) then for each \(x\in X\) there exists a finite subcollection \(\mc F_x\subseteq\mc U\) and an open neighborhood \(U_x\) of \(x\) such that \(U_x\times Y\subseteq\bigcup\mc F_x\text{.}\)</p></article><article class="theorem-like" id="theorem-48"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">7.14</span>.</h6>
-<p id="p-188">The product \(X\times Y\) is compact if and only if \(X,Y\) are each compact.</p></article><article class="theorem-like" id="theorem-49"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">7.15</span>.</h6>
-<p id="p-189">The product \(X\times Y\) is connected if and only if \(X,Y\) are each connected.</p></article></section></div></main>
+<li id="li-106"><p id="p-derived-li-106">Every projection map is continuous.</p></li>
+<li id="li-107"><p id="p-derived-li-107">The projection of an open set is always open.</p></li>
+<li id="li-108"><p id="p-derived-li-108">The projection of a closed set is not always closed.</p></li>
+</ol></article><article class="theorem theorem-like" id="theorem-48"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.12</span><span class="period">.</span>
+</h3>
+<p id="p-197">The product <span class="process-math">\(X\times Y\)</span> is metrizable if and only if <span class="process-math">\(X,Y\)</span> are each metrizable.</p></article><article class="lemma theorem-like" id="lemma-4"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.13</span><span class="period">.</span>
+</h3>
+<p id="p-198">Let <span class="process-math">\(Y\)</span> be compact. If <span class="process-math">\(\mc U\)</span> is an open cover of <span class="process-math">\(X\times Y\text{,}\)</span> then for each <span class="process-math">\(x\in X\)</span> there exists a finite subcollection <span class="process-math">\(\mc F_x\subseteq\mc U\)</span> and an open neighborhood <span class="process-math">\(U_x\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(U_x\times Y\subseteq\bigcup\mc F_x\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-49"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.14</span><span class="period">.</span>
+</h3>
+<p id="p-199">The product <span class="process-math">\(X\times Y\)</span> is compact if and only if <span class="process-math">\(X,Y\)</span> are each compact.</p></article><article class="theorem theorem-like" id="theorem-50"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.15</span><span class="period">.</span>
+</h3>
+<p id="p-200">The product <span class="process-math">\(X\times Y\)</span> is connected if and only if <span class="process-math">\(X,Y\)</span> are each connected.</p></article></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

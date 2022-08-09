@@ -1,63 +1,60 @@
 <!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-06-09T19:16:42Z    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
-<head>
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Compactness</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
-    },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="mathbook-article has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
@@ -67,96 +64,118 @@ var js_version = 0.11;
 \newcommand{\glb}{\operatorname{glb}}
 \newcommand{\lub}{\operatorname{lub}}
 \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+\newcommand{\setB}{\setBuilder}
 \newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\setL}{\setList}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
-\)</div>
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="index.html"><span class="title">Intro to Topology</span></a></h1>
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
 <p class="byline">Steven Clontz</p>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-metric.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-connected.html" title="Next">Next</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-metric.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-connected.html" title="Next">Next</a></span></div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-metric.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-connected.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-metric.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-connected.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></li>
-<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces"><span class="codenumber">1</span> <span class="title">Curves and Surfaces</span></a></li>
-<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces"><span class="codenumber">2</span> <span class="title">Topological Spaces</span></a></li>
-<li class="link"><a href="section-continuity.html" data-scroll="section-continuity"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
-<li class="link"><a href="section-metric.html" data-scroll="section-metric"><span class="codenumber">4</span> <span class="title">Metric Spaces</span></a></li>
-<li class="link active"><a href="section-compact.html" data-scroll="section-compact"><span class="codenumber">5</span> <span class="title">Compactness</span></a></li>
-<li class="link"><a href="section-connected.html" data-scroll="section-connected"><span class="codenumber">6</span> <span class="title">Connectedness</span></a></li>
-<li class="link"><a href="section-product.html" data-scroll="section-product"><span class="codenumber">7</span> <span class="title">Product Spaces</span></a></li>
-<li class="link"><a href="section-quotient.html" data-scroll="section-quotient"><span class="codenumber">8</span> <span class="title">Quotient Spaces</span></a></li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="set-theory.html" data-scroll="set-theory"><span class="codenumber">A</span> <span class="title">Assumed Results</span></a></li>
-</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Intro: Curves and Surfaces</span></a></li>
+<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
+<li class="link"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
+<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
+<li class="link"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
+<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
+<li class="link active"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
+<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
+<li class="link"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
+<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-compact"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">5</span> <span class="title">Compactness</span>
+<span class="type">Section</span> <span class="codenumber">6</span> <span class="title">Compactness</span>
 </h2>
-<a href="section-compact.html" class="permalink">¶</a><article class="definition-like" id="definition-39"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.1</span>.</h6>
-<p id="p-140">A collection \(\mc A\subseteq \mc P(X)\) is said to <dfn class="terminology">cover</dfn> a subset \(Y\subseteq X\) iff \(Y\subseteq\bigcup\mc A\text{.}\)</p></article><article class="definition-like" id="definition-40"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.2</span>.</h6>
-<p id="p-141">A subset \(K\subseteq X\) of a topological space is said to be <dfn class="terminology">compact</dfn> iff for every collection of open sets \(\mc U\) covering \(K\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that also covers \(K\text{.}\)</p></article><article class="example-like" id="compact-examples"><a data-knowl="" class="id-ref" data-refid="hk-compact-examples"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">5.3</span>.</h6></a></article><div id="hk-compact-examples" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-142">Determine if each of the following subsets of the Euclidean line is compact.</p>
+<article class="definition definition-like" id="definition-41"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span>
+</h3>
+<p id="p-151">A collection <span class="process-math">\(\mc A\subseteq \mc P(X)\)</span> is said to <dfn class="terminology">cover</dfn> a subset <span class="process-math">\(Y\subseteq X\)</span> iff <span class="process-math">\(Y\subseteq\bigcup\mc A\text{.}\)</span></p></article><article class="definition definition-like" id="definition-42"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span>
+</h3>
+<p id="p-152">A subset <span class="process-math">\(K\subseteq X\)</span> of a topological space is said to be <dfn class="terminology">compact</dfn> iff for every collection of open sets <span class="process-math">\(\mc U\)</span> covering <span class="process-math">\(K\text{,}\)</span> there exists a finite subcollection <span class="process-math">\(\mc F\subseteq\mc U\)</span> that also covers <span class="process-math">\(K\text{.}\)</span></p></article><article class="example example-like" id="compact-examples"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
+</h3>
+<p id="p-153">Determine if each of the following subsets of the Euclidean line is compact.</p>
 <ol class="decimal">
-<li id="li-104">\(\mb R\)</li>
-<li id="li-105">\(\mb Z\)</li>
-<li id="li-106">\(\setBuilder{2^{-n}}{n\in\mb N}\)</li>
-<li id="li-107">\(\setList{0}\cup\setBuilder{2^{-n}}{n\in\mb N}\)</li>
-<li id="li-108">\((0,1)\)</li>
-<li id="li-109">\([0,1]\)</li>
-</ol></article></div>
-<article class="definition-like" id="definition-41"><h6 class="heading">
-<span class="type">Definition</span> <span class="codenumber">5.4</span>.</h6>
-<p id="p-143">A subset \(R\subseteq X\) of a topological space is said to be <dfn class="terminology">relatively compact</dfn> iff for every collection of open sets \(\mc U\) covering \(X\text{,}\) there exists a finite subcollection \(\mc F\subseteq\mc U\) that covers \(K\text{.}\)</p></article><article class="theorem-like" id="theorem-30"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.5</span>.</h6>
-<p id="p-144">A space is regular if and only if for every point \(x\) and neighborhood \(U\text{,}\) there exists a neighborhood \(V\) of \(x\) such that \(x\in V\subseteq\cl V\subseteq U\text{.}\)</p></article><article class="theorem-like" id="theorem-31"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.6</span>.</h6>
-<p id="p-145">Let \(X\) be regular. A subset \(R\subseteq X\) is relatively compact if and only if \(\cl R\) is compact.</p></article><article class="theorem-like" id="theorem-32"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.7</span>.</h6>
-<p id="p-146">Let \(X\) be compact and \(K\) be a closed subset of \(X\text{.}\) Then \(K\) is compact.</p></article><article class="theorem-like" id="proposition-31"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">5.8</span>.</h6>
-<p id="p-147">Every finite subset of a space is compact.</p></article><article class="theorem-like" id="proposition-32"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">5.9</span>.</h6>
-<p id="p-148">Every finite union of compact subsets is compact.</p></article><article class="theorem-like" id="theorem-33"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.10</span>.</h6>
-<p id="p-149">Every compact subset of a Hausdorff space is closed.</p></article><article class="theorem-like" id="proposition-33"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">5.11</span>.</h6>
-<p id="p-150">Let \(\mc T=\setList{\emptyset}\cup
-\setBuilder{\mb N\setminus F}{F\text{ is finite}}\) be the cofinite topology on \(\mb N\text{.}\) Every subset of \(\mb N\) is compact under this topology.</p></article><article class="theorem-like" id="theorem-34"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.12</span>.</h6>
-<p id="p-151">Let \(f:X\to Y\) be continuous and \(K\subseteq X\) be compact. Then \(f[K]\) is compact.</p></article><article class="theorem-like" id="corollary-1"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">5.13</span>.</h6>
-<p id="p-152">Compactness is a topological property.</p></article><article class="theorem-like" id="theorem-35"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.14</span>.</h6>
-<p id="p-153">Every infinite subset of a compact set has a limit point.</p></article><article class="theorem-like" id="theorem-36"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.15</span>.</h6>
-<p id="p-154">Let \(\mc K=\setBuilder{K_n}{n\in\mb N}\) be a collection of non-empty compact subsets of a topological space such that \(K_{n+1}\subseteq K_n\) for all \(n\in\mb N\text{.}\) Then \(\bigcap\mc K\) is a non-empty compact set.</p></article><article class="theorem-like" id="theorem-37"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.16</span>.</h6>
-<p id="p-155">Let \(X\) be metrizable. Then the following are equivalent for \(K\subseteq X\text{.}\)</p>
+<li id="li-97"><p id="p-derived-li-97"><span class="process-math">\(\displaystyle \mb R\)</span></p></li>
+<li id="li-98"><p id="p-derived-li-98"><span class="process-math">\(\displaystyle \mb Z\)</span></p></li>
+<li id="li-99"><p id="p-derived-li-99"><span class="process-math">\(\displaystyle \setBuilder{2^{-n}}{n\in\omega}\)</span></p></li>
+<li id="li-100"><p id="p-derived-li-100"><span class="process-math">\(\displaystyle \setList{0}\cup\setBuilder{2^{-n}}{n\in\omega}\)</span></p></li>
+<li id="li-101"><p id="p-derived-li-101"><span class="process-math">\(\displaystyle (0,1)\)</span></p></li>
+<li id="li-102"><p id="p-derived-li-102"><span class="process-math">\(\displaystyle [0,1]\)</span></p></li>
+</ol></article><article class="definition definition-like" id="definition-43"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">6.4</span><span class="period">.</span>
+</h3>
+<p id="p-154">A subset <span class="process-math">\(R\subseteq X\)</span> of a topological space is said to be <dfn class="terminology">relatively compact</dfn> iff for every collection of open sets <span class="process-math">\(\mc U\)</span> covering <span class="process-math">\(X\text{,}\)</span> there exists a finite subcollection <span class="process-math">\(\mc F\subseteq\mc U\)</span> that covers <span class="process-math">\(K\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-31"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.5</span><span class="period">.</span>
+</h3>
+<p id="p-155">A space is regular if and only if for every point <span class="process-math">\(x\)</span> and neighborhood <span class="process-math">\(U\text{,}\)</span> there exists a neighborhood <span class="process-math">\(V\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\in V\subseteq\cl V\subseteq U\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-32"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span>
+</h3>
+<p id="p-156">Let <span class="process-math">\(X\)</span> be regular. A subset <span class="process-math">\(R\subseteq X\)</span> is relatively compact if and only if <span class="process-math">\(\cl R\)</span> is compact.</p></article><article class="theorem theorem-like" id="theorem-33"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.7</span><span class="period">.</span>
+</h3>
+<p id="p-157">Let <span class="process-math">\(X\)</span> be compact and <span class="process-math">\(K\)</span> be a closed subset of <span class="process-math">\(X\text{.}\)</span> Then <span class="process-math">\(K\)</span> is compact.</p></article><article class="proposition theorem-like" id="proposition-32"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span>
+</h3>
+<p id="p-158">Every finite subset of a space is compact.</p></article><article class="proposition theorem-like" id="proposition-33"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span>
+</h3>
+<p id="p-159">Every finite union of compact subsets is compact.</p></article><article class="theorem theorem-like" id="theorem-34"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span>
+</h3>
+<p id="p-160">Every compact subset of a Hausdorff space is closed.</p></article><article class="proposition theorem-like" id="proposition-34"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.11</span><span class="period">.</span>
+</h3>
+<p id="p-161">Let <span class="process-math">\(\mc T=\setList{\emptyset}\cup
+\setBuilder{\omega\setminus F}{F\text{ is finite}}\)</span> be the cofinite topology on <span class="process-math">\(\omega\text{.}\)</span> Every subset of <span class="process-math">\(\omega\)</span> is compact under this topology.</p></article><article class="theorem theorem-like" id="theorem-35"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span>
+</h3>
+<p id="p-162">Let <span class="process-math">\(f:X\to Y\)</span> be continuous and <span class="process-math">\(K\subseteq X\)</span> be compact. Then <span class="process-math">\(f[K]\)</span> is compact.</p></article><article class="corollary theorem-like" id="corollary-1"><h3 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.13</span><span class="period">.</span>
+</h3>
+<p id="p-163">Compactness is a topological property.</p></article><article class="theorem theorem-like" id="theorem-36"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span>
+</h3>
+<p id="p-164">Every infinite subset of a compact set has a limit point.</p></article><article class="theorem theorem-like" id="theorem-37"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.15</span><span class="period">.</span>
+</h3>
+<p id="p-165">Let <span class="process-math">\(\mc K=\setBuilder{K_n}{n\in\omega}\)</span> be a collection of non-empty compact subsets of a topological space such that <span class="process-math">\(K_{n+1}\subseteq K_n\)</span> for all <span class="process-math">\(n\in\omega\text{.}\)</span> Then <span class="process-math">\(\bigcap\mc K\)</span> is a non-empty compact set.</p></article><article class="theorem theorem-like" id="theorem-38"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.16</span><span class="period">.</span>
+</h3>
+<p id="p-166">Let <span class="process-math">\(X\)</span> be metrizable. Then the following are equivalent for <span class="process-math">\(K\subseteq X\text{.}\)</span></p>
 <ol class="decimal">
-<li id="li-110">\(K\) is compact</li>
-<li id="li-111">Every infinite subset of \(K\) has a limit point.</li>
-<li id="li-112">Every infinite subset of \(K\) has a sequential limit point.</li>
-</ol></article><article class="theorem-like" id="lemma-1"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">5.17</span>.</h6>
-<p id="p-156">A topological space \(X\) is Hausdorff if and only if for every pair of disjoint compact subsets \(H,K\) there exist disjoint open sets \(U,V\) such that \(H\subseteq U\) and \(K\subseteq V\text{.}\)</p></article><article class="theorem-like" id="theorem-38"><h6 class="heading">
-<span class="type">Theorem</span> <span class="codenumber">5.18</span>.</h6>
-<p id="p-157">Every compact Hausdorff space is \(T_4\text{.}\)</p></article></section></div></main>
+<li id="li-103"><p id="p-derived-li-103"><span class="process-math">\(K\)</span> is compact</p></li>
+<li id="li-104"><p id="p-derived-li-104">Every infinite subset of <span class="process-math">\(K\)</span> has a limit point.</p></li>
+<li id="li-105"><p id="p-derived-li-105">Every infinite subset of <span class="process-math">\(K\)</span> has a sequential limit point.</p></li>
+</ol></article><article class="lemma theorem-like" id="lemma-1"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">6.17</span><span class="period">.</span>
+</h3>
+<p id="p-167">A topological space <span class="process-math">\(X\)</span> is Hausdorff if and only if for every pair of disjoint compact subsets <span class="process-math">\(H,K\)</span> there exist disjoint open sets <span class="process-math">\(U,V\)</span> such that <span class="process-math">\(H\subseteq U\)</span> and <span class="process-math">\(K\subseteq V\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-39"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.18</span><span class="period">.</span>
+</h3>
+<p id="p-168">Every compact Hausdorff space is <span class="process-math">\(T_4\text{.}\)</span></p></article></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

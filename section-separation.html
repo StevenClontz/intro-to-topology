@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Separation</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\cl}{\operatorname{cl}}
+\renewcommand{\int}{\operatorname{int}}
+\newcommand{\ext}{\operatorname{ext}}
+\newcommand{\bd}{\operatorname{bd}}
+\newcommand{\glb}{\operatorname{glb}}
+\newcommand{\lub}{\operatorname{lub}}
+\newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+\newcommand{\setB}{\setBuilder}
+\newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\setL}{\setList}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-continuity.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-metric.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-continuity.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-metric.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Intro: Curves and Surfaces</span></a></li>
+<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
+<li class="link"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
+<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
+<li class="link active"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
+<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
+<li class="link"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
+<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
+<li class="link"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
+<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-separation"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">4</span> <span class="title">Separation</span>
+</h2>
+<article class="definition definition-like" id="definition-29"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
+</h3>
+<p id="p-106">The following are known as <dfn class="terminology">separation axioms</dfn> for a topological space <span class="process-math">\(\tuple{X,\mc T}\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-70"><p id="p-derived-li-70"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology"><span class="process-math">\(T_0\)</span></dfn> if and only if for all points <span class="process-math">\(x,y\in X\)</span> such that <span class="process-math">\(x\not=y\text{,}\)</span> there either exists a neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(y\not\in U\text{,}\)</span> or there exists a neighborhood <span class="process-math">\(V\)</span> of <span class="process-math">\(y\)</span> such that <span class="process-math">\(x\not\in V\text{.}\)</span></p></li>
+<li id="li-71"><p id="p-derived-li-71"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology"><span class="process-math">\(T_1\)</span></dfn> if and only if for all points <span class="process-math">\(x,y\in X\)</span> such that <span class="process-math">\(x\not=y\text{,}\)</span> there exists a neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(y\not\in U\text{.}\)</span></p></li>
+<li id="li-72"><p id="p-derived-li-72"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology"><span class="process-math">\(T_2\)</span></dfn> (also known as <dfn class="terminology">Hausdorff</dfn>) if and only if for all points <span class="process-math">\(x,y\in X\)</span> such that <span class="process-math">\(x\not=y\text{,}\)</span> there exist neighborhoods <span class="process-math">\(U,V\)</span> of <span class="process-math">\(x,y\)</span> (respectively) such that <span class="process-math">\(U\cap V=\emptyset\text{.}\)</span></p></li>
+</ol></article><article class="proposition theorem-like" id="proposition-22"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
+</h3>
+<p id="p-107"><span class="process-math">\(T_2\Rightarrow T_1\Rightarrow T_0\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-10"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
+</h3>
+<p id="p-108">Find or create an example of a topological space <span class="process-math">\(\tuple{X,\mc T}\)</span> that is:</p>
+<ol class="decimal">
+<li id="li-73"><p id="p-derived-li-73">Not <span class="process-math">\(T_0\text{.}\)</span></p></li>
+<li id="li-74"><p id="p-derived-li-74"><span class="process-math">\(T_0\)</span> but not <span class="process-math">\(T_1\text{.}\)</span></p></li>
+<li id="li-75"><p id="p-derived-li-75"><span class="process-math">\(T_1\)</span> but not <span class="process-math">\(T_2\text{.}\)</span></p></li>
+</ol></article><article class="theorem theorem-like" id="theorem-15"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
+</h3>
+<p id="p-109">Let <span class="process-math">\(X\)</span> be a finite topological space. Then <span class="process-math">\(X\)</span> is <span class="process-math">\(T_1\)</span> if and only if <span class="process-math">\(X\)</span> has the discrete topology.</p></article><article class="proposition theorem-like" id="proposition-23"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
+</h3>
+<p id="p-110">The Euclidean real line is a non-discrete Hausdorff topological space.</p></article><article class="definition definition-like" id="definition-30"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
+</h3>
+<p id="p-111">The following are also known as <dfn class="terminology">separation axioms</dfn> for a topological space <span class="process-math">\(\tuple{X,\mc T}\text{.}\)</span></p>
+<ol class="decimal">
+<li id="li-76"><p id="p-derived-li-76"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology">regular</dfn> if and only if for all points <span class="process-math">\(x\in X\)</span> and closed subsets <span class="process-math">\(H\subseteq X\)</span> such that <span class="process-math">\(x\not\in H\text{,}\)</span> there exist open sets <span class="process-math">\(U,V\in\mc T\)</span> such that <span class="process-math">\(x\in U,H\subseteq V,U\cap V=\emptyset\text{.}\)</span></p></li>
+<li id="li-77"><p id="p-derived-li-77"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology"><span class="process-math">\(T_3\)</span></dfn> if and only if it is both regular and <span class="process-math">\(T_1\)</span></p></li>
+<li id="li-78"><p id="p-derived-li-78"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology">normal</dfn> if and only if for all closed subsets <span class="process-math">\(H,L\subseteq X\)</span> such that <span class="process-math">\(H\cap L=\emptyset\text{,}\)</span> there exist open sets <span class="process-math">\(U,V\in\mc T\)</span> such that <span class="process-math">\(H\subseteq U,L\subseteq V,U\cap V=\emptyset\text{.}\)</span></p></li>
+<li id="li-79"><p id="p-derived-li-79"><span class="process-math">\(\mc T\)</span> is said to be <dfn class="terminology"><span class="process-math">\(T_4\)</span></dfn> if and only if it is both normal and <span class="process-math">\(T_1\)</span></p></li>
+</ol></article><article class="proposition theorem-like" id="proposition-24"><h3 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">4.7</span><span class="period">.</span>
+</h3>
+<p id="p-112"><span class="process-math">\(T_{n+1}\Rightarrow T_n\)</span> for <span class="process-math">\(n\in\setList{0,1,2,3}\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-16"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
+</h3>
+<p id="p-113">The real line <span class="process-math">\(\mb R\)</span> equipped with the Euclidean topology is <span class="process-math">\(T_4\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-11"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">4.9</span><span class="period">.</span>
+</h3>
+<p id="p-114">Find or create an example of a topological space that is:</p>
+<ol class="decimal">
+<li id="li-80"><p id="p-derived-li-80"><span class="process-math">\(T_2\)</span> but not regular.</p></li>
+<li id="li-81"><p id="p-derived-li-81"><span class="process-math">\(T_3\)</span> but not <span class="process-math">\(T_4\)</span></p></li>
+<li id="li-82"><p id="p-derived-li-82">Regular but not <span class="process-math">\(T_3\text{.}\)</span></p></li>
+<li id="li-83"><p id="p-derived-li-83">Normal but not <span class="process-math">\(T_4\text{.}\)</span></p></li>
+<li id="li-84"><p id="p-derived-li-84">Regular but not normal.</p></li>
+<li id="li-85"><p id="p-derived-li-85">Normal but not regular.</p></li>
+</ol></article><article class="theorem theorem-like" id="theorem-17"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.10</span><span class="period">.</span>
+</h3>
+<p id="p-115">A topological space is <span class="process-math">\(T_3\)</span> if and only if it is regular and <span class="process-math">\(T_0\text{.}\)</span></p></article></section></div></main>
+</div>
+</body>
+</html>

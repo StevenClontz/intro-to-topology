@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Assumptions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="article">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      $(document).trigger("runestone:mathjax-ready");
+      }
+    )}
+},
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-article ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\cl}{\operatorname{cl}}
+\renewcommand{\int}{\operatorname{int}}
+\newcommand{\ext}{\operatorname{ext}}
+\newcommand{\bd}{\operatorname{bd}}
+\newcommand{\glb}{\operatorname{glb}}
+\newcommand{\lub}{\operatorname{lub}}
+\newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+\newcommand{\setB}{\setBuilder}
+\newcommand{\setList}[1]{\left\{#1\right\}}
+\newcommand{\setL}{\setList}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="backmatter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="backmatter-1.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="backmatter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="backmatter-1.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
+<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Intro: Curves and Surfaces</span></a></li>
+<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
+<li class="link"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
+<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
+<li class="link"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
+<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
+<li class="link"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
+<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
+<li class="link"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
+<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
+<li class="link active"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="appendix" id="assumed"><h2 class="heading">
+<span class="type">Appendix</span> <span class="codenumber">A</span> <span class="title">Assumptions</span>
+</h2>
+<section class="introduction" id="introduction-3"><p id="p-219">Here is a brief overview of basic results and definitions concerning sets and the reals that should be assumed for this course.</p></section><article class="definition definition-like" id="definition-57"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.1</span><span class="period">.</span>
+</h3>
+<ul class="disc">
+<li id="li-116"><p id="p-derived-li-116"><span class="process-math">\(\mb R\)</span> is the set of real numbers.</p></li>
+<li id="li-117"><p id="p-derived-li-117"><span class="process-math">\(\mb Z\)</span> is the set of integers.</p></li>
+<li id="li-118"><p id="p-derived-li-118"><span class="process-math">\(\omega=\setBuilder{z\in\mb Z}{z\geq 0}=\setList{0,1,2,\dots}\)</span> is the set of natural numbers, which includes zero.</p></li>
+<li id="li-119"><p id="p-derived-li-119"><span class="process-math">\(\mb Q=\setBuilder{\frac{z}{n+1}}{z\in\mb Z,n\in\omega}\)</span> is the set of rational numbers.</p></li>
+</ul></article><article class="theorem theorem-like" id="theorem-55"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.2</span><span class="period">.</span>
+</h3>
+<p id="p-220"><dfn class="terminology">De Morgan's Laws</dfn>: Let <span class="process-math">\(\mc A\)</span> be a collection of subsets of <span class="process-math">\(X\text{.}\)</span></p>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+X\setminus\bigcup_{A\in\mc A}A=\bigcap_{A\in\mc A}(X\setminus A)
+\end{equation*}
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="">
+\begin{equation*}
+X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
+\end{equation*}
+</div></article><article class="theorem theorem-like" id="theorem-56"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.3</span><span class="period">.</span>
+</h3>
+<p id="p-221">The <dfn class="terminology">Archemedian Property</dfn> of the real numbers guarantees that for each positive real number <span class="process-math">\(x&gt;0\text{,}\)</span> there exists a natural number <span class="process-math">\(n\in\omega\)</span> such that <span class="process-math">\(\frac{1}{n}\lt x\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-57"><h3 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">A.4</span><span class="period">.</span>
+</h3>
+<p id="p-222">Let <span class="process-math">\(S\subseteq \mb R\)</span> be a set of real numbers with a lower bound. Then there exists a <dfn class="terminology">greatest lower bound</dfn> (a.k.a. <dfn class="terminology">infimum</dfn>) <span class="process-math">\(\glb S=\inf S\text{.}\)</span></p>
+<p id="p-223">Let <span class="process-math">\(S\subseteq \mb R\)</span> be a set of real numbers with a lower bound. Then there exists a <dfn class="terminology">least upper bound</dfn> (a.k.a. <dfn class="terminology">supremum</dfn>) <span class="process-math">\(\lub S=\sup S\text{.}\)</span></p></article><article class="definition definition-like" id="definition-58"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">A.5</span><span class="period">.</span>
+</h3>
+<p id="p-224">The <dfn class="terminology">cardinality</dfn> of a finite set is the natural number that is equal to the number of elements it contains. For example, <span class="process-math">\(S=\setL{-1,\setL{5,-e},\pi}\)</span> has cardinality <span class="process-math">\(|S|=3\text{.}\)</span></p>
+<p id="p-225">A set <span class="process-math">\(S\)</span> that has a bijection with <span class="process-math">\(\omega\)</span> is said to be <dfn class="terminology">countable</dfn> and have cardinality <span class="process-math">\(|S|=\aleph_0\text{.}\)</span></p>
+<p id="p-226">A set <span class="process-math">\(S\)</span> that has no injection with <span class="process-math">\(\omega\)</span> is said to be <dfn class="terminology">uncountable</dfn> and have cardinality <span class="process-math">\(|S|&gt;\aleph_0\text{.}\)</span></p>
+<p id="p-227">A set <span class="process-math">\(S\)</span> that has a bijection with <span class="process-math">\(\mb R\)</span> is said to be <dfn class="terminology">continuum-sized</dfn> and have cardinality <span class="process-math">\(|S|=\mathfrak c\text{.}\)</span></p></article></section></div></main>
+</div>
+</body>
+</html>
