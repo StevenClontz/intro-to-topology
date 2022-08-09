@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-cd build
-# rm -rf *
-cp -r ../images .
-xsltproc --xinclude ../../pretext/xsl/mathbook-html.xsl ../index.xml
-xsltproc -o intro-to-topology.tex --xinclude ../../pretext/xsl/mathbook-latex.xsl ../index.xml
-pdflatex intro-to-topology.tex && pdflatex intro-to-topology.tex
