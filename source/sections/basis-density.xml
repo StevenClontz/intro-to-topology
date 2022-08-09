@@ -106,4 +106,50 @@
   If <m>D</m> is dense, then <m>E</m> is also dense.
 </p>
 </proposition>
+<definition>
+<p>
+A space is said to have <term>countable weight</term> (or be <term>second-countable</term>) 
+if it has a basis whose cardinality is countable.
+</p>
+</definition>
+<definition>
+<p>
+A space is said to have <term>countable density</term> (or be <term>separable</term>,
+no relation to <xref ref="section-separation"/>) 
+if it has a dense subset whose cardinality is countable.
+</p>
+</definition>
+<proposition>
+<p>
+Every space with countable cardinality has countable weight.
+</p>
+</proposition>
+<example>
+<p>
+The reals with the Euclidean topology are a space with uncountable cardinality,
+but countable weight and countable density.
+</p>
+</example>
+<theorem>
+<p>
+Every space with countable weight has countable density.
+</p>
+</theorem>
+<example>
+<p>
+The reals with the Sorgenfrey topology are a space with uncountable cardinality
+and weight, but countable density.
+</p>
+</example>
+<proposition>
+<p>
+The reals with the discrete topology are a space with uncountable cardinality
+weight, and density.
+</p>
+</proposition>
+<exercise>
+<p>
+Find or define a non-discrete topological space which has uncountable weight and density.
+</p>
+</exercise>
 </section>
