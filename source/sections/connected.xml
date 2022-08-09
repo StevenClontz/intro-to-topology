@@ -10,21 +10,27 @@
   is called a <term>disconnection</term> of <m>Y</m>. 
 </p>
 <p>
-  A space for which a diconnection exists is called
+  A subset of a space for which a disconnection exists is called
   <term>disconnected</term>; otherwise, the space is called
   <term>connected</term>. 
+</p>
+</definition>
+<definition>
+<p>
+A set which is both closed and open is said to be <term>clopen</term>.
 </p>
 </definition>
 <proposition>
 <p>
   A pair <m>\setList{A,B}</m> of open sets is a disconnection of <m>Y\subseteq X</m>
   if and only if <m>\setList{A\cap Y,B\cap Y}</m> is a partition
-  of <m>Y</m> by non-empty clopen (both closed and open) sets in the subspace topology.
+  of <m>Y</m> by non-empty clopen sets in the subspace topology.
 </p>
 </proposition>
-<p>(Corollary: A space itself is disconnected iff it is the union of two disjoint
-non-empty clopen subsets.)</p> 
-<!-- TODO make an actual corollary -->
+<corollary>
+<p>A space itself is disconnected if and only if it is the union of two disjoint
+non-empty clopen subsets.</p> 
+</corollary>
 <proposition>
 <p>
   The Euclidean line with a point removed <m>\mb R\setminus\setList{0}</m> 
@@ -42,11 +48,11 @@ non-empty clopen subsets.)</p>
   The Euclidean line is connected.
 </p>
 </corollary>
-<theorem>
+<proposition>
 <p>
   The Sorgenfrey topology on <m>\mb R</m> is disconnected.
 </p>
-</theorem>
+</proposition>
 <theorem>
 <p>
   If a subset <m>A</m> of a topological space is connected,
@@ -55,7 +61,7 @@ non-empty clopen subsets.)</p>
 </theorem>
 <proposition>
 <p>
-  If a subset <m>A</m> of a topological space is connected
+  If a subset <m>A</m> of a topological space <m>X</m> is connected
   and <m>f:X\to Y</m> is continuous,
   then <m>f[A]</m> is connected.
 </p>
@@ -89,17 +95,11 @@ non-empty clopen subsets.)</p>
   Every path connected space is connected.
 </p>
 </proposition>
-<theorem>
+<exercise>
 <p>
-  For <m>\vec x,\vec y\in\mb R^2</m>, let 
-  <me>B(\vec x,\vec y)=\setBuilder{\vec z}{\vec z(0)\in(\vec x(0),\vec y(0))
-  \text{ or } (\vec x(0)=\vec y(0)=\vec z(0) \text{ and }
-  \vec z(1)\in(\vec x(1),\vec y(1))}</me>.
-  Then <m>\mc B=\setBuilder{B(\vec x,\vec y)}{\vec x,\vec y\in\mb R^2}</m>
-  is a basis for a topology on <m>\mb R^2</m> that is connected but
-  not path connected. 
+  Find or create an example of a connected space that's not path connected.
 </p>
-</theorem>
+</exercise>
 <theorem>
 <p>
   Let <me>S=

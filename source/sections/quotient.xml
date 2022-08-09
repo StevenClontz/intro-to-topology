@@ -1,42 +1,20 @@
 <section xml:id="section-quotient">
   <title>Quotient Spaces</title>
+<theorem xml:id="quotient-topology">
+<p>
+  Let <m>X^*</m> be a partition of a space <m>X</m> with topology <m>\mc T</m>.
+  Then the set <m>\mc T^*=\setB{U^*\subseteq X^*}{\bigcup U^*\in\mc T}</m>
+  defines a topology on <m>X^*</m>.
+</p>
+</theorem>
 <definition>
 <p>
-  A <term>quotient map</term> is a surjection <m>f:X\to Y</m>
-  such that <m>V\subseteq Y</m> is open
-  if and only if <m>f^\leftarrow[V]\subseteq X</m>
-  is open.
-</p>
-</definition>
-<proposition xml:id="quotient-topology-thm">
-<p>
-  Let <m>\tuple{X,\mc T_X}</m> be a topological space, and let <m>f:X\to Y</m> 
-  be a surjection. Then <m>\mc T_Y=\setBuilder{V\subseteq Y}{f^\leftarrow[V]\in\mc T_X}</m>
-  is a topology on <m>Y</m> such that <m>f</m> is a quotient map.
-</p>
-</proposition>
-<definition>
-<p>
-  The topology defined in <xref ref="quotient-topology-thm"/> is known as
-  the <term>quotient topology</term> induced by <m>f</m>.
-</p>
-</definition>
-<definition>
-<p>
-  Let <m>X^*</m> be a partition of a topological space <m>X</m>, and let
-  <m>f:X\to X^*</m> be the surjection given by letting <m>f(x)=A</m> iff 
-  <m>x\in A</m>. Then <m>X^*</m> paired with the quotient topology
-  induced by <m>f</m> is called a <term>quotient space</term> or
+  The topology defined in <xref ref="quotient-topology"/> is 
+  called the <term>quotent topology</term>, and <m>X^*</m> is
+  called a <term>quotient space</term> or
   <term>identification space</term>.
 </p>
 </definition>
-<theorem>
-<p>
-  Let <m>X^*</m> be a quotient space of <m>X</m> and <m>V\subseteq X^*</m>. 
-  Then <m>V</m> is open in <m>X^*</m> if and only if 
-  <m>\bigcup V\subseteq X</m> is open in <m>X</m>.
-</p>
-</theorem>
 <theorem>
 <p>
   Let <m>(X\times Y)^*=\setBuilder{\setList{x}\times Y}{x\in X}</m> partition
@@ -59,13 +37,13 @@
 <li><m>x\sim y</m> and <m>y\sim z</m> implies <m>y\sim z</m>. (Transitivity)</li>
 </ol>
 </definition>
-<theorem>
+<proposition>
 <p>
   Let <m>X^*</m> be a partition of <m>X</m> and define the relation <m>\sim</m> on <m>X</m>
   such that <m>x\sim y</m> if and only if <m>\setList{x,y}\subseteq A</m> for some
   <m>A\in X^*</m>. Then <m>\sim</m> is an equivalence relation.
 </p>
-</theorem>
+</proposition>
 <theorem xml:id="equivalence-partition">
 <p>
   Let <m>\sim</m> be an equivalence relation on <m>X</m>, and let
@@ -92,28 +70,35 @@
   a list of relationships.)
 </p>
 </proposition>
-<example><title>Curves and surfaces defined as quotients</title>
+<proposition>
+<p>
+  Define the equivalence relation <m>\sim_Y</m> on <m>X\times Y</m> by <m>\tuple{x,a}\sim_Y\tuple{x,b}</m>.
+  Then the quotient space <m>(X\times Y)/\sim_Y</m>
+  is homeomorphic to <m>X</m>.
+</p>
+</proposition>
+<exercise><title>Curves and surfaces defined as quotients</title>
 <p>
   Show that each of the following Euclidean subspaces and quotients of Euclidean subspaces are homeomorphic.
 </p>
 <ol>
-<li><m>[0,1]/\sim</m> where <m>0\sim 1</m>, and <m>\setBuilder{\tuple{x,y}\in\mb R^2}{x^2+y^2=1}</m>.</li>
+<li><m>X=[0,1]/\sim</m> where <m>0\sim 1</m>, and <m>Y=\setBuilder{\tuple{x,y}\in\mb R^2}{x^2+y^2=1}</m>.</li>
 <li>
-  <m>[0,2]/\sim</m> where <m>0\sim 1\sim 2</m>, and 
-  <m>\setBuilder{\tuple{x,y}\in\mb R^2}{(x-1)^2+y^2=1}\cup\setBuilder{\tuple{x,y}\in\mb R^2}{(x+1)^2+y^2=1}</m>.
+  <m>X=[0,2]/\sim</m> where <m>0\sim 1\sim 2</m>, and 
+  <m>Y=\setBuilder{\tuple{x,y}\in\mb R^2}{(x-1)^2+y^2=1}\cup\setBuilder{\tuple{x,y}\in\mb R^2}{(x+1)^2+y^2=1}</m>.
 </li>
 <li>
-  <m>[0,1]^2/\sim</m> where <m>\tuple{0,y}\sim\tuple{1,y}</m>, and 
-  <m>\setBuilder{\tuple{x,y}\in\mb R^2}{1\leq x^2+y^2\leq 2}</m>.
+  <m>X=[0,1]^2/\sim</m> where <m>\tuple{0,y}\sim\tuple{1,y}</m>, and 
+  <m>Y=\setBuilder{\tuple{x,y}\in\mb R^2}{1\leq x^2+y^2\leq 2}</m>.
 </li>
 <li>
-  <m>[0,1]^2/\sim</m> where <m>\tuple{x,y}\sim\tuple{z,w}</m> whenever
+  <m>X=[0,1]^2/\sim</m> where <m>\tuple{x,y}\sim\tuple{z,w}</m> whenever
   at least one of <m>x,y</m> and at least one of <m>z,w</m> is in
   <m>\setList{0,1}</m>, and 
-  <m>\setBuilder{\tuple{x,y,z}\in\mb R^2}{1\leq x^2+y^2+z^2=1}</m>.
+  <m>Y=\setBuilder{\tuple{x,y,z}\in\mb R^2}{1\leq x^2+y^2+z^2=1}</m>.
 </li>
 </ol>
-</example>
+</exercise>
 <definition>
 <p>
   The <term>hypersphere</term> of dimension <m>n</m> 

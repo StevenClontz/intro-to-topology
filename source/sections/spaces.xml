@@ -389,9 +389,6 @@
 <proposition>
 <p>The subspace topology is a valid topology.</p>
 </proposition>
-<proposition>
-<p>Let <m>n\in\setList{0,1,2}</m>. A subspace of a <m>T_n</m> space is also <m>T_n</m>.</p>
-</proposition>
 <definition>
 <p>
   The <term>Cantor set</term> is the subset <m>C\subseteq\mb R</m> defined by

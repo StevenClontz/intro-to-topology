@@ -9,6 +9,17 @@
   <m>\mc B=\setBuilder{U\times V}{U\in\mc B_X,V\in\mc B_Y}</m>.
 </p>
 </definition>
+<proposition>
+<p>
+  The product spaces <m>X\times Y</m> and <m>Y\times X</m> are homeomorphic.
+</p>
+</proposition>
+<proposition>
+<p>
+  Let <m>p\in Y</m>. The subspace <m>X\times\{p\}=\setBuilder{\tuple{x,p}}{x\in X}</m>
+  of <m>X\times Y</m> is homeomorphic to <m>X</m>.
+</p>
+</proposition>
 <theorem>
 <p>
   The Euclidean space <m>\mb R^{n+1}</m> is homeomorphic to the
@@ -42,19 +53,8 @@ The product <m>X\times Y</m> is regular if and only if <m>X,Y</m> are each regul
 </theorem>
 <proposition>
 <p>
-  Let <m>p\in Y</m>. The subspace <m>\setBuilder{\tuple{x,p}}{x\in X}</m>
-  of <m>X\times Y</m> is homeomorphic to <m>X</m>.
-</p>
-</proposition>
-<proposition>
-<p>
   The <term>diagonal</term> <m>\Delta=\setBuilder{\tuple{x,x}}{x\in X}</m>
   of <m>X\times X</m> is homeomorphic to <m>X</m>.
-</p>
-</proposition>
-<proposition>
-<p>
-  The product spaces <m>X\times Y</m> and <m>Y\times X</m> are homeomorphic.
 </p>
 </proposition>
 <definition>
@@ -64,7 +64,7 @@ The product <m>X\times Y</m> is regular if and only if <m>X,Y</m> are each regul
   are defined by <m>\pi_X(\tuple{x,y})=x</m> and <m>\pi_Y(\tuple{x,y})=y</m>.
 </p>
 </definition>
-<example><title>Properties of projection maps</title>
+<exercise><title>Properties of projection maps</title>
 <p>
 Verify the following properties of projection maps.
 </p>
@@ -73,7 +73,7 @@ Verify the following properties of projection maps.
 <li>The projection of an open set is always open.</li>
 <li>The projection of a closed set is not always closed.</li>
 </ol>
-</example>
+</exercise>
 <theorem>
 <p>
 The product <m>X\times Y</m> is metrizable if and only if <m>X,Y</m> are each metrizable.

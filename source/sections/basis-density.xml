@@ -40,6 +40,15 @@
   <li><m>\mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}</m></li>
 </ol>
 </exercise>
+<theorem>
+<p>
+  Two bases <m>\mc B_0,\mc B_1</m> generate the same topology if and only if
+  for all <m>x\in B_0\in\mc B_0</m> there exists <m>B_1\in\mc B_1</m>
+  such that <m>x\in B_1\subseteq B_0</m>, and
+  for all <m>x\in B_1\in\mc B_1</m> there exists <m>B_0\in\mc B_0</m>
+  such that <m>x\in B_0\subseteq B_1</m>.
+</p>
+</theorem>
 <theorem xml:id="subbasis">
 <p>
   Let <m>\mc S\subseteq\mc P(X)</m> and 

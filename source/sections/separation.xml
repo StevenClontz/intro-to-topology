@@ -107,9 +107,26 @@
   <li>Normal but not regular.</li>
 </ol>
 </exercise>
+<proposition>
+<p>
+  A space is regular if and only if for every point <m>x</m> and
+  neighborhood <m>U</m>, there exists a neighborhood <m>V</m> of
+  <m>x</m> such that <m>x\in V\subseteq\cl V\subseteq U</m>.
+</p>
+</proposition>
+<proposition>
+<p>
+  A space is normal if and only if for closed set <m>H</m> and
+  open set <m>U\supseteq H</m>, there exists an open set <m>V\supseteq H</m>
+  such that <m>H\subseteq V\subseteq\cl V\subseteq U</m>.
+</p>
+</proposition>
 <theorem>
 <p>
   A topological space is <m>T_3</m> if and only if it is regular and <m>T_0</m>.
 </p>
 </theorem>
+<proposition>
+<p>Let <m>n\in\setList{0,1,2,3}</m>. A subspace of a <m>T_n</m> space is also <m>T_n</m>.</p>
+</proposition>
 </section>

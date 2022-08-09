@@ -44,7 +44,7 @@
   <li>Every function whose range is an indiscrete space is continuous.</li> 
 </ol>
 </proposition>
-<example><title>Continuous functions <m>\mb R\to\mb R</m></title>
+<exercise><title>Continuous functions <m>\mb R\to\mb R</m></title>
 <p>
   Verify that each of the following functions <m>f:\mb R\to\mb R</m> 
   are continuous.
@@ -55,7 +55,7 @@
   <li><m>f(x)=g(x)+h(x)</m> for <m>g,h:\mb R\to\mb R</m> continuous.</li>
   <li><m>f(x)=g(x)h(x)</m> for <m>g,h:\mb R\to\mb R</m> continuous.</li>
 </ol>
-</example>
+</exercise>
 <theorem>
 <p>
   If <m>f:X\to Y</m> and <m>g:Y\to Z</m> are both continuous,
@@ -70,7 +70,7 @@
   to be <term>homeomorphic</term>.
 </p>
 </definition>
-<example><title>Properties preserved by continuous functions</title>
+<exercise><title>Properties preserved by continuous functions</title>
 <p>
   Determine if the following hold if <m>f:X\to Y</m> is 
   a continous surjection. If not, determine if they hold if <m>f</m>
@@ -85,7 +85,7 @@
   <li>If <m>x</m> is a limit point of <m>A\subseteq X</m>, 
   then <m>f(x)</m> is a limit point of <m>f[A]\subseteq Y</m>.</li>
 </ol>
-</example>
+</exercise>
 <proposition>
 <p>
   Every topological space is homeomorphic to itself.

@@ -17,7 +17,7 @@
   is said to be a <term>metric ball around <m>x</m></term>.
 </p>
 </definition>
-<example><title>Examples of metrics</title>
+<exercise><title>Examples of metrics</title>
 <p>
   Verify that each of the following is a metric.
 </p>
@@ -38,7 +38,7 @@
     for all <m>\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2</m>.
   </li>
 </ol>
-</example>
+</exercise>
 <theorem xml:id="metric-basis">
 <p>
   Let <m>d</m> be a metric on a set <m>X</m>. Then
@@ -65,22 +65,12 @@
 </theorem>
 <theorem>
 <p>
-  Two bases <m>\mc B_0,\mc B_1</m> generate the same topology if and only if
-  for all <m>x\in B_0\in\mc B_0</m> there exists <m>B_1\in\mc B_1</m>
-  such that <m>x\in B_1\subseteq B_0</m>, and
-  for all <m>x\in B_1\in\mc B_1</m> there exists <m>B_0\in\mc B_0</m>
-  such that <m>x\in B_0\subseteq B_1</m>.
-  <!-- TODO move to basis section -->
-</p>
-</theorem>
-<theorem>
-<p>
-  Let <m>B_{0,r}(x),B_{1,r}(x)</m> be the metric balls around <m>x</m> 
-  given by two metrics <m>d_0,d_1</m> respectively.
-  Then <m>d_0,d_1</m> are topologically equivalent if and only if
+  Let <m>B_{r}(x),B_{r}'(x)</m> be the metric balls around <m>x</m> 
+  given by two metrics <m>d,d'</m> respectively.
+  Then <m>d,d'</m> are topologically equivalent if and only if
   for all <m>x\in X</m> and <m>\epsilon\gt 0</m>, there exists
-  <m>\delta\gt 0</m> such that <m>B_{0,\delta}(x)\subseteq B_{1,\epsilon}</m>
-  and <m>B_{1,\delta}(x)\subseteq B_{0,\epsilon}(x)</m>.
+  <m>\delta\gt 0</m> such that <m>B_{\delta}(x)\subseteq B_{\epsilon}'(x)</m>
+  and <m>B_{\delta}(x)'\subseteq B_{\epsilon}(x)</m>.
 </p>
 </theorem>
 <definition>
@@ -119,38 +109,27 @@
 </definition>
 <definition>
 <p>
-  A space is said to be <term>first-countable</term> if there exists a countable
-  local basis at every point of the space.
+  A space is said to have <term>local countable weight</term> (or be <term>first-countable</term>)
+  if there exists a countable local basis at every point of the space.
 </p>
-<p>
-  A space is said to be <term>second-countable</term> if there exists  a countable
-  basis for the space.
-</p>
-<!-- TODO move-->
 </definition>
 <proposition>
 <p>
-  Every second-countable space is first-countable. 
+  Every space of countable weight has local countable weight. 
 </p>
 </proposition>
 <proposition>
-<p>Every metrizable space is first-countable</p>
+<p>Every metrizable space has local countable weight</p>
 </proposition>
-<definition>
-<p>
-  A space is said to be <term>separable</term> if there exists a countable
-  dense subset of the space.
-</p>
-</definition>
 <theorem>
 <p>
-  Let <m>X</m> be metrizable. Then <m>X</m> is second-countable if and only if
-  it is separable.
+  Let <m>X</m> be metrizable. Then <m>X</m> has countable weight if and only if
+  it has countable density.
 </p>
 </theorem>
 <proposition>
 <p>
-  Every Euclidean space is separable and second-countable.
+  Every space <m>\mb R^n</m> with the Euclidean topology has countable weight and density.
 </p>
 </proposition>
 <theorem xml:id="nonseparable-metric">
@@ -158,8 +137,8 @@
   For <m>\vec x,\vec y\in\mb R^2</m>, let <m>d(\vec x,\vec y)=1</m>
   if <m>\vec x(1)\not=\vec y(1)</m>, and 
   <m>d(\vec x,\vec y)=|\vec y(0)-\vec x(0)|</m> otherwise.
-  Then <m>d</m> is a metric generating a non-separable, non-discrete topology
-  on <m>\mb R^2</m>.
+  Then <m>d</m> is a metric generating a non-discrete topology
+  on <m>\mb R^2</m> with uncountable weight and uncountable density.
 </p>
 </theorem>
 <theorem>
@@ -186,7 +165,7 @@
 </proposition>
 <theorem>
 <p>
-  Let <m>X</m> be first-countable. Then <m>x</m> is a limit point of a set
+  Let <m>X</m> have local countable weight. Then <m>x</m> is a limit point of a set
   if and only if <m>x</m> is a sequental limit point of that set.
 </p>
 </theorem>
