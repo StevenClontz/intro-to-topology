@@ -1,0 +1,115 @@
+<section xml:id="section-separation">
+<title>Separation</title>
+<definition>
+<p>
+  The following are known as <term>separation axioms</term> for a topological space
+  <m>\tuple{X,\mc T}</m>. 
+</p>
+<ol>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_0</m></term> 
+    if and only if for all points <m>x,y\in X</m>
+    such that <m>x\not=y</m>, there either exists a neighborhood <m>U</m> of <m>x</m>
+    such that <m>y\not\in U</m>, or there exists a neighborhood <m>V</m> of <m>y</m>
+    such that <m>x\not\in V</m>.
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_1</m></term> 
+    if and only if for all points <m>x,y\in X</m>
+    such that <m>x\not=y</m>, there exists a neighborhood <m>U</m> of <m>x</m>
+    such that <m>y\not\in U</m>.
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_2</m></term> 
+    (also known as <term>Hausdorff</term>)
+    if and only if for all points <m>x,y\in X</m>
+    such that <m>x\not=y</m>, there exist neighborhoods <m>U,V</m> of <m>x,y</m>
+    (respectively) such that <m>U\cap V=\emptyset</m>.
+  </li>
+</ol>
+</definition>
+<proposition>
+<p>
+  <m>T_2\Rightarrow T_1\Rightarrow T_0</m>.
+</p>
+</proposition>
+<exercise>
+<p>
+  Find or create an example of a topological space <m>\tuple{X,\mc T}</m> that is:
+</p>
+<ol>
+  <li>Not <m>T_0</m>.</li>
+  <li><m>T_0</m> but not <m>T_1</m>.</li>
+  <li><m>T_1</m> but not <m>T_2</m>.</li>
+</ol>
+</exercise>
+<theorem>
+<p>
+  Let <m>X</m> be a finite topological space. 
+  Then <m>X</m> is <m>T_1</m> if and only if
+  <m>X</m> has the discrete topology.
+</p>
+</theorem>
+<proposition>
+<p>
+  The Euclidean real line is a non-discrete Hausdorff topological space.
+</p>
+</proposition>
+<definition>
+<p>
+  The following are also known as <term>separation axioms</term> for a topological space
+  <m>\tuple{X,\mc T}</m>. 
+</p>
+<ol>
+  <li>
+    <m>\mc T</m> is said to be <term>regular</term> 
+    if and only if for all points <m>x\in X</m> and closed subsets <m>H\subseteq X</m>
+    such that <m>x\not\in H</m>, there exist open sets <m>U,V\in\mc T</m>
+    such that <m>x\in U,H\subseteq V,U\cap V=\emptyset</m>.
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_3</m></term> 
+    if and only if it is both regular and <m>T_1</m>
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term>normal</term> 
+    if and only if for all closed subsets <m>H,L\subseteq X</m>
+    such that <m>H\cap L=\emptyset</m>, there exist open sets <m>U,V\in\mc T</m>
+    such that <m>H\subseteq U,L\subseteq V,U\cap V=\emptyset</m>.
+  </li>
+  <li>
+    <m>\mc T</m> is said to be <term><m>T_4</m></term> 
+    if and only if it is both normal and <m>T_1</m>
+  </li>
+</ol>
+</definition>
+<proposition>
+<p>
+  <m>T_{n+1}\Rightarrow T_n</m> for <m>n\in\setList{0,1,2,3}</m>.
+</p>
+</proposition>
+<theorem>
+<p>
+  The real line <m>\mb R</m> equipped with the Euclidean topology is
+  <m>T_4</m>.
+</p>
+</theorem>
+<exercise>
+<p>
+  Find or create an example of a topological space that is:
+</p>
+<ol>
+  <li><m>T_2</m> but not regular.</li>
+  <li><m>T_3</m> but not <m>T_4</m></li>
+  <li>Regular but not <m>T_3</m>.</li>
+  <li>Normal but not <m>T_4</m>.</li>
+  <li>Regular but not normal.</li>
+  <li>Normal but not regular.</li>
+</ol>
+</exercise>
+<theorem>
+<p>
+  A topological space is <m>T_3</m> if and only if it is regular and <m>T_0</m>.
+</p>
+</theorem>
+</section>

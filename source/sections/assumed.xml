@@ -48,4 +48,24 @@
   <term>supremum</term>) <m>\lub S=\sup S</m>.
 </p>
 </theorem>
+<definition>
+<p>
+The <term>cardinality</term> of a finite set is the natural number that
+is equal to the number of elements it contains. For example,
+<m>S=\setL{-1,\setL{5,-e},\pi}</m> has cardinality
+<m>|S|=3</m>.
+</p>
+<p>
+A set <m>S</m> that has a bijection with <m>\omega</m> is said to be
+<term>countable</term> and have cardinality <m>|S|=\aleph_0</m>.
+</p>
+<p>
+A set <m>S</m> that has no injection with <m>\omega</m> is said to be
+<term>uncountable</term> and have cardinality <m>|S|>\aleph_0</m>.
+</p>
+<p>
+A set <m>S</m> that has a bijection with <m>\mb R</m> is said to be
+<term>continuum-sized</term> and have cardinality <m>|S|=\mathfrak c</m>.
+</p>
+</definition>
 </appendix>

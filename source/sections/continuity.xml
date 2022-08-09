@@ -78,8 +78,8 @@
   is a homeomorphism.
 </p>
 <ol>
-  <li>If <m>X</m> is Hausdorff, then <m>Y</m> is Hausdorff.</li>
-  <li>If <m>Y</m> is Hausdorff, then <m>X</m> is Hausdorff.</li>
+  <!-- <li>If <m>X</m> is Hausdorff, then <m>Y</m> is Hausdorff.</li>
+  <li>If <m>Y</m> is Hausdorff, then <m>X</m> is Hausdorff.</li> -->
   <li>If <m>U\subseteq X</m> is open, then <m>f[U]\subseteq Y</m> is open.</li>
   <li>If <m>H\subseteq X</m> is closed, then <m>f[H]\subseteq Y</m> is closed.</li>
   <li>If <m>x</m> is a limit point of <m>A\subseteq X</m>, 

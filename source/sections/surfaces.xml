@@ -1,4 +1,4 @@
-<section xml:id="section-surfaces">
+<preface xml:id="section-surfaces">
 <title>Intro: Curves and Surfaces</title>
 <introduction>
   <p>
@@ -162,4 +162,4 @@
   these, we will begin by distilling down the notion of a
   <q>neighborhood</q> for an arbitrary set.
 </p>
-</section>
+</preface>

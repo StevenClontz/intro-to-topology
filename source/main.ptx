@@ -14,7 +14,9 @@
           \newcommand{\glb}{\operatorname{glb}}
           \newcommand{\lub}{\operatorname{lub}}
           \newcommand{\setBuilder}[2]{\left\{#1:#2\right\}}
+          \newcommand{\setB}{\setBuilder}
           \newcommand{\setList}[1]{\left\{#1\right\}}
+          \newcommand{\setL}{\setList}
         </macros>
     </docinfo>
 
@@ -62,17 +64,11 @@
                 own, with the support of the instructor.
               </p>
               <p>
-                The exception to this format is <xref ref="section-surfaces"/>, which
-                provides a short narrative to movitave the study of topology by discussing
-                the neighborhoods of points in subspaces of <m>\mathbb R^3</m>, particularly 
-                unions of curves and surfaces.
-              </p>
-              <p>
                 The only prerequisite for this course is an undergraduate-level introduction
                 to proofs course, which should include all the naive set theory necessary
                 to study topology at the introductory level. <xref ref="assumed"/> provides
                 a few definitions and theorems that should be assumed for this course 
-                (e.g. properties of the reals, <m>0\in\mathbb N</m>).
+                (e.g. properties of the reals, <m>0\in\omega</m>).
               </p>
             </preface>
 
@@ -82,7 +78,9 @@
 
 <xi:include href="sections/surfaces.xml" />
 <xi:include href="sections/spaces.xml" />
+<xi:include href="sections/basis-density.xml" />
 <xi:include href="sections/continuity.xml" />
+<xi:include href="sections/separation.xml" />
 <xi:include href="sections/metric.xml" />
 <xi:include href="sections/compact.xml" />
 <xi:include href="sections/connected.xml" />
@@ -95,43 +93,3 @@
 </article>
 
 </pretext>
-<!--********************************************************************
-Copyright 2015 Robert A. Beezer
-
-This file is part of MathBook XML.
-
-MathBook XML is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 or version 3 of the
-License (at your option).
-
-MathBook XML is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
-*********************************************************************-->
-
-<!-- To process this file do                                                                      -->
-<!--                                                                                              -->
-<!-- (1) LaTeX/PDF:                                                                               -->
-<!--     xsltproc mathbook/xsl/mathbook-latex.xsl minimal.xml                                     -->
-<!--     pdflatex minimal.tex                                                                     -->
-<!--     xelatex minimal.tex                                                                      -->
-<!--                                                                                              -->
-<!-- (2) HTML:                                                                                    -->
-<!--     xsltproc mathbook/xsl/mathbook-html.xsl minimal.xml                                      -->
-<!--     <browswer>  minimal.html                                                                 -->
-<!--                                                                                              -->
-<!-- (3) CoCalc worksheet (parameter causes a single file for output)                             -->
-<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
-<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/mathbook-smc.xsl minimal.xml          -->
-<!--     <CoCalc> minimal.sagews                                                                  -->
-<!--                                                                                              -->
-<!-- (4) Sage doctesting                                                                          -->
-<!--     REMOVE the "X" in the double dash (which is not legal in an XML comment)                 -->
-<!--     xsltproc -X-stringparam chunk.level 0 mathbook/xsl/mathbook-sage-doctest.xsl minimal.xml -->
-<!--     <read further instructions in> minimal.py                                                -->
-
