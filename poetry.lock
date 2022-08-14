@@ -289,7 +289,7 @@ tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "pa
 
 [[package]]
 name = "pretext"
-version = "1.0.0a1"
+version = "1.0.0a2"
 description = "A package to author, build, and deploy PreTeXt projects."
 category = "main"
 optional = false
@@ -666,7 +666,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.5,<4.0"
-content-hash = "5a5f303442ce2a9cb8c7e02af49b875ef6a4cb5232914e9a7c310fa49c75805e"
+content-hash = "6a7da1ebee1c89340a66347ea7a70c967ec97287666bda600f611d9752c60c70"
 
 [metadata.files]
 alabaster = [
@@ -931,8 +931,8 @@ pillow = [
     {file = "Pillow-9.2.0.tar.gz", hash = "sha256:75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"},
 ]
 pretext = [
-    {file = "pretext-1.0.0a1-py3-none-any.whl", hash = "sha256:6cfc92b8eddce57bc959bca640d71d7ee05fea6c311fd43564ac038aabaf32f8"},
-    {file = "pretext-1.0.0a1.tar.gz", hash = "sha256:3fb7559d923cce74fb58511600082807ca012770cc80ac5e9f6fb85ce42ffd5d"},
+    {file = "pretext-1.0.0a2-py3-none-any.whl", hash = "sha256:62bbe6f0faab47312481a44a6bf72709245ae9cc391e93c643657e796d586abe"},
+    {file = "pretext-1.0.0a2.tar.gz", hash = "sha256:54a8c39309855d3bff4849927c8c08b816717e5b50b13702c132bff1e7f23ba7"},
 ]
 psutil = [
     {file = "psutil-5.9.1-cp27-cp27m-manylinux2010_i686.whl", hash = "sha256:799759d809c31aab5fe4579e50addf84565e71c1dc9f1c31258f159ff70d3f87"},

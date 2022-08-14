@@ -6,7 +6,7 @@ authors = ["Steven Clontz <steven.clontz@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8.5,<4.0"
-pretext = "1.0.0a1"
+pretext = "1.0.0a2"
 
 [tool.poetry.dev-dependencies]
 
