@@ -56,8 +56,10 @@ is equal to the number of elements it contains. For example,
 <m>|S|=3</m>.
 </p>
 <p>
-A set <m>S</m> that has a bijection with <m>\omega</m> is said to be
-<term>countable</term> and have cardinality <m>|S|=\aleph_0</m>.
+A set <m>S</m> that has an injection with <m>\omega</m> is said to be
+<term>countable</term> and have cardinality <m>|S|\leq\aleph_0</m>.
+If a bijection exists, the set is <term>countably infinite</term> and has
+cardinality <m>|S|=\alpha_0</m>.
 </p>
 <p>
 A set <m>S</m> that has no injection with <m>\omega</m> is said to be
