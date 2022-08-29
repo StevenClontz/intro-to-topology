@@ -68,4 +68,13 @@ A set <m>S</m> that has a bijection with <m>\mb R</m> is said to be
 <term>continuum-sized</term> and have cardinality <m>|S|=\mathfrak c</m>.
 </p>
 </definition>
+<lemma>
+<p>
+For each <m>a,b\in\mathbb R\cup\setL{-\infty,\infty}</m>, the set
+<m>(a,b)\cap\mathbb Q</m> is infinite and countable, and the set
+<m>(a,b)\setminus\mathbb Q</m> is infinite and uncoutnable. In particular,
+every subinterval <m>(a,b)</m> of <m>\mathbb R</m> contains a rational from
+<m>\mathbb Q</m> and an irrational from <m>\mathbb R\setminus\mathbb Q</m>.
+</p>
+</lemma>
 </appendix>
