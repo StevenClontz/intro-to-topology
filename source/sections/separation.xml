@@ -45,11 +45,17 @@
 </exercise>
 <theorem>
 <p>
+  A topological space <m>X</m> is <m>T_1</m> if and only if
+  every finite subset of <m>X</m> is closed.
+</p>
+</theorem>
+<corollary>
+<p>
   Let <m>X</m> be a finite topological space. 
   Then <m>X</m> is <m>T_1</m> if and only if
   <m>X</m> has the discrete topology.
 </p>
-</theorem>
+</corollary>
 <proposition>
 <p>
   The Euclidean real line is a non-discrete Hausdorff topological space.

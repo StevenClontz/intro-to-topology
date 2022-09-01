@@ -280,8 +280,8 @@
 </proposition>
 <theorem>
 <p>
-  A topological space <m>X</m> is <m>T_1</m> if and only if
-  every finite subset of <m>X</m> is closed.
+  (This space intentionally left blank to not mess up numbering.
+  TODO: delete this after fall 2022.)
 </p>
 </theorem>
 <definition xml:id="boundary-point">
