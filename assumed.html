@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-09-28T21:41:35Z       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -12,8 +15,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
-window.MathJax = {
+<script>window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -33,14 +35,6 @@ window.MathJax = {
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
-  startup: {
-    pageReady() {
-      return MathJax.startup.defaultPageReady().then(function () {
-      console.log("in ready function");
-      rsMathReady();
-      }
-    )}
-},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -145,7 +139,10 @@ X\setminus\bigcap_{A\in\mc A}A=\bigcup_{A\in\mc A}(X\setminus A)
 <p id="p-228">A set <span class="process-math">\(S\)</span> that has a bijection with <span class="process-math">\(\mb R\)</span> is said to be <dfn class="terminology">continuum-sized</dfn> and have cardinality <span class="process-math">\(|S|=\mathfrak c\text{.}\)</span></p></article><article class="lemma theorem-like" id="lemma-5"><h3 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">A.6</span><span class="period">.</span>
 </h3>
-<p id="p-229">For each <span class="process-math">\(a,b\in\mathbb R\cup\setL{-\infty,\infty}\text{,}\)</span> the set <span class="process-math">\((a,b)\cap\mathbb Q\)</span> is infinite and countable, and the set <span class="process-math">\((a,b)\setminus\mathbb Q\)</span> is infinite and uncoutnable. In particular, every subinterval <span class="process-math">\((a,b)\)</span> of <span class="process-math">\(\mathbb R\)</span> contains a rational from <span class="process-math">\(\mathbb Q\)</span> and an irrational from <span class="process-math">\(\mathbb R\setminus\mathbb Q\text{.}\)</span></p></article></section></div></main>
+<p id="p-229">For each <span class="process-math">\(a,b\in\mathbb R\cup\setL{-\infty,\infty}\text{,}\)</span> the set <span class="process-math">\((a,b)\cap\mathbb Q\)</span> is infinite and countable, and the set <span class="process-math">\((a,b)\setminus\mathbb Q\)</span> is infinite and uncoutnable. In particular, every subinterval <span class="process-math">\((a,b)\)</span> of <span class="process-math">\(\mathbb R\)</span> contains a rational from <span class="process-math">\(\mathbb Q\)</span> and an irrational from <span class="process-math">\(\mathbb R\setminus\mathbb Q\text{.}\)</span></p></article><article class="lemma theorem-like" id="lemma-6"><h3 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">A.7</span><span class="period">.</span>
+</h3>
+<p id="p-230">For any functions <span class="process-math">\(f:A\to B,g:B\to C\)</span> and <span class="process-math">\(Z\subseteq C\text{,}\)</span> <span class="process-math">\((g\circ f)^\leftarrow[Z]=f^\leftarrow[g^\leftarrow[Z]]\text{.}\)</span></p></article></section></div></main>
 </div>
 </body>
 </html>
