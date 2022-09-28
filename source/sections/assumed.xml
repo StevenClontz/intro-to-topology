@@ -79,4 +79,10 @@ every subinterval <m>(a,b)</m> of <m>\mathbb R</m> contains a rational from
 <m>\mathbb Q</m> and an irrational from <m>\mathbb R\setminus\mathbb Q</m>.
 </p>
 </lemma>
+<lemma>
+    <p>
+For any functions <m>f:A\to B,g:B\to C</m> and <m>Z\subseteq C</m>,
+<m>(g\circ f)^\leftarrow[Z]=f^\leftarrow[g^\leftarrow[Z]]</m>.
+    </p>
+</lemma>
 </appendix>
