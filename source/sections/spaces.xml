@@ -2,7 +2,7 @@
 <title>Topological Spaces</title>
 <definition>
 <p>
-  Let <m>a,b\in\mb R</m>. The <term>open interval</term>
+  Let <m>a,b\in\mb R</m>. The <term>Euclidean open interval</term>
   from <m>a</m> to <m>b</m> is the set
 </p>
 <me>
@@ -12,8 +12,8 @@
 <definition xml:id="limit-point-intro">
 <p>
   Let <m>x\in\mb R</m> and <m>S\subseteq\mb R</m>.
-  The point <m>x</m> is a <term>limit point</term> of the set
-  <m>S</m> if and only if for every open interval <m>(a,b)</m> containing <m>x</m>,
+  The point <m>x</m> is a <term>Euclidean limit point</term> of the set
+  <m>S</m> if and only if for every Euclidean open interval <m>(a,b)</m> containing <m>x</m>,
   there is a point <m>y\in S</m> such that <m>x\not=y</m> and
   <m>y\in(a,b)</m>.
 </p>
@@ -32,14 +32,14 @@
 </exercise>
 <definition xml:id="euclidean-open-sets">
 <p>
-  A subset <m>U\subseteq\mb R</m> is called <term>open</term>
-  if and only if for every point <m>x\in U</m>, there exists an open interval
+  A subset <m>U\subseteq\mb R</m> is called <term>Euclidean open</term>
+  if and only if for every point <m>x\in U</m>, there exists a Euclidean open interval
   <m>(a,b)</m> such that <m>x\in(a,b)\subseteq U</m>.
 </p>
 </definition>
 <exercise>
 <p>
-  Determine if each set is open or not open.
+  Determine if each set is Euclidean open or not Euclidean open.
 </p>
 <ol>
   <li><m>[\pi,42)</m></li>
@@ -53,33 +53,33 @@
 </exercise>
 <theorem>
 <p>
-  A subset <m>U\subseteq\mb R</m> is open if and only if there exists a
-  collection of open intervals <m>\mc U</m> such that <m>U=\bigcup\mc U</m>.
+  A subset <m>U\subseteq\mb R</m> is Euclidean open if and only if there exists a
+  collection of Euclidean open intervals <m>\mc U</m> such that <m>U=\bigcup\mc U</m>.
 </p>
 </theorem>
 <proposition>
 <p>
   Let <m>x\in\mb R</m> and <m>S\subseteq\mb R</m>.
   The point <m>x</m> is a limit point of the set
-  <m>S</m> if and only if for every open set <m>U</m> containing <m>x</m>,
+  <m>S</m> if and only if for every Euclidean open set <m>U</m> containing <m>x</m>,
   there is a point <m>y\in S</m> such that <m>x\not=y</m> and
   <m>y\in U</m>.
 </p>
 </proposition>
 <theorem xml:id="euclidean-topology-verification">
 <p>
-  The open subsets of <m>\mb R</m> satisfy the following properties.
+  The Euclidean open subsets of <m>\mb R</m> satisfy the following properties.
 </p>
 <ol>
   <li>
-    <m>\emptyset</m> and <m>\mb R</m> are open sets.
+    <m>\emptyset</m> and <m>\mb R</m> are Euclidean open sets.
   </li>
   <li>
-    If <m>\mc U</m> is a collection of open sets, then <m>\bigcup\mc U</m>
-    is also an open set.
+    If <m>\mc U</m> is a collection of Euclidean open sets, then <m>\bigcup\mc U</m>
+    is also a Euclidean open set.
   </li>
   <li>
-    If <m>U,V</m> are open sets, then <m>U\cap V</m> is an open set.
+    If <m>U,V</m> are Euclidean open sets, then <m>U\cap V</m> is also a Euclidean open set.
   </li>
 </ol>
 </theorem>
@@ -109,7 +109,7 @@
 </definition>
 <definition>
 <p>
-  Let <m>\mc T\subseteq\mc P(\mb R)</m> be the collection of open subsets
+  Let <m>\mc T\subseteq\mc P(\mb R)</m> be the collection of Euclidean open subsets
   of <m>\mb R</m> defined by <xref ref="euclidean-open-sets"/>.
   Then by <xref ref="euclidean-topology-verification"/>, <m>\mc T</m>
   is a valid topology for <m>\mb R</m> called the <term>Euclidean topology</term>.
@@ -216,10 +216,10 @@
 </definition>
 <proposition>
 <p>
-  The point <m>x\in\mb R</m> is a limit point of <m>S\subseteq \mb R</m> according to
-  <xref ref="limit-point-intro"/> if and only if it is a limit point according
-  to <xref ref="limit-point"/> (where <m>\mb R</m> is assumed to have the Euclidean
-  topology).
+  The point <m>x\in\mb R</m> is a limit point of <m>S\subseteq \mb R</m>
+  with the Euclidean topology according to
+  <xref ref="limit-point-intro"/> if and only if it is a Euclidean limit point according
+  to <xref ref="limit-point"/>.
 </p>
 </proposition>
 <definition>
