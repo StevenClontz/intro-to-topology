@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-28T21:41:35Z       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,7 +12,8 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -35,6 +33,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -105,7 +111,7 @@
 <div class="author-name">Steven Clontz</div>
 <div class="author-info">University of South Alabama</div>
 </div>
-<div class="date">September 28, 2022</div>
+<div class="date">October 9, 2022</div>
 <p id="p-1">These are course notes for an introductory undergraduate or dual-listed course for general topology, to be used in an inquiry-based learning classroom.</p>
 <section class="colophon" id="colophon-1"><h3 class="heading hide-type">
 <span class="type">Colophon</span> <span class="codenumber"></span> <span class="title">Colophon</span>
@@ -116,7 +122,7 @@
 <span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Preface</span>
 </h3>
 <p id="p-5">These notes have been written to serve as an introduction to topology for undergraduate or beginning graduate students of mathematics. Unlike a more comprehensive textbook, these notes are written to be used in an inquiry-based learning classroom. As such, no proofs have been provided. Instead, the results of the course have been carefully scaffolded to allow students to prove most of the theorems on their own, with the support of the instructor.</p>
-<p id="p-6">The only prerequisite for this course is an undergraduate-level introduction to proofs course, which should include all the naive set theory necessary to study topology at the introductory level. <a href="assumed.html" class="internal" title="Appendix A: Assumptions">Appendix A</a> provides a few definitions and theorems that should be assumed for this course (e.g. properties of the reals, <span class="process-math">\(0\in\omega\)</span>).</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">https://creativecommons.org/licenses/by/4.0/</code></div></div>
+<p id="p-6">The only prerequisite for this course is an undergraduate-level introduction to proofs course, which should include all the naive set theory necessary to study topology at the introductory level. <a href="assumed.html" class="internal" title="Appendix A: Assumptions">Appendix A</a> provides a few definitions and theorems that should be assumed for this course (e.g. properties of the reals, <span class="process-math">\(0\in\omega\)</span>).</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn"><code class="code-inline tex2jax_ignore">creativecommons.org/licenses/by/4.0/</code></div></div>
 </div></main>
 </div>
 </body>

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-09-28T21:41:35Z       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -15,7 +12,8 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="article">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -35,6 +33,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -105,7 +111,7 @@
 <article class="definition definition-like" id="definition-4"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h3>
-<p id="p-22">Let <span class="process-math">\(a,b\in\mb R\text{.}\)</span> The <dfn class="terminology">open interval</dfn> from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> is the set</p>
+<p id="p-22">Let <span class="process-math">\(a,b\in\mb R\text{.}\)</span> The <dfn class="terminology">Euclidean open interval</dfn> from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> is the set</p>
 <div class="displaymath process-math" data-contains-math-knowls="">
 \begin{equation*}
 (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
@@ -113,7 +119,7 @@
 </div></article><article class="definition definition-like" id="limit-point-intro"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h3>
-<p id="p-23">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in(a,b)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-1"><h3 class="heading">
+<p id="p-23">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">Euclidean limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every Euclidean open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in(a,b)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-1"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h3>
 <div class="introduction" id="introduction-2"><p id="p-24">Determine if each set has the number <span class="process-math">\(0\)</span> as a limit point.</p></div>
@@ -125,10 +131,10 @@
 <p id="p-29">Any finite set <span class="process-math">\(F\subseteq\mb R\)</span></p></article></article><article class="definition definition-like" id="euclidean-open-sets"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h3>
-<p id="p-30">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is called <dfn class="terminology">open</dfn> if and only if for every point <span class="process-math">\(x\in U\text{,}\)</span> there exists an open interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(x\in(a,b)\subseteq U\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-2"><h3 class="heading">
+<p id="p-30">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is called <dfn class="terminology">Euclidean open</dfn> if and only if for every point <span class="process-math">\(x\in U\text{,}\)</span> there exists a Euclidean open interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(x\in(a,b)\subseteq U\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-2"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h3>
-<p id="p-31">Determine if each set is open or not open.</p>
+<p id="p-31">Determine if each set is Euclidean open or not Euclidean open.</p>
 <ol class="decimal">
 <li id="li-3"><p id="p-derived-li-3"><span class="process-math">\(\displaystyle [\pi,42)\)</span></p></li>
 <li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(\displaystyle (-3,-1)\cup(4,5.5)\)</span></p></li>
@@ -140,17 +146,17 @@
 </ol></article><article class="theorem theorem-like" id="theorem-1"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h3>
-<p id="p-32">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is open if and only if there exists a collection of open intervals <span class="process-math">\(\mc U\)</span> such that <span class="process-math">\(U=\bigcup\mc U\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-1"><h3 class="heading">
+<p id="p-32">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is Euclidean open if and only if there exists a collection of Euclidean open intervals <span class="process-math">\(\mc U\)</span> such that <span class="process-math">\(U=\bigcup\mc U\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-1"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
 </h3>
-<p id="p-33">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a limit point of the set <span class="process-math">\(S\)</span> if and only if for every open set <span class="process-math">\(U\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span></p></article><article class="theorem theorem-like" id="euclidean-topology-verification"><h3 class="heading">
+<p id="p-33">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a limit point of the set <span class="process-math">\(S\)</span> if and only if for every Euclidean open set <span class="process-math">\(U\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span></p></article><article class="theorem theorem-like" id="euclidean-topology-verification"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
 </h3>
-<p id="p-34">The open subsets of <span class="process-math">\(\mb R\)</span> satisfy the following properties.</p>
+<p id="p-34">The Euclidean open subsets of <span class="process-math">\(\mb R\)</span> satisfy the following properties.</p>
 <ol class="decimal">
-<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(\mb R\)</span> are open sets.</p></li>
-<li id="li-11"><p id="p-derived-li-11">If <span class="process-math">\(\mc U\)</span> is a collection of open sets, then <span class="process-math">\(\bigcup\mc U\)</span> is also an open set.</p></li>
-<li id="li-12"><p id="p-derived-li-12">If <span class="process-math">\(U,V\)</span> are open sets, then <span class="process-math">\(U\cap V\)</span> is an open set.</p></li>
+<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(\mb R\)</span> are Euclidean open sets.</p></li>
+<li id="li-11"><p id="p-derived-li-11">If <span class="process-math">\(\mc U\)</span> is a collection of Euclidean open sets, then <span class="process-math">\(\bigcup\mc U\)</span> is also a Euclidean open set.</p></li>
+<li id="li-12"><p id="p-derived-li-12">If <span class="process-math">\(U,V\)</span> are Euclidean open sets, then <span class="process-math">\(U\cap V\)</span> is also a Euclidean open set.</p></li>
 </ol></article><article class="definition definition-like" id="definition-7"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h3>
@@ -163,7 +169,7 @@
 <p id="p-36">Then <span class="process-math">\(\mc T\)</span> is called a <dfn class="terminology">topology</dfn> on <span class="process-math">\(X\text{,}\)</span> the pair <span class="process-math">\(\tuple{X,\mc T}\)</span> is called a <dfn class="terminology">topological space</dfn>, and elements <span class="process-math">\(U\in\mc T\)</span> are called <dfn class="terminology">open sets</dfn> of the space. (Usually <span class="process-math">\(\tuple{X,\mc T}\)</span> is abbreviated to just <span class="process-math">\(X\)</span> when the topology is known from context.)</p></article><article class="definition definition-like" id="definition-8"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
 </h3>
-<p id="p-37">Let <span class="process-math">\(\mc T\subseteq\mc P(\mb R)\)</span> be the collection of open subsets of <span class="process-math">\(\mb R\)</span> defined by <a href="" class="xref" data-knowl="./knowl/euclidean-open-sets.html" title="Definition 1.4">Definition 1.4</a>. Then by <a href="" class="xref" data-knowl="./knowl/euclidean-topology-verification.html" title="Theorem 1.8">Theorem 1.8</a>, <span class="process-math">\(\mc T\)</span> is a valid topology for <span class="process-math">\(\mb R\)</span> called the <dfn class="terminology">Euclidean topology</dfn>.</p></article><article class="theorem theorem-like" id="theorem-3"><h3 class="heading">
+<p id="p-37">Let <span class="process-math">\(\mc T\subseteq\mc P(\mb R)\)</span> be the collection of Euclidean open subsets of <span class="process-math">\(\mb R\)</span> defined by <a href="" class="xref" data-knowl="./knowl/euclidean-open-sets.html" title="Definition 1.4">Definition 1.4</a>. Then by <a href="" class="xref" data-knowl="./knowl/euclidean-topology-verification.html" title="Theorem 1.8">Theorem 1.8</a>, <span class="process-math">\(\mc T\)</span> is a valid topology for <span class="process-math">\(\mb R\)</span> called the <dfn class="terminology">Euclidean topology</dfn>.</p></article><article class="theorem theorem-like" id="theorem-3"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h3>
 <p id="p-38">Let <span class="process-math">\(X\)</span> be any set. Then the following sets are topologies on <span class="process-math">\(X\text{.}\)</span></p>
@@ -226,7 +232,7 @@ x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 <p id="p-45">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every neighborhood of <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-5"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
 </h3>
-<p id="p-46">The point <span class="process-math">\(x\in\mb R\)</span> is a limit point of <span class="process-math">\(S\subseteq \mb R\)</span> according to <a href="" class="xref" data-knowl="./knowl/limit-point-intro.html" title="Definition 1.2">Definition 1.2</a> if and only if it is a limit point according to <a href="" class="xref" data-knowl="./knowl/limit-point.html" title="Definition 1.18">Definition 1.18</a> (where <span class="process-math">\(\mb R\)</span> is assumed to have the Euclidean topology).</p></article><article class="definition definition-like" id="definition-12"><h3 class="heading">
+<p id="p-46">The point <span class="process-math">\(x\in\mb R\)</span> is a limit point of <span class="process-math">\(S\subseteq \mb R\)</span> with the Euclidean topology according to <a href="" class="xref" data-knowl="./knowl/limit-point-intro.html" title="Definition 1.2">Definition 1.2</a> if and only if it is a Euclidean limit point according to <a href="" class="xref" data-knowl="./knowl/limit-point.html" title="Definition 1.18">Definition 1.18</a>.</p></article><article class="definition definition-like" id="definition-12"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
 </h3>
 <p id="p-47">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(S'\)</span> is the set of all limit points of <span class="process-math">\(S\text{,}\)</span> called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(S\text{.}\)</span></p></article><article class="definition definition-like" id="definition-13"><h3 class="heading">
