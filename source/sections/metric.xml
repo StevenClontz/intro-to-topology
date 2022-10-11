@@ -103,7 +103,7 @@
 <proposition>
 <p>
 The Euclidean topology defined for <m>\mb R^1</m> in <xref ref="euclidean-metric-topology"/>
-is the same as the topology given for <m>\mb R</m> in <xref ref="euclidean-open-sets"/>.
+is the same as the Euclidean topology given for <m>\mb R</m> in <xref ref="euclidean-open-sets"/>.
 </p>
 </proposition>
 <definition>

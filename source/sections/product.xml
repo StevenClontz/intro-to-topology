@@ -22,8 +22,8 @@
 </proposition>
 <theorem>
 <p>
-  The Euclidean space <m>\mb R^{n+1}</m> is homeomorphic to the
-  product space <m>\mb R^n\times\mb R</m>.
+  The Euclidean space <m>\mb R^{n+1}</m> as defined in <xref ref="euclidean-metric-topology"/>
+  is homeomorphic to the product space <m>\mb R^n\times\mb R</m>.
 </p>
 </theorem>
 <proposition>
