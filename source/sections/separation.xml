@@ -135,4 +135,15 @@
 <proposition>
 <p>Let <m>n\in\setList{0,1,2,3}</m>. A subspace of a <m>T_n</m> space is also <m>T_n</m>.</p>
 </proposition>
+<proposition>
+<p>Let <m>n\in\setList{0,1,2}</m> and <m>f:X\to Y</m> be continuous. If <m>Y</m> is <m>T_n</m>,
+then <m>X</m> is also <m>T_n</m>.</p>
+</proposition>
+<theorem>
+<p>Let <m>n\in\setList{3,4}</m> and <m>f:X\to Y</m> be a continuous closed map. If <m>Y</m> is <m>T_n</m>,
+then <m>X</m> is also <m>T_n</m>.</p>
+</theorem>
+<corollary>
+<p>Separation properties are topological properties (that is, preserved by homeomorphism).</p>
+</corollary>
 </section>
