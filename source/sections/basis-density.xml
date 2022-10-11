@@ -49,6 +49,7 @@
   such that <m>x\in B_0\subseteq B_1</m>.
 </p>
 </theorem>
+<!-- TODO make lemma "intersection of topologies is a topology" -->
 <theorem xml:id="subbasis">
 <p>
   Let <m>\mc S\subseteq\mc P(X)</m> and 

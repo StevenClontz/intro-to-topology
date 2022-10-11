@@ -1,5 +1,5 @@
 <section xml:id="section-topological-spaces">
-<title>Topological Spaces</title>
+<title>Topological Spaces</title><!-- TODO split into Euclidean topology and Other topologies -->
 <definition>
 <p>
   Let <m>a,b\in\mb R</m>. The <term>Euclidean open interval</term>
@@ -124,6 +124,7 @@
   <li><m>\mc T=\{\emptyset,X\}</m> is called the <term>indiscrete topology</term>.</li>
 </ol>
 </theorem>
+    <!-- TODO lemma: requirements 2and3 of topology may ignore X and emptyset -->
 <proposition>
 <p>
   Let <m>\mc T</m> be a topology, and let <m>\mc U\subseteq\mc T</m> be finite. 
@@ -251,7 +252,7 @@
 <p>
   Let <m>H\subseteq X</m> be a subset of a topological space.
   Then <m>H</m> is called <term>closed</term> if and only if
-  <m>H=\cl S</m>.
+  <m>H=\cl H</m>.
 </p>
 </definition>
 <theorem>
