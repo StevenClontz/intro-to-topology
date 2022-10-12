@@ -2,11 +2,11 @@
   <title>Connectedness</title>
 <definition>
 <p>
+  Let<m>Y</m> be a subset
+  of a topological space <m>X</m> .
   A pair of open sets <m>\setList{A,B}</m>
   satisfying <m>A\cap Y\not=\emptyset</m>, <m>B\cap Y\not=\emptyset</m>, 
   <m>Y\subseteq A\cup B</m>, and <m>A\cap B\cap Y=\emptyset</m>
-  for a subset <m>Y</m>
-  of a topological space <m>X</m> 
   is called a <term>disconnection</term> of <m>Y</m>. 
 </p>
 <p>

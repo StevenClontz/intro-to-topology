@@ -27,9 +27,12 @@
   <li><m>\setBuilder{2^{-n}}{n\in\omega}</m></li>
   <li><m>\setList{0}\cup\setBuilder{2^{-n}}{n\in\omega}</m></li>
   <li><m>(0,1)</m></li>
-  <li><m>[0,1]</m></li>
 </ol>
 </exercise>
+<theorem>
+<p>For every subset <m>K\subseteq\mathbb R^n</m> with the Euclidean topology,
+<m>K</m> is compact if and only if it is closed and bounded.</p>
+</theorem>
 <definition>
 <p>
   A subset <m>R\subseteq X</m> of a topological space is said
