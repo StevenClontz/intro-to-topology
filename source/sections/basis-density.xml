@@ -162,4 +162,11 @@ weight, and density.
 Find or define a non-discrete topological space which has uncountable weight and density.
 </p>
 </exercise>
+<proposition>
+    <p>
+Let <m>\mathcal B</m> be a basis for <m>X</m> and <m>Y\subseteq X</m>.
+Then <m>\mathcal B_Y=\{U\cap Y:U\in\mathcal B\}</m> is a basis for the
+subspace topology on <m>Y</m>.
+    </p>
+</proposition>
 </section>
