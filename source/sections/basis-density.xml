@@ -129,11 +129,11 @@ no relation to <xref ref="section-separation"/>)
 if it has a dense subset whose cardinality is countable.
 </p>
 </definition>
-<proposition>
+<theorem>
 <p>
-Every space with countable cardinality has countable weight.
+There exists a space with countable cardinality, but uncountable weight.
 </p>
-</proposition>
+</theorem>
 <example>
 <p>
 The reals with the Euclidean topology are a space with uncountable cardinality,
