@@ -109,7 +109,7 @@
 <theorem>
 <p>
   Let <m>(-1,1)</m> and <m>\mathbb R</m> have their Euclidean (subspace) topologies.
-  Then the function <m>f:(-1,1)\to\mb R</m> defined by <m>f(x)=\frac{x}{1-x^2}</m>
+  Then the function <m>f:(-1,1)\to\mb R</m> defined by <m>f(x)=\frac{2x}{1-x^2}</m>
   is a homeomorphism.
 </p>
 </theorem>
