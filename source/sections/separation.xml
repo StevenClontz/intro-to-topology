@@ -98,9 +98,10 @@
 <theorem>
 <p>
   The real line <m>\mb R</m> equipped with the Euclidean topology is
-  <m>T_4</m>.
+  <m>T_3</m>.
 </p>
 </theorem>
+(Note: in fact it is <m>T_4</m>, but we will delay until the next chapter to see this.)
 <exercise>
 <p>
   Find or create an example of a topological space that is:
