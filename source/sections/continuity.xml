@@ -119,8 +119,8 @@
   Let <m>\mc B</m> be a basis for the Euclidean topology on <m>\mb R</m>.
   Give <m>K=\mb R\cup\setList{-\infty,\infty}</m> the topology generated
   by the basis 
-  <m>\setBuilder{[-\infty,x)}{x\in\mb Q}\cup
-  \setBuilder{(x,\infty]}{x\in\mb Q}\cup\mc B</m>.
+  <m>\setBuilder{\{-\infty\}\cup(-\infty,x)}{x\in\mb R}\cup
+  \setBuilder{(x,\infty)\cup\{\infty\}}{x\in\mb R}\cup\mc B</m>.
   Then <m>K</m> is homeomorphic to the subspace <m>[0,1]</m> of
   the Euclidean line.
 </p>
