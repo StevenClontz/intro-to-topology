@@ -128,14 +128,15 @@ window.MathJax = {
 <li id="li-61"><p id="p-derived-li-61">Every function whose domain is a discrete space is continuous.</p></li>
 <li id="li-62"><p id="p-derived-li-62">Every function whose range is an indiscrete space is continuous.</p></li>
 </ol></article><article class="exercise exercise-like" id="exercise-11"><h3 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Continuous functions <span class="process-math">\(\mb R\to\mb R\)</span>.</span>
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.5</span><span class="period">.</span>
 </h3>
-<p id="p-101">Verify that each of the following functions <span class="process-math">\(f:\mb R\to\mb R\)</span> are continuous.</p>
+<p id="p-101">Verify that each of the following functions are continuous with respect to the Euclidean topology at each real number where they are defined.</p>
 <ol class="decimal">
 <li id="li-63"><p id="p-derived-li-63"><span class="process-math">\(\displaystyle f(x)=|x|\)</span></p></li>
 <li id="li-64"><p id="p-derived-li-64"><span class="process-math">\(\displaystyle f(x)=x^2\)</span></p></li>
 <li id="li-65"><p id="p-derived-li-65"><span class="process-math">\(f(x)=g(x)+h(x)\)</span> for <span class="process-math">\(g,h:\mb R\to\mb R\)</span> continuous.</p></li>
 <li id="li-66"><p id="p-derived-li-66"><span class="process-math">\(f(x)=g(x)h(x)\)</span> for <span class="process-math">\(g,h:\mb R\to\mb R\)</span> continuous.</p></li>
+<li id="li-67"><p id="p-derived-li-67"><span class="process-math">\(\displaystyle f(x)=1/x\)</span></p></li>
 </ol></article><article class="theorem theorem-like" id="theorem-15"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.6</span><span class="period">.</span>
 </h3>
@@ -147,9 +148,9 @@ window.MathJax = {
 </h3>
 <p id="p-104">Determine if the following hold if <span class="process-math">\(f:X\to Y\)</span> is a continous surjection. If not, determine if they hold if <span class="process-math">\(f\)</span> is a continuous bijection. If not, show that they hold if <span class="process-math">\(f\)</span> is a homeomorphism.</p>
 <ol class="decimal">
-<li id="li-67"><p id="p-derived-li-67">If <span class="process-math">\(U\subseteq X\)</span> is open, then <span class="process-math">\(f[U]\subseteq Y\)</span> is open.</p></li>
-<li id="li-68"><p id="p-derived-li-68">If <span class="process-math">\(H\subseteq X\)</span> is closed, then <span class="process-math">\(f[H]\subseteq Y\)</span> is closed.</p></li>
-<li id="li-69"><p id="p-derived-li-69">If <span class="process-math">\(x\)</span> is a limit point of <span class="process-math">\(A\subseteq X\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is a limit point of <span class="process-math">\(f[A]\subseteq Y\text{.}\)</span></p></li>
+<li id="li-68"><p id="p-derived-li-68">If <span class="process-math">\(U\subseteq X\)</span> is open, then <span class="process-math">\(f[U]\subseteq Y\)</span> is open.</p></li>
+<li id="li-69"><p id="p-derived-li-69">If <span class="process-math">\(H\subseteq X\)</span> is closed, then <span class="process-math">\(f[H]\subseteq Y\)</span> is closed.</p></li>
+<li id="li-70"><p id="p-derived-li-70">If <span class="process-math">\(x\)</span> is a limit point of <span class="process-math">\(A\subseteq X\text{,}\)</span> then <span class="process-math">\(f(x)\)</span> is a limit point of <span class="process-math">\(f[A]\subseteq Y\text{.}\)</span></p></li>
 </ol></article><article class="proposition theorem-like" id="proposition-19"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">3.9</span><span class="period">.</span>
 </h3>
@@ -162,7 +163,7 @@ window.MathJax = {
 <p id="p-107">Let <span class="process-math">\(a\lt b\)</span> and <span class="process-math">\(c\lt d\)</span> be real numbers. Then <span class="process-math">\((a,b)\)</span> and <span class="process-math">\((c,d)\)</span> are homeomorphic subspaces of the Euclidean line.</p></article><article class="theorem theorem-like" id="theorem-17"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.12</span><span class="period">.</span>
 </h3>
-<p id="p-108"><span class="process-math">\(\mb R\)</span> with the Euclidean topology is homeomorphic to its subspace <span class="process-math">\((0,1)\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-18"><h3 class="heading">
+<p id="p-108">Let <span class="process-math">\((-1,1)\)</span> and <span class="process-math">\(\mathbb R\)</span> have their Euclidean (subspace) topologies. Then the function <span class="process-math">\(f:(-1,1)\to\mb R\)</span> defined by <span class="process-math">\(f(x)=\frac{x}{1-x^2}\)</span> is a homeomorphism.</p></article><article class="theorem theorem-like" id="theorem-18"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">3.13</span><span class="period">.</span>
 </h3>
 <p id="p-109">Let <span class="process-math">\(\mc B\)</span> be a basis for the Euclidean topology on <span class="process-math">\(\mb R\text{.}\)</span> Give <span class="process-math">\(K=\mb R\cup\setList{-\infty,\infty}\)</span> the topology generated by the basis <span class="process-math">\(\setBuilder{[-\infty,x)}{x\in\mb Q}\cup
