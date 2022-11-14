@@ -29,8 +29,29 @@
   <li><m>(0,1)</m></li>
 </ol>
 </exercise>
+<definition>
+<p>
+  A subset <m>A\subseteq X</m> of a space with metric <m>d(x,y)</m> is said
+  to be <term>bounded</term> iff there exists some <m>D\in[0,\infty)</m>
+  with <m>d(x,y)&lt;D</m> for all <m>x,y\in A</m>.
+</p>
+</definition>
 <theorem>
-<p>For every subset <m>K\subseteq\mathbb R^n</m> with the Euclidean topology,
+<p>
+  Every compact subset of a Hausdorff space is closed.
+</p>
+</theorem>
+<proposition>
+<p>
+  Let 
+  <m>\mc T=\setList{\emptyset}\cup
+  \setBuilder{\omega\setminus F}{F\text{ is finite}}</m>
+  be the cofinite topology on <m>\omega</m>. Every subset of
+  <m>\omega</m> is compact under this topology.
+</p>
+</proposition>
+<theorem>
+<p>For every subset <m>K\subseteq\mathbb R^n</m> with the Euclidean metric,
 <m>K</m> is compact if and only if it is closed and bounded.</p>
 </theorem>
 <definition>
@@ -49,6 +70,10 @@
   if and only if <m>\cl R</m> is compact.
 </p>
 </theorem>
+<corollary>
+<p>For every subset <m>K\subseteq\mathbb R^n</m> with the Euclidean topology,
+<m>K</m> is relatively compact if and only if it is bounded.</p>
+</corollary>
 <theorem>
 <p>
   Let <m>X</m> be compact and <m>K</m> be a closed subset of <m>X</m>.
@@ -63,20 +88,6 @@
 <proposition>
 <p>
   Every finite union of compact subsets is compact.
-</p>
-</proposition>
-<theorem>
-<p>
-  Every compact subset of a Hausdorff space is closed.
-</p>
-</theorem>
-<proposition>
-<p>
-  Let 
-  <m>\mc T=\setList{\emptyset}\cup
-  \setBuilder{\omega\setminus F}{F\text{ is finite}}</m>
-  be the cofinite topology on <m>\omega</m>. Every subset of
-  <m>\omega</m> is compact under this topology.
 </p>
 </proposition>
 <theorem>

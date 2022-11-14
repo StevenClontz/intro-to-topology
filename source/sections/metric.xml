@@ -138,6 +138,7 @@ is the same as the Euclidean topology given for <m>\mb R</m> in <xref ref="eucli
   Every space <m>\mb R^n</m> with the Euclidean topology has countable weight and density.
 </p>
 </proposition>
+<p>FALL 2022 note: we will not cover the below topics.</p>
 <theorem xml:id="nonseparable-metric">
 <p>
   For <m>\vec x,\vec y\in\mb R^2</m>, let <m>d(\vec x,\vec y)=1</m>
