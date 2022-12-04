@@ -138,6 +138,7 @@
   Every compact Hausdorff space is <m>T_4</m>.
 </p>
 </theorem>
+    <!-- TODO add compact iff does not contain a closed infinite subset -->
 </section>
 
 
