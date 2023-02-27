@@ -19,18 +19,18 @@ window.MathJax = {
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
   startup: {
@@ -40,22 +40,144 @@ window.MathJax = {
       rsMathReady();
       }
     )}
-},
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-surfaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro-to-topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-basis-density.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
@@ -74,270 +196,310 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
-<p class="byline">Steven Clontz</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-surfaces.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-basis-density.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-surfaces.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-basis-density.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Motivation: Curves and Surfaces</span></a></li>
-<li class="link active"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
-<li class="link"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
-<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
-<li class="link"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
-<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
-<li class="link"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
-<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
-<li class="link"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
-<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-topological-spaces"><h2 class="heading hide-type">
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth1"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-surfaces.html" class="internal"><span class="title">Motivation: Curves and Surfaces</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-topological-spaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-basis-density.html" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></div></li>
+<li><div class="toc-item"><a href="section-continuity.html" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="section-separation.html" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></div></li>
+<li><div class="toc-item"><a href="section-metric.html" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-compact.html" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="section-connected.html" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></div></li>
+<li><div class="toc-item"><a href="section-product.html" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-quotient.html" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="assumed.html" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-topological-spaces"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1</span> <span class="title">Topological Spaces</span>
 </h2>
 <article class="definition definition-like" id="definition-4"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span>
 </h3>
-<p id="p-22">Let <span class="process-math">\(a,b\in\mb R\text{.}\)</span> The <dfn class="terminology">Euclidean open interval</dfn> from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> is the set</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para" id="p-22">Let <span class="process-math">\(a,b\in\mb R\text{.}\)</span> The <dfn class="terminology">Euclidean open interval</dfn> from <span class="process-math">\(a\)</span> to <span class="process-math">\(b\)</span> is the set</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 \end{equation*}
 </div></article><article class="definition definition-like" id="limit-point-intro"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span>
 </h3>
-<p id="p-23">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">Euclidean limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every Euclidean open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in(a,b)\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-1"><h3 class="heading">
+<div class="para" id="p-23">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">Euclidean limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every Euclidean open interval <span class="process-math">\((a,b)\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in(a,b)\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-1"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="introduction-2"><p id="p-24">Determine if each set has the number <span class="process-math">\(0\)</span> as a limit point.</p></div>
+<div class="introduction" id="introduction-2"><div class="para" id="p-24">Determine if each set has the number <span class="process-math">\(0\)</span> as a limit point.</div></div>
 <article class="task exercise-like" id="task-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<p id="p-25"><span class="process-math">\(\mb Z\)</span></p></article><article class="task exercise-like" id="task-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<p id="p-26"><span class="process-math">\(\mb R\setminus\mb Z\)</span></p></article><article class="task exercise-like" id="task-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<p id="p-27"><span class="process-math">\(\setBuilder{\frac{1}{n+1}}{n\in\omega}\)</span></p></article><article class="task exercise-like" id="task-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<p id="p-28"><span class="process-math">\(\mb Q\)</span></p></article><article class="task exercise-like" id="task-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<p id="p-29">Any finite set <span class="process-math">\(F\subseteq\mb R\)</span></p></article></article><article class="definition definition-like" id="euclidean-open-sets"><h3 class="heading">
+<div class="para" id="p-25"><span class="process-math">\(\mb Z\)</span></div></article><article class="task exercise-like" id="task-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-26"><span class="process-math">\(\mb R\setminus\mb Z\)</span></div></article><article class="task exercise-like" id="task-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="p-27"><span class="process-math">\(\setBuilder{\frac{1}{n+1}}{n\in\omega}\)</span></div></article><article class="task exercise-like" id="task-4"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-28"><span class="process-math">\(\mb Q\)</span></div></article><article class="task exercise-like" id="task-5"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="p-29">Any finite set <span class="process-math">\(F\subseteq\mb R\)</span>
+</div></article></article><article class="definition definition-like" id="euclidean-open-sets"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4</span><span class="period">.</span>
 </h3>
-<p id="p-30">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is called <dfn class="terminology">Euclidean open</dfn> if and only if for every point <span class="process-math">\(x\in U\text{,}\)</span> there exists a Euclidean open interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(x\in(a,b)\subseteq U\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-2"><h3 class="heading">
+<div class="para" id="p-30">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is called <dfn class="terminology">Euclidean open</dfn> if and only if for every point <span class="process-math">\(x\in U\text{,}\)</span> there exists a Euclidean open interval <span class="process-math">\((a,b)\)</span> such that <span class="process-math">\(x\in(a,b)\subseteq U\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-2"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.5</span><span class="period">.</span>
 </h3>
-<p id="p-31">Determine if each set is Euclidean open or not Euclidean open.</p>
+<div class="para" id="p-31">Determine if each set is Euclidean open or not Euclidean open.</div>
 <ol class="decimal">
-<li id="li-3"><p id="p-derived-li-3"><span class="process-math">\(\displaystyle [\pi,42)\)</span></p></li>
-<li id="li-4"><p id="p-derived-li-4"><span class="process-math">\(\displaystyle (-3,-1)\cup(4,5.5)\)</span></p></li>
-<li id="li-5"><p id="p-derived-li-5"><span class="process-math">\(\displaystyle \setBuilder{x}{2x+1&gt;5}\)</span></p></li>
-<li id="li-6"><p id="p-derived-li-6"><span class="process-math">\(\displaystyle \mb Z\)</span></p></li>
-<li id="li-7"><p id="p-derived-li-7"><span class="process-math">\(\displaystyle \mb R\setminus\mb Z\)</span></p></li>
-<li id="li-8"><p id="p-derived-li-8"><span class="process-math">\(\displaystyle \mb Q\)</span></p></li>
-<li id="li-9"><p id="p-derived-li-9">A finite set <span class="process-math">\(F\subseteq\mb R\)</span></p></li>
+<li id="li-3"><div class="para" id="p-derived-li-3"><span class="process-math">\(\displaystyle [\pi,42)\)</span></div></li>
+<li id="li-4"><div class="para" id="p-derived-li-4"><span class="process-math">\(\displaystyle (-3,-1)\cup(4,5.5)\)</span></div></li>
+<li id="li-5"><div class="para" id="p-derived-li-5"><span class="process-math">\(\displaystyle \setBuilder{x}{2x+1&gt;5}\)</span></div></li>
+<li id="li-6"><div class="para" id="p-derived-li-6"><span class="process-math">\(\displaystyle \mb Z\)</span></div></li>
+<li id="li-7"><div class="para" id="p-derived-li-7"><span class="process-math">\(\displaystyle \mb R\setminus\mb Z\)</span></div></li>
+<li id="li-8"><div class="para" id="p-derived-li-8"><span class="process-math">\(\displaystyle \mb Q\)</span></div></li>
+<li id="li-9"><div class="para" id="p-derived-li-9">A finite set <span class="process-math">\(F\subseteq\mb R\)</span>
+</div></li>
 </ol></article><article class="theorem theorem-like" id="theorem-1"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h3>
-<p id="p-32">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is Euclidean open if and only if there exists a collection of Euclidean open intervals <span class="process-math">\(\mc U\)</span> such that <span class="process-math">\(U=\bigcup\mc U\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-1"><h3 class="heading">
+<div class="para" id="p-32">A subset <span class="process-math">\(U\subseteq\mb R\)</span> is Euclidean open if and only if there exists a collection of Euclidean open intervals <span class="process-math">\(\mc U\)</span> such that <span class="process-math">\(U=\bigcup\mc U\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-1"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.7</span><span class="period">.</span>
 </h3>
-<p id="p-33">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a limit point of the set <span class="process-math">\(S\)</span> if and only if for every Euclidean open set <span class="process-math">\(U\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span></p></article><article class="theorem theorem-like" id="euclidean-topology-verification"><h3 class="heading">
+<div class="para" id="p-33">Let <span class="process-math">\(x\in\mb R\)</span> and <span class="process-math">\(S\subseteq\mb R\text{.}\)</span> The point <span class="process-math">\(x\)</span> is a limit point of the set <span class="process-math">\(S\)</span> if and only if for every Euclidean open set <span class="process-math">\(U\)</span> containing <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="euclidean-topology-verification"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
 </h3>
-<p id="p-34">The Euclidean open subsets of <span class="process-math">\(\mb R\)</span> satisfy the following properties.</p>
+<div class="para" id="p-34">The Euclidean open subsets of <span class="process-math">\(\mb R\)</span> satisfy the following properties.</div>
 <ol class="decimal">
-<li id="li-10"><p id="p-derived-li-10"><span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(\mb R\)</span> are Euclidean open sets.</p></li>
-<li id="li-11"><p id="p-derived-li-11">If <span class="process-math">\(\mc U\)</span> is a collection of Euclidean open sets, then <span class="process-math">\(\bigcup\mc U\)</span> is also a Euclidean open set.</p></li>
-<li id="li-12"><p id="p-derived-li-12">If <span class="process-math">\(U,V\)</span> are Euclidean open sets, then <span class="process-math">\(U\cap V\)</span> is also a Euclidean open set.</p></li>
+<li id="li-10"><div class="para" id="p-derived-li-10">
+<span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(\mb R\)</span> are Euclidean open sets.</div></li>
+<li id="li-11"><div class="para" id="p-derived-li-11">If <span class="process-math">\(\mc U\)</span> is a collection of Euclidean open sets, then <span class="process-math">\(\bigcup\mc U\)</span> is also a Euclidean open set.</div></li>
+<li id="li-12"><div class="para" id="p-derived-li-12">If <span class="process-math">\(U,V\)</span> are Euclidean open sets, then <span class="process-math">\(U\cap V\)</span> is also a Euclidean open set.</div></li>
 </ol></article><article class="definition definition-like" id="definition-7"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.9</span><span class="period">.</span>
 </h3>
-<p id="p-35">Let <span class="process-math">\(X\)</span> be a set, and let <span class="process-math">\(\mc T\subseteq \mc P(X)\)</span> satisfy the following properties.</p>
-<ol class="decimal">
-<li id="li-13"><p id="p-derived-li-13"><span class="process-math">\(\emptyset,X\in\mc T\text{.}\)</span></p></li>
-<li id="li-14"><p id="p-derived-li-14">If <span class="process-math">\(\mc U\subseteq\mc T\text{,}\)</span> then <span class="process-math">\(\bigcup\mc U\in\mc T\text{.}\)</span></p></li>
-<li id="li-15"><p id="p-derived-li-15">If <span class="process-math">\(U,V\in\mc T\text{,}\)</span> then <span class="process-math">\(U\cap V\in\mc T\text{.}\)</span></p></li>
-</ol>
-<p id="p-36">Then <span class="process-math">\(\mc T\)</span> is called a <dfn class="terminology">topology</dfn> on <span class="process-math">\(X\text{,}\)</span> the pair <span class="process-math">\(\tuple{X,\mc T}\)</span> is called a <dfn class="terminology">topological space</dfn>, and elements <span class="process-math">\(U\in\mc T\)</span> are called <dfn class="terminology">open sets</dfn> of the space. (Usually <span class="process-math">\(\tuple{X,\mc T}\)</span> is abbreviated to just <span class="process-math">\(X\)</span> when the topology is known from context.)</p></article><article class="definition definition-like" id="definition-8"><h3 class="heading">
+<div class="para" id="p-35">Let <span class="process-math">\(X\)</span> be a set, and let <span class="process-math">\(\mc T\subseteq \mc P(X)\)</span> satisfy the following properties.</div> <ol class="decimal">
+<li id="li-13"><div class="para" id="p-derived-li-13"><span class="process-math">\(\emptyset,X\in\mc T\text{.}\)</span></div></li>
+<li id="li-14"><div class="para" id="p-derived-li-14">If <span class="process-math">\(\mc U\subseteq\mc T\text{,}\)</span> then <span class="process-math">\(\bigcup\mc U\in\mc T\text{.}\)</span>
+</div></li>
+<li id="li-15"><div class="para" id="p-derived-li-15">If <span class="process-math">\(U,V\in\mc T\text{,}\)</span> then <span class="process-math">\(U\cap V\in\mc T\text{.}\)</span>
+</div></li>
+</ol> <div class="para" id="p-36">Then <span class="process-math">\(\mc T\)</span> is called a <dfn class="terminology">topology</dfn> on <span class="process-math">\(X\text{,}\)</span> the pair <span class="process-math">\(\tuple{X,\mc T}\)</span> is called a <dfn class="terminology">topological space</dfn>, and elements <span class="process-math">\(U\in\mc T\)</span> are called <dfn class="terminology">open sets</dfn> of the space. (Usually <span class="process-math">\(\tuple{X,\mc T}\)</span> is abbreviated to just <span class="process-math">\(X\)</span> when the topology is known from context.)</div></article><article class="definition definition-like" id="definition-8"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
 </h3>
-<p id="p-37">Let <span class="process-math">\(\mc T\subseteq\mc P(\mb R)\)</span> be the collection of Euclidean open subsets of <span class="process-math">\(\mb R\)</span> defined by <a href="" class="xref" data-knowl="./knowl/euclidean-open-sets.html" title="Definition 1.4">Definition 1.4</a>. Then by <a href="" class="xref" data-knowl="./knowl/euclidean-topology-verification.html" title="Theorem 1.8">Theorem 1.8</a>, <span class="process-math">\(\mc T\)</span> is a valid topology for <span class="process-math">\(\mb R\)</span> called the <dfn class="terminology">Euclidean topology</dfn>.</p></article><article class="theorem theorem-like" id="theorem-3"><h3 class="heading">
+<div class="para" id="p-37">Let <span class="process-math">\(\mc T\subseteq\mc P(\mb R)\)</span> be the collection of Euclidean open subsets of <span class="process-math">\(\mb R\)</span> defined by <a href="" class="xref" data-knowl="./knowl/euclidean-open-sets.html" title="Definition 1.4">Definition 1.4</a>. Then by <a href="" class="xref" data-knowl="./knowl/euclidean-topology-verification.html" title="Theorem 1.8">Theorem 1.8</a>, <span class="process-math">\(\mc T\)</span> is a valid topology for <span class="process-math">\(\mb R\)</span> called the <dfn class="terminology">Euclidean topology</dfn>.</div></article><article class="theorem theorem-like" id="theorem-3"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.11</span><span class="period">.</span>
 </h3>
-<p id="p-38">Let <span class="process-math">\(X\)</span> be any set. Then the following sets are topologies on <span class="process-math">\(X\text{.}\)</span></p>
+<div class="para" id="p-38">Let <span class="process-math">\(X\)</span> be any set. Then the following sets are topologies on <span class="process-math">\(X\text{.}\)</span>
+</div>
 <ol class="decimal">
-<li id="li-16"><p id="p-derived-li-16"><span class="process-math">\(\mc T=\mc P(X)\)</span> is called the <dfn class="terminology">discrete topology</dfn>.</p></li>
-<li id="li-17"><p id="p-derived-li-17"><span class="process-math">\(\mc T=\{\emptyset,X\}\)</span> is called the <dfn class="terminology">indiscrete topology</dfn>.</p></li>
+<li id="li-16"><div class="para" id="p-derived-li-16">
+<span class="process-math">\(\mc T=\mc P(X)\)</span> is called the <dfn class="terminology">discrete topology</dfn>.</div></li>
+<li id="li-17"><div class="para" id="p-derived-li-17">
+<span class="process-math">\(\mc T=\{\emptyset,X\}\)</span> is called the <dfn class="terminology">indiscrete topology</dfn>.</div></li>
 </ol></article><article class="proposition theorem-like" id="proposition-2"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h3>
-<p id="p-39">Let <span class="process-math">\(\mc T\)</span> be a topology, and let <span class="process-math">\(\mc U\subseteq\mc T\)</span> be finite. Then <span class="process-math">\(\bigcap\mc U\in\mc T\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-3"><h3 class="heading">
+<div class="para" id="p-39">Let <span class="process-math">\(\mc T\)</span> be a topology, and let <span class="process-math">\(\mc U\subseteq\mc T\)</span> be finite. Then <span class="process-math">\(\bigcap\mc U\in\mc T\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-3"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.13</span><span class="period">.</span>
 </h3>
-<p id="p-40">Let <span class="process-math">\(\mc T\)</span> be the Euclidean topology. There exists a collection <span class="process-math">\(\mc U=\{U_n:n\in\omega\}\)</span> such that <span class="process-math">\(\bigcap\mc U\not\in\mc T\text{.}\)</span></p></article><article class="definition definition-like" id="definition-9"><h3 class="heading">
+<div class="para" id="p-40">Let <span class="process-math">\(\mc T\)</span> be the Euclidean topology. There exists a collection <span class="process-math">\(\mc U=\{U_n:n\in\omega\}\)</span> such that <span class="process-math">\(\bigcap\mc U\not\in\mc T\text{.}\)</span>
+</div></article><article class="definition definition-like" id="definition-9"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
 </h3>
-<p id="p-41">Let <span class="process-math">\(a,b\in\mb R\cup\setList{-\infty,\infty}\text{.}\)</span> The following are called <dfn class="terminology">intervals</dfn> of real numbers.</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para" id="p-41">Let <span class="process-math">\(a,b\in\mb R\cup\setList{-\infty,\infty}\text{.}\)</span> The following are called <dfn class="terminology">intervals</dfn> of real numbers.</div>
+<div class="displaymath process-math">
 \begin{equation*}
 (a,b)=\setBuilder{x\in\mb R}{a\lt x\lt b}
 \end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 [a,b)=\setBuilder{x\in\mb R}{a\leq x\lt b}
 \end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 (a,b]=\setBuilder{x\in\mb R}{a\lt x\leq b}
 \end{equation*}
 </div>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="displaymath process-math">
 \begin{equation*}
 [a,b]=\setBuilder{x\in\mb R}{a\leq x\leq b}
 \end{equation*}
 </div></article><article class="exercise exercise-like" id="exercise-3"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h3>
-<p id="p-42">Show that each of the following is an example of a topological space <span class="process-math">\(\tuple{X,\mc T}\text{.}\)</span></p>
+<div class="para" id="p-42">Show that each of the following is an example of a topological space <span class="process-math">\(\tuple{X,\mc T}\text{.}\)</span>
+</div>
 <ol class="decimal">
-<li id="li-18"><p id="p-derived-li-18">Let <span class="process-math">\(X=\mb R\)</span> and <span class="process-math">\(\mc T=\setBuilder{(x,\infty)}{x\in\mb R}
+<li id="li-18"><div class="para" id="p-derived-li-18">Let <span class="process-math">\(X=\mb R\)</span> and <span class="process-math">\(\mc T=\setBuilder{(x,\infty)}{x\in\mb R}
 \cup\setBuilder{[x,\infty)}{x\in\mb R}\cup\setList{\emptyset,\mb R}
-\text{.}\)</span></p></li>
-<li id="li-19"><p id="p-derived-li-19">Let <span class="process-math">\(X=\mb R\)</span> and <span class="process-math">\(\mc T=\setBuilder{(x,y)}{
+\text{.}\)</span>
+</div></li>
+<li id="li-19"><div class="para" id="p-derived-li-19">Let <span class="process-math">\(X=\mb R\)</span> and <span class="process-math">\(\mc T=\setBuilder{(x,y)}{
 x,y\in\mb R\cup\setList{-\infty,\infty} \text{ and }x\lt 0\lt y
 }\cup\setList{\emptyset}
-\text{.}\)</span></p></li>
-<li id="li-20"><p id="p-derived-li-20">Let <span class="process-math">\(X=\mb R\)</span> and <span class="process-math">\(U\in\mc T\)</span> if for each <span class="process-math">\(x\in U\text{,}\)</span> there exists <span class="process-math">\(a,b\in\mb R\)</span> such that <span class="process-math">\(x\in[a,b)\subseteq U\text{.}\)</span></p></li>
-<li id="li-21"><p id="p-derived-li-21">Let <span class="process-math">\(X=\setList{0,1}\)</span> and <span class="process-math">\(\mc T=\setList{\emptyset,\setList{0},X}\text{.}\)</span></p></li>
-<li id="li-22"><p id="p-derived-li-22">Let <span class="process-math">\(X=\mb Z\text{,}\)</span> <span class="process-math">\(E=\setBuilder{n\in\mb Z}{n\text{ is even}}\text{,}\)</span> <span class="process-math">\(D=\setBuilder{n\in\mb Z}{n\text{ is odd}}\text{,}\)</span> and <span class="process-math">\(\mc T=\setList{\emptyset,E,D,X}\text{.}\)</span></p></li>
+\text{.}\)</span>
+</div></li>
+<li id="li-20"><div class="para" id="p-derived-li-20">Let <span class="process-math">\(X=\mb R\)</span> and <span class="process-math">\(U\in\mc T\)</span> if for each <span class="process-math">\(x\in U\text{,}\)</span> there exists <span class="process-math">\(a,b\in\mb R\)</span> such that <span class="process-math">\(x\in[a,b)\subseteq U\text{.}\)</span>
+</div></li>
+<li id="li-21"><div class="para" id="p-derived-li-21">Let <span class="process-math">\(X=\setList{0,1}\)</span> and <span class="process-math">\(\mc T=\setList{\emptyset,\setList{0},X}\text{.}\)</span>
+</div></li>
+<li id="li-22"><div class="para" id="p-derived-li-22">Let <span class="process-math">\(X=\mb Z\text{,}\)</span> <span class="process-math">\(E=\setBuilder{n\in\mb Z}{n\text{ is even}}\text{,}\)</span> <span class="process-math">\(D=\setBuilder{n\in\mb Z}{n\text{ is odd}}\text{,}\)</span> and <span class="process-math">\(\mc T=\setList{\emptyset,E,D,X}\text{.}\)</span>
+</div></li>
 </ol></article><article class="definition definition-like" id="definition-10"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.16</span><span class="period">.</span>
 </h3>
-<p id="p-43">Let <span class="process-math">\(\tuple{X,\mc T}\)</span> be a topological space and let <span class="process-math">\(x\in X\text{.}\)</span> The set <span class="process-math">\(N\subseteq X\)</span> is called a <dfn class="terminology">neighborhood</dfn> of <span class="process-math">\(x\)</span> if and only if there exists an open set <span class="process-math">\(U\in\mc T\)</span> such that <span class="process-math">\(x\in U\subseteq N\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-4"><h3 class="heading">
+<div class="para" id="p-43">Let <span class="process-math">\(\tuple{X,\mc T}\)</span> be a topological space and let <span class="process-math">\(x\in X\text{.}\)</span> The set <span class="process-math">\(N\subseteq X\)</span> is called a <dfn class="terminology">neighborhood</dfn> of <span class="process-math">\(x\)</span> if and only if there exists an open set <span class="process-math">\(U\in\mc T\)</span> such that <span class="process-math">\(x\in U\subseteq N\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-4"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.17</span><span class="period">.</span>
 </h3>
-<p id="p-44">A subset <span class="process-math">\(U\)</span> of a topological space <span class="process-math">\(X\)</span> is open if and only if <span class="process-math">\(U\)</span> is a neighborhood of every point it contains.</p></article><article class="definition definition-like" id="limit-point"><h3 class="heading">
+<div class="para" id="p-44">A subset <span class="process-math">\(U\)</span> of a topological space <span class="process-math">\(X\)</span> is open if and only if <span class="process-math">\(U\)</span> is a neighborhood of every point it contains.</div></article><article class="definition definition-like" id="limit-point"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
 </h3>
-<p id="p-45">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every neighborhood of <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-5"><h3 class="heading">
+<div class="para" id="p-45">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">limit point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every neighborhood of <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> there is a point <span class="process-math">\(y\in S\)</span> such that <span class="process-math">\(x\not=y\)</span> and <span class="process-math">\(y\in U\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-5"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
 </h3>
-<p id="p-46">The point <span class="process-math">\(x\in\mb R\)</span> is a limit point of <span class="process-math">\(S\subseteq \mb R\)</span> with the Euclidean topology according to <a href="" class="xref" data-knowl="./knowl/limit-point-intro.html" title="Definition 1.2">Definition 1.2</a> if and only if it is a Euclidean limit point according to <a href="" class="xref" data-knowl="./knowl/limit-point.html" title="Definition 1.18">Definition 1.18</a>.</p></article><article class="definition definition-like" id="definition-12"><h3 class="heading">
+<div class="para" id="p-46">The point <span class="process-math">\(x\in\mb R\)</span> is a limit point of <span class="process-math">\(S\subseteq \mb R\)</span> with the Euclidean topology according to <a href="" class="xref" data-knowl="./knowl/limit-point-intro.html" title="Definition 1.2">Definition 1.2</a> if and only if it is a Euclidean limit point according to <a href="" class="xref" data-knowl="./knowl/limit-point.html" title="Definition 1.18">Definition 1.18</a>.</div></article><article class="definition definition-like" id="definition-12"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
 </h3>
-<p id="p-47">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(S'\)</span> is the set of all limit points of <span class="process-math">\(S\text{,}\)</span> called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(S\text{.}\)</span></p></article><article class="definition definition-like" id="definition-13"><h3 class="heading">
+<div class="para" id="p-47">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(S'\)</span> is the set of all limit points of <span class="process-math">\(S\text{,}\)</span> called the <dfn class="terminology">derived set</dfn> of <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="definition definition-like" id="definition-13"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
 </h3>
-<p id="p-48">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(\cl S=S\cup S'\)</span> is called the <dfn class="terminology">closure</dfn> of <span class="process-math">\(S\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-4"><h3 class="heading">
+<div class="para" id="p-48">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(\cl S=S\cup S'\)</span> is called the <dfn class="terminology">closure</dfn> of <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span>
 </h3>
-<p id="p-49">Calculate <span class="process-math">\(\cl S\)</span> for each of the following examples.</p>
+<div class="para" id="p-49">Calculate <span class="process-math">\(\cl S\)</span> for each of the following examples.</div>
 <ol class="decimal">
-<li id="li-23"><p id="p-derived-li-23"><span class="process-math">\(S=(-1,1)\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the Euclidean topology.</p></li>
-<li id="li-24"><p id="p-derived-li-24"><span class="process-math">\(S=(-1,1)\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the discrete topology.</p></li>
-<li id="li-25"><p id="p-derived-li-25"><span class="process-math">\(S=(-1,1)\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the indiscrete topology.</p></li>
-<li id="li-26"><p id="p-derived-li-26"><span class="process-math">\(S=\mb Z\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the Euclidean topology.</p></li>
-<li id="li-27"><p id="p-derived-li-27"><span class="process-math">\(S=\mb Q\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the Euclidean topology.</p></li>
+<li id="li-23"><div class="para" id="p-derived-li-23">
+<span class="process-math">\(S=(-1,1)\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the Euclidean topology.</div></li>
+<li id="li-24"><div class="para" id="p-derived-li-24">
+<span class="process-math">\(S=(-1,1)\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the discrete topology.</div></li>
+<li id="li-25"><div class="para" id="p-derived-li-25">
+<span class="process-math">\(S=(-1,1)\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the indiscrete topology.</div></li>
+<li id="li-26"><div class="para" id="p-derived-li-26">
+<span class="process-math">\(S=\mb Z\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the Euclidean topology.</div></li>
+<li id="li-27"><div class="para" id="p-derived-li-27">
+<span class="process-math">\(S=\mb Q\subseteq\mb R\)</span> where <span class="process-math">\(\mb R\)</span> has the Euclidean topology.</div></li>
 </ol></article><article class="definition definition-like" id="definition-14"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
 </h3>
-<p id="p-50">Let <span class="process-math">\(H\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(H\)</span> is called <dfn class="terminology">closed</dfn> if and only if <span class="process-math">\(H=\cl H\text{.}\)</span></p></article><article class="theorem theorem-like" id="theorem-4"><h3 class="heading">
+<div class="para" id="p-50">Let <span class="process-math">\(H\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(H\)</span> is called <dfn class="terminology">closed</dfn> if and only if <span class="process-math">\(H=\cl H\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="theorem-4"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.24</span><span class="period">.</span>
 </h3>
-<p id="p-51">Let <span class="process-math">\(H\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(H\)</span> is closed if and only if the set <span class="process-math">\(X\setminus H\)</span> is open.</p></article><article class="proposition theorem-like" id="proposition-6"><h3 class="heading">
+<div class="para" id="p-51">Let <span class="process-math">\(H\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(H\)</span> is closed if and only if the set <span class="process-math">\(X\setminus H\)</span> is open.</div></article><article class="proposition theorem-like" id="proposition-6"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
 </h3>
-<p id="p-52">The closed subsets of a topological space <span class="process-math">\(X\)</span> satisfy the following properties.</p>
+<div class="para" id="p-52">The closed subsets of a topological space <span class="process-math">\(X\)</span> satisfy the following properties.</div>
 <ol class="decimal">
-<li id="li-28"><p id="p-derived-li-28"><span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are closed sets.</p></li>
-<li id="li-29"><p id="p-derived-li-29">If <span class="process-math">\(\mc H\)</span> is a collection of closed sets, then <span class="process-math">\(\bigcap\mc H\)</span> is also a closed set.</p></li>
-<li id="li-30"><p id="p-derived-li-30">If <span class="process-math">\(H,L\)</span> are closed sets, then <span class="process-math">\(H\cup L\)</span> is a closed set.</p></li>
+<li id="li-28"><div class="para" id="p-derived-li-28">
+<span class="process-math">\(\emptyset\)</span> and <span class="process-math">\(X\)</span> are closed sets.</div></li>
+<li id="li-29"><div class="para" id="p-derived-li-29">If <span class="process-math">\(\mc H\)</span> is a collection of closed sets, then <span class="process-math">\(\bigcap\mc H\)</span> is also a closed set.</div></li>
+<li id="li-30"><div class="para" id="p-derived-li-30">If <span class="process-math">\(H,L\)</span> are closed sets, then <span class="process-math">\(H\cup L\)</span> is a closed set.</div></li>
 </ol></article><article class="theorem theorem-like" id="theorem-5"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.26</span><span class="period">.</span>
 </h3>
-<p id="p-53">(This space intentionally left blank to not mess up numbering. TODO: delete this after fall 2022.)</p></article><article class="definition definition-like" id="boundary-point"><h3 class="heading">
+<div class="para" id="p-53">(This space intentionally left blank to not mess up numbering. TODO: delete this after fall 2022.)</div></article><article class="definition definition-like" id="boundary-point"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.27</span><span class="period">.</span>
 </h3>
-<p id="p-54">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">boundary point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every neighborhood of <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> both <span class="process-math">\(U\cap S\)</span> and <span class="process-math">\(U\setminus S\)</span> are non-empty.</p>
-<p id="p-55">Let <span class="process-math">\(\bd S\)</span> collect all the boundary points of <span class="process-math">\(S\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-7"><h3 class="heading">
+<div class="para" id="p-54">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">boundary point</dfn> of the set <span class="process-math">\(S\)</span> if and only if for every neighborhood of <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> both <span class="process-math">\(U\cap S\)</span> and <span class="process-math">\(U\setminus S\)</span> are non-empty.</div> <div class="para" id="p-55">Let <span class="process-math">\(\bd S\)</span> collect all the boundary points of <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-7"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.28</span><span class="period">.</span>
 </h3>
-<p id="p-56">Let <span class="process-math">\(a,b\in\mb R\text{.}\)</span> Then <span class="process-math">\(\bd (a,b)=\bd (a,b]=\bd [a,b)=\bd [a,b]=\{a,b\}\)</span> with respect to the Eudlidean topology.</p></article><article class="definition definition-like" id="interior-point"><h3 class="heading">
+<div class="para" id="p-56">Let <span class="process-math">\(a,b\in\mb R\text{.}\)</span> Then <span class="process-math">\(\bd (a,b)=\bd (a,b]=\bd [a,b)=\bd [a,b]=\{a,b\}\)</span> with respect to the Eudlidean topology.</div></article><article class="definition definition-like" id="interior-point"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.29</span><span class="period">.</span>
 </h3>
-<p id="p-57">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">interior point</dfn> of the set <span class="process-math">\(S\)</span> if and only if there exists a neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\in U\subseteq S\text{.}\)</span></p>
-<p id="p-58">Let <span class="process-math">\(\int S\)</span> collect all the interior points of <span class="process-math">\(S\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-8"><h3 class="heading">
+<div class="para" id="p-57">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">interior point</dfn> of the set <span class="process-math">\(S\)</span> if and only if there exists a neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\in U\subseteq S\text{.}\)</span>
+</div> <div class="para" id="p-58">Let <span class="process-math">\(\int S\)</span> collect all the interior points of <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-8"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.30</span><span class="period">.</span>
 </h3>
-<p id="p-59">Let <span class="process-math">\(U\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(U\)</span> is open if and only if <span class="process-math">\(U=\int U\text{.}\)</span></p></article><article class="definition definition-like" id="exterior-point"><h3 class="heading">
+<div class="para" id="p-59">Let <span class="process-math">\(U\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(U\)</span> is open if and only if <span class="process-math">\(U=\int U\text{.}\)</span>
+</div></article><article class="definition definition-like" id="exterior-point"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.31</span><span class="period">.</span>
 </h3>
-<p id="p-60">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">exterior point</dfn> of the set <span class="process-math">\(S\)</span> if and only if there exists a neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\in U\subseteq X\setminus S\text{.}\)</span></p>
-<p id="p-61">Let <span class="process-math">\(\ext S\)</span> collect all the exterior points of <span class="process-math">\(S\text{.}\)</span></p></article><article class="definition definition-like" id="definition-18"><h3 class="heading">
+<div class="para" id="p-60">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. The point <span class="process-math">\(x\)</span> is a <dfn class="terminology">exterior point</dfn> of the set <span class="process-math">\(S\)</span> if and only if there exists a neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\)</span> such that <span class="process-math">\(x\in U\subseteq X\setminus S\text{.}\)</span>
+</div> <div class="para" id="p-61">Let <span class="process-math">\(\ext S\)</span> collect all the exterior points of <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="definition definition-like" id="definition-18"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.32</span><span class="period">.</span>
 </h3>
-<p id="p-62">A <dfn class="terminology">partition</dfn> of a set <span class="process-math">\(X\)</span> is a collection <span class="process-math">\(\mc P\)</span> such that <span class="process-math">\(X=\bigcup\mc P\)</span> and <span class="process-math">\(A\cap B=\emptyset\)</span> for all <span class="process-math">\(A,B\in\mc P\)</span> where <span class="process-math">\(A\not=B\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-9"><h3 class="heading">
+<div class="para" id="p-62">A <dfn class="terminology">partition</dfn> of a set <span class="process-math">\(X\)</span> is a collection <span class="process-math">\(\mc P\)</span> such that <span class="process-math">\(X=\bigcup\mc P\)</span> and <span class="process-math">\(A\cap B=\emptyset\)</span> for all <span class="process-math">\(A,B\in\mc P\)</span> where <span class="process-math">\(A\not=B\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-9"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.33</span><span class="period">.</span>
 </h3>
-<p id="p-63">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(\setList{\int S,\bd S,\ext S}\)</span> is a partition of <span class="process-math">\(X\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-10"><h3 class="heading">
+<div class="para" id="p-63">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(\setList{\int S,\bd S,\ext S}\)</span> is a partition of <span class="process-math">\(X\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-10"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.34</span><span class="period">.</span>
 </h3>
-<p id="p-64">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(\cl S=\int S\cup\bd S=S\cup\bd S\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-5"><h3 class="heading">
+<div class="para" id="p-64">Let <span class="process-math">\(S\subseteq X\)</span> be a subset of a topological space. Then <span class="process-math">\(\cl S=\int S\cup\bd S=S\cup\bd S\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.35</span><span class="period">.</span>
 </h3>
-<p id="p-65">Let <span class="process-math">\(A\)</span> be a subset of a topological space <span class="process-math">\(X\text{.}\)</span> Prove or disprove the following.</p>
+<div class="para" id="p-65">Let <span class="process-math">\(A\)</span> be a subset of a topological space <span class="process-math">\(X\text{.}\)</span> Prove or disprove the following.</div>
 <ol class="decimal">
-<li id="li-31"><p id="p-derived-li-31"><span class="process-math">\(\displaystyle \int\int A=\int A\)</span></p></li>
-<li id="li-32"><p id="p-derived-li-32"><span class="process-math">\(\displaystyle \int\cl A=\int A\)</span></p></li>
-<li id="li-33"><p id="p-derived-li-33"><span class="process-math">\(\displaystyle \bd\bd A=\bd A\)</span></p></li>
-<li id="li-34"><p id="p-derived-li-34"><span class="process-math">\(\displaystyle \ext\ext A=\int A\)</span></p></li>
-<li id="li-35"><p id="p-derived-li-35"><span class="process-math">\(\displaystyle \int\ext A=\ext A\)</span></p></li>
-<li id="li-36"><p id="p-derived-li-36"><span class="process-math">\(\displaystyle \int\bd A=\emptyset\)</span></p></li>
-<li id="li-37"><p id="p-derived-li-37"><span class="process-math">\(\displaystyle \cl\ext A=X\setminus\int A\)</span></p></li>
+<li id="li-31"><div class="para" id="p-derived-li-31"><span class="process-math">\(\displaystyle \int\int A=\int A\)</span></div></li>
+<li id="li-32"><div class="para" id="p-derived-li-32"><span class="process-math">\(\displaystyle \int\cl A=\int A\)</span></div></li>
+<li id="li-33"><div class="para" id="p-derived-li-33"><span class="process-math">\(\displaystyle \bd\bd A=\bd A\)</span></div></li>
+<li id="li-34"><div class="para" id="p-derived-li-34"><span class="process-math">\(\displaystyle \ext\ext A=\int A\)</span></div></li>
+<li id="li-35"><div class="para" id="p-derived-li-35"><span class="process-math">\(\displaystyle \int\ext A=\ext A\)</span></div></li>
+<li id="li-36"><div class="para" id="p-derived-li-36"><span class="process-math">\(\displaystyle \int\bd A=\emptyset\)</span></div></li>
+<li id="li-37"><div class="para" id="p-derived-li-37"><span class="process-math">\(\displaystyle \cl\ext A=X\setminus\int A\)</span></div></li>
 </ol></article><article class="exercise exercise-like" id="exercise-6"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.36</span><span class="period">.</span>
 </h3>
-<p id="p-66">Let <span class="process-math">\(A,B\)</span> be subsets of a topological space <span class="process-math">\(X\text{.}\)</span> Prove or disprove the following.</p>
+<div class="para" id="p-66">Let <span class="process-math">\(A,B\)</span> be subsets of a topological space <span class="process-math">\(X\text{.}\)</span> Prove or disprove the following.</div>
 <ol class="decimal">
-<li id="li-38"><p id="p-derived-li-38"><span class="process-math">\(\displaystyle \int(A\cap B)=\int A\cap\int B\)</span></p></li>
-<li id="li-39"><p id="p-derived-li-39"><span class="process-math">\(\displaystyle \int(A\cup B)=\int A\cup\int B\)</span></p></li>
-<li id="li-40"><p id="p-derived-li-40"><span class="process-math">\(\displaystyle \bd(A\cap B)=\bd A\cap\bd B\)</span></p></li>
-<li id="li-41"><p id="p-derived-li-41"><span class="process-math">\(\displaystyle \bd(A\cup B)=\bd A\cup\bd B\)</span></p></li>
-<li id="li-42"><p id="p-derived-li-42"><span class="process-math">\(\displaystyle \cl(A\cap B)=\cl A\cap\cl B\)</span></p></li>
-<li id="li-43"><p id="p-derived-li-43"><span class="process-math">\(\displaystyle \cl(A\cup B)=\cl A\cup\cl B\)</span></p></li>
+<li id="li-38"><div class="para" id="p-derived-li-38"><span class="process-math">\(\displaystyle \int(A\cap B)=\int A\cap\int B\)</span></div></li>
+<li id="li-39"><div class="para" id="p-derived-li-39"><span class="process-math">\(\displaystyle \int(A\cup B)=\int A\cup\int B\)</span></div></li>
+<li id="li-40"><div class="para" id="p-derived-li-40"><span class="process-math">\(\displaystyle \bd(A\cap B)=\bd A\cap\bd B\)</span></div></li>
+<li id="li-41"><div class="para" id="p-derived-li-41"><span class="process-math">\(\displaystyle \bd(A\cup B)=\bd A\cup\bd B\)</span></div></li>
+<li id="li-42"><div class="para" id="p-derived-li-42"><span class="process-math">\(\displaystyle \cl(A\cap B)=\cl A\cap\cl B\)</span></div></li>
+<li id="li-43"><div class="para" id="p-derived-li-43"><span class="process-math">\(\displaystyle \cl(A\cup B)=\cl A\cup\cl B\)</span></div></li>
 </ol></article><article class="definition definition-like" id="definition-19"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.37</span><span class="period">.</span>
 </h3>
-<p id="p-67">Let <span class="process-math">\(Y\subseteq X\)</span> for a topological space <span class="process-math">\(\tuple{X,\mc T}\text{.}\)</span> Then the <dfn class="terminology">subspace topology</dfn> for <span class="process-math">\(Y\)</span> is given by <span class="process-math">\(\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-11"><h3 class="heading">
+<div class="para" id="p-67">Let <span class="process-math">\(Y\subseteq X\)</span> for a topological space <span class="process-math">\(\tuple{X,\mc T}\text{.}\)</span> Then the <dfn class="terminology">subspace topology</dfn> for <span class="process-math">\(Y\)</span> is given by <span class="process-math">\(\mc T_Y=\setBuilder{U\cap Y}{U\in\mc T}\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-11"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.38</span><span class="period">.</span>
 </h3>
-<p id="p-68">The subspace topology is a valid topology.</p></article><article class="definition definition-like" id="definition-20"><h3 class="heading">
+<div class="para" id="p-68">The subspace topology is a valid topology.</div></article><article class="definition definition-like" id="definition-20"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.39</span><span class="period">.</span>
 </h3>
-<p id="p-69">The <dfn class="terminology">Cantor set</dfn> is the subset <span class="process-math">\(C\subseteq\mb R\)</span> defined by <span class="process-math">\(C=\bigcap_{n\in\omega} C_n\text{,}\)</span> where <span class="process-math">\(C_0=[0,1]\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-69">
+<div class="para">The <dfn class="terminology">Cantor set</dfn> is the subset <span class="process-math">\(C\subseteq\mb R\)</span> defined by <span class="process-math">\(C=\bigcap_{n\in\omega} C_n\text{,}\)</span> where <span class="process-math">\(C_0=[0,1]\)</span> and</div>
+<div class="displaymath process-math">
 \begin{equation*}
 C_{n+1}=C_n\setminus\bigcup_{0\leq k\lt 3^n} 
 \left(\frac{3k+1}{3^{n+1}},\frac{3k+2}{3^{n+1}}\right).
 \end{equation*}
 </div>
-<p class="continuation">This set is usually considered as a closed subset of the Euclidean line, or as a subspace of the Euclidean line.</p></article><article class="theorem theorem-like" id="theorem-6"><h3 class="heading">
+<div class="para">This set is usually considered as a closed subset of the Euclidean line, or as a subspace of the Euclidean line.</div>
+</div></article><article class="theorem theorem-like" id="theorem-6"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.40</span><span class="period">.</span>
 </h3>
-<p id="p-70">The interior of the Cantor Set is empty.</p></article><article class="theorem theorem-like" id="theorem-7"><h3 class="heading">
+<div class="para" id="p-70">The interior of the Cantor Set is empty.</div></article><article class="theorem theorem-like" id="theorem-7"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.41</span><span class="period">.</span>
 </h3>
-<p id="p-71">The Cantor Set is uncountable.</p></article></section></div></main>
+<div class="para" id="p-71">The Cantor Set is uncountable.</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-surfaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-basis-density.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

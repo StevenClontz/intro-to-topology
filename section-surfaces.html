@@ -19,18 +19,18 @@ window.MathJax = {
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
   startup: {
@@ -40,22 +40,144 @@ window.MathJax = {
       rsMathReady();
       }
     )}
-},
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="frontmatter-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro-to-topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-topological-spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
@@ -74,77 +196,83 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
-<p class="byline">Steven Clontz</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-topological-spaces.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="frontmatter-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-topological-spaces.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link active"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Motivation: Curves and Surfaces</span></a></li>
-<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
-<li class="link"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
-<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
-<li class="link"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
-<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
-<li class="link"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
-<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
-<li class="link"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
-<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth1"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="active"><div class="toc-item"><a href="section-surfaces.html" class="internal"><span class="title">Motivation: Curves and Surfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-topological-spaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-basis-density.html" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></div></li>
+<li><div class="toc-item"><a href="section-continuity.html" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="section-separation.html" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></div></li>
+<li><div class="toc-item"><a href="section-metric.html" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-compact.html" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="section-connected.html" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></div></li>
+<li><div class="toc-item"><a href="section-product.html" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-quotient.html" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="assumed.html" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="preface" id="section-surfaces"><h2 class="heading hide-type">
 <span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Motivation: Curves and Surfaces</span>
 </h2>
-<section class="introduction" id="introduction-1"><p id="p-7">In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.</p>
-<p id="p-8">Unlike the rest of these notes, we will not rigorously define these concepts. (For example, what do I mean by “locally looks like” in <a href="" class="xref" data-knowl="./knowl/curve-defn.html" title="Definition 0.1">Definition 0.1</a>?)  However, many of these ideas will return later in the course and be handled more carefully.</p></section><article class="definition definition-like" id="curve-defn"><h3 class="heading">
+<section class="introduction" id="introduction-1"><div class="para" id="p-7">In this section, we will develop an intuition for a topological space and the purpose of topology by investigating two natural examples of topological spaces: curves and surfaces.</div> <div class="para" id="p-8">Unlike the rest of these notes, we will not rigorously define these concepts. (For example, what do I mean by “locally looks like” in <a href="" class="xref" data-knowl="./knowl/curve-defn.html" title="Definition 0.1">Definition 0.1</a>?)  However, many of these ideas will return later in the course and be handled more carefully.</div></section><article class="definition definition-like" id="curve-defn"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.1</span><span class="period">.</span>
 </h3>
-<p id="p-9">A <dfn class="terminology">curve</dfn> is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the real line <span class="process-math">\(\mathbb R\)</span> or the half line <span class="process-math">\(\mathbb R^*=\{x\in\mathbb R:x\geq 0\}\text{.}\)</span></p></article><p id="p-10">For example, <a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a>, <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a>, and <a href="" class="xref" data-knowl="./knowl/figure-helix.html" title="Figure 0.4">Figure 0.4</a> are all examples of curves in two or three-dimensional Euclidean space.</p>
+<div class="para" id="p-9">A <dfn class="terminology">curve</dfn> is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the real line <span class="process-math">\(\mathbb R\)</span> or the half line <span class="process-math">\(\mathbb R^*=\{x\in\mathbb R:x\geq 0\}\text{.}\)</span>
+</div></article><div class="para" id="p-10">For example, <a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a>, <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a>, and <a href="" class="xref" data-knowl="./knowl/figure-helix.html" title="Figure 0.4">Figure 0.4</a> are all examples of curves in two or three-dimensional Euclidean space.</div>
 <figure class="figure figure-like" id="circle-fig"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/circle.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.2<span class="period">.</span></span><span class="space"> </span>A circle</figcaption></figure><figure class="figure figure-like" id="figure-parabola"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/parabola.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.3<span class="period">.</span></span><span class="space"> </span>A parabola</figcaption></figure><figure class="figure figure-like" id="figure-helix"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/helix.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.4<span class="period">.</span></span><span class="space"> </span>A helix</figcaption></figure><p id="p-11">Note the following differences between <a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a> and <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a>:</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.4<span class="period">.</span></span><span class="space"> </span>A helix</figcaption></figure><div class="para" id="p-11">Note the following differences between <a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a> and <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a>:</div>
 <ul class="disc">
-<li id="li-1"><p id="p-derived-li-1">Removing a point from <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a> would split it into two disconnected parts, but <a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a> would remain connected after a point is removed.</p></li>
-<li id="li-2"><p id="p-derived-li-2"><a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a> is bounded while <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a> extends unboundedly. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a></p></li>
+<li id="li-1"><div class="para" id="p-derived-li-1">Removing a point from <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a> would split it into two disconnected parts, but <a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a> would remain connected after a point is removed.</div></li>
+<li id="li-2"><div class="para" id="p-derived-li-2">
+<a href="" class="xref" data-knowl="./knowl/circle-fig.html" title="Figure 0.2">Figure 0.2</a> is bounded while <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a> extends unboundedly. <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>
+</div></li>
 </ul>
-<p id="p-12">These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a> and <a href="" class="xref" data-knowl="./knowl/figure-helix.html" title="Figure 0.4">Figure 0.4</a>, they are in a certain sense the same object that has been bent or stretched into a different shape.</p>
+<div class="para" id="p-12">These differences would remain no matter how the curves were stretched or bent. However, while there are certainly geometrical differences beteween <a href="" class="xref" data-knowl="./knowl/figure-parabola.html" title="Figure 0.3">Figure 0.3</a> and <a href="" class="xref" data-knowl="./knowl/figure-helix.html" title="Figure 0.4">Figure 0.4</a>, they are in a certain sense the same object that has been bent or stretched into a different shape.</div>
 <article class="definition definition-like" id="definition-2"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.5</span><span class="period">.</span>
 </h3>
-<p id="p-13">Two objects are said to be <dfn class="terminology">topologically equivalent</dfn> or <dfn class="terminology">homeomorphic</dfn> if one may be bent or stretched into the shape of the other.</p></article><p id="p-14">So this means that all geometrically similar shapes are homeomorphic (as in <a href="" class="xref" data-knowl="./knowl/figure-similar-triangles.html" title="Figure 0.6">Figure 0.6</a>), but we also use the idea of homeomorphism to compare other objects in our daily lives.</p>
-<p id="p-15">For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. <a href="" class="xref" data-knowl="./knowl/figure-letter-a.html" title="Figure 0.7">Figure 0.7</a> illustrates several homeomorphic expressions of the letter “A”.</p>
+<div class="para" id="p-13">Two objects are said to be <dfn class="terminology">topologically equivalent</dfn> or <dfn class="terminology">homeomorphic</dfn> if one may be bent or stretched into the shape of the other.</div></article><div class="para" id="p-14">So this means that all geometrically similar shapes are homeomorphic (as in <a href="" class="xref" data-knowl="./knowl/figure-similar-triangles.html" title="Figure 0.6">Figure 0.6</a>), but we also use the idea of homeomorphism to compare other objects in our daily lives.</div>
+<div class="para" id="p-15">For example, while many of them are not curves by our definition, the letters of the alphabet may be considered as topological objects. <a href="" class="xref" data-knowl="./knowl/figure-letter-a.html" title="Figure 0.7">Figure 0.7</a> illustrates several homeomorphic expressions of the letter “A”.</div>
 <figure class="figure figure-like" id="figure-similar-triangles"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/similar-triangles.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.6<span class="period">.</span></span><span class="space"> </span>Two similar triangles</figcaption></figure><figure class="figure figure-like" id="figure-letter-a"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/letter-a.jpg" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.7<span class="period">.</span></span><span class="space"> </span>The letter “A” in several fonts.</figcaption></figure><p id="p-16">A homeomorphism is more carefully defined in <a href="section-continuity.html" class="internal" title="Section 3: Continuity &amp; Homeomorphisms">Section 3</a>, but the central idea is that of “neighborhoods”. For each of the letters “A” in <a href="" class="xref" data-knowl="./knowl/figure-letter-a.html" title="Figure 0.7">Figure 0.7</a>, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see <a href="" class="xref" data-knowl="./knowl/figure-letter-a-neighborhoods.html" title="Figure 0.8">Figure 0.8</a>.</p>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.7<span class="period">.</span></span><span class="space"> </span>The letter “A” in several fonts.</figcaption></figure><div class="para" id="p-16">A homeomorphism is more carefully defined in <a href="section-continuity.html" class="internal" title="Section 3: Continuity &amp; Homeomorphisms">Section 3</a>, but the central idea is that of “neighborhoods”. For each of the letters “A” in <a href="" class="xref" data-knowl="./knowl/figure-letter-a.html" title="Figure 0.7">Figure 0.7</a>, note that there are two endpoints and two triad intersections whose neighborhoods look different from the other neighborhoods within the letter; see <a href="" class="xref" data-knowl="./knowl/figure-letter-a-neighborhoods.html" title="Figure 0.8">Figure 0.8</a>.</div>
 <figure class="figure figure-like" id="figure-letter-a-neighborhoods"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/letter-a-neighborhoods.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.8<span class="period">.</span></span><span class="space"> </span>Neighborhoods within the letter “A”.</figcaption></figure><article class="definition definition-like" id="definition-surface"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">0.9</span><span class="period">.</span>
 </h3>
-<p id="p-17">A <dfn class="terminology">surface</dfn> is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the plane <span class="process-math">\(\mathbb R^2\)</span> or the half-plane <span class="process-math">\(\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}\text{.}\)</span></p></article><p id="p-18">A classic example of the topology of surfaces is the following joke: “A topologist is a mathematician who cannot tell the difference between his doughnut and coffee cup.” The joke is a lot funnier<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> once you've seen <a class="external" href="https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif" target="_blank">this animated GIF on Wikipedia</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a>.</p>
-<p id="p-19">The “doughnut”'s surface is known mathematically as a “torus”, shown in <a href="" class="xref" data-knowl="./knowl/figure-torus.html" title="Figure 0.10">Figure 0.10</a>. A sphere is shown in <a href="" class="xref" data-knowl="./knowl/figure-sphere.html" title="Figure 0.11">Figure 0.11</a>, and a surface that cannot be cannot be embedded in <span class="process-math">\(\mathbb R^3\text{,}\)</span> the Klein bottle, is shown in <a href="" class="xref" data-knowl="./knowl/figure-klein-bottle.html" title="Figure 0.12">Figure 0.12</a>.</p>
+<div class="para" id="p-17">A <dfn class="terminology">surface</dfn> is a set of points such that for every point in the set, the set locally looks like a (possibly bent or curved) copy of the plane <span class="process-math">\(\mathbb R^2\)</span> or the half-plane <span class="process-math">\(\mathbb R^{2*}=\{\tuple{x,y}\in\mb R^2:x\geq 0\}\text{.}\)</span>
+</div></article><div class="para" id="p-18">A classic example of the topology of surfaces is the following joke: “A topologist is a mathematician who cannot tell the difference between his doughnut and coffee cup.” The joke is a lot funnier<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a> once you've seen <a class="external" href="https://en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif" target="_blank">this animated GIF on Wikipedia</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a>.</div>
+<div class="para" id="p-19">The “doughnut”'s surface is known mathematically as a “torus”, shown in <a href="" class="xref" data-knowl="./knowl/figure-torus.html" title="Figure 0.10">Figure 0.10</a>. A sphere is shown in <a href="" class="xref" data-knowl="./knowl/figure-sphere.html" title="Figure 0.11">Figure 0.11</a>, and a surface that cannot be cannot be embedded in <span class="process-math">\(\mathbb R^3\text{,}\)</span> the Klein bottle, is shown in <a href="" class="xref" data-knowl="./knowl/figure-klein-bottle.html" title="Figure 0.12">Figure 0.12</a>.</div>
 <figure class="figure figure-like" id="figure-torus"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/torus.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.10<span class="period">.</span></span><span class="space"> </span>A torus.</figcaption></figure><figure class="figure figure-like" id="figure-sphere"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/sphere.jpg" class="contained"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.11<span class="period">.</span></span><span class="space"> </span>A sphere.</figcaption></figure><figure class="figure figure-like" id="figure-klein-bottle"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/klein-bottle.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.12<span class="period">.</span></span><span class="space"> </span>A Klein bottle.</figcaption></figure><p id="p-20">While these shapes appear very different, they can all be defined as a “quotient space” (<a href="section-quotient.html" class="internal" title="Section 9: Quotient Spaces">Section 9</a>) of the unit square in <span class="process-math">\(\mathbb R^2\text{.}\)</span></p>
-<p id="p-21">In order to study so-called “topological spaces” such as these, we will begin by distilling down the notion of a “neighborhood” for an arbitrary set.</p></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">This topological distinction makes sense as both are closed subsets of <span class="process-math">\(\mathbb R^2\text{;}\)</span> see <a href="section-compact.html" class="internal" title="Section 6: Compactness">Section 6</a> for more info.</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.12<span class="period">.</span></span><span class="space"> </span>A Klein bottle.</figcaption></figure><div class="para" id="p-20">While these shapes appear very different, they can all be defined as a “quotient space” (<a href="section-quotient.html" class="internal" title="Section 9: Quotient Spaces">Section 9</a>) of the unit square in <span class="process-math">\(\mathbb R^2\text{.}\)</span>
+</div>
+<div class="para" id="p-21">In order to study so-called “topological spaces” such as these, we will begin by distilling down the notion of a “neighborhood” for an arbitrary set.</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn">This topological distinction makes sense as both are closed subsets of <span class="process-math">\(\mathbb R^2\text{;}\)</span> see <a href="section-compact.html" class="internal" title="Section 6: Compactness">Section 6</a> for more info.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn">Eh, maybe.</div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/File:Mug_and_Torus_morph.gif</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="frontmatter-1.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-topological-spaces.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>

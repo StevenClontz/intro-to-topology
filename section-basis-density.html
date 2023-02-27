@@ -19,18 +19,18 @@ window.MathJax = {
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
   startup: {
@@ -40,22 +40,144 @@ window.MathJax = {
       rsMathReady();
       }
     )}
-},
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 </head>
-<body class="pretext-article ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
+<body class="pretext article ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
+<p class="byline">Steven Clontz</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="section-topological-spaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="intro-to-topology.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="section-continuity.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\tuple}[1]{\langle #1 \rangle}
 \newcommand{\mb}{\mathbb}
 \newcommand{\mc}{\mathcal}
 \newcommand{\cl}{\operatorname{cl}}
@@ -74,155 +196,175 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="intro-to-topology.html"><span class="title">Intro to Topology</span></a></h1>
-<p class="byline">Steven Clontz</p>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-topological-spaces.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-continuity.html" title="Next">Next</a></span></div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-topological-spaces.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="intro-to-topology.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-continuity.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter"><a href="frontmatter-1.html" data-scroll="frontmatter-1" class="internal"><span class="title">Front Matter</span></a></li>
-<li class="link"><a href="section-surfaces.html" data-scroll="section-surfaces" class="internal"><span class="title">Motivation: Curves and Surfaces</span></a></li>
-<li class="link"><a href="section-topological-spaces.html" data-scroll="section-topological-spaces" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></li>
-<li class="link active"><a href="section-basis-density.html" data-scroll="section-basis-density" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></li>
-<li class="link"><a href="section-continuity.html" data-scroll="section-continuity" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></li>
-<li class="link"><a href="section-separation.html" data-scroll="section-separation" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></li>
-<li class="link"><a href="section-metric.html" data-scroll="section-metric" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></li>
-<li class="link"><a href="section-compact.html" data-scroll="section-compact" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></li>
-<li class="link"><a href="section-connected.html" data-scroll="section-connected" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></li>
-<li class="link"><a href="section-product.html" data-scroll="section-product" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></li>
-<li class="link"><a href="section-quotient.html" data-scroll="section-quotient" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></li>
-<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1" class="internal"><span class="title">Back Matter</span></a></li>
-<li class="link"><a href="assumed.html" data-scroll="assumed" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-basis-density"><h2 class="heading hide-type">
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth1"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter-1.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="frontmatter-1.html#abstract-1" class="internal"><span class="title">Abstract</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="section-surfaces.html" class="internal"><span class="title">Motivation: Curves and Surfaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-topological-spaces.html" class="internal"><span class="codenumber">1</span> <span class="title">Topological Spaces</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="section-basis-density.html" class="internal"><span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span></a></div></li>
+<li><div class="toc-item"><a href="section-continuity.html" class="internal"><span class="codenumber">3</span> <span class="title">Continuity &amp; Homeomorphisms</span></a></div></li>
+<li><div class="toc-item"><a href="section-separation.html" class="internal"><span class="codenumber">4</span> <span class="title">Separation</span></a></div></li>
+<li><div class="toc-item"><a href="section-metric.html" class="internal"><span class="codenumber">5</span> <span class="title">Metric Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-compact.html" class="internal"><span class="codenumber">6</span> <span class="title">Compactness</span></a></div></li>
+<li><div class="toc-item"><a href="section-connected.html" class="internal"><span class="codenumber">7</span> <span class="title">Connectedness</span></a></div></li>
+<li><div class="toc-item"><a href="section-product.html" class="internal"><span class="codenumber">8</span> <span class="title">Product Spaces</span></a></div></li>
+<li><div class="toc-item"><a href="section-quotient.html" class="internal"><span class="codenumber">9</span> <span class="title">Quotient Spaces</span></a></div></li>
+<li>
+<div class="toc-item"><a href="backmatter-1.html" class="internal"><span class="title">Back Matter</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="assumed.html" class="internal"><span class="codenumber">A</span> <span class="title">Assumptions</span></a></div></li></ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="section-basis-density"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2</span> <span class="title">Basis, Density, and Size</span>
 </h2>
 <article class="definition definition-like" id="definition-21"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
 </h3>
-<p id="p-72">Let <span class="process-math">\(\tuple{X,\mc T}\)</span> be a topological space. A subset <span class="process-math">\(\mc B\subseteq\mc T\)</span> is called a <dfn class="terminology">basis</dfn> for the topology if for every <span class="process-math">\(x\in X\)</span> and neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> there exists <span class="process-math">\(B\in\mc B\)</span> such that <span class="process-math">\(x\in B\subseteq U\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-12"><h3 class="heading">
+<div class="para" id="p-72">Let <span class="process-math">\(\tuple{X,\mc T}\)</span> be a topological space. A subset <span class="process-math">\(\mc B\subseteq\mc T\)</span> is called a <dfn class="terminology">basis</dfn> for the topology if for every <span class="process-math">\(x\in X\)</span> and neighborhood <span class="process-math">\(U\)</span> of <span class="process-math">\(x\text{,}\)</span> there exists <span class="process-math">\(B\in\mc B\)</span> such that <span class="process-math">\(x\in B\subseteq U\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-12"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h3>
-<p id="p-73"><span class="process-math">\(\mc B=\setBuilder{(a,b)}{a,b\in\mb R}\)</span> is a basis for the Euclidean topology.</p></article><article class="theorem theorem-like" id="theorem-8"><h3 class="heading">
+<div class="para" id="p-73">
+<span class="process-math">\(\mc B=\setBuilder{(a,b)}{a,b\in\mb R}\)</span> is a basis for the Euclidean topology.</div></article><article class="theorem theorem-like" id="theorem-8"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span>
 </h3>
-<p id="p-74">Let <span class="process-math">\(\mc B\subseteq\mc P(X)\)</span> satisfy the following properties:</p>
+<div class="para" id="p-74">Let <span class="process-math">\(\mc B\subseteq\mc P(X)\)</span> satisfy the following properties:</div>
 <ol class="decimal">
-<li id="li-44"><p id="p-derived-li-44">For all <span class="process-math">\(x\in X\text{,}\)</span> there exists <span class="process-math">\(B\in\mc B\)</span> such that <span class="process-math">\(x\in B\text{.}\)</span></p></li>
-<li id="li-45"><p id="p-derived-li-45">If <span class="process-math">\(x\in A\in\mc B\)</span> and <span class="process-math">\(x\in B\in\mc B\text{,}\)</span> there exists <span class="process-math">\(C\in\mc B\)</span> such that <span class="process-math">\(x\in C\subseteq A\cap B\text{.}\)</span></p></li>
+<li id="li-44"><div class="para" id="p-derived-li-44">For all <span class="process-math">\(x\in X\text{,}\)</span> there exists <span class="process-math">\(B\in\mc B\)</span> such that <span class="process-math">\(x\in B\text{.}\)</span>
+</div></li>
+<li id="li-45"><div class="para" id="p-derived-li-45">If <span class="process-math">\(x\in A\in\mc B\)</span> and <span class="process-math">\(x\in B\in\mc B\text{,}\)</span> there exists <span class="process-math">\(C\in\mc B\)</span> such that <span class="process-math">\(x\in C\subseteq A\cap B\text{.}\)</span>
+</div></li>
 </ol>
-<p id="p-75">Then <span class="process-math">\(\mc T=\setBuilder{\bigcup\mc U}{\mc U\subseteq\mc B}\)</span> is a topology, and <span class="process-math">\(\mc B\)</span> is a basis for that topology. We call this the <dfn class="terminology">topology generated by the basis</dfn>.</p></article><article class="proposition theorem-like" id="proposition-13"><h3 class="heading">
+<div class="para" id="p-75">Then <span class="process-math">\(\mc T=\setBuilder{\bigcup\mc U}{\mc U\subseteq\mc B}\)</span> is a topology, and <span class="process-math">\(\mc B\)</span> is a basis for that topology. We call this the <dfn class="terminology">topology generated by the basis</dfn>.</div></article><article class="proposition theorem-like" id="proposition-13"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.4</span><span class="period">.</span>
 </h3>
-<p id="p-76"><span class="process-math">\(\mc B=\setBuilder{[a,b)}{a,b\in\mb R}\)</span> is a basis for a topology different from the Euclidean topology, called the <dfn class="terminology">Sorgenfrey topology</dfn>.</p></article><article class="exercise exercise-like" id="exercise-7"><h3 class="heading">
+<div class="para" id="p-76">
+<span class="process-math">\(\mc B=\setBuilder{[a,b)}{a,b\in\mb R}\)</span> is a basis for a topology different from the Euclidean topology, called the <dfn class="terminology">Sorgenfrey topology</dfn>.</div></article><article class="exercise exercise-like" id="exercise-7"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.5</span><span class="period">.</span><span class="space"> </span><span class="title">Examples of bases.</span>
 </h3>
-<p id="p-77">Calculate the topology generated by each basis on <span class="process-math">\(\mb R\text{.}\)</span></p>
+<div class="para" id="p-77">Calculate the topology generated by each basis on <span class="process-math">\(\mb R\text{.}\)</span>
+</div>
 <ol class="decimal">
-<li id="li-46"><p id="p-derived-li-46"><span class="process-math">\(\displaystyle \mc B=\setBuilder{(a,b)}{a,b\in\mb Q}\)</span></p></li>
-<li id="li-47"><p id="p-derived-li-47"><span class="process-math">\(\displaystyle \mc B=\setBuilder{(a,\infty)}{a\in\mb R}\)</span></p></li>
-<li id="li-48"><p id="p-derived-li-48"><span class="process-math">\(\displaystyle \mc B=\setBuilder{\setList{x}}{x\in\mb R}\)</span></p></li>
-<li id="li-49"><p id="p-derived-li-49"><span class="process-math">\(\displaystyle \mc B=\setBuilder{[a,b]}{a,b\in\mb R}\)</span></p></li>
-<li id="li-50"><p id="p-derived-li-50"><span class="process-math">\(\displaystyle \mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}\)</span></p></li>
+<li id="li-46"><div class="para" id="p-derived-li-46"><span class="process-math">\(\displaystyle \mc B=\setBuilder{(a,b)}{a,b\in\mb Q}\)</span></div></li>
+<li id="li-47"><div class="para" id="p-derived-li-47"><span class="process-math">\(\displaystyle \mc B=\setBuilder{(a,\infty)}{a\in\mb R}\)</span></div></li>
+<li id="li-48"><div class="para" id="p-derived-li-48"><span class="process-math">\(\displaystyle \mc B=\setBuilder{\setList{x}}{x\in\mb R}\)</span></div></li>
+<li id="li-49"><div class="para" id="p-derived-li-49"><span class="process-math">\(\displaystyle \mc B=\setBuilder{[a,b]}{a,b\in\mb R}\)</span></div></li>
+<li id="li-50"><div class="para" id="p-derived-li-50"><span class="process-math">\(\displaystyle \mc B=\setBuilder{[a,b]}{a,b\in\mb R,a\lt0\lt b}\)</span></div></li>
 </ol></article><article class="theorem theorem-like" id="theorem-9"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.6</span><span class="period">.</span>
 </h3>
-<p id="p-78">Two bases <span class="process-math">\(\mc B_0,\mc B_1\)</span> generate the same topology if and only if for all <span class="process-math">\(x\in B_0\in\mc B_0\)</span> there exists <span class="process-math">\(B_1\in\mc B_1\)</span> such that <span class="process-math">\(x\in B_1\subseteq B_0\text{,}\)</span> and for all <span class="process-math">\(x\in B_1\in\mc B_1\)</span> there exists <span class="process-math">\(B_0\in\mc B_0\)</span> such that <span class="process-math">\(x\in B_0\subseteq B_1\text{.}\)</span></p></article><article class="theorem theorem-like" id="subbasis"><h3 class="heading">
+<div class="para" id="p-78">Two bases <span class="process-math">\(\mc B_0,\mc B_1\)</span> generate the same topology if and only if for all <span class="process-math">\(x\in B_0\in\mc B_0\)</span> there exists <span class="process-math">\(B_1\in\mc B_1\)</span> such that <span class="process-math">\(x\in B_1\subseteq B_0\text{,}\)</span> and for all <span class="process-math">\(x\in B_1\in\mc B_1\)</span> there exists <span class="process-math">\(B_0\in\mc B_0\)</span> such that <span class="process-math">\(x\in B_0\subseteq B_1\text{.}\)</span>
+</div></article><article class="theorem theorem-like" id="subbasis"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.7</span><span class="period">.</span>
 </h3>
-<p id="p-79">Let <span class="process-math">\(\mc S\subseteq\mc P(X)\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-79">
+<div class="para">Let <span class="process-math">\(\mc S\subseteq\mc P(X)\)</span> and</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
 \mc T^\star \text{ is a topology on } X}.
 \end{equation*}
 </div>
-<p class="continuation">Then <span class="process-math">\(\mc T\)</span> is a topology.</p></article><article class="definition definition-like" id="definition-22"><h3 class="heading">
+<div class="para">Then <span class="process-math">\(\mc T\)</span> is a topology.</div>
+</div></article><article class="definition definition-like" id="definition-22"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.8</span><span class="period">.</span>
 </h3>
-<p id="p-80">The set <span class="process-math">\(\mc S\subseteq\mc P(X)\)</span> in <a href="" class="xref" data-knowl="./knowl/subbasis.html" title="Theorem 2.7">Theorem 2.7</a> is called a <dfn class="terminology">subbasis</dfn> generating the topology</p>
+<div class="para logical" id="p-80">
+<div class="para">The set <span class="process-math">\(\mc S\subseteq\mc P(X)\)</span> in <a href="" class="xref" data-knowl="./knowl/subbasis.html" title="Theorem 2.7">Theorem 2.7</a> is called a <dfn class="terminology">subbasis</dfn> generating the topology</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/subbasis.html">
 \begin{equation*}
 \mc T=\bigcap\setBuilder{\mc T^\star\subseteq\mc P(X)}{\mc S\subseteq\mc T^\star \text{ and }
 \mc T^\star \text{ is a topology on } X}.
 \end{equation*}
+</div>
 </div></article><article class="exercise exercise-like" id="exercise-8"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.9</span><span class="period">.</span><span class="space"> </span><span class="title">Topologies generated from subbases.</span>
 </h3>
-<p id="p-81">Calculate the topology on <span class="process-math">\(\mb R\)</span> generated by each subbasis.</p>
+<div class="para" id="p-81">Calculate the topology on <span class="process-math">\(\mb R\)</span> generated by each subbasis.</div>
 <ol class="decimal">
-<li id="li-51"><p id="p-derived-li-51"><span class="process-math">\(\displaystyle \setBuilder{(-\infty,x)}{x\in\mb R}\cup\setBuilder{(y,\infty)}{y\in\mb R}\)</span></p></li>
-<li id="li-52"><p id="p-derived-li-52"><span class="process-math">\(\displaystyle \setBuilder{(-\infty,x]}{x\in\mb R}\cup\setBuilder{[y,\infty)}{y\in\mb R}\)</span></p></li>
-<li id="li-53"><p id="p-derived-li-53"><span class="process-math">\(\displaystyle \setList{\setList{0}}\)</span></p></li>
-<li id="li-54"><p id="p-derived-li-54"><span class="process-math">\(\displaystyle \mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\omega}}\)</span></p></li>
+<li id="li-51"><div class="para" id="p-derived-li-51"><span class="process-math">\(\displaystyle \setBuilder{(-\infty,x)}{x\in\mb R}\cup\setBuilder{(y,\infty)}{y\in\mb R}\)</span></div></li>
+<li id="li-52"><div class="para" id="p-derived-li-52"><span class="process-math">\(\displaystyle \setBuilder{(-\infty,x]}{x\in\mb R}\cup\setBuilder{[y,\infty)}{y\in\mb R}\)</span></div></li>
+<li id="li-53"><div class="para" id="p-derived-li-53"><span class="process-math">\(\displaystyle \setList{\setList{0}}\)</span></div></li>
+<li id="li-54"><div class="para" id="p-derived-li-54"><span class="process-math">\(\displaystyle \mc T\cup\setList{\mb R\setminus\setBuilder{\frac{1}{2^n}}{n\in\omega}}\)</span></div></li>
 </ol></article><article class="theorem theorem-like" id="theorem-11"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.10</span><span class="period">.</span>
 </h3>
-<p id="p-82">Let <span class="process-math">\(\mc S\subseteq\mc P(X)\)</span> and</p>
-<div class="displaymath process-math" data-contains-math-knowls="">
+<div class="para logical" id="p-82">
+<div class="para">Let <span class="process-math">\(\mc S\subseteq\mc P(X)\)</span> and</div>
+<div class="displaymath process-math">
 \begin{equation*}
 \mc B=\setList{X}\cup\bigcap\setBuilder{\mc B^\star\subseteq\mc P(X)}
 {\mc S\subseteq\mc B^\star\text{ and }
 B_1,B_2\in\mc B^\star\Rightarrow B_1\cap B_2\in\mc B^\star}.
 \end{equation*}
 </div>
-<p class="continuation">Then <span class="process-math">\(\mc B\)</span> is a basis for a topology on <span class="process-math">\(X\text{,}\)</span> and the topology generated by the basis <span class="process-math">\(\mc B\)</span> is same as the topology generated by the subbasis <span class="process-math">\(\mc S\text{.}\)</span></p></article><article class="definition definition-like" id="definition-23"><h3 class="heading">
+<div class="para">Then <span class="process-math">\(\mc B\)</span> is a basis for a topology on <span class="process-math">\(X\text{,}\)</span> and the topology generated by the basis <span class="process-math">\(\mc B\)</span> is same as the topology generated by the subbasis <span class="process-math">\(\mc S\text{.}\)</span>
+</div>
+</div></article><article class="definition definition-like" id="definition-23"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.11</span><span class="period">.</span>
 </h3>
-<p id="p-83">A subset <span class="process-math">\(D\subseteq X\)</span> of a topological space is called <dfn class="terminology">dense</dfn> if and only if <span class="process-math">\(\cl D=X\text{.}\)</span></p></article><article class="exercise exercise-like" id="exercise-9"><h3 class="heading">
+<div class="para" id="p-83">A subset <span class="process-math">\(D\subseteq X\)</span> of a topological space is called <dfn class="terminology">dense</dfn> if and only if <span class="process-math">\(\cl D=X\text{.}\)</span>
+</div></article><article class="exercise exercise-like" id="exercise-9"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.12</span><span class="period">.</span>
 </h3>
-<p id="p-84">Determine which of these are dense subsets of <span class="process-math">\(\mb R\text{.}\)</span></p>
+<div class="para" id="p-84">Determine which of these are dense subsets of <span class="process-math">\(\mb R\text{.}\)</span>
+</div>
 <ol class="decimal">
-<li id="li-55"><p id="p-derived-li-55"><span class="process-math">\(\displaystyle \mb Q\)</span></p></li>
-<li id="li-56"><p id="p-derived-li-56"><span class="process-math">\(\displaystyle \mb Z\)</span></p></li>
-<li id="li-57"><p id="p-derived-li-57"><span class="process-math">\(\displaystyle \mb R\setminus\mb Q\)</span></p></li>
-<li id="li-58"><p id="p-derived-li-58"><span class="process-math">\(\displaystyle \mb R\setminus\mb Z\)</span></p></li>
+<li id="li-55"><div class="para" id="p-derived-li-55"><span class="process-math">\(\displaystyle \mb Q\)</span></div></li>
+<li id="li-56"><div class="para" id="p-derived-li-56"><span class="process-math">\(\displaystyle \mb Z\)</span></div></li>
+<li id="li-57"><div class="para" id="p-derived-li-57"><span class="process-math">\(\displaystyle \mb R\setminus\mb Q\)</span></div></li>
+<li id="li-58"><div class="para" id="p-derived-li-58"><span class="process-math">\(\displaystyle \mb R\setminus\mb Z\)</span></div></li>
 </ol></article><article class="theorem theorem-like" id="theorem-12"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.13</span><span class="period">.</span>
 </h3>
-<p id="p-85">A subset <span class="process-math">\(D\)</span> of a topological space is dense if and only if every nonempty open set of the space contains a point of <span class="process-math">\(D\text{.}\)</span></p></article><article class="proposition theorem-like" id="proposition-14"><h3 class="heading">
+<div class="para" id="p-85">A subset <span class="process-math">\(D\)</span> of a topological space is dense if and only if every nonempty open set of the space contains a point of <span class="process-math">\(D\text{.}\)</span>
+</div></article><article class="proposition theorem-like" id="proposition-14"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.14</span><span class="period">.</span>
 </h3>
-<p id="p-86">Let <span class="process-math">\(X\)</span> be a topological space, and let <span class="process-math">\(D\subseteq E\subseteq X\text{.}\)</span> If <span class="process-math">\(D\)</span> is dense, then <span class="process-math">\(E\)</span> is also dense.</p></article><article class="definition definition-like" id="definition-24"><h3 class="heading">
+<div class="para" id="p-86">Let <span class="process-math">\(X\)</span> be a topological space, and let <span class="process-math">\(D\subseteq E\subseteq X\text{.}\)</span> If <span class="process-math">\(D\)</span> is dense, then <span class="process-math">\(E\)</span> is also dense.</div></article><article class="definition definition-like" id="definition-24"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.15</span><span class="period">.</span>
 </h3>
-<p id="p-87">A space is said to have <dfn class="terminology">countable weight</dfn> (or be <dfn class="terminology">second-countable</dfn>) if it has a basis whose cardinality is countable.</p></article><article class="definition definition-like" id="definition-25"><h3 class="heading">
+<div class="para" id="p-87">A space is said to have <dfn class="terminology">countable weight</dfn> (or be <dfn class="terminology">second-countable</dfn>) if it has a basis whose cardinality is countable.</div></article><article class="definition definition-like" id="definition-25"><h3 class="heading">
 <span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.16</span><span class="period">.</span>
 </h3>
-<p id="p-88">A space is said to have <dfn class="terminology">countable density</dfn> (or be <dfn class="terminology">separable</dfn>, no relation to <a href="section-separation.html" class="internal" title="Section 4: Separation">Section 4</a>) if it has a dense subset whose cardinality is countable.</p></article><article class="theorem theorem-like" id="theorem-13"><h3 class="heading">
+<div class="para" id="p-88">A space is said to have <dfn class="terminology">countable density</dfn> (or be <dfn class="terminology">separable</dfn>, no relation to <a href="section-separation.html" class="internal" title="Section 4: Separation">Section 4</a>) if it has a dense subset whose cardinality is countable.</div></article><article class="theorem theorem-like" id="theorem-13"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.17</span><span class="period">.</span>
 </h3>
-<p id="p-89">There exists a space with countable cardinality, but uncountable weight.</p></article><article class="example example-like" id="example-1"><h3 class="heading">
+<div class="para" id="p-89">There exists a space with countable cardinality, but uncountable weight.</div></article><article class="example example-like" id="example-1"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.18</span><span class="period">.</span>
 </h3>
-<p id="p-90">The reals with the Euclidean topology are a space with uncountable cardinality, but countable weight and countable density.</p></article><article class="theorem theorem-like" id="theorem-14"><h3 class="heading">
+<div class="para" id="p-90">The reals with the Euclidean topology are a space with uncountable cardinality, but countable weight and countable density.</div></article><article class="theorem theorem-like" id="theorem-14"><h3 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">2.19</span><span class="period">.</span>
 </h3>
-<p id="p-91">Every space with countable weight has countable density.</p></article><article class="example example-like" id="example-2"><h3 class="heading">
+<div class="para" id="p-91">Every space with countable weight has countable density.</div></article><article class="example example-like" id="example-2"><h3 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.20</span><span class="period">.</span>
 </h3>
-<p id="p-92">The reals with the Sorgenfrey topology are a space with uncountable cardinality and weight, but countable density.</p></article><article class="proposition theorem-like" id="proposition-15"><h3 class="heading">
+<div class="para" id="p-92">The reals with the Sorgenfrey topology are a space with uncountable cardinality and weight, but countable density.</div></article><article class="proposition theorem-like" id="proposition-15"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.21</span><span class="period">.</span>
 </h3>
-<p id="p-93">The reals with the discrete topology are a space with uncountable cardinality, weight, and density.</p></article><article class="exercise exercise-like" id="exercise-10"><h3 class="heading">
+<div class="para" id="p-93">The reals with the discrete topology are a space with uncountable cardinality, weight, and density.</div></article><article class="exercise exercise-like" id="exercise-10"><h3 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.22</span><span class="period">.</span>
 </h3>
-<p id="p-94">Find or define a non-discrete topological space which has uncountable weight and density.</p></article><article class="proposition theorem-like" id="proposition-16"><h3 class="heading">
+<div class="para" id="p-94">Find or define a non-discrete topological space which has uncountable weight and density.</div></article><article class="proposition theorem-like" id="proposition-16"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">2.23</span><span class="period">.</span>
 </h3>
-<p id="p-95">Let <span class="process-math">\(\mathcal B\)</span> be a basis for <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\subseteq X\text{.}\)</span> Then <span class="process-math">\(\mathcal B_Y=\{U\cap Y:U\in\mathcal B\}\)</span> is a basis for the subspace topology on <span class="process-math">\(Y\text{.}\)</span></p></article></section></div></main>
+<div class="para" id="p-95">Let <span class="process-math">\(\mathcal B\)</span> be a basis for <span class="process-math">\(X\)</span> and <span class="process-math">\(Y\subseteq X\text{.}\)</span> Then <span class="process-math">\(\mathcal B_Y=\{U\cap Y:U\in\mathcal B\}\)</span> is a basis for the subspace topology on <span class="process-math">\(Y\text{.}\)</span>
+</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="section-topological-spaces.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="section-continuity.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
+</div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>
