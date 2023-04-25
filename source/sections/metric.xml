@@ -26,15 +26,15 @@
   and <m>d(x,x)=0</m></li>
   <li><m>d(x,y)=|y-x|</m> for all <m>x,y\in\mb R</m></li>
   <li>
-    <m>d(\tuple{x_0,x_1},\tuple{y_0,y_1})=\sqrt{(y_1-y_0)^2+(x_1-x_0)^2}</m>
+    <m>d(\tuple{x_0,y_0},\tuple{x_1,y_1})=\sqrt{(y_1-y_0)^2+(x_1-x_0)^2}</m>
     for all <m>\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2</m>.
   </li>
   <li>
-    <m>d(\tuple{x_0,x_1},\tuple{y_0,y_1})=|y_1-y_0|+|x_1-x_0|</m>
+    <m>d(\tuple{x_0,y_0},\tuple{x_1,y_1})=|y_1-y_0|+|x_1-x_0|</m>
     for all <m>\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2</m>.
   </li>
   <li>
-    <m>d(\tuple{x_0,x_1},\tuple{y_0,y_1})=\max\setList{|y_1-y_0|,|x_1-x_0|}</m>
+    <m>d(\tuple{x_0,y_0},\tuple{x_1,y_1})=\max\setList{|y_1-y_0|,|x_1-x_0|}</m>
     for all <m>\tuple{x_0,x_1},\tuple{y_0,y_1}\in\mb R^2</m>.
   </li>
 </ol>
